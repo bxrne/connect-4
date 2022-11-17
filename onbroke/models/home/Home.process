@@ -1,5 +1,6 @@
 Process _LWgagF-SEeakMeYoloYxpg {
   modelName "Home"
+  displayName "Connect 4"
   description "Home"
   dataFlowView true
   processType Basic
