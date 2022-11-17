@@ -8,7 +8,7 @@ GUI _dddDUGaXEe2ffZDgDpg3pA {
   	dfViewWorkaround true
   }
   
-  Template _deuOoWaXEe2ffZDgDpg3pA at 240,10 size 370,220 {
+  Template _deuOoWaXEe2ffZDgDpg3pA at 240,10 size 370,910 {
   	blockName ""
   	disableAutoLayout false
   	generalStyle GeneralStyling _dezHIGaXEe2ffZDgDpg3pA {
@@ -35,7 +35,7 @@ GUI _dddDUGaXEe2ffZDgDpg3pA {
   			layout Layout _dfBJkGaXEe2ffZDgDpg3pA {
   					size Default
   					offset None
-  					alignment Left
+  					alignment Center
   				}
   			generalStyle GeneralStyling _dfAigGaXEe2ffZDgDpg3pA {
   					tallness Fitting
@@ -49,14 +49,221 @@ GUI _dddDUGaXEe2ffZDgDpg3pA {
   			MoveRight _de-tUWaXEe2ffZDgDpg3pA at 10,2 size 7,14 {
   			}
   			
-  			Headline _eCuTkGaXEe2ffZDgDpg3pA at 10,30 size 300,50 {
+  			Headline _clrmcGaaEe24gf5J_KrBHg at 10,30 size 300,50 {
   				size Big
-  				content [ StaticContent _eC1oUWaXEe2ffZDgDpg3pA {
+  				content [ StaticContent _clxGAGaaEe24gf5J_KrBHg {
   						renderMarkdown false
   						maxChars 0
   						html false
-  						rawContent "Headline"
-  						styling TextStyling _eC22cGaXEe2ffZDgDpg3pA {
+  						rawContent "Connect-4"
+  						styling TextStyling _clxtEGaaEe24gf5J_KrBHg {
+  								small false
+  								highlight false
+  								deleted false
+  								underline false
+  								bold true
+  								alignment Center
+  								italic false
+  								color Default
+  							}
+  					} ]
+  				generalStyle GeneralStyling _clwe8GaaEe24gf5J_KrBHg {
+  						tallness Fitting
+  						marginBottom None
+  						attributes [  ]
+  						marginTop None
+  					}
+  				MoveUp _clvQ0WaaEe24gf5J_KrBHg at 2,2 size 14,7 {
+  				}
+  				
+  				MoveDown _clv34WaaEe24gf5J_KrBHg at 2,10 size 14,7 {
+  				}
+  			}
+  		}
+  	}
+  	
+  	Row _ctU_MWadEe24gf5J_KrBHg at 10,200 size 270,230 {
+  		generalStyle GeneralStyling _ctbF0GadEe24gf5J_KrBHg {
+  				tallness Fitting
+  				marginBottom None
+  				attributes [  ]
+  				marginTop None
+  			}
+  		MoveUp _ctU_M2adEe24gf5J_KrBHg at 2,2 size 14,7 {
+  		}
+  		
+  		MoveDown _ctVmQWadEe24gf5J_KrBHg at 2,10 size 14,7 {
+  		}
+  		
+  		Col _ctWNUWadEe24gf5J_KrBHg at 10,30 size 240,180 {
+  			wideness Full
+  			layout Layout _ctZQoGadEe24gf5J_KrBHg {
+  					size Default
+  					offset None
+  					alignment Center
+  				}
+  			generalStyle GeneralStyling _ctW0YWadEe24gf5J_KrBHg {
+  					tallness Fitting
+  					marginBottom None
+  					attributes [  ]
+  					marginTop Single
+  				}
+  			MoveLeft _ctWNU2adEe24gf5J_KrBHg at 2,2 size 7,14 {
+  			}
+  			
+  			MoveRight _ctW0YGadEe24gf5J_KrBHg at 10,2 size 7,14 {
+  			}
+  			
+  			Jumbotron _cC-IsGafEe24gf5J_KrBHg at 10,30 size 220,120 {
+  				generalStyle GeneralStyling _cDAk8GafEe24gf5J_KrBHg {
+  						tallness Fitting
+  						marginBottom None
+  						attributes [  ]
+  						marginTop None
+  					}
+  				MoveUp _cC_W0WafEe24gf5J_KrBHg at 2,2 size 14,7 {
+  				}
+  				
+  				MoveDown _cC_94WafEe24gf5J_KrBHg at 2,10 size 14,7 {
+  				}
+  				
+  				Text _i31ZoWadEe24gf5J_KrBHg at 10,30 size 200,60 {
+  					content [ StaticContent _i34c8GadEe24gf5J_KrBHg {
+  							renderMarkdown false
+  							maxChars 0
+  							html false
+  							rawContent "It’s the classic game you love to play with your friends and family. Can you connect four of your coloured disks by dropping them into the holder before your opponent does? We created this game using DIME; a Cinco Product."
+  							styling TextStyling _i34c8WadEe24gf5J_KrBHg {
+  									small false
+  									highlight false
+  									deleted false
+  									underline false
+  									bold false
+  									alignment Left
+  									italic true
+  									color Default
+  								}
+  						} ]
+  					generalStyle GeneralStyling _i32nwmadEe24gf5J_KrBHg {
+  							tallness Fitting
+  							marginBottom None
+  							attributes [  ]
+  							marginTop None
+  						}
+  					MoveUp _i32AsWadEe24gf5J_KrBHg at 2,2 size 14,7 {
+  					}
+  					
+  					MoveDown _i32nwWadEe24gf5J_KrBHg at 2,10 size 14,7 {
+  					}
+  				}
+  			}
+  		}
+  	}
+  	
+  	Row _jDa0AWacEe24gf5J_KrBHg at 10,440 size 250,170 {
+  		generalStyle GeneralStyling _jDd3UGacEe24gf5J_KrBHg {
+  				tallness Fitting
+  				marginBottom None
+  				attributes [  ]
+  				marginTop None
+  			}
+  		MoveUp _jDa0A2acEe24gf5J_KrBHg at 2,2 size 14,7 {
+  		}
+  		
+  		MoveDown _jDbbEWacEe24gf5J_KrBHg at 2,10 size 14,7 {
+  		}
+  		
+  		Col _jDbbE2acEe24gf5J_KrBHg at 10,30 size 220,120 {
+  			wideness Full
+  			layout Layout _jDdQQGacEe24gf5J_KrBHg {
+  					size Default
+  					offset None
+  					alignment Center
+  				}
+  			generalStyle GeneralStyling _jDcpMGacEe24gf5J_KrBHg {
+  					tallness Fitting
+  					marginBottom None
+  					attributes [  ]
+  					marginTop Single
+  				}
+  			MoveLeft _jDbbFWacEe24gf5J_KrBHg at 2,2 size 7,14 {
+  			}
+  			
+  			MoveRight _jDcCIWacEe24gf5J_KrBHg at 10,2 size 7,14 {
+  			}
+  			
+  			Button _k2BaEGacEe24gf5J_KrBHg at 10,30 size 200,60 {
+  				displayLabel "Start Game"
+  				label "start_game_basic"
+  				styling ButtonStyling _k2PcgGacEe24gf5J_KrBHg {
+  						fullWidth true
+  						size Large
+  						disabled false
+  						color Green
+  					}
+  				options ButtonOptions _k2Tt8GacEe24gf5J_KrBHg {
+  						isLink false
+  						submitsForm true
+  					}
+  				disabled false
+  				icon Icon _k2JV4GacEe24gf5J_KrBHg {
+  						postIcon ArrowRight
+  						preIcon None
+  					}
+  				generalStyle GeneralStyling _k2IHwGacEe24gf5J_KrBHg {
+  						tallness Fitting
+  						marginBottom None
+  						attributes [  ]
+  						marginTop None
+  					}
+  				MoveUp _k2HgsWacEe24gf5J_KrBHg at 2,2 size 14,7 {
+  				}
+  				
+  				MoveDown _k2Hgs2acEe24gf5J_KrBHg at 2,10 size 14,7 {
+  				}
+  			}
+  		}
+  	}
+  	
+  	Row _IbVFoWadEe24gf5J_KrBHg at 10,620 size 250,170 {
+  		generalStyle GeneralStyling _IbalMGadEe24gf5J_KrBHg {
+  				tallness Fitting
+  				marginBottom None
+  				attributes [  ]
+  				marginTop None
+  			}
+  		MoveUp _IbVFo2adEe24gf5J_KrBHg at 2,2 size 14,7 {
+  		}
+  		
+  		MoveDown _IbVssWadEe24gf5J_KrBHg at 2,10 size 14,7 {
+  		}
+  		
+  		Col _IbVss2adEe24gf5J_KrBHg at 10,30 size 220,120 {
+  			wideness Full
+  			layout Layout _IbYwAGadEe24gf5J_KrBHg {
+  					size Default
+  					offset None
+  					alignment Center
+  				}
+  			generalStyle GeneralStyling _IbW60GadEe24gf5J_KrBHg {
+  					tallness Fitting
+  					marginBottom None
+  					attributes [  ]
+  					marginTop Double
+  				}
+  			MoveLeft _IbWTwWadEe24gf5J_KrBHg at 2,2 size 7,14 {
+  			}
+  			
+  			MoveRight _IbWTw2adEe24gf5J_KrBHg at 10,2 size 7,14 {
+  			}
+  			
+  			Text _JRX80WadEe24gf5J_KrBHg at 10,30 size 200,60 {
+  				content [ StaticContent _JRbAIGadEe24gf5J_KrBHg {
+  						renderMarkdown false
+  						maxChars 0
+  						html false
+  						rawContent "Created by Adam Byrne & Daniel Kennedy\n"
+  						styling TextStyling _JRbAIWadEe24gf5J_KrBHg {
   								small false
   								highlight false
   								deleted false
@@ -67,16 +274,16 @@ GUI _dddDUGaXEe2ffZDgDpg3pA {
   								color Default
   							}
   					} ]
-  				generalStyle GeneralStyling _eC1oUGaXEe2ffZDgDpg3pA {
+  				generalStyle GeneralStyling _JRZK8madEe24gf5J_KrBHg {
   						tallness Fitting
   						marginBottom None
   						attributes [  ]
   						marginTop None
   					}
-  				MoveUp _eC0aMWaXEe2ffZDgDpg3pA at 2,2 size 14,7 {
+  				MoveUp _JRYj4WadEe24gf5J_KrBHg at 2,2 size 14,7 {
   				}
   				
-  				MoveDown _eC1BQWaXEe2ffZDgDpg3pA at 2,10 size 14,7 {
+  				MoveDown _JRZK8WadEe24gf5J_KrBHg at 2,10 size 14,7 {
   				}
   			}
   		}
