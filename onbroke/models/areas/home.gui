@@ -1,0 +1,85 @@
+GUI _dddDUGaXEe2ffZDgDpg3pA {
+  fullWidth false
+  disableAutoLayout false
+  additionalJavaScript [  ]
+  additionalStylesheets [  ]
+  title "home"
+  DataContext _delrwWaXEe2ffZDgDpg3pA at 10,10 size 180,130 {
+  	dfViewWorkaround true
+  }
+  
+  Template _deuOoWaXEe2ffZDgDpg3pA at 240,10 size 370,220 {
+  	blockName ""
+  	disableAutoLayout false
+  	generalStyle GeneralStyling _dezHIGaXEe2ffZDgDpg3pA {
+  			tallness Fitting
+  			marginBottom None
+  			attributes [  ]
+  			marginTop None
+  		}
+  	Row _de0VQWaXEe2ffZDgDpg3pA at 10,30 size 350,160 {
+  		generalStyle GeneralStyling _dfBwoGaXEe2ffZDgDpg3pA {
+  				tallness Fitting
+  				marginBottom None
+  				attributes [  ]
+  				marginTop None
+  			}
+  		MoveUp _de3YkWaXEe2ffZDgDpg3pA at 2,2 size 14,7 {
+  		}
+  		
+  		MoveDown _de5NwWaXEe2ffZDgDpg3pA at 2,10 size 14,7 {
+  		}
+  		
+  		Col _de8REWaXEe2ffZDgDpg3pA at 10,30 size 320,110 {
+  			wideness Full
+  			layout Layout _dfBJkGaXEe2ffZDgDpg3pA {
+  					size Default
+  					offset None
+  					alignment Left
+  				}
+  			generalStyle GeneralStyling _dfAigGaXEe2ffZDgDpg3pA {
+  					tallness Fitting
+  					marginBottom None
+  					attributes [  ]
+  					marginTop None
+  				}
+  			MoveLeft _de9fMWaXEe2ffZDgDpg3pA at 2,2 size 7,14 {
+  			}
+  			
+  			MoveRight _de-tUWaXEe2ffZDgDpg3pA at 10,2 size 7,14 {
+  			}
+  			
+  			Headline _eCuTkGaXEe2ffZDgDpg3pA at 10,30 size 300,50 {
+  				size Big
+  				content [ StaticContent _eC1oUWaXEe2ffZDgDpg3pA {
+  						renderMarkdown false
+  						maxChars 0
+  						html false
+  						rawContent "Headline"
+  						styling TextStyling _eC22cGaXEe2ffZDgDpg3pA {
+  								small false
+  								highlight false
+  								deleted false
+  								underline false
+  								bold false
+  								alignment Left
+  								italic false
+  								color Default
+  							}
+  					} ]
+  				generalStyle GeneralStyling _eC1oUGaXEe2ffZDgDpg3pA {
+  						tallness Fitting
+  						marginBottom None
+  						attributes [  ]
+  						marginTop None
+  					}
+  				MoveUp _eC0aMWaXEe2ffZDgDpg3pA at 2,2 size 14,7 {
+  				}
+  				
+  				MoveDown _eC1BQWaXEe2ffZDgDpg3pA at 2,10 size 14,7 {
+  				}
+  			}
+  		}
+  	}
+  }
+}
