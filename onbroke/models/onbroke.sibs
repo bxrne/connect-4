@@ -2,6 +2,16 @@ package onbroke
 
 import "models/app.data" as data
 
+/*
+sib printAssignment: info.scce.dime.app.onbroke.OnbrokeNative#printAssignment
+input: data.Assignment
+->success
+output: text
+ */
+
 // TODO
 
 // Board sibs
+
+sib initialiseBoard : info.scce.dime.app.onbroke.Game#initialise
+->success
