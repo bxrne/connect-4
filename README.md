@@ -12,4 +12,7 @@ Mark the checkbox of the `onbroke` project and hit 'Finish'.
 Once imported, the project is listed in the Project Explorer. You may want to explore the already existing models in folder `oncore/models`. A good start for your tour is the DAD model in `onbroke/models/app.dad`.
 
 To build and deploy the app, hit the 'Purge and Deploy' button in the Deployment View that builds, deploys and runs the app automatically.
+C
+A
+
 As soon as the app has been deployed you can access it by opening http://localhost:8080 in a browser.

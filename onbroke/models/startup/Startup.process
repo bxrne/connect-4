@@ -11,7 +11,7 @@ Process _sA1GYNviEeWsF7MALrkAZQ {
   	}
   }
   
-  EndSIB _sBOvANviEeWsF7MALrkAZQ at 220,300 size 100,65 {
+  EndSIB _sBOvANviEeWsF7MALrkAZQ at 100,220 size 100,65 {
   	branchName "success"
   }
 }
