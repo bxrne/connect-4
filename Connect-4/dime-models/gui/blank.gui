@@ -1,0 +1,21 @@
+GUI _zn-lAWhpEe2Ts87gHbvjRg {
+  fullWidth false
+  disableAutoLayout false
+  additionalJavaScript [  ]
+  additionalStylesheets [  ]
+  title "blank"
+  DataContext _zoAaMWhpEe2Ts87gHbvjRg at 10,10 size 180,130 {
+  	dfViewWorkaround true
+  }
+  
+  Template _zoBBQWhpEe2Ts87gHbvjRg at 240,10 size 130,140 {
+  	blockName ""
+  	disableAutoLayout false
+  	generalStyle GeneralStyling _zoBBQmhpEe2Ts87gHbvjRg {
+  			tallness Fitting
+  			marginBottom None
+  			attributes [  ]
+  			marginTop None
+  		}
+  }
+}
