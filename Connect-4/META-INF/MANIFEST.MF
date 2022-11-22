@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Connect-4
+Bundle-SymbolicName: Connect-4; singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle:  org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-11

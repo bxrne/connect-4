@@ -1,0 +1,83 @@
+<div 
+ class="row">
+<div
+
+class="col-md-12 text-center"
+>
+<h1
+
+> 
+<span aria-live="polite" aria-atomic="true" class="text-center">
+<strong>
+Connect-4
+</strong>
+</span>
+</h1>
+</div>
+</div>
+<div class="row">
+	<div class="col-sm-12">
+<div *ngIf="				board!=null
+" 
+aria-live="polite" aria-atomic="true" 
+
+  class="jumbotron">
+<div 
+ class="row">
+<div
+*ngFor="let thisColumn of initOnDemandboard().initOnDemandcolumns(); let index = index; trackBy: trackSelective"  
+aria-live="polite" aria-atomic="true" 
+
+class="col-md-12 text-left"
+>
+<span 
+ >
+<span aria-live="polite" aria-atomic="true" class="text-left">
+<strong>
+<u>
+{{thisColumn?.index}}
+</u>
+</strong>
+</span>
+</span>
+<div *ngFor="let thisCell of thisColumn.initOnDemandcells(); let index2 = index; trackBy: trackSelective"  
+aria-live="polite" aria-atomic="true" 
+
+ class="row">
+<div
+
+class="col-md-12 text-left"
+>
+<span 
+ >
+<span aria-live="polite" aria-atomic="true" class="text-left">
+{{thisCell?.value}}
+</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+	</div>
+</div>
+<div 
+ class="row">
+<div
+
+class="col-md-12 text-center"
+>
+<!-- beginn button back -->
+<button 
+	data-cinco-id="_wx7LYWacEe24gf5J_KrBHg"
+	tabindex="0" aria-label="back"
+	[disabled]="isBusy()"
+type="button"
+(click)="actionbackeventawx7LYWacEe24gf5J_KrBHgEventTrigger()
+"
+class="btn btn-warning">
+ Back to start
+</button>
+<!-- end button back -->
+</div>
+</div>
