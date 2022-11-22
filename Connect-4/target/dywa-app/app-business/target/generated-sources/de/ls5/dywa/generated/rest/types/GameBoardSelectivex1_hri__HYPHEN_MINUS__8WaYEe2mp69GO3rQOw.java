@@ -4,7 +4,7 @@ package de.ls5.dywa.generated.rest.types;
 public class GameBoardSelectivex1_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOw {
 
 	public static void copy(
-		final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Board from,
+		final de.ls5.dywa.generated.entity.models.app.Board from,
 		final de.ls5.dywa.generated.rest.types.Board to,
 		final info.scce.dime.rest.ObjectCache objectCache) {
 	
@@ -22,14 +22,14 @@ public class GameBoardSelectivex1_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOw {
 		objectCache.putSelective(to, "GameBoardSelectivex1_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOw");
 	
 		{
-			final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Board effectiveFrom = from;
+			final de.ls5.dywa.generated.entity.models.app.Board effectiveFrom = from;
 			final de.ls5.dywa.generated.rest.types.Board effectiveTo = to;
-		final java.util.List<de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column>
+		final java.util.List<de.ls5.dywa.generated.entity.models.app.Column>
 		 source = effectiveFrom.getcolumns_Column();
 		final java.util.List<de.ls5.dywa.generated.rest.types.Column>
 		 target = new java.util.ArrayList<>(source.size());
 		
-		for (final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column
+		for (final de.ls5.dywa.generated.entity.models.app.Column
 		 s : source) {
 			// original selective: GameColumnSelectivex1x1x1_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOw
 			de.ls5.dywa.generated.rest.types.Column cached = objectCache.getRestTo(s);

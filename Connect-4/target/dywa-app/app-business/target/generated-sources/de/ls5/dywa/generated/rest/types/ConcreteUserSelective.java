@@ -4,7 +4,7 @@ package de.ls5.dywa.generated.rest.types;
 public class ConcreteUserSelective {
 
 	public static void copy(
-		final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.ConcreteUser from,
+		final de.ls5.dywa.generated.entity.models.app.ConcreteUser from,
 		final de.ls5.dywa.generated.rest.types.ConcreteUser to,
 		final info.scce.dime.rest.ObjectCache objectCache) {
 
@@ -27,9 +27,9 @@ public class ConcreteUserSelective {
 		to.setDywaName(from.getDywaName());
 
 		{
-			final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.ConcreteUser effectiveFrom = from;
+			final de.ls5.dywa.generated.entity.models.app.ConcreteUser effectiveFrom = from;
 			final de.ls5.dywa.generated.rest.types.ConcreteUser effectiveTo = to;
-		final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.BaseUser
+		final de.ls5.dywa.generated.entity.models.app.BaseUser
 		 source = effectiveFrom.getbaseUser();
 		if (source != null) {
 			// original selective: BaseUserSelective
@@ -47,9 +47,9 @@ public class ConcreteUserSelective {
 		}
 		}
 		{
-			final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.ConcreteUser effectiveFrom = from;
+			final de.ls5.dywa.generated.entity.models.app.ConcreteUser effectiveFrom = from;
 			final de.ls5.dywa.generated.rest.types.ConcreteUser effectiveTo = to;
-		final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.ConcreteUser
+		final de.ls5.dywa.generated.entity.models.app.ConcreteUser
 		 source = effectiveFrom.getdywaSwitchedTo();
 		if (source != null) {
 			// original selective: ConcreteUserSelective

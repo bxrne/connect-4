@@ -4,7 +4,7 @@ package de.ls5.dywa.generated.rest.types;
 public class CellSelective {
 
 	public static void copy(
-		final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell from,
+		final de.ls5.dywa.generated.entity.models.app.Cell from,
 		final de.ls5.dywa.generated.rest.types.Cell to,
 		final info.scce.dime.rest.ObjectCache objectCache) {
 
@@ -27,7 +27,7 @@ public class CellSelective {
 		to.setDywaName(from.getDywaName());
 
 		{
-			final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell effectiveFrom = from;
+			final de.ls5.dywa.generated.entity.models.app.Cell effectiveFrom = from;
 			final de.ls5.dywa.generated.rest.types.Cell effectiveTo = to;
 		effectiveTo.setvalue(effectiveFrom.getvalue());
 		}

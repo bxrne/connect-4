@@ -10,7 +10,7 @@ public class Home_LWgagF__HYPHEN_MINUS__SEeakMeYoloYxpgController {
 	@javax.inject.Inject
 	private info.scce.dime.rest.ObjectCache objectCache;
 	@javax.inject.Inject
-	private info.scce.dime.process.dime__HYPHEN_MINUS__models.interaction.Home_LWgagF__HYPHEN_MINUS__SEeakMeYoloYxpg process;
+	private info.scce.dime.process.models.interaction.Home_LWgagF__HYPHEN_MINUS__SEeakMeYoloYxpg process;
 	
 	// controller for fetching dywa entities
 	@javax.inject.Inject

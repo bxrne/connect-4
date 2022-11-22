@@ -4,7 +4,7 @@ package de.ls5.dywa.generated.rest.types;
 public class GameColumnSelectivex1x1x1_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOw {
 
 	public static void copy(
-		final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column from,
+		final de.ls5.dywa.generated.entity.models.app.Column from,
 		final de.ls5.dywa.generated.rest.types.Column to,
 		final info.scce.dime.rest.ObjectCache objectCache) {
 	
@@ -22,14 +22,14 @@ public class GameColumnSelectivex1x1x1_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOw {
 		objectCache.putSelective(to, "GameColumnSelectivex1x1x1_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOw");
 	
 		{
-			final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column effectiveFrom = from;
+			final de.ls5.dywa.generated.entity.models.app.Column effectiveFrom = from;
 			final de.ls5.dywa.generated.rest.types.Column effectiveTo = to;
-		final java.util.List<de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell>
+		final java.util.List<de.ls5.dywa.generated.entity.models.app.Cell>
 		 source = effectiveFrom.getcells_Cell();
 		final java.util.List<de.ls5.dywa.generated.rest.types.Cell>
 		 target = new java.util.ArrayList<>(source.size());
 		
-		for (final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell
+		for (final de.ls5.dywa.generated.entity.models.app.Cell
 		 s : source) {
 			// original selective: GameCellSelectivex1x1x1x2x2_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOw
 			de.ls5.dywa.generated.rest.types.Cell cached = objectCache.getRestTo(s);
@@ -48,7 +48,7 @@ public class GameColumnSelectivex1x1x1_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOw {
 		effectiveTo.setcells_Cell(target);
 		}
 		{
-			final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column effectiveFrom = from;
+			final de.ls5.dywa.generated.entity.models.app.Column effectiveFrom = from;
 			final de.ls5.dywa.generated.rest.types.Column effectiveTo = to;
 		effectiveTo.setindex(effectiveFrom.getindex());
 		}

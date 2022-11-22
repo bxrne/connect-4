@@ -14,17 +14,17 @@ public class CellREST {
 	@javax.inject.Inject
 	private de.ls5.dywa.generated.rest.controller.CellREST CellREST;
 	@javax.inject.Inject
-	private de.ls5.dywa.generated.controller.dime__HYPHEN_MINUS__models.app.CellController CellController;
+	private de.ls5.dywa.generated.controller.models.app.CellController CellController;
 
 	public long create(final java.lang.String name) {
-		final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell obj = this.CellController.create(name);
+		final de.ls5.dywa.generated.entity.models.app.Cell obj = this.CellController.create(name);
 		return obj.getDywaId();
 	}
 
 	
 	public de.ls5.dywa.generated.rest.types.Cell read_GameCellSelectivex1x1x1x2x2_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOw(final long id) {
 		
-		final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell obj = this.CellController.read(id);
+		final de.ls5.dywa.generated.entity.models.app.Cell obj = this.CellController.read(id);
 		
 		if (obj == null) {
 			return null;
@@ -62,12 +62,12 @@ public class CellREST {
 
 		public java.util.Set<de.ls5.dywa.generated.rest.types.Cell> readAll_GameCellSelectivex1x1x1x2x2_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOw() {
 			
-			final java.util.Set<de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell> objs =
+			final java.util.Set<de.ls5.dywa.generated.entity.models.app.Cell> objs =
 			this.CellController.fetch();
 	
 			final java.util.Set<de.ls5.dywa.generated.rest.types.Cell> result = new java.util.HashSet<>();
 
-			for (final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell s : objs) {
+			for (final de.ls5.dywa.generated.entity.models.app.Cell s : objs) {
 				de.ls5.dywa.generated.rest.types.Cell cached = objectCache.getRestTo(s);
 				
 				if (cached == null) {
@@ -87,12 +87,12 @@ public class CellREST {
 
 	public void update_GameCellSelectivex1x1x1x2x2_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOw(final de.ls5.dywa.generated.rest.types.Cell value) {
 
-		final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell obj = this.CellController.read(value.getDywaId());
+		final de.ls5.dywa.generated.entity.models.app.Cell obj = this.CellController.read(value.getDywaId());
 		
 		this.update_GameCellSelectivex1x1x1x2x2_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOw(value, obj);
 	}
 
-	public void update_GameCellSelectivex1x1x1x2x2_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOw(final de.ls5.dywa.generated.rest.types.Cell value, final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell obj) {
+	public void update_GameCellSelectivex1x1x1x2x2_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOw(final de.ls5.dywa.generated.rest.types.Cell value, final de.ls5.dywa.generated.entity.models.app.Cell obj) {
 
 		// for updates, consider a special selective so we don't clash with read-operations
 		if (this.objectCache.containsSelective(obj, "GameCellSelectivex1x1x1x2x2_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOw")) {
@@ -110,7 +110,7 @@ public class CellREST {
 
 		{
 			final de.ls5.dywa.generated.rest.types.Cell effectiveValue = value;
-			final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell effectiveObj = obj;
+			final de.ls5.dywa.generated.entity.models.app.Cell effectiveObj = obj;
 
 		// If values were not specified, ignore them
 		if (effectiveValue.isvalueSet()) {
@@ -121,12 +121,12 @@ public class CellREST {
 	}
 	public void update_CellSelective(final de.ls5.dywa.generated.rest.types.Cell value) {
 
-		final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell obj = this.CellController.read(value.getDywaId());
+		final de.ls5.dywa.generated.entity.models.app.Cell obj = this.CellController.read(value.getDywaId());
 		
 		this.update_CellSelective(value, obj);
 	}
 
-	public void update_CellSelective(final de.ls5.dywa.generated.rest.types.Cell value, final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell obj) {
+	public void update_CellSelective(final de.ls5.dywa.generated.rest.types.Cell value, final de.ls5.dywa.generated.entity.models.app.Cell obj) {
 
 		// for updates, consider a special selective so we don't clash with read-operations
 		if (this.objectCache.containsSelective(obj, "CellSelective")) {
@@ -144,7 +144,7 @@ public class CellREST {
 
 		{
 			final de.ls5.dywa.generated.rest.types.Cell effectiveValue = value;
-			final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell effectiveObj = obj;
+			final de.ls5.dywa.generated.entity.models.app.Cell effectiveObj = obj;
 
 		// If values were not specified, ignore them
 		if (effectiveValue.isvalueSet()) {
@@ -154,9 +154,9 @@ public class CellREST {
 	}
 	}
 
-	public de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell copyToTransient(final de.ls5.dywa.generated.rest.types.Cell value) {
+	public de.ls5.dywa.generated.entity.models.app.Cell copyToTransient(final de.ls5.dywa.generated.rest.types.Cell value) {
 
-		final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell obj;
+		final de.ls5.dywa.generated.entity.models.app.Cell obj;
 
 		if (this.objectCache.containsTransient(value)) {
 			return this.objectCache.getTransient(value);
@@ -178,7 +178,7 @@ public class CellREST {
 
 			{
 				final de.ls5.dywa.generated.rest.types.Cell effectiveValue = value;
-				final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell effectiveObj = obj;
+				final de.ls5.dywa.generated.entity.models.app.Cell effectiveObj = obj;
 
 			// If values were not specified, ignore them
 			if (effectiveValue.isvalueSet()) {
@@ -191,11 +191,11 @@ public class CellREST {
 	}
 
 	public void delete(final long id) {
-		final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell obj = this.CellController.read(id);
+		final de.ls5.dywa.generated.entity.models.app.Cell obj = this.CellController.read(id);
 		this.CellController.delete(obj);
 	}
 
-	private void checkVersion(final de.ls5.dywa.generated.rest.types.Cell value, final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell obj) {
+	private void checkVersion(final de.ls5.dywa.generated.rest.types.Cell value, final de.ls5.dywa.generated.entity.models.app.Cell obj) {
 		if (value.isDywaVersionSet() && value.getDywaVersion() != obj.getDywaVersion()) {
 			throw new javax.persistence.OptimisticLockException(obj.getDywaName() + '[' + obj.getDywaId() + "] has been updated by other transaction");
 		}

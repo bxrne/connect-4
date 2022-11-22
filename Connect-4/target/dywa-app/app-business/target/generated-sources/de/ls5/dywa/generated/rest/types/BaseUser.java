@@ -151,11 +151,11 @@ public class BaseUser extends info.scce.dime.rest.RESTBaseImpl implements info.s
 	}
 
 	
-	public static BaseUser fromDywaEntity(final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.BaseUser entity, info.scce.dime.rest.ObjectCache objectCache) {
+	public static BaseUser fromDywaEntity(final de.ls5.dywa.generated.entity.models.app.BaseUser entity, info.scce.dime.rest.ObjectCache objectCache) {
 	
 		final BaseUser result;
 	
-		if (entity instanceof de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.BaseUser) {
+		if (entity instanceof de.ls5.dywa.generated.entity.models.app.BaseUser) {
 			result = new de.ls5.dywa.generated.rest.types.BaseUser();
 		}
 	 else { throw new java.lang.IllegalArgumentException("Unknown type"); } 

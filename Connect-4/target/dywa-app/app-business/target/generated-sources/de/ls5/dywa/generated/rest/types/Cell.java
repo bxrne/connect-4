@@ -12,11 +12,11 @@ public interface Cell extends info.scce.dime.rest.RESTBaseType  {
 	void setvalue(final java.lang.Long
 	 value);
 
-	public static Cell fromDywaEntity(final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell entity, info.scce.dime.rest.ObjectCache objectCache) {
+	public static Cell fromDywaEntity(final de.ls5.dywa.generated.entity.models.app.Cell entity, info.scce.dime.rest.ObjectCache objectCache) {
 	
 		final Cell result;
 	
-		if (entity instanceof de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell) {
+		if (entity instanceof de.ls5.dywa.generated.entity.models.app.Cell) {
 			result = new de.ls5.dywa.generated.rest.types.CellImpl();
 		}
 	 else { throw new java.lang.IllegalArgumentException("Unknown type"); } 

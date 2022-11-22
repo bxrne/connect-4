@@ -6,16 +6,16 @@ package de.ls5.dywa.generated.rest.user;
 public class CurrentUserController {
 	
 	@javax.inject.Inject
-	private de.ls5.dywa.generated.controller.dime__HYPHEN_MINUS__models.app.BaseUserController subjectController;
+	private de.ls5.dywa.generated.controller.models.app.BaseUserController subjectController;
 
 	@javax.inject.Inject
 	private info.scce.dime.rest.ObjectCache objectCache;
 	
 	
 	public <T> T getCurrentUser(final Class<T> userType) {
-		final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.BaseUser subject = subjectController.read((Long)org.apache.shiro.SecurityUtils.getSubject().getPrincipal());
+		final de.ls5.dywa.generated.entity.models.app.BaseUser subject = subjectController.read((Long)org.apache.shiro.SecurityUtils.getSubject().getPrincipal());
 
-		for (final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.ConcreteUser concreteUser: subject.getconcreteUser_ConcreteUser()) {
+		for (final de.ls5.dywa.generated.entity.models.app.ConcreteUser concreteUser: subject.getconcreteUser_ConcreteUser()) {
 			if (userType.isAssignableFrom(concreteUser.getClass())) {
 				return (T)concreteUser;
 			}

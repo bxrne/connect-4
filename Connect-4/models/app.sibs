@@ -1,0 +1,20 @@
+package app.demo
+
+import "models/app.data" as data
+
+sib InitialiseBoard : info.scce.dime.app.demo.Game#initialise
+  -> success
+
+sib GetCol : info.scce.dime.app.demo.Game#getCol
+index : integer
+->success
+column : [integer]
+
+sib GetBoardWidth : info.scce.dime.app.demo.Game#getBoardWidth
+->success
+width : [integer]
+
+sib AddCell : info.scce.dime.app.demo.Game#addCell
+cell : data.Cell
+column : data.Column
+->success
