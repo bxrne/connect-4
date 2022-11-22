@@ -39,7 +39,7 @@ public class Home_LWgagF__HYPHEN_MINUS__SEeakMeYoloYxpgOutput{
 		this.result = result;
 	}
 	public Home_LWgagF__HYPHEN_MINUS__SEeakMeYoloYxpgOutput(){}
-	public Home_LWgagF__HYPHEN_MINUS__SEeakMeYoloYxpgOutput(info.scce.dime.process.dime__HYPHEN_MINUS__models.interaction.Home_LWgagF__HYPHEN_MINUS__SEeakMeYoloYxpg.Home_LWgagF__HYPHEN_MINUS__SEeakMeYoloYxpgResult result, info.scce.dime.rest.ObjectCache objectCache){
+	public Home_LWgagF__HYPHEN_MINUS__SEeakMeYoloYxpgOutput(info.scce.dime.process.models.interaction.Home_LWgagF__HYPHEN_MINUS__SEeakMeYoloYxpg.Home_LWgagF__HYPHEN_MINUS__SEeakMeYoloYxpgResult result, info.scce.dime.rest.ObjectCache objectCache){
 		this.branchName = result.getBranchName();
 		this.branchId = result.getBranchId();
 		this.result = new Home_LWgagF__HYPHEN_MINUS__SEeakMeYoloYxpgOutputWrapper(result, objectCache);
@@ -58,7 +58,7 @@ public static class Home_LWgagF__HYPHEN_MINUS__SEeakMeYoloYxpgOutputWrapper {
 		this.branchName = branchname;
 	}
 	public Home_LWgagF__HYPHEN_MINUS__SEeakMeYoloYxpgOutputWrapper(){}
-	public Home_LWgagF__HYPHEN_MINUS__SEeakMeYoloYxpgOutputWrapper(info.scce.dime.process.dime__HYPHEN_MINUS__models.interaction.Home_LWgagF__HYPHEN_MINUS__SEeakMeYoloYxpg.Home_LWgagF__HYPHEN_MINUS__SEeakMeYoloYxpgResult result, info.scce.dime.rest.ObjectCache objectCache){
+	public Home_LWgagF__HYPHEN_MINUS__SEeakMeYoloYxpgOutputWrapper(info.scce.dime.process.models.interaction.Home_LWgagF__HYPHEN_MINUS__SEeakMeYoloYxpg.Home_LWgagF__HYPHEN_MINUS__SEeakMeYoloYxpgResult result, info.scce.dime.rest.ObjectCache objectCache){
 		this.branchName = result.getBranchName();
 	}
 }

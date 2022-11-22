@@ -4,7 +4,7 @@ package de.ls5.dywa.generated.rest.types;
 public class BaseUserSelective {
 
 	public static void copy(
-		final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.BaseUser from,
+		final de.ls5.dywa.generated.entity.models.app.BaseUser from,
 		final de.ls5.dywa.generated.rest.types.BaseUser to,
 		final info.scce.dime.rest.ObjectCache objectCache) {
 
@@ -27,14 +27,14 @@ public class BaseUserSelective {
 		to.setDywaName(from.getDywaName());
 
 		{
-			final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.BaseUser effectiveFrom = from;
+			final de.ls5.dywa.generated.entity.models.app.BaseUser effectiveFrom = from;
 			final de.ls5.dywa.generated.rest.types.BaseUser effectiveTo = to;
-		final java.util.List<de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.ConcreteUser>
+		final java.util.List<de.ls5.dywa.generated.entity.models.app.ConcreteUser>
 		 source = effectiveFrom.getconcreteUser_ConcreteUser();
 		final java.util.List<de.ls5.dywa.generated.rest.types.ConcreteUser>
 		 target = new java.util.ArrayList<>(source.size());
 		
-		for (final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.ConcreteUser
+		for (final de.ls5.dywa.generated.entity.models.app.ConcreteUser
 		 s : source) {
 			// original selective: ConcreteUserSelective
 			de.ls5.dywa.generated.rest.types.ConcreteUser cached = objectCache.getRestTo(s);
@@ -53,12 +53,12 @@ public class BaseUserSelective {
 		effectiveTo.setconcreteUser_ConcreteUser(target);
 		}
 		{
-			final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.BaseUser effectiveFrom = from;
+			final de.ls5.dywa.generated.entity.models.app.BaseUser effectiveFrom = from;
 			final de.ls5.dywa.generated.rest.types.BaseUser effectiveTo = to;
 		effectiveTo.setpassword(effectiveFrom.getpassword());
 		}
 		{
-			final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.BaseUser effectiveFrom = from;
+			final de.ls5.dywa.generated.entity.models.app.BaseUser effectiveFrom = from;
 			final de.ls5.dywa.generated.rest.types.BaseUser effectiveTo = to;
 		if (effectiveFrom.getimage() != null) {
 			to.setimage(
@@ -68,17 +68,17 @@ public class BaseUserSelective {
 		
 		}
 		{
-			final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.BaseUser effectiveFrom = from;
+			final de.ls5.dywa.generated.entity.models.app.BaseUser effectiveFrom = from;
 			final de.ls5.dywa.generated.rest.types.BaseUser effectiveTo = to;
 		effectiveTo.setfirstName(effectiveFrom.getfirstName());
 		}
 		{
-			final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.BaseUser effectiveFrom = from;
+			final de.ls5.dywa.generated.entity.models.app.BaseUser effectiveFrom = from;
 			final de.ls5.dywa.generated.rest.types.BaseUser effectiveTo = to;
 		effectiveTo.setlastName(effectiveFrom.getlastName());
 		}
 		{
-			final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.BaseUser effectiveFrom = from;
+			final de.ls5.dywa.generated.entity.models.app.BaseUser effectiveFrom = from;
 			final de.ls5.dywa.generated.rest.types.BaseUser effectiveTo = to;
 		effectiveTo.setusername(effectiveFrom.getusername());
 		}

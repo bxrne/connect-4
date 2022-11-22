@@ -16,11 +16,11 @@ public interface Board extends info.scce.dime.rest.RESTBaseType  {
 	>
 	 columns);
 
-	public static Board fromDywaEntity(final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Board entity, info.scce.dime.rest.ObjectCache objectCache) {
+	public static Board fromDywaEntity(final de.ls5.dywa.generated.entity.models.app.Board entity, info.scce.dime.rest.ObjectCache objectCache) {
 	
 		final Board result;
 	
-		if (entity instanceof de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Board) {
+		if (entity instanceof de.ls5.dywa.generated.entity.models.app.Board) {
 			result = new de.ls5.dywa.generated.rest.types.BoardImpl();
 		}
 	 else { throw new java.lang.IllegalArgumentException("Unknown type"); } 

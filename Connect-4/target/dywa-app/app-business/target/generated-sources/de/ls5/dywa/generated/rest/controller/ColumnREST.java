@@ -14,21 +14,21 @@ public class ColumnREST {
 	@javax.inject.Inject
 	private de.ls5.dywa.generated.rest.controller.ColumnREST ColumnREST;
 	@javax.inject.Inject
-	private de.ls5.dywa.generated.controller.dime__HYPHEN_MINUS__models.app.ColumnController ColumnController;
+	private de.ls5.dywa.generated.controller.models.app.ColumnController ColumnController;
 	@javax.inject.Inject
 	private de.ls5.dywa.generated.rest.controller.CellREST CellREST;
 	@javax.inject.Inject
-	private de.ls5.dywa.generated.controller.dime__HYPHEN_MINUS__models.app.CellController CellController;
+	private de.ls5.dywa.generated.controller.models.app.CellController CellController;
 
 	public long create(final java.lang.String name) {
-		final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column obj = this.ColumnController.create(name);
+		final de.ls5.dywa.generated.entity.models.app.Column obj = this.ColumnController.create(name);
 		return obj.getDywaId();
 	}
 
 	
 	public de.ls5.dywa.generated.rest.types.Column read_GameColumnSelectivex1x1x1_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOw(final long id) {
 		
-		final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column obj = this.ColumnController.read(id);
+		final de.ls5.dywa.generated.entity.models.app.Column obj = this.ColumnController.read(id);
 		
 		if (obj == null) {
 			return null;
@@ -96,12 +96,12 @@ public class ColumnREST {
 
 		public java.util.Set<de.ls5.dywa.generated.rest.types.Column> readAll_GameColumnSelectivex1x1x1_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOw() {
 			
-			final java.util.Set<de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column> objs =
+			final java.util.Set<de.ls5.dywa.generated.entity.models.app.Column> objs =
 			this.ColumnController.fetch();
 	
 			final java.util.Set<de.ls5.dywa.generated.rest.types.Column> result = new java.util.HashSet<>();
 
-			for (final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column s : objs) {
+			for (final de.ls5.dywa.generated.entity.models.app.Column s : objs) {
 				de.ls5.dywa.generated.rest.types.Column cached = objectCache.getRestTo(s);
 				
 				if (cached == null) {
@@ -121,12 +121,12 @@ public class ColumnREST {
 
 	public void update_GameColumnSelectivex1x1x1_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOw(final de.ls5.dywa.generated.rest.types.Column value) {
 
-		final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column obj = this.ColumnController.read(value.getDywaId());
+		final de.ls5.dywa.generated.entity.models.app.Column obj = this.ColumnController.read(value.getDywaId());
 		
 		this.update_GameColumnSelectivex1x1x1_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOw(value, obj);
 	}
 
-	public void update_GameColumnSelectivex1x1x1_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOw(final de.ls5.dywa.generated.rest.types.Column value, final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column obj) {
+	public void update_GameColumnSelectivex1x1x1_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOw(final de.ls5.dywa.generated.rest.types.Column value, final de.ls5.dywa.generated.entity.models.app.Column obj) {
 
 		// for updates, consider a special selective so we don't clash with read-operations
 		if (this.objectCache.containsSelective(obj, "GameColumnSelectivex1x1x1_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOw")) {
@@ -144,12 +144,12 @@ public class ColumnREST {
 
 		{
 			final de.ls5.dywa.generated.rest.types.Column effectiveValue = value;
-			final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column effectiveObj = obj;
+			final de.ls5.dywa.generated.entity.models.app.Column effectiveObj = obj;
 
 		// If values were not specified, ignore them
 		if (effectiveValue.iscells_CellSet()) {
 			checkVersion(value, obj);
-			final java.util.List<de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell>
+			final java.util.List<de.ls5.dywa.generated.entity.models.app.Cell>
 			 source = effectiveObj.getcells_Cell();
 			final java.util.List<de.ls5.dywa.generated.rest.types.Cell>
 			 actual = java.util.Optional.ofNullable(effectiveValue.getcells_Cell()).orElseGet(java.util.Collections::emptyList);
@@ -158,7 +158,7 @@ public class ColumnREST {
 			
 			for (final de.ls5.dywa.generated.rest.types.Cell item : actual) {
 				
-				final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell entity;
+				final de.ls5.dywa.generated.entity.models.app.Cell entity;
 
 				// create new
 				if (item.getDywaId() == info.scce.dime.util.Constants.DYWA_ID_CREATE_NEW) {
@@ -203,7 +203,7 @@ public class ColumnREST {
 	}
 		{
 			final de.ls5.dywa.generated.rest.types.Column effectiveValue = value;
-			final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column effectiveObj = obj;
+			final de.ls5.dywa.generated.entity.models.app.Column effectiveObj = obj;
 
 		// If values were not specified, ignore them
 		if (effectiveValue.isindexSet()) {
@@ -214,12 +214,12 @@ public class ColumnREST {
 	}
 	public void update_ColumnSelective(final de.ls5.dywa.generated.rest.types.Column value) {
 
-		final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column obj = this.ColumnController.read(value.getDywaId());
+		final de.ls5.dywa.generated.entity.models.app.Column obj = this.ColumnController.read(value.getDywaId());
 		
 		this.update_ColumnSelective(value, obj);
 	}
 
-	public void update_ColumnSelective(final de.ls5.dywa.generated.rest.types.Column value, final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column obj) {
+	public void update_ColumnSelective(final de.ls5.dywa.generated.rest.types.Column value, final de.ls5.dywa.generated.entity.models.app.Column obj) {
 
 		// for updates, consider a special selective so we don't clash with read-operations
 		if (this.objectCache.containsSelective(obj, "ColumnSelective")) {
@@ -237,12 +237,12 @@ public class ColumnREST {
 
 		{
 			final de.ls5.dywa.generated.rest.types.Column effectiveValue = value;
-			final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column effectiveObj = obj;
+			final de.ls5.dywa.generated.entity.models.app.Column effectiveObj = obj;
 
 		// If values were not specified, ignore them
 		if (effectiveValue.iscells_CellSet()) {
 			checkVersion(value, obj);
-			final java.util.List<de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell>
+			final java.util.List<de.ls5.dywa.generated.entity.models.app.Cell>
 			 source = effectiveObj.getcells_Cell();
 			final java.util.List<de.ls5.dywa.generated.rest.types.Cell>
 			 actual = java.util.Optional.ofNullable(effectiveValue.getcells_Cell()).orElseGet(java.util.Collections::emptyList);
@@ -251,7 +251,7 @@ public class ColumnREST {
 			
 			for (final de.ls5.dywa.generated.rest.types.Cell item : actual) {
 				
-				final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell entity;
+				final de.ls5.dywa.generated.entity.models.app.Cell entity;
 
 				// create new
 				if (item.getDywaId() == info.scce.dime.util.Constants.DYWA_ID_CREATE_NEW) {
@@ -296,7 +296,7 @@ public class ColumnREST {
 	}
 		{
 			final de.ls5.dywa.generated.rest.types.Column effectiveValue = value;
-			final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column effectiveObj = obj;
+			final de.ls5.dywa.generated.entity.models.app.Column effectiveObj = obj;
 
 		// If values were not specified, ignore them
 		if (effectiveValue.isindexSet()) {
@@ -306,9 +306,9 @@ public class ColumnREST {
 	}
 	}
 
-	public de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column copyToTransient(final de.ls5.dywa.generated.rest.types.Column value) {
+	public de.ls5.dywa.generated.entity.models.app.Column copyToTransient(final de.ls5.dywa.generated.rest.types.Column value) {
 
-		final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column obj;
+		final de.ls5.dywa.generated.entity.models.app.Column obj;
 
 		if (this.objectCache.containsTransient(value)) {
 			return this.objectCache.getTransient(value);
@@ -330,20 +330,20 @@ public class ColumnREST {
 
 			{
 				final de.ls5.dywa.generated.rest.types.Column effectiveValue = value;
-				final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column effectiveObj = obj;
+				final de.ls5.dywa.generated.entity.models.app.Column effectiveObj = obj;
 
 			// If values were not specified, ignore them
 			if (effectiveValue.iscells_CellSet()) {
 				checkVersion(value, obj);
 
-				final java.util.List<de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell>
+				final java.util.List<de.ls5.dywa.generated.entity.models.app.Cell>
 				 source = effectiveObj.getcells_Cell();
 				final java.util.List<de.ls5.dywa.generated.rest.types.Cell>
 				 actual = java.util.Optional.ofNullable(effectiveValue.getcells_Cell()).orElseGet(java.util.Collections::emptyList);
 
 				for (final de.ls5.dywa.generated.rest.types.Cell item : actual) {
 
-					final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell entity;
+					final de.ls5.dywa.generated.entity.models.app.Cell entity;
 
 					// create new
 					if (item.getDywaId() == info.scce.dime.util.Constants.DYWA_ID_CREATE_NEW) {
@@ -388,7 +388,7 @@ public class ColumnREST {
 		}
 			{
 				final de.ls5.dywa.generated.rest.types.Column effectiveValue = value;
-				final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column effectiveObj = obj;
+				final de.ls5.dywa.generated.entity.models.app.Column effectiveObj = obj;
 
 			// If values were not specified, ignore them
 			if (effectiveValue.isindexSet()) {
@@ -401,11 +401,11 @@ public class ColumnREST {
 	}
 
 	public void delete(final long id) {
-		final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column obj = this.ColumnController.read(id);
+		final de.ls5.dywa.generated.entity.models.app.Column obj = this.ColumnController.read(id);
 		this.ColumnController.delete(obj);
 	}
 
-	private void checkVersion(final de.ls5.dywa.generated.rest.types.Column value, final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column obj) {
+	private void checkVersion(final de.ls5.dywa.generated.rest.types.Column value, final de.ls5.dywa.generated.entity.models.app.Column obj) {
 		if (value.isDywaVersionSet() && value.getDywaVersion() != obj.getDywaVersion()) {
 			throw new javax.persistence.OptimisticLockException(obj.getDywaName() + '[' + obj.getDywaId() + "] has been updated by other transaction");
 		}

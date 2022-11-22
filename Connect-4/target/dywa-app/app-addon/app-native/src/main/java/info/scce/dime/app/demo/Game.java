@@ -2,6 +2,13 @@ package info.scce.dime.app.demo;
 
 import java.util.*;
 
+
+//import de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Assignment;
+//import de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.*;
+import de.ls5.dywa.generated.entity.models.app.*;
+
+import de.ls5.dywa.generated.controller.models.app.*;
+
 public class Game {
 	//board[col][row]
 	private static Long[][] board;
@@ -39,6 +46,7 @@ public class Game {
 		return result;
 		
 	}
+	
 
 	//col is 0-6, player is 1-2
 	//false if no win, true if win
@@ -107,5 +115,9 @@ public class Game {
 		return false;
 
 	}
-
+	
+	public static void addCell(Cell cell, Column column) {
+		column.getcells_Cell().add(cell);
+	}
+	
 }

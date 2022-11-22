@@ -18,11 +18,11 @@ public interface ConcreteUser extends info.scce.dime.rest.RESTBaseType  {
 	void setdywaSwitchedTo(final ConcreteUser
 	 dywaSwitchedTo);
 
-	public static ConcreteUser fromDywaEntity(final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.ConcreteUser entity, info.scce.dime.rest.ObjectCache objectCache) {
+	public static ConcreteUser fromDywaEntity(final de.ls5.dywa.generated.entity.models.app.ConcreteUser entity, info.scce.dime.rest.ObjectCache objectCache) {
 	
 		final ConcreteUser result;
 	
-		if (entity instanceof de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.ConcreteUser) {
+		if (entity instanceof de.ls5.dywa.generated.entity.models.app.ConcreteUser) {
 			result = new de.ls5.dywa.generated.rest.types.ConcreteUserImpl();
 		}
 	 else { throw new java.lang.IllegalArgumentException("Unknown type"); } 

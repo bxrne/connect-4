@@ -13,17 +13,17 @@ public class AALControllerImpl implements AALController {
 	private EntityManager entityManager;
 
 	@Inject
-	private de.ls5.dywa.generated.controller.dime__HYPHEN_MINUS__models.app.ConcreteUserController ConcreteUserController;
+	private de.ls5.dywa.generated.controller.models.app.ConcreteUserController ConcreteUserController;
 	@Inject
-	private de.ls5.dywa.generated.controller.dime__HYPHEN_MINUS__models.app.BaseUserController BaseUserController;
+	private de.ls5.dywa.generated.controller.models.app.BaseUserController BaseUserController;
 	@Inject
-	private de.ls5.dywa.generated.controller.dime__HYPHEN_MINUS__models.app.BoardController BoardController;
+	private de.ls5.dywa.generated.controller.models.app.BoardController BoardController;
 	@Inject
-	private de.ls5.dywa.generated.controller.dime__HYPHEN_MINUS__models.app.ColumnController ColumnController;
+	private de.ls5.dywa.generated.controller.models.app.ColumnController ColumnController;
 	@Inject
-	private de.ls5.dywa.generated.controller.dime__HYPHEN_MINUS__models.app.CellController CellController;
+	private de.ls5.dywa.generated.controller.models.app.CellController CellController;
 	@Inject
-	private de.ls5.dywa.generated.controller.dime__HYPHEN_MINUS__models.app.TempColumnController TempColumnController;
+	private de.ls5.dywa.generated.controller.models.app.TempColumnController TempColumnController;
 
 	@Override
 	public void reset() {
@@ -32,22 +32,22 @@ public class AALControllerImpl implements AALController {
 	this.entityManager.flush();
 	this.entityManager.setFlushMode(FlushModeType.COMMIT);
 
-	for (final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.ConcreteUser o : ConcreteUserController.fetch()) {
+	for (final de.ls5.dywa.generated.entity.models.app.ConcreteUser o : ConcreteUserController.fetch()) {
 	ConcreteUserController.deleteWithIncomingReferences(o);
 	}
-	for (final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.BaseUser o : BaseUserController.fetch()) {
+	for (final de.ls5.dywa.generated.entity.models.app.BaseUser o : BaseUserController.fetch()) {
 	BaseUserController.deleteWithIncomingReferences(o);
 	}
-	for (final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Board o : BoardController.fetch()) {
+	for (final de.ls5.dywa.generated.entity.models.app.Board o : BoardController.fetch()) {
 	BoardController.deleteWithIncomingReferences(o);
 	}
-	for (final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column o : ColumnController.fetch()) {
+	for (final de.ls5.dywa.generated.entity.models.app.Column o : ColumnController.fetch()) {
 	ColumnController.deleteWithIncomingReferences(o);
 	}
-	for (final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell o : CellController.fetch()) {
+	for (final de.ls5.dywa.generated.entity.models.app.Cell o : CellController.fetch()) {
 	CellController.deleteWithIncomingReferences(o);
 	}
-	for (final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.TempColumn o : TempColumnController.fetch()) {
+	for (final de.ls5.dywa.generated.entity.models.app.TempColumn o : TempColumnController.fetch()) {
 	TempColumnController.deleteWithIncomingReferences(o);
 	}
 

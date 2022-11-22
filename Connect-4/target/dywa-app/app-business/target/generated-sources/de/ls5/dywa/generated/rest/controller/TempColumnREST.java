@@ -14,14 +14,14 @@ public class TempColumnREST {
 	@javax.inject.Inject
 	private de.ls5.dywa.generated.rest.controller.TempColumnREST TempColumnREST;
 	@javax.inject.Inject
-	private de.ls5.dywa.generated.controller.dime__HYPHEN_MINUS__models.app.TempColumnController TempColumnController;
+	private de.ls5.dywa.generated.controller.models.app.TempColumnController TempColumnController;
 	@javax.inject.Inject
 	private de.ls5.dywa.generated.rest.controller.CellREST CellREST;
 	@javax.inject.Inject
-	private de.ls5.dywa.generated.controller.dime__HYPHEN_MINUS__models.app.CellController CellController;
+	private de.ls5.dywa.generated.controller.models.app.CellController CellController;
 
 	public long create(final java.lang.String name) {
-		final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.TempColumn obj = this.TempColumnController.create(name);
+		final de.ls5.dywa.generated.entity.models.app.TempColumn obj = this.TempColumnController.create(name);
 		return obj.getDywaId();
 	}
 
@@ -31,12 +31,12 @@ public class TempColumnREST {
 
 	public void update_TempColumnSelective(final de.ls5.dywa.generated.rest.types.TempColumn value) {
 
-		final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.TempColumn obj = this.TempColumnController.read(value.getDywaId());
+		final de.ls5.dywa.generated.entity.models.app.TempColumn obj = this.TempColumnController.read(value.getDywaId());
 		
 		this.update_TempColumnSelective(value, obj);
 	}
 
-	public void update_TempColumnSelective(final de.ls5.dywa.generated.rest.types.TempColumn value, final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.TempColumn obj) {
+	public void update_TempColumnSelective(final de.ls5.dywa.generated.rest.types.TempColumn value, final de.ls5.dywa.generated.entity.models.app.TempColumn obj) {
 
 		// for updates, consider a special selective so we don't clash with read-operations
 		if (this.objectCache.containsSelective(obj, "TempColumnSelective")) {
@@ -54,12 +54,12 @@ public class TempColumnREST {
 
 		{
 			final de.ls5.dywa.generated.rest.types.TempColumn effectiveValue = value;
-			final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.TempColumn effectiveObj = obj;
+			final de.ls5.dywa.generated.entity.models.app.TempColumn effectiveObj = obj;
 
 		// If values were not specified, ignore them
 		if (effectiveValue.iscell_CellSet()) {
 			checkVersion(value, obj);
-			final java.util.List<de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell>
+			final java.util.List<de.ls5.dywa.generated.entity.models.app.Cell>
 			 source = effectiveObj.getcell_Cell();
 			final java.util.List<de.ls5.dywa.generated.rest.types.Cell>
 			 actual = java.util.Optional.ofNullable(effectiveValue.getcell_Cell()).orElseGet(java.util.Collections::emptyList);
@@ -68,7 +68,7 @@ public class TempColumnREST {
 			
 			for (final de.ls5.dywa.generated.rest.types.Cell item : actual) {
 				
-				final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell entity;
+				final de.ls5.dywa.generated.entity.models.app.Cell entity;
 
 				// create new
 				if (item.getDywaId() == info.scce.dime.util.Constants.DYWA_ID_CREATE_NEW) {
@@ -113,9 +113,9 @@ public class TempColumnREST {
 	}
 	}
 
-	public de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.TempColumn copyToTransient(final de.ls5.dywa.generated.rest.types.TempColumn value) {
+	public de.ls5.dywa.generated.entity.models.app.TempColumn copyToTransient(final de.ls5.dywa.generated.rest.types.TempColumn value) {
 
-		final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.TempColumn obj;
+		final de.ls5.dywa.generated.entity.models.app.TempColumn obj;
 
 		if (this.objectCache.containsTransient(value)) {
 			return this.objectCache.getTransient(value);
@@ -137,20 +137,20 @@ public class TempColumnREST {
 
 			{
 				final de.ls5.dywa.generated.rest.types.TempColumn effectiveValue = value;
-				final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.TempColumn effectiveObj = obj;
+				final de.ls5.dywa.generated.entity.models.app.TempColumn effectiveObj = obj;
 
 			// If values were not specified, ignore them
 			if (effectiveValue.iscell_CellSet()) {
 				checkVersion(value, obj);
 
-				final java.util.List<de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell>
+				final java.util.List<de.ls5.dywa.generated.entity.models.app.Cell>
 				 source = effectiveObj.getcell_Cell();
 				final java.util.List<de.ls5.dywa.generated.rest.types.Cell>
 				 actual = java.util.Optional.ofNullable(effectiveValue.getcell_Cell()).orElseGet(java.util.Collections::emptyList);
 
 				for (final de.ls5.dywa.generated.rest.types.Cell item : actual) {
 
-					final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell entity;
+					final de.ls5.dywa.generated.entity.models.app.Cell entity;
 
 					// create new
 					if (item.getDywaId() == info.scce.dime.util.Constants.DYWA_ID_CREATE_NEW) {
@@ -198,11 +198,11 @@ public class TempColumnREST {
 	}
 
 	public void delete(final long id) {
-		final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.TempColumn obj = this.TempColumnController.read(id);
+		final de.ls5.dywa.generated.entity.models.app.TempColumn obj = this.TempColumnController.read(id);
 		this.TempColumnController.delete(obj);
 	}
 
-	private void checkVersion(final de.ls5.dywa.generated.rest.types.TempColumn value, final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.TempColumn obj) {
+	private void checkVersion(final de.ls5.dywa.generated.rest.types.TempColumn value, final de.ls5.dywa.generated.entity.models.app.TempColumn obj) {
 		if (value.isDywaVersionSet() && value.getDywaVersion() != obj.getDywaVersion()) {
 			throw new javax.persistence.OptimisticLockException(obj.getDywaName() + '[' + obj.getDywaId() + "] has been updated by other transaction");
 		}

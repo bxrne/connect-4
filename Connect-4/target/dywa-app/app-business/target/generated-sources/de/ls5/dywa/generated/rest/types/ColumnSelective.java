@@ -4,7 +4,7 @@ package de.ls5.dywa.generated.rest.types;
 public class ColumnSelective {
 
 	public static void copy(
-		final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column from,
+		final de.ls5.dywa.generated.entity.models.app.Column from,
 		final de.ls5.dywa.generated.rest.types.Column to,
 		final info.scce.dime.rest.ObjectCache objectCache) {
 
@@ -27,14 +27,14 @@ public class ColumnSelective {
 		to.setDywaName(from.getDywaName());
 
 		{
-			final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column effectiveFrom = from;
+			final de.ls5.dywa.generated.entity.models.app.Column effectiveFrom = from;
 			final de.ls5.dywa.generated.rest.types.Column effectiveTo = to;
-		final java.util.List<de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell>
+		final java.util.List<de.ls5.dywa.generated.entity.models.app.Cell>
 		 source = effectiveFrom.getcells_Cell();
 		final java.util.List<de.ls5.dywa.generated.rest.types.Cell>
 		 target = new java.util.ArrayList<>(source.size());
 		
-		for (final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell
+		for (final de.ls5.dywa.generated.entity.models.app.Cell
 		 s : source) {
 			// original selective: CellSelective
 			de.ls5.dywa.generated.rest.types.Cell cached = objectCache.getRestTo(s);
@@ -53,7 +53,7 @@ public class ColumnSelective {
 		effectiveTo.setcells_Cell(target);
 		}
 		{
-			final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column effectiveFrom = from;
+			final de.ls5.dywa.generated.entity.models.app.Column effectiveFrom = from;
 			final de.ls5.dywa.generated.rest.types.Column effectiveTo = to;
 		effectiveTo.setindex(effectiveFrom.getindex());
 		}

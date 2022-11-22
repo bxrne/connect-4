@@ -22,8 +22,8 @@ public class gameGUIResumer extends info.scce.dime.process.GUIResumer {
 		checkAuthentication(output.getCallStack(),"_hri-8WaYEe2mp69GO3rQOw/back");
 		
 		
-		final info.scce.dime.gui.dime__HYPHEN_MINUS__models.gui.game.Game_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOwResult guiResult = 
-		new info.scce.dime.gui.dime__HYPHEN_MINUS__models.gui.game.Game_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOwResult("back");
+		final info.scce.dime.gui.models.gui.game.Game_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOwResult guiResult = 
+		new info.scce.dime.gui.models.gui.game.Game_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOwResult("back");
 		if(!"_hri-8WaYEe2mp69GO3rQOw".equals(output.getCallStack().getCallFrames().get(output.getCallStack().getCallFrames().size()-1).getPointer().split(":")[2])){
 					output.getCallStack().getCallFrames().get(output.getCallStack().getCallFrames().size()-1).setPointer(output.getCallStack().getCallFrames().get(output.getCallStack().getCallFrames().size()-1).getMajorGUI());
 		}

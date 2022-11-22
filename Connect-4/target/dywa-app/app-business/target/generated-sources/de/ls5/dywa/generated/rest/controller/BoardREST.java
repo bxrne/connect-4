@@ -14,21 +14,21 @@ public class BoardREST {
 	@javax.inject.Inject
 	private de.ls5.dywa.generated.rest.controller.BoardREST BoardREST;
 	@javax.inject.Inject
-	private de.ls5.dywa.generated.controller.dime__HYPHEN_MINUS__models.app.BoardController BoardController;
+	private de.ls5.dywa.generated.controller.models.app.BoardController BoardController;
 	@javax.inject.Inject
 	private de.ls5.dywa.generated.rest.controller.ColumnREST ColumnREST;
 	@javax.inject.Inject
-	private de.ls5.dywa.generated.controller.dime__HYPHEN_MINUS__models.app.ColumnController ColumnController;
+	private de.ls5.dywa.generated.controller.models.app.ColumnController ColumnController;
 
 	public long create(final java.lang.String name) {
-		final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Board obj = this.BoardController.create(name);
+		final de.ls5.dywa.generated.entity.models.app.Board obj = this.BoardController.create(name);
 		return obj.getDywaId();
 	}
 
 	
 	public de.ls5.dywa.generated.rest.types.Board read_GameBoardSelectivex1_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOw(final long id) {
 		
-		final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Board obj = this.BoardController.read(id);
+		final de.ls5.dywa.generated.entity.models.app.Board obj = this.BoardController.read(id);
 		
 		if (obj == null) {
 			return null;
@@ -96,12 +96,12 @@ public class BoardREST {
 
 		public java.util.Set<de.ls5.dywa.generated.rest.types.Board> readAll_GameBoardSelectivex1_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOw() {
 			
-			final java.util.Set<de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Board> objs =
+			final java.util.Set<de.ls5.dywa.generated.entity.models.app.Board> objs =
 			this.BoardController.fetch();
 	
 			final java.util.Set<de.ls5.dywa.generated.rest.types.Board> result = new java.util.HashSet<>();
 
-			for (final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Board s : objs) {
+			for (final de.ls5.dywa.generated.entity.models.app.Board s : objs) {
 				de.ls5.dywa.generated.rest.types.Board cached = objectCache.getRestTo(s);
 				
 				if (cached == null) {
@@ -121,12 +121,12 @@ public class BoardREST {
 
 	public void update_GameBoardSelectivex1_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOw(final de.ls5.dywa.generated.rest.types.Board value) {
 
-		final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Board obj = this.BoardController.read(value.getDywaId());
+		final de.ls5.dywa.generated.entity.models.app.Board obj = this.BoardController.read(value.getDywaId());
 		
 		this.update_GameBoardSelectivex1_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOw(value, obj);
 	}
 
-	public void update_GameBoardSelectivex1_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOw(final de.ls5.dywa.generated.rest.types.Board value, final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Board obj) {
+	public void update_GameBoardSelectivex1_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOw(final de.ls5.dywa.generated.rest.types.Board value, final de.ls5.dywa.generated.entity.models.app.Board obj) {
 
 		// for updates, consider a special selective so we don't clash with read-operations
 		if (this.objectCache.containsSelective(obj, "GameBoardSelectivex1_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOw")) {
@@ -144,12 +144,12 @@ public class BoardREST {
 
 		{
 			final de.ls5.dywa.generated.rest.types.Board effectiveValue = value;
-			final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Board effectiveObj = obj;
+			final de.ls5.dywa.generated.entity.models.app.Board effectiveObj = obj;
 
 		// If values were not specified, ignore them
 		if (effectiveValue.iscolumns_ColumnSet()) {
 			checkVersion(value, obj);
-			final java.util.List<de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column>
+			final java.util.List<de.ls5.dywa.generated.entity.models.app.Column>
 			 source = effectiveObj.getcolumns_Column();
 			final java.util.List<de.ls5.dywa.generated.rest.types.Column>
 			 actual = java.util.Optional.ofNullable(effectiveValue.getcolumns_Column()).orElseGet(java.util.Collections::emptyList);
@@ -158,7 +158,7 @@ public class BoardREST {
 			
 			for (final de.ls5.dywa.generated.rest.types.Column item : actual) {
 				
-				final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column entity;
+				final de.ls5.dywa.generated.entity.models.app.Column entity;
 
 				// create new
 				if (item.getDywaId() == info.scce.dime.util.Constants.DYWA_ID_CREATE_NEW) {
@@ -204,12 +204,12 @@ public class BoardREST {
 	}
 	public void update_BoardSelective(final de.ls5.dywa.generated.rest.types.Board value) {
 
-		final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Board obj = this.BoardController.read(value.getDywaId());
+		final de.ls5.dywa.generated.entity.models.app.Board obj = this.BoardController.read(value.getDywaId());
 		
 		this.update_BoardSelective(value, obj);
 	}
 
-	public void update_BoardSelective(final de.ls5.dywa.generated.rest.types.Board value, final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Board obj) {
+	public void update_BoardSelective(final de.ls5.dywa.generated.rest.types.Board value, final de.ls5.dywa.generated.entity.models.app.Board obj) {
 
 		// for updates, consider a special selective so we don't clash with read-operations
 		if (this.objectCache.containsSelective(obj, "BoardSelective")) {
@@ -227,12 +227,12 @@ public class BoardREST {
 
 		{
 			final de.ls5.dywa.generated.rest.types.Board effectiveValue = value;
-			final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Board effectiveObj = obj;
+			final de.ls5.dywa.generated.entity.models.app.Board effectiveObj = obj;
 
 		// If values were not specified, ignore them
 		if (effectiveValue.iscolumns_ColumnSet()) {
 			checkVersion(value, obj);
-			final java.util.List<de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column>
+			final java.util.List<de.ls5.dywa.generated.entity.models.app.Column>
 			 source = effectiveObj.getcolumns_Column();
 			final java.util.List<de.ls5.dywa.generated.rest.types.Column>
 			 actual = java.util.Optional.ofNullable(effectiveValue.getcolumns_Column()).orElseGet(java.util.Collections::emptyList);
@@ -241,7 +241,7 @@ public class BoardREST {
 			
 			for (final de.ls5.dywa.generated.rest.types.Column item : actual) {
 				
-				final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column entity;
+				final de.ls5.dywa.generated.entity.models.app.Column entity;
 
 				// create new
 				if (item.getDywaId() == info.scce.dime.util.Constants.DYWA_ID_CREATE_NEW) {
@@ -286,9 +286,9 @@ public class BoardREST {
 	}
 	}
 
-	public de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Board copyToTransient(final de.ls5.dywa.generated.rest.types.Board value) {
+	public de.ls5.dywa.generated.entity.models.app.Board copyToTransient(final de.ls5.dywa.generated.rest.types.Board value) {
 
-		final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Board obj;
+		final de.ls5.dywa.generated.entity.models.app.Board obj;
 
 		if (this.objectCache.containsTransient(value)) {
 			return this.objectCache.getTransient(value);
@@ -310,20 +310,20 @@ public class BoardREST {
 
 			{
 				final de.ls5.dywa.generated.rest.types.Board effectiveValue = value;
-				final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Board effectiveObj = obj;
+				final de.ls5.dywa.generated.entity.models.app.Board effectiveObj = obj;
 
 			// If values were not specified, ignore them
 			if (effectiveValue.iscolumns_ColumnSet()) {
 				checkVersion(value, obj);
 
-				final java.util.List<de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column>
+				final java.util.List<de.ls5.dywa.generated.entity.models.app.Column>
 				 source = effectiveObj.getcolumns_Column();
 				final java.util.List<de.ls5.dywa.generated.rest.types.Column>
 				 actual = java.util.Optional.ofNullable(effectiveValue.getcolumns_Column()).orElseGet(java.util.Collections::emptyList);
 
 				for (final de.ls5.dywa.generated.rest.types.Column item : actual) {
 
-					final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column entity;
+					final de.ls5.dywa.generated.entity.models.app.Column entity;
 
 					// create new
 					if (item.getDywaId() == info.scce.dime.util.Constants.DYWA_ID_CREATE_NEW) {
@@ -371,11 +371,11 @@ public class BoardREST {
 	}
 
 	public void delete(final long id) {
-		final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Board obj = this.BoardController.read(id);
+		final de.ls5.dywa.generated.entity.models.app.Board obj = this.BoardController.read(id);
 		this.BoardController.delete(obj);
 	}
 
-	private void checkVersion(final de.ls5.dywa.generated.rest.types.Board value, final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Board obj) {
+	private void checkVersion(final de.ls5.dywa.generated.rest.types.Board value, final de.ls5.dywa.generated.entity.models.app.Board obj) {
 		if (value.isDywaVersionSet() && value.getDywaVersion() != obj.getDywaVersion()) {
 			throw new javax.persistence.OptimisticLockException(obj.getDywaName() + '[' + obj.getDywaId() + "] has been updated by other transaction");
 		}

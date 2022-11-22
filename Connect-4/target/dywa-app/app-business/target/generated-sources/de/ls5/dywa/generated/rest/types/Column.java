@@ -22,11 +22,11 @@ public interface Column extends info.scce.dime.rest.RESTBaseType  {
 	void setindex(final java.lang.Long
 	 index);
 
-	public static Column fromDywaEntity(final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column entity, info.scce.dime.rest.ObjectCache objectCache) {
+	public static Column fromDywaEntity(final de.ls5.dywa.generated.entity.models.app.Column entity, info.scce.dime.rest.ObjectCache objectCache) {
 	
 		final Column result;
 	
-		if (entity instanceof de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column) {
+		if (entity instanceof de.ls5.dywa.generated.entity.models.app.Column) {
 			result = new de.ls5.dywa.generated.rest.types.ColumnImpl();
 		}
 	 else { throw new java.lang.IllegalArgumentException("Unknown type"); } 

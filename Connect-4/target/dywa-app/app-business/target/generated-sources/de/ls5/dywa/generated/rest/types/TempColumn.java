@@ -16,11 +16,11 @@ public interface TempColumn extends info.scce.dime.rest.RESTBaseType  {
 	>
 	 cell);
 
-	public static TempColumn fromDywaEntity(final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.TempColumn entity, info.scce.dime.rest.ObjectCache objectCache) {
+	public static TempColumn fromDywaEntity(final de.ls5.dywa.generated.entity.models.app.TempColumn entity, info.scce.dime.rest.ObjectCache objectCache) {
 	
 		final TempColumn result;
 	
-		if (entity instanceof de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.TempColumn) {
+		if (entity instanceof de.ls5.dywa.generated.entity.models.app.TempColumn) {
 			result = new de.ls5.dywa.generated.rest.types.TempColumnImpl();
 		}
 	 else { throw new java.lang.IllegalArgumentException("Unknown type"); } 

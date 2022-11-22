@@ -14,14 +14,14 @@ public class BaseUserREST {
 	@javax.inject.Inject
 	private de.ls5.dywa.generated.rest.controller.BaseUserREST BaseUserREST;
 	@javax.inject.Inject
-	private de.ls5.dywa.generated.controller.dime__HYPHEN_MINUS__models.app.BaseUserController BaseUserController;
+	private de.ls5.dywa.generated.controller.models.app.BaseUserController BaseUserController;
 	@javax.inject.Inject
 	private de.ls5.dywa.generated.rest.controller.ConcreteUserREST ConcreteUserREST;
 	@javax.inject.Inject
-	private de.ls5.dywa.generated.controller.dime__HYPHEN_MINUS__models.app.ConcreteUserController ConcreteUserController;
+	private de.ls5.dywa.generated.controller.models.app.ConcreteUserController ConcreteUserController;
 
 	public long create(final java.lang.String name) {
-		final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.BaseUser obj = this.BaseUserController.create(name);
+		final de.ls5.dywa.generated.entity.models.app.BaseUser obj = this.BaseUserController.create(name);
 		return obj.getDywaId();
 	}
 
@@ -31,12 +31,12 @@ public class BaseUserREST {
 
 	public void update_BaseUserSelective(final de.ls5.dywa.generated.rest.types.BaseUser value) {
 
-		final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.BaseUser obj = this.BaseUserController.read(value.getDywaId());
+		final de.ls5.dywa.generated.entity.models.app.BaseUser obj = this.BaseUserController.read(value.getDywaId());
 		
 		this.update_BaseUserSelective(value, obj);
 	}
 
-	public void update_BaseUserSelective(final de.ls5.dywa.generated.rest.types.BaseUser value, final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.BaseUser obj) {
+	public void update_BaseUserSelective(final de.ls5.dywa.generated.rest.types.BaseUser value, final de.ls5.dywa.generated.entity.models.app.BaseUser obj) {
 
 		// for updates, consider a special selective so we don't clash with read-operations
 		if (this.objectCache.containsSelective(obj, "BaseUserSelective")) {
@@ -54,12 +54,12 @@ public class BaseUserREST {
 
 		{
 			final de.ls5.dywa.generated.rest.types.BaseUser effectiveValue = value;
-			final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.BaseUser effectiveObj = obj;
+			final de.ls5.dywa.generated.entity.models.app.BaseUser effectiveObj = obj;
 
 		// If values were not specified, ignore them
 		if (effectiveValue.isconcreteUser_ConcreteUserSet()) {
 			checkVersion(value, obj);
-			final java.util.List<de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.ConcreteUser>
+			final java.util.List<de.ls5.dywa.generated.entity.models.app.ConcreteUser>
 			 source = effectiveObj.getconcreteUser_ConcreteUser();
 			final java.util.List<de.ls5.dywa.generated.rest.types.ConcreteUser>
 			 actual = java.util.Optional.ofNullable(effectiveValue.getconcreteUser_ConcreteUser()).orElseGet(java.util.Collections::emptyList);
@@ -68,7 +68,7 @@ public class BaseUserREST {
 			
 			for (final de.ls5.dywa.generated.rest.types.ConcreteUser item : actual) {
 				
-				final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.ConcreteUser entity;
+				final de.ls5.dywa.generated.entity.models.app.ConcreteUser entity;
 
 				// create new
 				if (item.getDywaId() == info.scce.dime.util.Constants.DYWA_ID_CREATE_NEW) {
@@ -113,7 +113,7 @@ public class BaseUserREST {
 	}
 		{
 			final de.ls5.dywa.generated.rest.types.BaseUser effectiveValue = value;
-			final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.BaseUser effectiveObj = obj;
+			final de.ls5.dywa.generated.entity.models.app.BaseUser effectiveObj = obj;
 
 		// If values were not specified, ignore them
 		if (effectiveValue.ispasswordSet()) {
@@ -123,7 +123,7 @@ public class BaseUserREST {
 	}
 		{
 			final de.ls5.dywa.generated.rest.types.BaseUser effectiveValue = value;
-			final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.BaseUser effectiveObj = obj;
+			final de.ls5.dywa.generated.entity.models.app.BaseUser effectiveObj = obj;
 
 		// If values were not specified, ignore them
 		if (effectiveValue.isimageSet()) {
@@ -138,7 +138,7 @@ public class BaseUserREST {
 	}
 		{
 			final de.ls5.dywa.generated.rest.types.BaseUser effectiveValue = value;
-			final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.BaseUser effectiveObj = obj;
+			final de.ls5.dywa.generated.entity.models.app.BaseUser effectiveObj = obj;
 
 		// If values were not specified, ignore them
 		if (effectiveValue.isfirstNameSet()) {
@@ -148,7 +148,7 @@ public class BaseUserREST {
 	}
 		{
 			final de.ls5.dywa.generated.rest.types.BaseUser effectiveValue = value;
-			final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.BaseUser effectiveObj = obj;
+			final de.ls5.dywa.generated.entity.models.app.BaseUser effectiveObj = obj;
 
 		// If values were not specified, ignore them
 		if (effectiveValue.islastNameSet()) {
@@ -158,7 +158,7 @@ public class BaseUserREST {
 	}
 		{
 			final de.ls5.dywa.generated.rest.types.BaseUser effectiveValue = value;
-			final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.BaseUser effectiveObj = obj;
+			final de.ls5.dywa.generated.entity.models.app.BaseUser effectiveObj = obj;
 
 		// If values were not specified, ignore them
 		if (effectiveValue.isusernameSet()) {
@@ -168,9 +168,9 @@ public class BaseUserREST {
 	}
 	}
 
-	public de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.BaseUser copyToTransient(final de.ls5.dywa.generated.rest.types.BaseUser value) {
+	public de.ls5.dywa.generated.entity.models.app.BaseUser copyToTransient(final de.ls5.dywa.generated.rest.types.BaseUser value) {
 
-		final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.BaseUser obj;
+		final de.ls5.dywa.generated.entity.models.app.BaseUser obj;
 
 		if (this.objectCache.containsTransient(value)) {
 			return this.objectCache.getTransient(value);
@@ -192,20 +192,20 @@ public class BaseUserREST {
 
 			{
 				final de.ls5.dywa.generated.rest.types.BaseUser effectiveValue = value;
-				final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.BaseUser effectiveObj = obj;
+				final de.ls5.dywa.generated.entity.models.app.BaseUser effectiveObj = obj;
 
 			// If values were not specified, ignore them
 			if (effectiveValue.isconcreteUser_ConcreteUserSet()) {
 				checkVersion(value, obj);
 
-				final java.util.List<de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.ConcreteUser>
+				final java.util.List<de.ls5.dywa.generated.entity.models.app.ConcreteUser>
 				 source = effectiveObj.getconcreteUser_ConcreteUser();
 				final java.util.List<de.ls5.dywa.generated.rest.types.ConcreteUser>
 				 actual = java.util.Optional.ofNullable(effectiveValue.getconcreteUser_ConcreteUser()).orElseGet(java.util.Collections::emptyList);
 
 				for (final de.ls5.dywa.generated.rest.types.ConcreteUser item : actual) {
 
-					final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.ConcreteUser entity;
+					final de.ls5.dywa.generated.entity.models.app.ConcreteUser entity;
 
 					// create new
 					if (item.getDywaId() == info.scce.dime.util.Constants.DYWA_ID_CREATE_NEW) {
@@ -250,7 +250,7 @@ public class BaseUserREST {
 		}
 			{
 				final de.ls5.dywa.generated.rest.types.BaseUser effectiveValue = value;
-				final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.BaseUser effectiveObj = obj;
+				final de.ls5.dywa.generated.entity.models.app.BaseUser effectiveObj = obj;
 
 			// If values were not specified, ignore them
 			if (effectiveValue.ispasswordSet()) {
@@ -260,7 +260,7 @@ public class BaseUserREST {
 		}
 			{
 				final de.ls5.dywa.generated.rest.types.BaseUser effectiveValue = value;
-				final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.BaseUser effectiveObj = obj;
+				final de.ls5.dywa.generated.entity.models.app.BaseUser effectiveObj = obj;
 
 			// If values were not specified, ignore them
 			if (effectiveValue.isimageSet()) {
@@ -275,7 +275,7 @@ public class BaseUserREST {
 		}
 			{
 				final de.ls5.dywa.generated.rest.types.BaseUser effectiveValue = value;
-				final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.BaseUser effectiveObj = obj;
+				final de.ls5.dywa.generated.entity.models.app.BaseUser effectiveObj = obj;
 
 			// If values were not specified, ignore them
 			if (effectiveValue.isfirstNameSet()) {
@@ -285,7 +285,7 @@ public class BaseUserREST {
 		}
 			{
 				final de.ls5.dywa.generated.rest.types.BaseUser effectiveValue = value;
-				final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.BaseUser effectiveObj = obj;
+				final de.ls5.dywa.generated.entity.models.app.BaseUser effectiveObj = obj;
 
 			// If values were not specified, ignore them
 			if (effectiveValue.islastNameSet()) {
@@ -295,7 +295,7 @@ public class BaseUserREST {
 		}
 			{
 				final de.ls5.dywa.generated.rest.types.BaseUser effectiveValue = value;
-				final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.BaseUser effectiveObj = obj;
+				final de.ls5.dywa.generated.entity.models.app.BaseUser effectiveObj = obj;
 
 			// If values were not specified, ignore them
 			if (effectiveValue.isusernameSet()) {
@@ -308,11 +308,11 @@ public class BaseUserREST {
 	}
 
 	public void delete(final long id) {
-		final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.BaseUser obj = this.BaseUserController.read(id);
+		final de.ls5.dywa.generated.entity.models.app.BaseUser obj = this.BaseUserController.read(id);
 		this.BaseUserController.delete(obj);
 	}
 
-	private void checkVersion(final de.ls5.dywa.generated.rest.types.BaseUser value, final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.BaseUser obj) {
+	private void checkVersion(final de.ls5.dywa.generated.rest.types.BaseUser value, final de.ls5.dywa.generated.entity.models.app.BaseUser obj) {
 		if (value.isDywaVersionSet() && value.getDywaVersion() != obj.getDywaVersion()) {
 			throw new javax.persistence.OptimisticLockException(obj.getDywaName() + '[' + obj.getDywaId() + "] has been updated by other transaction");
 		}
