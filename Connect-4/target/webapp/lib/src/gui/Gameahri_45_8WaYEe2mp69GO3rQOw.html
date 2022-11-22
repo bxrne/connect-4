@@ -17,45 +17,25 @@ Connect-4
 </div>
 <div class="row">
 	<div class="col-sm-12">
-<div *ngIf="				board!=null
-" 
-aria-live="polite" aria-atomic="true" 
-
+<div 
   class="jumbotron">
 <div 
  class="row">
 <div
-*ngFor="let thisColumn of initOnDemandboard().initOnDemandcolumns(); let index = index; trackBy: trackSelective"  
+*ngFor="let thisColumn of initOnDemandboard().initOnDemandcolumns(); let poopoo = index; trackBy: trackSelective"  
 aria-live="polite" aria-atomic="true" 
 
-class="col-md-12 text-left"
+[ngStyle]="{ 'margin-top':'15px' }"
+class="col-md-1 text-left"
 >
-<span 
- >
-<span aria-live="polite" aria-atomic="true" class="text-left">
-<strong>
-<u>
-{{thisColumn?.index}}
-</u>
-</strong>
-</span>
-</span>
-<div *ngFor="let thisCell of thisColumn.initOnDemandcells(); let index2 = index; trackBy: trackSelective"  
+<span *ngFor="let thisCell of thisColumn.initOnDemandcells(); let peepee = index; trackBy: trackSelective"  
 aria-live="polite" aria-atomic="true" 
 
- class="row">
-<div
-
-class="col-md-12 text-left"
->
-<span 
  >
-<span aria-live="polite" aria-atomic="true" class="text-left">
-{{thisCell?.value}}
+<span aria-live="polite" aria-atomic="true" class="text-center">
+<span [safeInnerHtml]="getSafeHtml(''+thisCell?.value.toString()+' <br/>')"></span>
 </span>
 </span>
-</div>
-</div>
 </div>
 </div>
 </div>

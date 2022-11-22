@@ -294,9 +294,9 @@ public final class GetBoard_HdofkWkUEe2cW5_gHw6itA implements DIMEProcess {
 	public SIB_ID execute_MUzC02kUEe2cW5_gHw6itA(final Context ctx) {
 		try {
 			final List<java.lang.Long> result = info.scce.dime.app.demo.Game.getBoardWidth();
-			List<java.lang.Long> value0 = result;
-			if (value0 != null) { // prevent null in lists
-			ctx.GetBoardWidthSuccessWidth_MUzC2WkUEe2cW5_gHw6itA = new ArrayList<java.lang.Long>(value0);
+			List<java.lang.Long> value1 = result;
+			if (value1 != null) { // prevent null in lists
+			ctx.GetBoardWidthSuccessWidth_MUzC2WkUEe2cW5_gHw6itA = new ArrayList<java.lang.Long>(value1);
 			}
 		}
 		catch (Exception e) {
@@ -311,9 +311,9 @@ public final class GetBoard_HdofkWkUEe2cW5_gHw6itA implements DIMEProcess {
 	public SIB_ID execute_4pKJMWkUEe2cW5_gHw6itA(final Context ctx) {
 		try {
 			final List<java.lang.Long> result = info.scce.dime.app.demo.Game.getCol(ctx.IterateNextElement_MU04D2kUEe2cW5_gHw6itA);
-			List<java.lang.Long> value1 = result;
-			if (value1 != null) { // prevent null in lists
-			ctx.GetColSuccessColumn_4pdrMWkUEe2cW5_gHw6itA = new ArrayList<java.lang.Long>(value1);
+			List<java.lang.Long> value2 = result;
+			if (value2 != null) { // prevent null in lists
+			ctx.GetColSuccessColumn_4pdrMWkUEe2cW5_gHw6itA = new ArrayList<java.lang.Long>(value2);
 			}
 		}
 		catch (Exception e) {
@@ -361,9 +361,9 @@ public final class GetBoard_HdofkWkUEe2cW5_gHw6itA implements DIMEProcess {
 	
 		createdObj.setindex(ctx.IterateNextElement_MU04D2kUEe2cW5_gHw6itA);
 	
-		de.ls5.dywa.generated.entity.models.app.Column value2 = createdObj;
-		if (value2 != null) { // prevent null in lists
-		ctx.columns_XnhvsWniEe2ZroPb56nQ4Q.add(value2);
+		de.ls5.dywa.generated.entity.models.app.Column value3 = createdObj;
+		if (value3 != null) { // prevent null in lists
+		ctx.columns_XnhvsWniEe2ZroPb56nQ4Q.add(value3);
 		}
 		ctx.Create_ColumnSuccessCreated_TpCe4Wn4Ee2DQ__HYPHEN_MINUS__vHzwgk5w = createdObj;
 	

@@ -18,11 +18,6 @@ GUI _hri-8WaYEe2mp69GO3rQOw {
   			id _sNVQgWmqEe2sl80VZxYqHw
   			associationName "columns"
   		}
-  		
-  		-IF-> _JL4yYWhqEe2Ts87gHbvjRg  decorate "" at (0,0) decorate "Text" at (0,0) {
-  			id _x8AqkWmqEe2sl80VZxYqHw
-  			negate false
-  		}
   	}
   	
   	ComplexVariable _sNQ_EWmqEe2sl80VZxYqHw at 10,130 size 160,105 {
@@ -57,8 +52,8 @@ GUI _hri-8WaYEe2mp69GO3rQOw {
   		}
   		
   		-FOR-> _EPlbAWhrEe2Ts87gHbvjRg  decorate "" at (0,0) decorate "Text" at (0,0) {
-  			id _yuB9YWmqEe2sl80VZxYqHw
-  			index "index"
+  			id _SJqAQWp7Ee2LPP-yV9ajYA
+  			index "poopoo"
   		}
   	}
   	
@@ -111,9 +106,9 @@ GUI _hri-8WaYEe2mp69GO3rQOw {
   			attributeName current
   		}
   		
-  		-FOR-> _Krl_MGmqEe2sl80VZxYqHw  decorate "" at (0,0) decorate "Text" at (0,0) {
-  			id _5K-ysGmqEe2sl80VZxYqHw
-  			index "index2"
+  		-FOR-> _x1UWMWp6Ee2LPP-yV9ajYA  decorate "" at (0,0) decorate "Text" at (0,0) {
+  			id _TH1fwWp7Ee2LPP-yV9ajYA
+  			index "peepee"
   		}
   	}
   	
@@ -132,7 +127,7 @@ GUI _hri-8WaYEe2mp69GO3rQOw {
   	}
   }
   
-  Template _hrnQYWaYEe2mp69GO3rQOw at 240,10 size 370,820 {
+  Template _hrnQYWaYEe2mp69GO3rQOw at 240,10 size 370,640 {
   	blockName ""
   	disableAutoLayout false
   	generalStyle GeneralStyling _hrpFkGaYEe2mp69GO3rQOw {
@@ -206,7 +201,7 @@ GUI _hri-8WaYEe2mp69GO3rQOw {
   		}
   	}
   	
-  	Row _vy9owWacEe24gf5J_KrBHg at 10,620 size 250,170 {
+  	Row _vy9owWacEe24gf5J_KrBHg at 10,440 size 250,170 {
   		generalStyle GeneralStyling _vzAFAWacEe24gf5J_KrBHg {
   				tallness Fitting
   				marginBottom None
@@ -271,7 +266,7 @@ GUI _hri-8WaYEe2mp69GO3rQOw {
   		}
   	}
   	
-  	Jumbotron _JL4yYWhqEe2Ts87gHbvjRg at 10,200 size 320,410 {
+  	Jumbotron _JL4yYWhqEe2Ts87gHbvjRg at 10,200 size 270,230 {
   		generalStyle GeneralStyling _JL_gEGhqEe2Ts87gHbvjRg {
   				tallness Fitting
   				marginBottom None
@@ -284,7 +279,7 @@ GUI _hri-8WaYEe2mp69GO3rQOw {
   		MoveDown _JL-R8WhqEe2Ts87gHbvjRg at 2,10 size 14,7 {
   		}
   		
-  		Row _EPkz8WhrEe2Ts87gHbvjRg at 10,30 size 300,350 {
+  		Row _EPkz8WhrEe2Ts87gHbvjRg at 10,30 size 250,170 {
   			generalStyle GeneralStyling _EPpFYGhrEe2Ts87gHbvjRg {
   					tallness Fitting
   					marginBottom None
@@ -297,8 +292,8 @@ GUI _hri-8WaYEe2mp69GO3rQOw {
   			MoveDown _EPkz9WhrEe2Ts87gHbvjRg at 2,10 size 14,7 {
   			}
   			
-  			Col _EPlbAWhrEe2Ts87gHbvjRg at 10,30 size 270,300 {
-  				wideness Full
+  			Col _EPlbAWhrEe2Ts87gHbvjRg at 10,30 size 220,120 {
+  				wideness Twelfth
   				layout Layout _EPnQMGhrEe2Ts87gHbvjRg {
   						size Default
   						offset None
@@ -308,7 +303,7 @@ GUI _hri-8WaYEe2mp69GO3rQOw {
   						tallness Fitting
   						marginBottom None
   						attributes [  ]
-  						marginTop None
+  						marginTop Single
   					}
   				MoveLeft _EPlbA2hrEe2Ts87gHbvjRg at 2,2 size 7,14 {
   				}
@@ -316,97 +311,33 @@ GUI _hri-8WaYEe2mp69GO3rQOw {
   				MoveRight _EPmCEWhrEe2Ts87gHbvjRg at 10,2 size 7,14 {
   				}
   				
-  				Row _Krl_MGmqEe2sl80VZxYqHw at 10,100 size 250,170 {
-  					generalStyle GeneralStyling _KsSiwGmqEe2sl80VZxYqHw {
-  							tallness Fitting
-  							marginBottom None
-  							attributes [  ]
-  							marginTop None
-  						}
-  					MoveUp _KrxlYWmqEe2sl80VZxYqHw at 2,2 size 14,7 {
-  					}
-  					
-  					MoveDown _KryMcWmqEe2sl80VZxYqHw at 2,10 size 14,7 {
-  					}
-  					
-  					Col _Kr0osGmqEe2sl80VZxYqHw at 10,30 size 220,120 {
-  						wideness Full
-  						layout Layout _KsG8kGmqEe2sl80VZxYqHw {
-  								size Default
-  								offset None
-  								alignment Left
-  							}
-  						generalStyle GeneralStyling _Kr4TEGmqEe2sl80VZxYqHw {
-  								tallness Fitting
-  								marginBottom None
-  								attributes [  ]
-  								marginTop None
-  							}
-  						MoveLeft _Kr120WmqEe2sl80VZxYqHw at 2,2 size 7,14 {
-  						}
-  						
-  						MoveRight _Kr2d4WmqEe2sl80VZxYqHw at 10,2 size 7,14 {
-  						}
-  						
-  						Text _N7SOUGmqEe2sl80VZxYqHw at 10,30 size 200,60 {
-  							content [ StaticContent _N7lwUGmqEe2sl80VZxYqHw {
-  									renderMarkdown false
-  									maxChars 0
-  									html false
-  									rawContent "{{thisCell.value}}"
-  									styling TextStyling _N7r28GmqEe2sl80VZxYqHw {
-  											small false
-  											highlight false
-  											deleted false
-  											underline false
-  											bold false
-  											alignment Left
-  											italic false
-  											color Default
-  										}
-  								} ]
-  							generalStyle GeneralStyling _N7g30GmqEe2sl80VZxYqHw {
-  									tallness Fitting
-  									marginBottom None
-  									attributes [  ]
-  									marginTop None
-  								}
-  							MoveUp _N7cmYWmqEe2sl80VZxYqHw at 2,2 size 14,7 {
-  							}
-  							
-  							MoveDown _N7dNcWmqEe2sl80VZxYqHw at 2,10 size 14,7 {
-  							}
-  						}
-  					}
-  				}
-  				
-  				Text _zwCM8WmqEe2sl80VZxYqHw at 10,30 size 200,60 {
-  					content [ StaticContent _zwI6oGmqEe2sl80VZxYqHw {
+  				Text _x1UWMWp6Ee2LPP-yV9ajYA at 10,30 size 200,60 {
+  					content [ StaticContent _x1WLYWp6Ee2LPP-yV9ajYA {
   							renderMarkdown false
   							maxChars 0
-  							html false
-  							rawContent "{{thisColumn.index}}"
-  							styling TextStyling _zwJhsGmqEe2sl80VZxYqHw {
+  							html true
+  							rawContent "{{ thisCell.value }} <br/>"
+  							styling TextStyling _x1WLYmp6Ee2LPP-yV9ajYA {
   									small false
   									highlight false
   									deleted false
-  									underline true
-  									bold true
-  									alignment Left
+  									underline false
+  									bold false
+  									alignment Center
   									italic false
   									color Default
   								}
   						} ]
-  					generalStyle GeneralStyling _zwECIGmqEe2sl80VZxYqHw {
+  					generalStyle GeneralStyling _x1WLYGp6Ee2LPP-yV9ajYA {
   							tallness Fitting
   							marginBottom None
   							attributes [  ]
   							marginTop None
   						}
-  					MoveUp _zwC0AWmqEe2sl80VZxYqHw at 2,2 size 14,7 {
+  					MoveUp _x1VkUWp6Ee2LPP-yV9ajYA at 2,2 size 14,7 {
   					}
   					
-  					MoveDown _zwDbEWmqEe2sl80VZxYqHw at 2,10 size 14,7 {
+  					MoveDown _x1VkU2p6Ee2LPP-yV9ajYA at 2,10 size 14,7 {
   					}
   				}
   			}

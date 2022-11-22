@@ -47,10 +47,5 @@ public class GameColumnSelectivex1x1x1_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOw {
 		
 		effectiveTo.setcells_Cell(target);
 		}
-		{
-			final de.ls5.dywa.generated.entity.models.app.Column effectiveFrom = from;
-			final de.ls5.dywa.generated.rest.types.Column effectiveTo = to;
-		effectiveTo.setindex(effectiveFrom.getindex());
-		}
 	}
 }
