@@ -3,9 +3,9 @@ package de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app;
 @javax.persistence.Entity
 @javax.persistence.Cacheable
 @org.hibernate.annotations.Cache(usage = org.hibernate.annotations.CacheConcurrencyStrategy.READ_WRITE)
-@javax.persistence.Table(name = "t_Cell__n5bpygmoee2sl80", indexes={@javax.persistence.Index(columnList="meta_inheritance")})
-@de.ls5.dywa.annotations.IdRef(id = 4L)
-public class CellImpl implements Cell {
+@javax.persistence.Table(name = "t_TempColumn__ejobuwnxee2us_f", indexes={@javax.persistence.Index(columnList="meta_inheritance")})
+@de.ls5.dywa.annotations.IdRef(id = 5L)
+public class TempColumnImpl implements TempColumn {
 	@javax.persistence.Id
 	@javax.persistence.GeneratedValue(strategy = javax.persistence.GenerationType.SEQUENCE)
 	@javax.persistence.Column(name = "meta_id")
@@ -26,9 +26,17 @@ public class CellImpl implements Cell {
 
 	
 	/* MAIN ATTRIBUTES START */
-	@de.ls5.dywa.annotations.IdRef(id = 17L)
-	@javax.persistence.Column(name = "a_Value__qoan0wmoee2sl80", columnDefinition="bigint")
-	private java.lang.Long value;
+	@de.ls5.dywa.annotations.IdRef(id = 18L)
+	@org.hibernate.annotations.Cascade(org.hibernate.annotations.CascadeType.PERSIST)
+	@javax.persistence.JoinTable(name="r_TempColumn_Cell__hjylqwnxee2us_f", joinColumns = { @javax.persistence.JoinColumn(name = "r1_TempColumn_id") }, inverseJoinColumns = { @javax.persistence.JoinColumn(name = "r2_Cell_id") })
+	@org.hibernate.annotations.ManyToAny(metaColumn=@javax.persistence.Column(name="m_Cell_Type__hjylqwnxee2us_f"))
+	@org.hibernate.annotations.AnyMetaDef(
+		idType="long", metaType="string",
+		metaValues={
+			@org.hibernate.annotations.MetaValue(targetEntity=de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.CellImpl.class, value="_n5bpygmoee2sl80")
+		}
+	)
+	private java.util.List<de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell> cell  = new java.util.ArrayList<>();
 	
 	/* MAIN ATTRIBUTES END */
 	
@@ -45,7 +53,7 @@ public class CellImpl implements Cell {
 	/* ADDITIONAL INHERITED MODELS END */
 	
 	// Constructors
-	public CellImpl() {
+	public TempColumnImpl() {
 	}
 
 
@@ -87,19 +95,19 @@ public class CellImpl implements Cell {
 	}
 	
 	@java.lang.Override
-	public java.lang.Long getvalue() {
-		return this.value;
+	public java.util.List<de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell> getcell_Cell() {
+		return this.cell;
 	}
 	
 	@java.lang.Override
-	public void setvalue(java.lang.Long object) {
-		this.value = object;
+	public void setcell_Cell(java.util.List<de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell> object) {
+		this.cell = object;
 	}
 	
 	
 	@java.lang.Override
 	public String toString() {
-		return "Cell[id: " + this.id_ + ", name: " + this.name_ + "]";
+		return "TempColumn[id: " + this.id_ + ", name: " + this.name_ + "]";
 	}
 }
 

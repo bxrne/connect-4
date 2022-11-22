@@ -12,7 +12,7 @@ public class Game {
 		for(int i = 0; i<7; i++) {
 			for(int j = 0; j<6; j++) board[i][j] = 0l;
 		}
-		System.out.println("BOARD INIT SUCCESSFUL");
+		System.out.println("BOARD INIT SUCCESSFUL 1");
 		System.out.println(display(board));
 	}
 

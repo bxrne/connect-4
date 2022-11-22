@@ -31,6 +31,8 @@ public static ContextTransformer getInstance(javax.enterprise.inject.spi.BeanMan
 @Inject de.ls5.dywa.generated.rest.controller.ColumnREST ColumnREST;
 @Inject de.ls5.dywa.generated.controller.dime__HYPHEN_MINUS__models.app.CellController CellController;
 @Inject de.ls5.dywa.generated.rest.controller.CellREST CellREST;
+@Inject de.ls5.dywa.generated.controller.dime__HYPHEN_MINUS__models.app.TempColumnController TempColumnController;
+@Inject de.ls5.dywa.generated.rest.controller.TempColumnREST TempColumnREST;
 
 @Inject de.ls5.dywa.generated.util.DomainFileController domainFileController;
 
@@ -89,6 +91,17 @@ public de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell transfor
 	}
 	 else if (o instanceof de.ls5.dywa.generated.rest.types.Cell) {
 		obj = CellREST.copyToTransient((de.ls5.dywa.generated.rest.types.Cell) o);
+	}
+	 else { throw new java.lang.IllegalArgumentException("Unknown type"); } 
+	return obj;
+}
+public de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.TempColumn transform(de.ls5.dywa.generated.rest.types.TempColumn o) {
+	final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.TempColumn obj;
+	if (o.getDywaId() > 0) {
+		obj = TempColumnController.read(o.getDywaId());
+	}
+	 else if (o instanceof de.ls5.dywa.generated.rest.types.TempColumn) {
+		obj = TempColumnREST.copyToTransient((de.ls5.dywa.generated.rest.types.TempColumn) o);
 	}
 	 else { throw new java.lang.IllegalArgumentException("Unknown type"); } 
 	return obj;

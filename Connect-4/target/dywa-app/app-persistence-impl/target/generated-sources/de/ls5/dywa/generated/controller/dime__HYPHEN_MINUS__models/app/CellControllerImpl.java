@@ -21,6 +21,9 @@ public class CellControllerImpl implements CellController {
 @javax.inject.Inject //referenceMap
 private de.ls5.dywa.generated.controller.dime__HYPHEN_MINUS__models.app.ColumnController columnController;
 
+@javax.inject.Inject //referenceMap
+private de.ls5.dywa.generated.controller.dime__HYPHEN_MINUS__models.app.TempColumnController tempColumnController;
+
     
     @Override
 	public Cell read(final java.lang.Long id) {
@@ -113,6 +116,14 @@ private de.ls5.dywa.generated.controller.dime__HYPHEN_MINUS__models.app.ColumnCo
 				searchColumn.setcells_Cell(java.util.Arrays.asList(entityToDelete));
 			for (de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column queryResult : this.columnController.findByProperties(searchColumn)) {
 				queryResult.getcells_Cell().remove(entityToDelete);
+			}
+		
+		// Delete references from type TempColumn
+			de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.TempColumn searchTempColumn;
+			searchTempColumn = new de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.TempColumnSearch();	
+				searchTempColumn.setcell_Cell(java.util.Arrays.asList(entityToDelete));
+			for (de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.TempColumn queryResult : this.tempColumnController.findByProperties(searchTempColumn)) {
+				queryResult.getcell_Cell().remove(entityToDelete);
 			}
 		delete(entityToDelete);
 	}

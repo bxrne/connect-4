@@ -26,6 +26,10 @@ class DataCastUtil {
 	static Cell castToCell(core.Object o) => o as Cell;
 	static DIMEList<Cell> castToListCell(DIMEList<core.Object> os) => new DIMEList.from(os.cast<Cell>());
 	static DIMEList<Cell> newListCell() => new DIMEList<Cell>();
+	
+	static TempColumn castToTempColumn(core.Object o) => o as TempColumn;
+	static DIMEList<TempColumn> castToListTempColumn(DIMEList<core.Object> os) => new DIMEList.from(os.cast<TempColumn>());
+	static DIMEList<TempColumn> newListTempColumn() => new DIMEList<TempColumn>();
 }
 class ConcreteUser extends BaseModel
 {
@@ -134,7 +138,7 @@ class ConcreteUser extends BaseModel
 			if (jsog.containsKey("dywaSwitchedTo")) {
 				core.Map<core.String,core.dynamic> jsogObj = jsog["dywaSwitchedTo"];
 				if(jsogObj != null) {
-					ConcreteUser valueaYdHxMWmxEe2smc0VZxYqHw;
+					ConcreteUser valueaTtUJoWnyEe2us_45_FTnwz4hA;
 					
 					core.String jsogId;
 					
@@ -145,22 +149,22 @@ class ConcreteUser extends BaseModel
 					 	jsogId = jsogObj['@id'];
 					}
 					if (cache.containsKey(jsogId)) {
-						valueaYdHxMWmxEe2smc0VZxYqHw = cache[jsogId];
+						valueaTtUJoWnyEe2us_45_FTnwz4hA = cache[jsogId];
 					}
 					else {
 						if (jsogObj != null) {
 							if (jsogObj['dywaRuntimeType'] == "de.ls5.dywa.generated.rest.types.ConcreteUserImpl") {
-								valueaYdHxMWmxEe2smc0VZxYqHw = new ConcreteUser(cache: cache, jsog: jsogObj);
+								valueaTtUJoWnyEe2us_45_FTnwz4hA = new ConcreteUser(cache: cache, jsog: jsogObj);
 							}
 							else {
-								valueaYdHxMWmxEe2smc0VZxYqHw = new ConcreteUser(cache: cache,jsog: jsogObj);
+								valueaTtUJoWnyEe2us_45_FTnwz4hA = new ConcreteUser(cache: cache,jsog: jsogObj);
 							}
 						}
 						else {
-							valueaYdHxMWmxEe2smc0VZxYqHw = new ConcreteUser(cache: cache,jsog: jsogObj);
+							valueaTtUJoWnyEe2us_45_FTnwz4hA = new ConcreteUser(cache: cache,jsog: jsogObj);
 						}
 					}
-					this._dywaSwitchedTo = valueaYdHxMWmxEe2smc0VZxYqHw;
+					this._dywaSwitchedTo = valueaTtUJoWnyEe2us_45_FTnwz4hA;
 				}
 			}
 			
@@ -1513,5 +1517,217 @@ class Cell extends BaseModel
 			this.value = value;
 		}
 		
+	
+}
+
+class TempColumn extends BaseModel
+{
+	core.bool _cellHasBeenSet = false;
+	core.bool cellHasBeenChanged() => _cellHasBeenSet;
+	DIMEList<Cell> _cell;
+	
+	static TempColumn fromId(core.int id) {
+		var m = new TempColumn();
+		m.dywa_id = id;
+		return m;
+	}
+	
+	
+	// reflection methods to read and wirte dart properties by string name
+	
+	core.dynamic $$getProperty(core.String prop) {
+	  var propMap = {
+	  'cell': this.cell
+	  };
+	
+	  if (!propMap.containsKey(prop)) throw NoSuchPropertyException(prop);
+	  return propMap[prop];
+	}
+	
+	void $$setProperty(core.String prop, core.dynamic value) {
+	  switch (prop) {
+	  case 'cell': this.cell = value; return;
+	    default: throw NoSuchPropertyException(prop);
+	  }
+	}
+	
+	core.bool $$hasProperty(core.String prop) {
+	  try {
+	    $$getProperty(prop);
+	    return true;
+	  } on NoSuchPropertyException catch (e) {
+	    return false;
+	  }
+	}
+	
+	TempColumn({core.Map<core.String,core.dynamic> cache, jsog}) {
+		if (cache == null) {
+			cache = new core.Map();
+		}
+
+		// default constructor
+		if (jsog == null) {
+			
+			this.dywa_id = -1;
+			this.dywa_version = 0;
+			this.dywa_name = null;
+			
+			// properties
+			this._cell = new DIMEList.monitored(cellHasBeenSetted);
+		}
+		// from jsog
+		else {
+			core.String jsogId = jsog['@id'];
+			cache[jsogId] = this;
+			
+			this.dywa_id = jsog['dywaId'];
+			this.dywa_version = jsog['dywaVersion'];
+			this.dywa_name = jsog['dywaName'];
+			
+			// properties
+			this._cell = new DIMEList.monitored(cellHasBeenSetted);
+			if (jsog.containsKey("cell")) {
+				for (core.Map<core.String,core.dynamic> iter in jsog["cell"]) {
+					core.Map<core.String,core.dynamic> jsogObj = iter;
+					Cell valueahJyLQWnxEe2us_45_FTnwz4hA;
+					
+					core.String jsogId;
+					
+					if (jsogObj.containsKey('@ref')) {
+						jsogId = jsogObj['@ref'];
+					}
+					else {
+					 	jsogId = jsogObj['@id'];
+					}
+					if (cache.containsKey(jsogId)) {
+						valueahJyLQWnxEe2us_45_FTnwz4hA = cache[jsogId];
+					}
+					else {
+						if (jsogObj != null) {
+							if (jsogObj['dywaRuntimeType'] == "de.ls5.dywa.generated.rest.types.CellImpl") {
+								valueahJyLQWnxEe2us_45_FTnwz4hA = new Cell(cache: cache, jsog: jsogObj);
+							}
+							else {
+								valueahJyLQWnxEe2us_45_FTnwz4hA = new Cell(cache: cache,jsog: jsogObj);
+							}
+						}
+						else {
+							valueahJyLQWnxEe2us_45_FTnwz4hA = new Cell(cache: cache,jsog: jsogObj);
+						}
+					}
+					this._cell.add(valueahJyLQWnxEe2us_45_FTnwz4hA);
+				}
+			}
+			
+			
+			_cellHasBeenSet = false;
+		}
+	}
+	
+	void cellHasBeenSetted() { _cellHasBeenSet=true; }
+	
+	core.bool hasChanged() {
+		return 		_cellHasBeenSet
+			;
+	}
+	
+	
+	core.Map<core.String,core.dynamic> toJSOG(core.Map<core.Object,core.dynamic> objects) {
+		if (objects == null) {
+			objects = new core.Map();
+		}
+		core.int jsogId;
+		core.Map<core.String,core.dynamic> jsonObj = new core.Map();
+		if(objects.containsKey(this)) {
+			jsogId = objects[this]['id'];
+			jsonObj = objects[this]['value'];
+			if(( cellHasBeenChanged() && !jsonObj.containsKey('cell'))) {
+			if(this._cell.isEmpty){
+				jsonObj["cell"] = [];
+			}
+			else{
+				jsonObj["cell"] = this._cell.where((n) => objects.containsKey(n)).map((n)=>n.toJSOG(objects)).toList();
+			}
+			}
+			return { 
+				'@ref': jsogId.toString()
+			};
+		}
+		else {
+			jsogId = objects.length;
+			var pair = {
+				'id': jsogId,
+				'value': jsonObj
+			};
+			objects[this] = pair;
+		}
+		jsonObj['@id'] = jsogId.toString();
+		jsonObj['dywaRuntimeType'] = "de.ls5.dywa.generated.rest.types.TempColumnImpl";
+
+		jsonObj['dywaId'] = this.dywa_id;
+		jsonObj['dywaVersion'] = this.dywa_version;
+		if(this.dywa_name != null) {
+			jsonObj['dywaName'] = this.dywa_name;
+		}
+		if(( cellHasBeenChanged() && !jsonObj.containsKey('cell')) || this.dywa_id == 0) {
+		if(this._cell.isEmpty){
+			jsonObj["cell"] = [];
+		}
+		else{
+			jsonObj["cell"] = this._cell.where((n) => objects.containsKey(n)).map((n)=>n.toJSOG(objects)).toList();
+		}
+		}
+		return jsonObj;
+	}
+	static fromJSON(core.String json) {
+		return fromJSOG(cache:new core.Map<core.String,core.dynamic>(),jsog:jsonDecode(json));
+	}
+		
+	static TempColumn fromJSOG({core.Map<core.String,core.dynamic> cache, jsog}) {
+		if(jsog.containsKey('@ref')) {
+			assert (cache.containsKey(jsog['@ref']));
+			return cache[jsog['@ref']];
+		}
+		if(jsog['dywaRuntimeType'] == 'de.ls5.dywa.generated.rest.types.TempColumnImpl') {
+			return new TempColumn(cache:cache,jsog:jsog);
+		}
+		return new TempColumn(cache:cache,jsog:jsog);
+	}
+	
+	void set cell (DIMEList<Cell> value)
+	{
+		this._cellHasBeenSet = true;
+		this._cell = value;
+	}
+	
+	DIMEList<Cell> get cell
+	{
+		return this._cell;
+	}
+	
+		DIMEList<Cell> initOnDemandcell()
+		{
+			if(this._cell == null) {
+			this._cell = new DIMEList();
+			}
+			return this.cell;
+		}
+		
+		void setValuecell(DIMEList<Cell> value)
+		{
+			this.cell = value;
+		}
+		
+		void cellsetValue(DIMEList<Cell> value)
+		{
+			this.cell = value;
+		}
+		
+		void celladd(Cell value)
+		{
+			this.cell.add(value);
+			this._cellHasBeenSet = true;
+		}
+
 	
 }

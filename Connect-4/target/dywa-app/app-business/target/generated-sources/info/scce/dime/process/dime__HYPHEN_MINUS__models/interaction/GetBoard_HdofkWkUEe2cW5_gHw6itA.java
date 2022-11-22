@@ -95,14 +95,16 @@ public final class GetBoard_HdofkWkUEe2cW5_gHw6itA implements DIMEProcess {
 
 		// context variables.
 		private List<de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column> columns_XnhvsWniEe2ZroPb56nQ4Q = new ArrayList<>();
-		private List<de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell> cells_FVXm8WniEe2ZroPb56nQ4Q = new ArrayList<>();
-		private java.lang.Long index_FVuzUWniEe2ZroPb56nQ4Q = 0l;
+		private List<de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell> cell_1D0QwGnxEe2us__HYPHEN_MINUS__FTnwz4hA = new ArrayList<>();
+		private de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.TempColumn tempcolumn;
 		// direct dataflow variables.
 		private List<java.lang.Long> GetBoardWidthSuccessWidth_MUzC2WkUEe2cW5_gHw6itA = new ArrayList<>();
 		private java.lang.Long IterateNextElement_MU04D2kUEe2cW5_gHw6itA;
 		private List<java.lang.Long> GetColSuccessColumn_4pdrMWkUEe2cW5_gHw6itA = new ArrayList<>();
 		private java.lang.Long IterateNextElement_lhWLkWmoEe2sl80VZxYqHw;
 		private de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Board Create_BoardSuccessCreated_PIyBwWniEe2ZroPb56nQ4Q;
+		private de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column Create_ColumnSuccessCreated_6EbnwWntEe2usuFTnwz4hA;
+		private de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.TempColumn Create_TempColumnSuccessCreated_xXa3gWnxEe2us__HYPHEN_MINUS__FTnwz4hA;
 		// index variables of iterate sibs.
 		private int counterIterate_MUx0sWkUEe2cW5_gHw6itA = 0;
 		private int counterIterate_lgq2IWmoEe2sl80VZxYqHw = 0;
@@ -119,22 +121,28 @@ public final class GetBoard_HdofkWkUEe2cW5_gHw6itA implements DIMEProcess {
 	_4pKJMWkUEe2cW5_gHw6itA,
 	_lgq2IWmoEe2sl80VZxYqHw,
 	_7bKAkWnhEe2ZroPb56nQ4Q,
-	_EsaJgWniEe2ZroPb56nQ4Q,
 	_PICa4GniEe2ZroPb56nQ4Q,
+	_6CvlsWntEe2usuFTnwz4hA,
+	_BmWhEGnuEe2usuFTnwz4hA,
+	_CZiRgWnuEe2usuFTnwz4hA,
+	_xXKY0WnxEe2us__HYPHEN_MINUS__FTnwz4hA,
+	_KWQ6sWnyEe2us__HYPHEN_MINUS__FTnwz4hA,
 		;
 	}
 
 	private final BeanManager beanManager;
 	private final de.ls5.dywa.generated.controller.dime__HYPHEN_MINUS__models.app.CellController CellController;
-	private final de.ls5.dywa.generated.controller.dime__HYPHEN_MINUS__models.app.ColumnController ColumnController;
 	private final de.ls5.dywa.generated.controller.dime__HYPHEN_MINUS__models.app.BoardController BoardController;
+	private final de.ls5.dywa.generated.controller.dime__HYPHEN_MINUS__models.app.ColumnController ColumnController;
+	private final de.ls5.dywa.generated.controller.dime__HYPHEN_MINUS__models.app.TempColumnController TempColumnController;
 
 	@Inject
-	public GetBoard_HdofkWkUEe2cW5_gHw6itA(final BeanManager beanManager, de.ls5.dywa.generated.controller.dime__HYPHEN_MINUS__models.app.CellController CellController, de.ls5.dywa.generated.controller.dime__HYPHEN_MINUS__models.app.ColumnController ColumnController, de.ls5.dywa.generated.controller.dime__HYPHEN_MINUS__models.app.BoardController BoardController) {
+	public GetBoard_HdofkWkUEe2cW5_gHw6itA(final BeanManager beanManager, de.ls5.dywa.generated.controller.dime__HYPHEN_MINUS__models.app.CellController CellController, de.ls5.dywa.generated.controller.dime__HYPHEN_MINUS__models.app.BoardController BoardController, de.ls5.dywa.generated.controller.dime__HYPHEN_MINUS__models.app.ColumnController ColumnController, de.ls5.dywa.generated.controller.dime__HYPHEN_MINUS__models.app.TempColumnController TempColumnController) {
 		this.beanManager = beanManager;
 		this.CellController = CellController;
-		this.ColumnController = ColumnController;
 		this.BoardController = BoardController;
+		this.ColumnController = ColumnController;
+		this.TempColumnController = TempColumnController;
 	}
 
 	private Context createContext() {
@@ -191,12 +199,28 @@ public final class GetBoard_HdofkWkUEe2cW5_gHw6itA implements DIMEProcess {
 					curr = execute_7bKAkWnhEe2ZroPb56nQ4Q(ctx);
 					break;
 				}
-				case _EsaJgWniEe2ZroPb56nQ4Q: {
-					curr = execute_EsaJgWniEe2ZroPb56nQ4Q(ctx);
-					break;
-				}
 				case _PICa4GniEe2ZroPb56nQ4Q: {
 					curr = execute_PICa4GniEe2ZroPb56nQ4Q(ctx);
+					break;
+				}
+				case _6CvlsWntEe2usuFTnwz4hA: {
+					curr = execute_6CvlsWntEe2usuFTnwz4hA(ctx);
+					break;
+				}
+				case _BmWhEGnuEe2usuFTnwz4hA: {
+					curr = execute_BmWhEGnuEe2usuFTnwz4hA(ctx);
+					break;
+				}
+				case _CZiRgWnuEe2usuFTnwz4hA: {
+					curr = execute_CZiRgWnuEe2usuFTnwz4hA(ctx);
+					break;
+				}
+				case _xXKY0WnxEe2us__HYPHEN_MINUS__FTnwz4hA: {
+					curr = execute_xXKY0WnxEe2us__HYPHEN_MINUS__FTnwz4hA(ctx);
+					break;
+				}
+				case _KWQ6sWnyEe2us__HYPHEN_MINUS__FTnwz4hA: {
+					curr = execute_KWQ6sWnyEe2us__HYPHEN_MINUS__FTnwz4hA(ctx);
 					break;
 				}
 				default: {
@@ -274,9 +298,9 @@ public final class GetBoard_HdofkWkUEe2cW5_gHw6itA implements DIMEProcess {
 		List<java.lang.Long> list = ctx.GetBoardWidthSuccessWidth_MUzC2WkUEe2cW5_gHw6itA;
 		if(list != null && pos < list.size()) {
 			ctx.IterateNextElement_MU04D2kUEe2cW5_gHw6itA = ctx.GetBoardWidthSuccessWidth_MUzC2WkUEe2cW5_gHw6itA.get(pos);
-			ctx.index_FVuzUWniEe2ZroPb56nQ4Q = ctx.GetBoardWidthSuccessWidth_MUzC2WkUEe2cW5_gHw6itA.get(pos);
+			ctx.IterateNextElement_MU04D2kUEe2cW5_gHw6itA = ctx.GetBoardWidthSuccessWidth_MUzC2WkUEe2cW5_gHw6itA.get(pos);
 			// branch 'next'
-			return SIB_ID._4pKJMWkUEe2cW5_gHw6itA;
+			return SIB_ID._6CvlsWntEe2usuFTnwz4hA;
 		}
 		else {
 			ctx.counterIterate_MUx0sWkUEe2cW5_gHw6itA = 0;
@@ -331,7 +355,7 @@ public final class GetBoard_HdofkWkUEe2cW5_gHw6itA implements DIMEProcess {
 		else {
 			ctx.counterIterate_lgq2IWmoEe2sl80VZxYqHw = 0;
 			// branch 'exit'
-			return SIB_ID._EsaJgWniEe2ZroPb56nQ4Q;
+			return SIB_ID._xXKY0WnxEe2us__HYPHEN_MINUS__FTnwz4hA;
 		}
 		
 	}
@@ -345,28 +369,11 @@ public final class GetBoard_HdofkWkUEe2cW5_gHw6itA implements DIMEProcess {
 	
 		de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell value2 = createdObj;
 		if (value2 != null) { // prevent null in lists
-		ctx.cells_FVXm8WniEe2ZroPb56nQ4Q.add(value2);
+		ctx.cell_1D0QwGnxEe2us__HYPHEN_MINUS__FTnwz4hA.add(value2);
 		}
 	
 		// branch 'success'
 		return SIB_ID._lgq2IWmoEe2sl80VZxYqHw;
-	}
-	// container for create SIB 'Create Column'.
-	public SIB_ID execute_EsaJgWniEe2ZroPb56nQ4Q(final Context ctx) {
-		final de.ls5.dywa.generated.controller.dime__HYPHEN_MINUS__models.app.ColumnController domController = this.ColumnController;
-	
-		final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column createdObj = domController.create(null);
-	
-		createdObj.setcells_Cell(new ArrayList<de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell>(ctx.cells_FVXm8WniEe2ZroPb56nQ4Q));
-		createdObj.setindex(ctx.index_FVuzUWniEe2ZroPb56nQ4Q);
-	
-		de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column value3 = createdObj;
-		if (value3 != null) { // prevent null in lists
-		ctx.columns_XnhvsWniEe2ZroPb56nQ4Q.add(value3);
-		}
-	
-		// branch 'success'
-		return SIB_ID._MUx0sWkUEe2cW5_gHw6itA;
 	}
 	// container for create SIB 'Create Board'.
 	public SIB_ID execute_PICa4GniEe2ZroPb56nQ4Q(final Context ctx) {
@@ -380,6 +387,65 @@ public final class GetBoard_HdofkWkUEe2cW5_gHw6itA implements DIMEProcess {
 	
 		// branch 'success'
 		return SIB_ID._Hd0s0WkUEe2cW5_gHw6itA;
+	}
+	// container for create SIB 'Create Column'.
+	public SIB_ID execute_6CvlsWntEe2usuFTnwz4hA(final Context ctx) {
+		final de.ls5.dywa.generated.controller.dime__HYPHEN_MINUS__models.app.ColumnController domController = this.ColumnController;
+	
+		final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column createdObj = domController.create(null);
+	
+	
+		ctx.Create_ColumnSuccessCreated_6EbnwWntEe2usuFTnwz4hA = createdObj;
+		ctx.Create_ColumnSuccessCreated_6EbnwWntEe2usuFTnwz4hA = createdObj;
+		de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column value3 = createdObj;
+		if (value3 != null) { // prevent null in lists
+		ctx.columns_XnhvsWniEe2ZroPb56nQ4Q.add(value3);
+		}
+	
+		// branch 'success'
+		return SIB_ID._4pKJMWkUEe2cW5_gHw6itA;
+	}
+	// container for SIB 'Set index' setting a new attribute value.
+	public SIB_ID execute_BmWhEGnuEe2usuFTnwz4hA(final Context ctx) {
+		ctx.Create_ColumnSuccessCreated_6EbnwWntEe2usuFTnwz4hA.setindex(ctx.IterateNextElement_MU04D2kUEe2cW5_gHw6itA);
+		// branch 'success'
+		return SIB_ID._CZiRgWnuEe2usuFTnwz4hA;
+	}
+	// container for SIB 'Set cells' setting a new attribute value.
+	public SIB_ID execute_CZiRgWnuEe2usuFTnwz4hA(final Context ctx) {
+		ctx.Create_ColumnSuccessCreated_6EbnwWntEe2usuFTnwz4hA.setcells_Cell(new ArrayList<de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell>(Optional.ofNullable(ctx.tempcolumn).map(de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.TempColumn::getcell_Cell).orElse(new LinkedList<>())));
+		// branch 'success'
+		return SIB_ID._KWQ6sWnyEe2us__HYPHEN_MINUS__FTnwz4hA;
+	}
+	// container for create SIB 'Create TempColumn'.
+	public SIB_ID execute_xXKY0WnxEe2us__HYPHEN_MINUS__FTnwz4hA(final Context ctx) {
+		final de.ls5.dywa.generated.controller.dime__HYPHEN_MINUS__models.app.TempColumnController domController = this.TempColumnController;
+	
+		final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.TempColumn createdObj = domController.create(null);
+	
+		createdObj.setcell_Cell(new ArrayList<de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell>(ctx.cell_1D0QwGnxEe2us__HYPHEN_MINUS__FTnwz4hA));
+	
+		ctx.tempcolumn = createdObj;
+		ctx.Create_TempColumnSuccessCreated_xXa3gWnxEe2us__HYPHEN_MINUS__FTnwz4hA = createdObj;
+	
+		// branch 'success'
+		return SIB_ID._BmWhEGnuEe2usuFTnwz4hA;
+	}
+	// container for delete SIB 'Delete'.
+	public SIB_ID execute_KWQ6sWnyEe2us__HYPHEN_MINUS__FTnwz4hA(final Context ctx) {
+		{
+			final de.ls5.dywa.generated.controller.dime__HYPHEN_MINUS__models.app.TempColumnController domController = this.TempColumnController;
+	
+			final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.TempColumn instanceToDelete = ctx.Create_TempColumnSuccessCreated_xXa3gWnxEe2us__HYPHEN_MINUS__FTnwz4hA;
+			if (instanceToDelete != null) {
+			
+				// Clear attribute values in order to release all bidirectional associations from this object.
+				instanceToDelete.getcell_Cell().clear();
+				domController.deleteWithIncomingReferences(instanceToDelete);
+			}
+		}
+		// branch 'deleted'
+		return SIB_ID._MUx0sWkUEe2cW5_gHw6itA;
 	}
 	
 }  

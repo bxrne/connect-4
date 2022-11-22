@@ -15,6 +15,7 @@
         <class>de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.BoardImpl</class>
         <class>de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.ColumnImpl</class>
         <class>de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.CellImpl</class>
+        <class>de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.TempColumnImpl</class>
 
 		<shared-cache-mode>ALL</shared-cache-mode>
 		<properties>

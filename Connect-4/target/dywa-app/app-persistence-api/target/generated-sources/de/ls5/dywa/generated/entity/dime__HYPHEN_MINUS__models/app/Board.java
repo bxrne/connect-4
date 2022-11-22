@@ -5,13 +5,13 @@ package de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app;
 @de.ls5.dywa.annotations.ShortDescription(description = "")
 @de.ls5.dywa.annotations.LongDescription(description = "")
 public interface Board extends de.ls5.dywa.generated.util.Identifiable {
-	@de.ls5.dywa.annotations.IdRef(id = 13L)
+	@de.ls5.dywa.annotations.IdRef(id = 14L)
 	@de.ls5.dywa.annotations.OriginalName(name = "columns")
 	@de.ls5.dywa.annotations.ShortDescription(description = "")
 	@de.ls5.dywa.annotations.LongDescription(description = "")
 	java.util.List<de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Column> getcolumns_Column();
 	
-	@de.ls5.dywa.annotations.IdRef(id = 13L)
+	@de.ls5.dywa.annotations.IdRef(id = 14L)
 	@de.ls5.dywa.annotations.OriginalName(name = "columns")
 	@de.ls5.dywa.annotations.ShortDescription(description = "")
 	@de.ls5.dywa.annotations.LongDescription(description = "")

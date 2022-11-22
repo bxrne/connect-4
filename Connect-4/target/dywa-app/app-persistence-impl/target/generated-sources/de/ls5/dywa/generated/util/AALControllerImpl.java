@@ -22,6 +22,8 @@ public class AALControllerImpl implements AALController {
 	private de.ls5.dywa.generated.controller.dime__HYPHEN_MINUS__models.app.ColumnController ColumnController;
 	@Inject
 	private de.ls5.dywa.generated.controller.dime__HYPHEN_MINUS__models.app.CellController CellController;
+	@Inject
+	private de.ls5.dywa.generated.controller.dime__HYPHEN_MINUS__models.app.TempColumnController TempColumnController;
 
 	@Override
 	public void reset() {
@@ -44,6 +46,9 @@ public class AALControllerImpl implements AALController {
 	}
 	for (final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Cell o : CellController.fetch()) {
 	CellController.deleteWithIncomingReferences(o);
+	}
+	for (final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.TempColumn o : TempColumnController.fetch()) {
+	TempColumnController.deleteWithIncomingReferences(o);
 	}
 
 		this.entityManager.setFlushMode(oldFlushMode);
