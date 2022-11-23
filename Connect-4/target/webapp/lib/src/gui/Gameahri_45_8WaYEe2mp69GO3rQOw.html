@@ -33,6 +33,29 @@ class="col-md-4 text-center"
 <div 
  class="row">
 <div
+*ngFor="let thisColumn of initOnDemandboard().initOnDemandcolumns(); let index = index; trackBy: trackSelective"  
+aria-live="polite" aria-atomic="true" 
+
+class="col-md-1 text-left"
+>
+<!-- beginn button placePiece -->
+<button 
+	data-cinco-id="_c1JK8WsdEe2LPP-yV9ajYA"
+	tabindex="0" aria-label="placePiece"
+	[disabled]="isBusy()"
+type="button"
+(click)="actionplacepieceeventac1JK8WsdEe2LPP_45_yV9ajYAEventTrigger(thisColumn?.index)
+"
+class="btn btn-info btn-xs">
+ place
+ <span aria-hidden="true" aria-label="icon arrow-down" class="glyphicon glyphicon-arrow-down" style="left:2px"></span>
+</button>
+<!-- end button placePiece -->
+</div>
+</div>
+<div 
+ class="row">
+<div
 *ngFor="let thisColumn of initOnDemandboard().initOnDemandcolumns(); let poopoo = index; trackBy: trackSelective"  
 aria-live="polite" aria-atomic="true" 
 

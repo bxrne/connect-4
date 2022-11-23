@@ -29,4 +29,29 @@ public class Game_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOwResult {
 	
 	public static class gui__wx7LYWacEe24gf5J_KrBHgbackReturn {
 	}
+	
+	public Game_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOwResult(String branchName, gui__c1JK8WsdEe2LPP__HYPHEN_MINUS__yV9ajYAplacePieceReturn gui__c1JK8WsdEe2LPP__HYPHEN_MINUS__yV9ajYAplacePieceReturn) {
+		this.branchName = branchName;
+		this.gui__c1JK8WsdEe2LPP__HYPHEN_MINUS__yV9ajYAplacePieceReturn = gui__c1JK8WsdEe2LPP__HYPHEN_MINUS__yV9ajYAplacePieceReturn;
+	}
+	
+	private gui__c1JK8WsdEe2LPP__HYPHEN_MINUS__yV9ajYAplacePieceReturn gui__c1JK8WsdEe2LPP__HYPHEN_MINUS__yV9ajYAplacePieceReturn;
+	
+	public gui__c1JK8WsdEe2LPP__HYPHEN_MINUS__yV9ajYAplacePieceReturn getgui__c1JK8WsdEe2LPP__HYPHEN_MINUS__yV9ajYAplacePieceReturn() {
+		return gui__c1JK8WsdEe2LPP__HYPHEN_MINUS__yV9ajYAplacePieceReturn;
+	}
+	
+	public static class gui__c1JK8WsdEe2LPP__HYPHEN_MINUS__yV9ajYAplacePieceReturn {
+		private java.lang.Long index;
+		
+		@com.fasterxml.jackson.annotation.JsonProperty("index")
+		public java.lang.Long getIndex() {
+			return index;
+		}
+		
+		@com.fasterxml.jackson.annotation.JsonProperty("index")
+		public void setIndex(java.lang.Long index) {
+			this.index = index;
+		}
+	}
 }

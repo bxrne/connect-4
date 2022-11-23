@@ -116,6 +116,10 @@ public class Game {
 
 	}
 	
+	public static void pC(Long index) {
+		System.out.println(index+"");
+	}
+	
 	public static void addCell(Cell cell, Column column) {
 		column.getcells_Cell().add(cell);
 	}

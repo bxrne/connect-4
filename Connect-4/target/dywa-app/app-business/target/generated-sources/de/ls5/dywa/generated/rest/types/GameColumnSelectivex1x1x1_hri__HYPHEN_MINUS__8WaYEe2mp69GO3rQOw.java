@@ -24,6 +24,11 @@ public class GameColumnSelectivex1x1x1_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOw {
 		{
 			final de.ls5.dywa.generated.entity.models.app.Column effectiveFrom = from;
 			final de.ls5.dywa.generated.rest.types.Column effectiveTo = to;
+		effectiveTo.setindex(effectiveFrom.getindex());
+		}
+		{
+			final de.ls5.dywa.generated.entity.models.app.Column effectiveFrom = from;
+			final de.ls5.dywa.generated.rest.types.Column effectiveTo = to;
 		final java.util.List<de.ls5.dywa.generated.entity.models.app.Cell>
 		 source = effectiveFrom.getcells_Cell();
 		final java.util.List<de.ls5.dywa.generated.rest.types.Cell>

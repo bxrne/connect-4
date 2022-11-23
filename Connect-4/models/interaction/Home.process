@@ -27,6 +27,11 @@ Process _LWgagF-SEeakMeYoloYxpg {
   		id _NIO74WhZEe2Ts87gHbvjRg
   		concurrent true
   	}
+  	
+  	-BranchConnector-> _nR758WsdEe2LPP-yV9ajYA   {
+  		id _nR_kUWsdEe2LPP-yV9ajYA
+  		concurrent true
+  	}
   }
   
   Branch _NIHnIWhZEe2Ts87gHbvjRg at 40,600 size 120,25 {
@@ -81,6 +86,46 @@ Process _LWgagF-SEeakMeYoloYxpg {
   	}
   	-ControlFlow-> _NHhKMGhZEe2Ts87gHbvjRg  decorate "" at (0,0) {
   		id _g09ewWkVEe2cW5_gHw6itA
+  		concurrent true
+  	}
+  }
+  
+  Branch _nR758WsdEe2LPP-yV9ajYA at 260,520 size 120,50 {
+  	name "placePiece"
+  	PrimitiveOutputPort _nSD1wWsdEe2LPP-yV9ajYA at 5,27 size 110,18 {
+  		dataType Integer
+  		isList false
+  		name "index"
+  		-PrimitiveDirectDataFlow-> _4daHcWsdEe2LPP-yV9ajYA via (250,556) (250,576) decorate "" at (0,0) {
+  			id _5clsgWsdEe2LPP-yV9ajYA
+  			dfViewWorkaround true
+  		}
+  	}
+  	-ControlFlow-> _4dXEIWsdEe2LPP-yV9ajYA  decorate "" at (0,0) {
+  		id _4_qf8WsdEe2LPP-yV9ajYA
+  		concurrent true
+  	}
+  }
+  
+  ProcessSIB _4dXEIWsdEe2LPP-yV9ajYA at 460,500 size 120,90 {
+  	libraryComponentUID "_05YnEWsdEe2LPP-yV9ajYA"
+  	label "addPiece"
+  	ignoredBranch [  ]
+  	PrimitiveInputPort _4daHcWsdEe2LPP-yV9ajYA at 5,67 size 110,18 {
+  		dataType Integer
+  		isList false
+  		name "index"
+  	}
+  	-BranchConnector-> _4dlGkWsdEe2LPP-yV9ajYA   {
+  		id _4dmUsWsdEe2LPP-yV9ajYA
+  		concurrent true
+  	}
+  }
+  
+  Branch _4dlGkWsdEe2LPP-yV9ajYA at 680,532 size 120,25 {
+  	name "success"
+  	-ControlFlow-> _fQXfgWkVEe2cW5_gHw6itA via (740,310) (100,310) decorate "" at (0,0) {
+  		id _67ALQWsdEe2LPP-yV9ajYA
   		concurrent true
   	}
   }

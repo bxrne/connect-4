@@ -43,6 +43,7 @@ import 'package:app/src/gui/HomeadddDUGaXEe2ffZDgDpg3pA.dart';
 			[modalDialog]="false"
 			[ismajorpage]="true"
 			(actionbackevent) = "eventaNIHnIWhZEe2Ts87gHbvjRgbackTrigger(\$event)"
+			(actionplacepieceevent) = "eventanR758WsdEe2LPP_45_yV9ajYAplacePieceTrigger(\$event)"
 		>
 		</game-tag>
 		<home-tag
@@ -206,6 +207,24 @@ class ProcessaLWgagF_45_SEeakMeYoloYxpgComponent extends GUIProcess implements O
 			getRuntimeId(),
 			'_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOw',
 			'back/branch/public',
+			result.toJSOG(),
+			parentRuntimeId:getParentRuntimeId()
+		)
+		.then((cpr)=>processResponse(_processService,cpr))
+		.catchError((e)=>processError(e));
+	}
+	// Branch placePiece
+	void eventanR758WsdEe2LPP_45_yV9ajYAplacePieceTrigger(Map<String,dynamic> map)
+	{
+		var result = new Game_hri_45_8WaYEe2mp69GO3rQOwBranch.forplacePieceBranch(
+			index:map['index']
+		);
+		_processService.continueProcess(
+			deserializer,
+			getActiveProcesses()[runtimeId].runtime,
+			getRuntimeId(),
+			'_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOw',
+			'placePiece/branch/public',
 			result.toJSOG(),
 			parentRuntimeId:getParentRuntimeId()
 		)

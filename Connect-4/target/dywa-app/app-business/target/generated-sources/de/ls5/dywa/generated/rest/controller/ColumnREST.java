@@ -147,6 +147,16 @@ public class ColumnREST {
 			final de.ls5.dywa.generated.entity.models.app.Column effectiveObj = obj;
 
 		// If values were not specified, ignore them
+		if (effectiveValue.isindexSet()) {
+			checkVersion(value, obj);
+			effectiveObj.setindex(effectiveValue.getindex());
+		}
+	}
+		{
+			final de.ls5.dywa.generated.rest.types.Column effectiveValue = value;
+			final de.ls5.dywa.generated.entity.models.app.Column effectiveObj = obj;
+
+		// If values were not specified, ignore them
 		if (effectiveValue.iscells_CellSet()) {
 			checkVersion(value, obj);
 			final java.util.List<de.ls5.dywa.generated.entity.models.app.Cell>

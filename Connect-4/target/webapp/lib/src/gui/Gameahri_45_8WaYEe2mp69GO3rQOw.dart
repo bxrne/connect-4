@@ -88,6 +88,9 @@ class Gameahri_45_8WaYEe2mp69GO3rQOw extends dime.DIMEComponent implements OnIni
   	// branch back as info.scce.dime.gui.editor.graphiti.api.CButton@1a946377 (id: _wx7LYWacEe24gf5J_KrBHg) in info.scce.dime.gui.editor.graphiti.api.CGUI@bc7daf94 (id: _hri-8WaYEe2mp69GO3rQOw)
   	@Output('actionbackevent') Stream<Map<String,dynamic>> get evt_actionbackevent => actionbackevent.stream;
   	StreamController<Map<String,dynamic>> actionbackevent = new StreamController();
+  	// branch placePiece as info.scce.dime.gui.editor.graphiti.api.CButton@e035f265 (id: _c1JK8WsdEe2LPP-yV9ajYA) in info.scce.dime.gui.editor.graphiti.api.CGUI@bc7daf94 (id: _hri-8WaYEe2mp69GO3rQOw)
+  	@Output('actionplacepieceevent') Stream<Map<String,dynamic>> get evt_actionplacepieceevent => actionplacepieceevent.stream;
+  	StreamController<Map<String,dynamic>> actionplacepieceevent = new StreamController();
   	
   	@ViewChildren(modal.Modal)
   	List<modal.Modal> modals;
@@ -118,6 +121,10 @@ class Gameahri_45_8WaYEe2mp69GO3rQOw extends dime.DIMEComponent implements OnIni
 		// branch back declaration
 		if(this.actionbackevent!=null) {
 			  			this.actionbackevent = new StreamController<Map<String,dynamic>>();  				
+		}
+		// branch placePiece declaration
+		if(this.actionplacepieceevent!=null) {
+			  			this.actionplacepieceevent = new StreamController<Map<String,dynamic>>();  				
 		}
 			
 		updateImageHash();
@@ -178,6 +185,17 @@ class Gameahri_45_8WaYEe2mp69GO3rQOw extends dime.DIMEComponent implements OnIni
   		{
   			Map<String,dynamic> data = new Map();
   			this.actionbackevent.add(data);
+  		}
+  		/// callback, if the button placePiece is clicked
+  			void actionplacepieceeventac1JK8WsdEe2LPP_45_yV9ajYAEventTrigger(
+  				p_tcFioWmqEe2sl80VZxYqHw
+  				
+  				)
+  		
+  		{
+  			Map<String,dynamic> data = new Map();
+  			data['index'] = p_tcFioWmqEe2sl80VZxYqHw;
+  			this.actionplacepieceevent.add(data);
   		}
   		
   		

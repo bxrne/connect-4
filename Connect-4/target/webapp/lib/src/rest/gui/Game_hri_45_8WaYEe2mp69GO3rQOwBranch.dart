@@ -15,6 +15,14 @@ class Game_hri_45_8WaYEe2mp69GO3rQOwBranch extends ContinueProcessRequest {
 	) {
 		branch_back = new Back();
 	}
+	PlacePiece branch_placePiece;
+	
+	Game_hri_45_8WaYEe2mp69GO3rQOwBranch.forplacePieceBranch(
+{		int index:0
+}	) {
+		branch_placePiece = new PlacePiece();
+		branch_placePiece.port_index = index;
+	}
 
 	String toJSON() {
 		return jsonEncode(toJSOG());
@@ -27,6 +35,9 @@ class Game_hri_45_8WaYEe2mp69GO3rQOwBranch extends ContinueProcessRequest {
 		if(branch_back!=null) {
 			return branch_back.toJSOG();
 		}
+		if(branch_placePiece!=null) {
+			return branch_placePiece.toJSOG();
+		}
 		throw new Exception("Exhaustive IF Game_hri_45_8WaYEe2mp69GO3rQOwBranch.dart");
 	}
 }
@@ -38,6 +49,20 @@ class Game_hri_45_8WaYEe2mp69GO3rQOwBranch extends ContinueProcessRequest {
 		{
 			
 			Map<String,dynamic> jsonObj = new Map();
+					
+			return jsonObj;
+		}
+		
+	}
+	class PlacePiece {
+		
+		int port_index = 0;
+
+		Map<String,dynamic> toJSOG()
+		{
+			
+			Map<String,dynamic> jsonObj = new Map();
+Map<Object,dynamic> cache = new Map();			jsonObj["index"] = this.port_index;
 					
 			return jsonObj;
 		}
