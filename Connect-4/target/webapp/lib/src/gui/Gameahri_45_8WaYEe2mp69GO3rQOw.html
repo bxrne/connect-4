@@ -22,20 +22,52 @@ Connect-4
 <div 
  class="row">
 <div
+
+class="col-md-4 text-left"
+>
+</div>
+<div
+
+class="col-md-4 text-center"
+>
+<div 
+ class="row">
+<div
 *ngFor="let thisColumn of initOnDemandboard().initOnDemandcolumns(); let poopoo = index; trackBy: trackSelective"  
 aria-live="polite" aria-atomic="true" 
 
 [ngStyle]="{ 'margin-top':'15px' }"
-class="col-md-1 text-left"
+class="col-md-1 text-center"
 >
-<span *ngFor="let thisCell of thisColumn.initOnDemandcells(); let peepee = index; trackBy: trackSelective"  
+<!-- beginn box -->
+<div *ngFor="let thisCell of thisColumn.initOnDemandcells(); let peepee = index; trackBy: trackSelective"  
 aria-live="polite" aria-atomic="true" 
 
+ [ngStyle]="{ 'padding':'0px' }"
+ [dimeAttributes]="{}"
+ class="container">
+<img
+	
+	[ngStyle]="{ 'width':'50px' , 'height':'50px' }"
+	alt="game image"
+	class="img img-responsive"
+	src="https://bxrne.com/{{thisCell.value}}.png"
+>
+</div>
+<!-- end box -->
+<span 
  >
-<span aria-live="polite" aria-atomic="true" class="text-center">
-<span [safeInnerHtml]="getSafeHtml(''+thisCell?.value.toString()+' <br/>')"></span>
+<span aria-live="polite" aria-atomic="true" class="text-left">
+<span [safeInnerHtml]="getSafeHtml('<br/>')"></span>
 </span>
 </span>
+</div>
+</div>
+</div>
+<div
+
+class="col-md-4 text-left"
+>
 </div>
 </div>
 </div>

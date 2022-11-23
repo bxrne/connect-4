@@ -164,19 +164,19 @@ class HomeadddDUGaXEe2ffZDgDpg3pA extends dime.DIMEComponent implements OnInit, 
   		
   		
   	
-  		/// callback, if the button start_game_basic is clicked
-  			void actionstartxxgamexxbasiceventak2BaEGacEe24gf5J_KrBHgEventTrigger()
-  		
-  		{
-  			Map<String,dynamic> data = new Map();
-  			this.actionstartxxgamexxbasicevent.add(data);
-  		}
   		/// callback, if the button Label is clicked
   			void actionlabeleventalepcIGajEe24gf5J_KrBHgEventTrigger()
   		
   		{
   			// static button redirect
   			html.window.location.href='https://www.wikihow.com/Play-Connect-4';
+  		}
+  		/// callback, if the button start_game_basic is clicked
+  			void actionstartxxgamexxbasiceventak2BaEGacEe24gf5J_KrBHgEventTrigger()
+  		
+  		{
+  			Map<String,dynamic> data = new Map();
+  			this.actionstartxxgamexxbasicevent.add(data);
   		}
   		
   		

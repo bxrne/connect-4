@@ -36,6 +36,7 @@ import 'package:app/src/modal/Modal.dart' as modal;
 import 'package:app/src/panel/Panel.dart' as panel;
 
 //file guard imports
+import 'package:app/src/models/FileGuardsahri_45_8WaYEe2mp69GO3rQOwgame.dart';
 //special element imports
 //table component imports
 //form component imports
@@ -182,6 +183,18 @@ class Gameahri_45_8WaYEe2mp69GO3rQOw extends dime.DIMEComponent implements OnIni
   		
   		
   		
+  		/// loads an image file download for an image component	
+  		String loadaAzErgWsWEe2LPP_45_yV9ajYAImage(fileRef)
+  		{
+  			//prepare guard compound
+  			FileGuardaAzErgWsWEe2LPP_45_yV9ajYACompound guardContainer = new FileGuardaAzErgWsWEe2LPP_45_yV9ajYACompound();
+  			guardContainer.context = fileRef;
+  			
+  			// private interactable
+  			String guardData = guardContainer.toQueryParams();
+  			return guardData;
+  			
+  		}
   	
   		
   		
