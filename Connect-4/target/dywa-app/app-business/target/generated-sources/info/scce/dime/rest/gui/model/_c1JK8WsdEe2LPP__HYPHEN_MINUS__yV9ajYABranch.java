@@ -35,4 +35,18 @@
 			 index) {
 				this.index = index;
 			}
+			private de.ls5.dywa.generated.rest.types.Board
+			 board;
+			
+			@com.fasterxml.jackson.annotation.JsonProperty("board")
+			public de.ls5.dywa.generated.rest.types.Board
+			 getBoard() {
+				return board;
+			}
+			
+			@com.fasterxml.jackson.annotation.JsonProperty("board")
+			public void setBoard(de.ls5.dywa.generated.rest.types.Board
+			 board) {
+				this.board = board;
+			}
 		}

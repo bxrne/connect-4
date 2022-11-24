@@ -67,7 +67,6 @@ public final class Startup_sA1GYNviEeWsF7MALrkAZQ implements DIMEProcess {
 	_iHeOANzGEeW2rv4DARGjjw,
 	_PssUwNzGEeW2rv4DARGjjw,
 	_sBOvANviEeWsF7MALrkAZQ,
-	_5mJZIWhUEe2Ts87gHbvjRg,
 		;
 	}
 
@@ -132,10 +131,6 @@ public final class Startup_sA1GYNviEeWsF7MALrkAZQ implements DIMEProcess {
 				}
 				case _sBOvANviEeWsF7MALrkAZQ: {
 					return execute_sBOvANviEeWsF7MALrkAZQ(ctx);
-				}
-				case _5mJZIWhUEe2Ts87gHbvjRg: {
-					curr = execute_5mJZIWhUEe2Ts87gHbvjRg(ctx);
-					break;
 				}
 				default: {
 					throw new IllegalStateException("unhandled SIB container " + curr);
@@ -211,7 +206,7 @@ public final class Startup_sA1GYNviEeWsF7MALrkAZQ implements DIMEProcess {
 		}
 		else {
 			// branch 'success'
-			return SIB_ID._5mJZIWhUEe2Ts87gHbvjRg;
+			return SIB_ID._sBOvANviEeWsF7MALrkAZQ;
 		}
 	}
 	// container for graph abstraction 'CreateUser' and sub process 'CreateUser'.
@@ -223,7 +218,7 @@ public final class Startup_sA1GYNviEeWsF7MALrkAZQ implements DIMEProcess {
 		switch(result.getBranchName()) {
 		case "success": {
 			// branch 'success'
-			return SIB_ID._5mJZIWhUEe2Ts87gHbvjRg;
+			return SIB_ID._sBOvANviEeWsF7MALrkAZQ;
 		}
 			default: throw new IllegalStateException("SIB 'CreateUser' has no successor defined for branch '" + result.getBranchName() + '\'');
 		}
@@ -262,19 +257,6 @@ public final class Startup_sA1GYNviEeWsF7MALrkAZQ implements DIMEProcess {
 	// container for graph i/o 'success'.
 	public Startup_sA1GYNviEeWsF7MALrkAZQResult execute_sBOvANviEeWsF7MALrkAZQ(final Context ctx) {
 		return new Startup_sA1GYNviEeWsF7MALrkAZQResult(new SuccessReturnImpl(ctx));
-	}
-	// container for atomic SIB 'InitialiseBoard'.
-	public SIB_ID execute_5mJZIWhUEe2Ts87gHbvjRg(final Context ctx) {
-		try {
-			info.scce.dime.app.demo.Game.initialise();
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			// branch 'failure'
-			throw new IllegalStateException("SIB 'InitialiseBoard' has no successor defined for branch 'failure'");
-		}
-		// branch 'success'
-		return SIB_ID._sBOvANviEeWsF7MALrkAZQ;
 	}
 	
 }  

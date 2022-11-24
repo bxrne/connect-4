@@ -98,7 +98,7 @@ public final class GetBoard_HdofkWkUEe2cW5_gHw6itA implements DIMEProcess {
 		// direct dataflow variables.
 		private List<java.lang.Long> GetBoardWidthSuccessWidth_MUzC2WkUEe2cW5_gHw6itA = new ArrayList<>();
 		private java.lang.Long IterateNextElement_MU04D2kUEe2cW5_gHw6itA;
-		private List<java.lang.Long> GetColSuccessColumn_4pdrMWkUEe2cW5_gHw6itA = new ArrayList<>();
+		private List<java.lang.Long> MakeColSuccessColumn_Dsr3sWvsEe29DrU9LWXeGA = new ArrayList<>();
 		private java.lang.Long IterateNextElement_lhWLkWmoEe2sl80VZxYqHw;
 		private de.ls5.dywa.generated.entity.models.app.Board Create_BoardSuccessCreated_PIyBwWniEe2ZroPb56nQ4Q;
 		private de.ls5.dywa.generated.entity.models.app.Column Create_ColumnSuccessCreated_TpCe4Wn4Ee2DQ__HYPHEN_MINUS__vHzwgk5w;
@@ -116,12 +116,12 @@ public final class GetBoard_HdofkWkUEe2cW5_gHw6itA implements DIMEProcess {
 	_Hd0s0WkUEe2cW5_gHw6itA,
 	_MUx0sWkUEe2cW5_gHw6itA,
 	_MUzC02kUEe2cW5_gHw6itA,
-	_4pKJMWkUEe2cW5_gHw6itA,
 	_lgq2IWmoEe2sl80VZxYqHw,
 	_PICa4GniEe2ZroPb56nQ4Q,
 	_TocB8Gn4Ee2DQ__HYPHEN_MINUS__vHzwgk5w,
 	_jwRnwGpyEe2CKNJeKFP3QA,
 	_tBdfQWpyEe2CKNJeKFP3QA,
+	_Dr1jIWvsEe29DrU9LWXeGA,
 		;
 	}
 
@@ -180,10 +180,6 @@ public final class GetBoard_HdofkWkUEe2cW5_gHw6itA implements DIMEProcess {
 					curr = execute_MUzC02kUEe2cW5_gHw6itA(ctx);
 					break;
 				}
-				case _4pKJMWkUEe2cW5_gHw6itA: {
-					curr = execute_4pKJMWkUEe2cW5_gHw6itA(ctx);
-					break;
-				}
 				case _lgq2IWmoEe2sl80VZxYqHw: {
 					curr = execute_lgq2IWmoEe2sl80VZxYqHw(ctx);
 					break;
@@ -202,6 +198,10 @@ public final class GetBoard_HdofkWkUEe2cW5_gHw6itA implements DIMEProcess {
 				}
 				case _tBdfQWpyEe2CKNJeKFP3QA: {
 					curr = execute_tBdfQWpyEe2CKNJeKFP3QA(ctx);
+					break;
+				}
+				case _Dr1jIWvsEe29DrU9LWXeGA: {
+					curr = execute_Dr1jIWvsEe29DrU9LWXeGA(ctx);
 					break;
 				}
 				default: {
@@ -294,9 +294,9 @@ public final class GetBoard_HdofkWkUEe2cW5_gHw6itA implements DIMEProcess {
 	public SIB_ID execute_MUzC02kUEe2cW5_gHw6itA(final Context ctx) {
 		try {
 			final List<java.lang.Long> result = info.scce.dime.app.demo.Game.getBoardWidth();
-			List<java.lang.Long> value1 = result;
-			if (value1 != null) { // prevent null in lists
-			ctx.GetBoardWidthSuccessWidth_MUzC2WkUEe2cW5_gHw6itA = new ArrayList<java.lang.Long>(value1);
+			List<java.lang.Long> value0 = result;
+			if (value0 != null) { // prevent null in lists
+			ctx.GetBoardWidthSuccessWidth_MUzC2WkUEe2cW5_gHw6itA = new ArrayList<java.lang.Long>(value0);
 			}
 		}
 		catch (Exception e) {
@@ -307,29 +307,12 @@ public final class GetBoard_HdofkWkUEe2cW5_gHw6itA implements DIMEProcess {
 		// branch 'success'
 		return SIB_ID._MUx0sWkUEe2cW5_gHw6itA;
 	}
-	// container for atomic SIB 'GetCol'.
-	public SIB_ID execute_4pKJMWkUEe2cW5_gHw6itA(final Context ctx) {
-		try {
-			final List<java.lang.Long> result = info.scce.dime.app.demo.Game.getCol(ctx.IterateNextElement_MU04D2kUEe2cW5_gHw6itA);
-			List<java.lang.Long> value2 = result;
-			if (value2 != null) { // prevent null in lists
-			ctx.GetColSuccessColumn_4pdrMWkUEe2cW5_gHw6itA = new ArrayList<java.lang.Long>(value2);
-			}
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			// branch 'failure'
-			throw new IllegalStateException("SIB 'GetCol' has no successor defined for branch 'failure'");
-		}
-		// branch 'success'
-		return SIB_ID._lgq2IWmoEe2sl80VZxYqHw;
-	}
 	// container for iterate primitive SIB 'Iterate'.
 	public SIB_ID execute_lgq2IWmoEe2sl80VZxYqHw(final Context ctx) {
 		final int pos = ctx.counterIterate_lgq2IWmoEe2sl80VZxYqHw++;
-		List<java.lang.Long> list = ctx.GetColSuccessColumn_4pdrMWkUEe2cW5_gHw6itA;
+		List<java.lang.Long> list = ctx.MakeColSuccessColumn_Dsr3sWvsEe29DrU9LWXeGA;
 		if(list != null && pos < list.size()) {
-			ctx.IterateNextElement_lhWLkWmoEe2sl80VZxYqHw = ctx.GetColSuccessColumn_4pdrMWkUEe2cW5_gHw6itA.get(pos);
+			ctx.IterateNextElement_lhWLkWmoEe2sl80VZxYqHw = ctx.MakeColSuccessColumn_Dsr3sWvsEe29DrU9LWXeGA.get(pos);
 			// branch 'next'
 			return SIB_ID._tBdfQWpyEe2CKNJeKFP3QA;
 		}
@@ -361,14 +344,14 @@ public final class GetBoard_HdofkWkUEe2cW5_gHw6itA implements DIMEProcess {
 	
 		createdObj.setindex(ctx.IterateNextElement_MU04D2kUEe2cW5_gHw6itA);
 	
-		de.ls5.dywa.generated.entity.models.app.Column value3 = createdObj;
-		if (value3 != null) { // prevent null in lists
-		ctx.columns_XnhvsWniEe2ZroPb56nQ4Q.add(value3);
+		de.ls5.dywa.generated.entity.models.app.Column value1 = createdObj;
+		if (value1 != null) { // prevent null in lists
+		ctx.columns_XnhvsWniEe2ZroPb56nQ4Q.add(value1);
 		}
 		ctx.Create_ColumnSuccessCreated_TpCe4Wn4Ee2DQ__HYPHEN_MINUS__vHzwgk5w = createdObj;
 	
 		// branch 'success'
-		return SIB_ID._4pKJMWkUEe2cW5_gHw6itA;
+		return SIB_ID._Dr1jIWvsEe29DrU9LWXeGA;
 	}
 	// container for atomic SIB 'AddCell'.
 	public SIB_ID execute_jwRnwGpyEe2CKNJeKFP3QA(final Context ctx) {
@@ -395,6 +378,23 @@ public final class GetBoard_HdofkWkUEe2cW5_gHw6itA implements DIMEProcess {
 	
 		// branch 'success'
 		return SIB_ID._jwRnwGpyEe2CKNJeKFP3QA;
+	}
+	// container for atomic SIB 'MakeCol'.
+	public SIB_ID execute_Dr1jIWvsEe29DrU9LWXeGA(final Context ctx) {
+		try {
+			final List<java.lang.Long> result = info.scce.dime.app.demo.Game.makeCol(ctx.IterateNextElement_MU04D2kUEe2cW5_gHw6itA);
+			List<java.lang.Long> value2 = result;
+			if (value2 != null) { // prevent null in lists
+			ctx.MakeColSuccessColumn_Dsr3sWvsEe29DrU9LWXeGA = new ArrayList<java.lang.Long>(value2);
+			}
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			// branch 'failure'
+			throw new IllegalStateException("SIB 'MakeCol' has no successor defined for branch 'failure'");
+		}
+		// branch 'success'
+		return SIB_ID._lgq2IWmoEe2sl80VZxYqHw;
 	}
 	
 }  

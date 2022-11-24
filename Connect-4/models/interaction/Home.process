@@ -90,9 +90,19 @@ Process _LWgagF-SEeakMeYoloYxpg {
   	}
   }
   
-  Branch _nR758WsdEe2LPP-yV9ajYA at 260,520 size 120,50 {
+  Branch _nR758WsdEe2LPP-yV9ajYA at 260,520 size 120,68 {
   	name "placePiece"
-  	PrimitiveOutputPort _nSD1wWsdEe2LPP-yV9ajYA at 5,27 size 110,18 {
+  	ComplexOutputPort _YJ2y0WtlEe2yLYR6JjFIQg at 5,27 size 110,18 {
+  		libraryComponentUID "_bk7lAGkUEe2cW5_gHw6itA"
+  		isList false
+  		name "board"
+  		-ComplexDirectDataFlow-> _VRMjoWtlEe2yLYR6JjFIQg via (250,556) (250,594) decorate "" at (0,0) {
+  			id _Yn6AwWtlEe2yLYR6JjFIQg
+  			dfViewWorkaround true
+  		}
+  	}
+  	
+  	PrimitiveOutputPort _nSD1wWsdEe2LPP-yV9ajYA at 5,45 size 110,18 {
   		dataType Integer
   		isList false
   		name "index"
@@ -107,7 +117,7 @@ Process _LWgagF-SEeakMeYoloYxpg {
   	}
   }
   
-  ProcessSIB _4dXEIWsdEe2LPP-yV9ajYA at 460,500 size 120,90 {
+  ProcessSIB _4dXEIWsdEe2LPP-yV9ajYA at 460,500 size 120,108 {
   	libraryComponentUID "_05YnEWsdEe2LPP-yV9ajYA"
   	label "addPiece"
   	ignoredBranch [  ]
@@ -115,6 +125,12 @@ Process _LWgagF-SEeakMeYoloYxpg {
   		dataType Integer
   		isList false
   		name "index"
+  	}
+  	
+  	ComplexInputPort _VRMjoWtlEe2yLYR6JjFIQg at 5,85 size 110,18 {
+  		libraryComponentUID "_bk7lAGkUEe2cW5_gHw6itA"
+  		isList false
+  		name "board"
   	}
   	-BranchConnector-> _4dlGkWsdEe2LPP-yV9ajYA   {
   		id _4dmUsWsdEe2LPP-yV9ajYA

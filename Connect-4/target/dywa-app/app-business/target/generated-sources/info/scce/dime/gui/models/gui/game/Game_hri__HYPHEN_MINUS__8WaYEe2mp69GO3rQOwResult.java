@@ -53,5 +53,16 @@ public class Game_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOwResult {
 		public void setIndex(java.lang.Long index) {
 			this.index = index;
 		}
+		private de.ls5.dywa.generated.entity.models.app.Board Board;
+		
+		@com.fasterxml.jackson.annotation.JsonProperty("Board")
+		public de.ls5.dywa.generated.entity.models.app.Board getBoard() {
+			return Board;
+		}
+		
+		@com.fasterxml.jackson.annotation.JsonProperty("Board")
+		public void setBoard(de.ls5.dywa.generated.entity.models.app.Board Board) {
+			this.Board = Board;
+		}
 	}
 }

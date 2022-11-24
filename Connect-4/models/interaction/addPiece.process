@@ -8,13 +8,28 @@ Process _05YnEWsdEe2LPP-yV9ajYA {
   	dfViewWorkaround true
   }
   
-  StartSIB _05bqYWsdEe2LPP-yV9ajYA at 330,20 size 100,90 {
+  StartSIB _05bqYWsdEe2LPP-yV9ajYA at 330,20 size 100,108 {
   	PrimitiveOutputPort _1UX58WsdEe2LPP-yV9ajYA at 5,67 size 90,18 {
   		dataType Integer
   		isList false
   		name "index"
-  		-PrimitiveDirectDataFlow-> _reiLUWsfEe2LPP-yV9ajYA via (300,96) (300,346) decorate "" at (0,0) {
+  		-PrimitiveDirectDataFlow-> _reiLUWsfEe2LPP-yV9ajYA via (300,96) (300,227) decorate "" at (0,0) {
   			id _vBmpcWsfEe2LPP-yV9ajYA
+  			dfViewWorkaround true
+  		}
+  		
+  		-PrimitiveDirectDataFlow-> _OzBmUWtlEe2yLYR6JjFIQg via (300,96) (300,412) decorate "" at (0,0) {
+  			id _d6k0QGtlEe2yLYR6JjFIQg
+  			dfViewWorkaround true
+  		}
+  	}
+  	
+  	ComplexOutputPort _T11Y4WtlEe2yLYR6JjFIQg at 5,85 size 90,18 {
+  		libraryComponentUID "_bk7lAGkUEe2cW5_gHw6itA"
+  		isList false
+  		name "board"
+  		-ComplexDirectDataFlow-> _OykTUWtlEe2yLYR6JjFIQg via (310,114) (310,376) decorate "" at (0,0) {
+  			id _asWkwWtlEe2yLYR6JjFIQg
   			dfViewWorkaround true
   		}
   	}
@@ -28,7 +43,7 @@ Process _05YnEWsdEe2LPP-yV9ajYA {
   	branchName "success"
   }
   
-  AtomicSIB _refvEWsfEe2LPP-yV9ajYA at 310,270 size 120,90 {
+  AtomicSIB _refvEWsfEe2LPP-yV9ajYA at 320,151 size 120,90 {
   	libraryComponentUID "app.demo.PCL"
   	label "PCL"
   	ignoredBranch [  ]
@@ -43,10 +58,46 @@ Process _05YnEWsdEe2LPP-yV9ajYA {
   	}
   }
   
-  Branch _renq4WsfEe2LPP-yV9ajYA at 347,432 size 120,25 {
+  Branch _renq4WsfEe2LPP-yV9ajYA at 320,260 size 120,25 {
+  	name "success"
+  	-ControlFlow-> _OxptUGtlEe2yLYR6JjFIQg  decorate "" at (0,0) {
+  		id _cJuhsWtlEe2yLYR6JjFIQg
+  		concurrent true
+  	}
+  }
+  
+  AtomicSIB _OxptUGtlEe2yLYR6JjFIQg at 320,300 size 120,126 {
+  	libraryComponentUID "app.demo.PlaceCoin"
+  	label "PlaceCoin"
+  	ignoredBranch [ IgnoreBranch _OyOVEGtlEe2yLYR6JjFIQg {
+  			name "failure"
+  		} ]
+  	ComplexInputPort _OykTUWtlEe2yLYR6JjFIQg at 5,67 size 110,18 {
+  		libraryComponentUID "_bk7lAGkUEe2cW5_gHw6itA"
+  		isList false
+  		name "board"
+  	}
+  	
+  	IntegerInputStatic _gDJDQGtlEe2yLYR6JjFIQg at 5,85 size 110,18 {
+  		value 1
+  		name "player"
+  	}
+  	
+  	PrimitiveInputPort _OzBmUWtlEe2yLYR6JjFIQg at 5,103 size 110,18 {
+  		dataType Integer
+  		isList false
+  		name "index"
+  	}
+  	-BranchConnector-> _OzLXUWtlEe2yLYR6JjFIQg   {
+  		id _OzQ24WtlEe2yLYR6JjFIQg
+  		concurrent true
+  	}
+  }
+  
+  Branch _OzLXUWtlEe2yLYR6JjFIQg at 320,436 size 120,25 {
   	name "success"
   	-ControlFlow-> _05dfkWsdEe2LPP-yV9ajYA  decorate "" at (0,0) {
-  		id _vVJ3kWsfEe2LPP-yV9ajYA
+  		id _dC6McWtlEe2yLYR6JjFIQg
   		concurrent true
   	}
   }

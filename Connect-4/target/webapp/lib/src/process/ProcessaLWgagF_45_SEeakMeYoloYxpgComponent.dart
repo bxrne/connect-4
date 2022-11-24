@@ -217,6 +217,7 @@ class ProcessaLWgagF_45_SEeakMeYoloYxpgComponent extends GUIProcess implements O
 	void eventanR758WsdEe2LPP_45_yV9ajYAplacePieceTrigger(Map<String,dynamic> map)
 	{
 		var result = new Game_hri_45_8WaYEe2mp69GO3rQOwBranch.forplacePieceBranch(
+			board:map['board'] as Data.Board,
 			index:map['index']
 		);
 		_processService.continueProcess(

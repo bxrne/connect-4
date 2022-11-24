@@ -55,6 +55,7 @@ public final class AddPiece_05YnEWsdEe2LPP__HYPHEN_MINUS__yV9ajYA implements DIM
 
 		// direct dataflow variables.
 		private java.lang.Long startIndex_1UX58WsdEe2LPP__HYPHEN_MINUS__yV9ajYA;
+		private de.ls5.dywa.generated.entity.models.app.Board startBoard_T11Y4WtlEe2yLYR6JjFIQg;
 
 		public info.scce.dime.process.JSONContext toJSON() {
 			// this process has no context variables that need to be preserved
@@ -65,6 +66,7 @@ public final class AddPiece_05YnEWsdEe2LPP__HYPHEN_MINUS__yV9ajYA implements DIM
 	private enum SIB_ID {
 	_05dfkWsdEe2LPP__HYPHEN_MINUS__yV9ajYA,
 	_refvEWsfEe2LPP__HYPHEN_MINUS__yV9ajYA,
+	_OxptUGtlEe2yLYR6JjFIQg,
 		;
 	}
 
@@ -75,18 +77,20 @@ public final class AddPiece_05YnEWsdEe2LPP__HYPHEN_MINUS__yV9ajYA implements DIM
 		this.beanManager = beanManager;
 	}
 
-	private Context createContext(java.lang.Long index) {
+	private Context createContext(de.ls5.dywa.generated.entity.models.app.Board board, java.lang.Long index) {
 		final Context ctx = new Context();
 		ctx.beanManager = this.beanManager;
 
 		// store inputs
+		ctx.startBoard_T11Y4WtlEe2yLYR6JjFIQg = board;
+		ctx.startIndex_1UX58WsdEe2LPP__HYPHEN_MINUS__yV9ajYA = index;
 		ctx.startIndex_1UX58WsdEe2LPP__HYPHEN_MINUS__yV9ajYA = index;
 		
 		return ctx;
 	}
 
-	public AddPiece_05YnEWsdEe2LPP__HYPHEN_MINUS__yV9ajYAResult execute(boolean isAuthenticationRequired,java.lang.Long index) {
-		final Context ctx = createContext(index);
+	public AddPiece_05YnEWsdEe2LPP__HYPHEN_MINUS__yV9ajYAResult execute(boolean isAuthenticationRequired,de.ls5.dywa.generated.entity.models.app.Board board, java.lang.Long index) {
+		final Context ctx = createContext(board, index);
 		ctx.callStack.setAuthenticationRequired(isAuthenticationRequired);
 
 		return executeInternal(ctx, SIB_ID._refvEWsfEe2LPP__HYPHEN_MINUS__yV9ajYA);
@@ -115,6 +119,10 @@ public final class AddPiece_05YnEWsdEe2LPP__HYPHEN_MINUS__yV9ajYA implements DIM
 				}
 				case _refvEWsfEe2LPP__HYPHEN_MINUS__yV9ajYA: {
 					curr = execute_refvEWsfEe2LPP__HYPHEN_MINUS__yV9ajYA(ctx);
+					break;
+				}
+				case _OxptUGtlEe2yLYR6JjFIQg: {
+					curr = execute_OxptUGtlEe2yLYR6JjFIQg(ctx);
 					break;
 				}
 				default: {
@@ -191,6 +199,19 @@ public final class AddPiece_05YnEWsdEe2LPP__HYPHEN_MINUS__yV9ajYA implements DIM
 			e.printStackTrace();
 			// branch 'failure'
 			throw new IllegalStateException("SIB 'PCL' has no successor defined for branch 'failure'");
+		}
+		// branch 'success'
+		return SIB_ID._OxptUGtlEe2yLYR6JjFIQg;
+	}
+	// container for atomic SIB 'PlaceCoin'.
+	public SIB_ID execute_OxptUGtlEe2yLYR6JjFIQg(final Context ctx) {
+		try {
+			info.scce.dime.app.demo.Game.placeCoin(ctx.startBoard_T11Y4WtlEe2yLYR6JjFIQg, 1l, ctx.startIndex_1UX58WsdEe2LPP__HYPHEN_MINUS__yV9ajYA);
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			// branch 'failure'
+			throw new IllegalStateException("SIB 'PlaceCoin' has no successor defined for branch 'failure'");
 		}
 		// branch 'success'
 		return SIB_ID._05dfkWsdEe2LPP__HYPHEN_MINUS__yV9ajYA;

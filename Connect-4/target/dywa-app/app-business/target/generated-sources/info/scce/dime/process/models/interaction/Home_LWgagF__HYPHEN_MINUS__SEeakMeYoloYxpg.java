@@ -44,6 +44,7 @@ public final class Home_LWgagF__HYPHEN_MINUS__SEeakMeYoloYxpg implements DIMEPro
 				// begin direct dataflow variables
 				private java.lang.Long gamePlacePieceIndex_nSD1wWsdEe2LPP__HYPHEN_MINUS__yV9ajYA;
 				private de.ls5.dywa.generated.rest.types.Board GetBoardSuccessBoard_fQhQgWkVEe2cW5_gHw6itA;
+				private de.ls5.dywa.generated.rest.types.Board gamePlacePieceBoard_YJ2y0WtlEe2yLYR6JjFIQg;
 				// end direct dataflow variables
 
 				// begin index variables of iterate sibs
@@ -57,6 +58,10 @@ public final class Home_LWgagF__HYPHEN_MINUS__SEeakMeYoloYxpg implements DIMEPro
 					if(ctx.GetBoardSuccessBoard_fQhQgWkVEe2cW5_gHw6itA != null) {
 						result.GetBoardSuccessBoard_fQhQgWkVEe2cW5_gHw6itA = de.ls5.dywa.generated.rest.types.Board.fromDywaEntity(ctx.GetBoardSuccessBoard_fQhQgWkVEe2cW5_gHw6itA, objectCache);
 						de.ls5.dywa.generated.rest.types.BoardSelective.copy(ctx.GetBoardSuccessBoard_fQhQgWkVEe2cW5_gHw6itA, result.GetBoardSuccessBoard_fQhQgWkVEe2cW5_gHw6itA, objectCache);
+					}
+					if(ctx.gamePlacePieceBoard_YJ2y0WtlEe2yLYR6JjFIQg != null) {
+						result.gamePlacePieceBoard_YJ2y0WtlEe2yLYR6JjFIQg = de.ls5.dywa.generated.rest.types.Board.fromDywaEntity(ctx.gamePlacePieceBoard_YJ2y0WtlEe2yLYR6JjFIQg, objectCache);
+						de.ls5.dywa.generated.rest.types.BoardSelective.copy(ctx.gamePlacePieceBoard_YJ2y0WtlEe2yLYR6JjFIQg, result.gamePlacePieceBoard_YJ2y0WtlEe2yLYR6JjFIQg, objectCache);
 					}
 
 					return result;
@@ -74,6 +79,9 @@ public final class Home_LWgagF__HYPHEN_MINUS__SEeakMeYoloYxpg implements DIMEPro
 					result.gamePlacePieceIndex_nSD1wWsdEe2LPP__HYPHEN_MINUS__yV9ajYA = this.gamePlacePieceIndex_nSD1wWsdEe2LPP__HYPHEN_MINUS__yV9ajYA;
 					if (this.GetBoardSuccessBoard_fQhQgWkVEe2cW5_gHw6itA != null) {
 						result.GetBoardSuccessBoard_fQhQgWkVEe2cW5_gHw6itA = contextTransformer.transform(this.GetBoardSuccessBoard_fQhQgWkVEe2cW5_gHw6itA);
+					}
+					if (this.gamePlacePieceBoard_YJ2y0WtlEe2yLYR6JjFIQg != null) {
+						result.gamePlacePieceBoard_YJ2y0WtlEe2yLYR6JjFIQg = contextTransformer.transform(this.gamePlacePieceBoard_YJ2y0WtlEe2yLYR6JjFIQg);
 					}
 
 					return result;
@@ -101,6 +109,7 @@ public final class Home_LWgagF__HYPHEN_MINUS__SEeakMeYoloYxpg implements DIMEPro
 		// direct dataflow variables.
 		private java.lang.Long gamePlacePieceIndex_nSD1wWsdEe2LPP__HYPHEN_MINUS__yV9ajYA;
 		private de.ls5.dywa.generated.entity.models.app.Board GetBoardSuccessBoard_fQhQgWkVEe2cW5_gHw6itA;
+		private de.ls5.dywa.generated.entity.models.app.Board gamePlacePieceBoard_YJ2y0WtlEe2yLYR6JjFIQg;
 
 		public info.scce.dime.process.JSONContext toJSON() {
 			return JSONContext.toJSON(beanManager, this);
@@ -277,6 +286,7 @@ public final class Home_LWgagF__HYPHEN_MINUS__SEeakMeYoloYxpg implements DIMEPro
 		if ("placePiece".equals(result.getBranchName())) {
 			if(result.getgui__c1JK8WsdEe2LPP__HYPHEN_MINUS__yV9ajYAplacePieceReturn() != null) {
 			ctx.gamePlacePieceIndex_nSD1wWsdEe2LPP__HYPHEN_MINUS__yV9ajYA = result.getgui__c1JK8WsdEe2LPP__HYPHEN_MINUS__yV9ajYAplacePieceReturn().getIndex();
+			ctx.gamePlacePieceBoard_YJ2y0WtlEe2yLYR6JjFIQg = (de.ls5.dywa.generated.entity.models.app.Board)result.getgui__c1JK8WsdEe2LPP__HYPHEN_MINUS__yV9ajYAplacePieceReturn().getBoard();
 			}
 			// branch 'placePiece'
 			return SIB_ID._4dXEIWsdEe2LPP__HYPHEN_MINUS__yV9ajYA;
@@ -350,7 +360,7 @@ public final class Home_LWgagF__HYPHEN_MINUS__SEeakMeYoloYxpg implements DIMEPro
 	public SIB_ID execute_4dXEIWsdEe2LPP__HYPHEN_MINUS__yV9ajYA(final Context ctx) {
 		final info.scce.dime.process.models.interaction.AddPiece_05YnEWsdEe2LPP__HYPHEN_MINUS__yV9ajYA instance = new info.scce.dime.process.models.interaction.AddPiece_05YnEWsdEe2LPP__HYPHEN_MINUS__yV9ajYA(ctx.beanManager);
 	
-		final info.scce.dime.process.models.interaction.AddPiece_05YnEWsdEe2LPP__HYPHEN_MINUS__yV9ajYA.AddPiece_05YnEWsdEe2LPP__HYPHEN_MINUS__yV9ajYAResult result = instance.execute(false, ctx.gamePlacePieceIndex_nSD1wWsdEe2LPP__HYPHEN_MINUS__yV9ajYA);
+		final info.scce.dime.process.models.interaction.AddPiece_05YnEWsdEe2LPP__HYPHEN_MINUS__yV9ajYA.AddPiece_05YnEWsdEe2LPP__HYPHEN_MINUS__yV9ajYAResult result = instance.execute(false, ctx.gamePlacePieceBoard_YJ2y0WtlEe2yLYR6JjFIQg, ctx.gamePlacePieceIndex_nSD1wWsdEe2LPP__HYPHEN_MINUS__yV9ajYA);
 	
 		switch(result.getBranchName()) {
 		case "success": {

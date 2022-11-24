@@ -18,9 +18,11 @@ class Game_hri_45_8WaYEe2mp69GO3rQOwBranch extends ContinueProcessRequest {
 	PlacePiece branch_placePiece;
 	
 	Game_hri_45_8WaYEe2mp69GO3rQOwBranch.forplacePieceBranch(
-{		int index:0
+{		Data.Board board:null,
+		int index:0
 }	) {
 		branch_placePiece = new PlacePiece();
+		branch_placePiece.port_board = board;
 		branch_placePiece.port_index = index;
 	}
 
@@ -56,13 +58,20 @@ class Game_hri_45_8WaYEe2mp69GO3rQOwBranch extends ContinueProcessRequest {
 	}
 	class PlacePiece {
 		
+		Data.Board port_board = null;
 		int port_index = 0;
 
 		Map<String,dynamic> toJSOG()
 		{
 			
 			Map<String,dynamic> jsonObj = new Map();
-Map<Object,dynamic> cache = new Map();			jsonObj["index"] = this.port_index;
+Map<Object,dynamic> cache = new Map();			if(this.port_board != null){
+				jsonObj["board"] = this.port_board.toJSOG(cache);
+			}
+			else{
+				jsonObj["board"] = null;
+			}
+			jsonObj["index"] = this.port_index;
 					
 			return jsonObj;
 		}

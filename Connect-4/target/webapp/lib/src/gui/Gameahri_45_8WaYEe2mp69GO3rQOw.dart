@@ -194,6 +194,7 @@ class Gameahri_45_8WaYEe2mp69GO3rQOw extends dime.DIMEComponent implements OnIni
   		
   		{
   			Map<String,dynamic> data = new Map();
+  			data['board'] = this.board;
   			data['index'] = p_tcFioWmqEe2sl80VZxYqHw;
   			this.actionplacepieceevent.add(data);
   		}

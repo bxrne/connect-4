@@ -28,7 +28,7 @@ public class ConcreteUserImpl implements ConcreteUser {
 
 	
 	/* MAIN ATTRIBUTES START */
-	@de.ls5.dywa.annotations.IdRef(id = 6L)
+	@de.ls5.dywa.annotations.IdRef(id = 5L)
 	@org.hibernate.annotations.Cascade(org.hibernate.annotations.CascadeType.PERSIST)
 	@javax.persistence.JoinColumn(name = "a_BaseUser__fpy24mwneewzvvv")
 	@org.hibernate.annotations.Any(metaColumn=@javax.persistence.Column(name="m_BaseUser_Type__fpy24mwneewzvvv"))
@@ -40,10 +40,10 @@ public class ConcreteUserImpl implements ConcreteUser {
 	)
 	private de.ls5.dywa.generated.entity.models.app.BaseUser baseUser;
 	
-	@de.ls5.dywa.annotations.IdRef(id = 7L)
+	@de.ls5.dywa.annotations.IdRef(id = 6L)
 	@org.hibernate.annotations.Cascade(org.hibernate.annotations.CascadeType.PERSIST)
-	@javax.persistence.JoinColumn(name = "a_DywaSwitchedTo__edotmwsgee2lpp_")
-	@org.hibernate.annotations.Any(metaColumn=@javax.persistence.Column(name="m_DywaSwitchedTo_Type__edotmwsgee2lpp_"))
+	@javax.persistence.JoinColumn(name = "a_DywaSwitchedTo__gqkjuwvsee29dru")
+	@org.hibernate.annotations.Any(metaColumn=@javax.persistence.Column(name="m_DywaSwitchedTo_Type__gqkjuwvsee29dru"))
 	@org.hibernate.annotations.AnyMetaDef(
 		idType="long", metaType="string",
 		metaValues={
