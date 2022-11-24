@@ -447,8 +447,15 @@ public final class Home_LWgagF__HYPHEN_MINUS__SEeakMeYoloYxpg implements DIMEPro
 		
 		ctx.callStack.getCallFrames().remove(ctx.callStack.getCallFrames().size()-1);
 		
-		// unspecified branch, show same GUI again
-		return execute_n3ZogWwPEe2izKycOTLADg(ctx);
+		final info.scce.dime.gui.models.gui.winmsg.Winmsg_mJQrsGwPEe2izKycOTLADgResult result = (info.scce.dime.gui.models.gui.winmsg.Winmsg_mJQrsGwPEe2izKycOTLADgResult) guiResult;
+		if ("play_again".equals(result.getBranchName())) {
+			// branch 'play again'
+			return SIB_ID._yfBIcWwEEe2iyKycOTLADg;
+		}
+		else {
+			// unspecified branch, show same GUI again
+			return execute_n3ZogWwPEe2izKycOTLADg(ctx);
+		}
 	}
 	
 }  
