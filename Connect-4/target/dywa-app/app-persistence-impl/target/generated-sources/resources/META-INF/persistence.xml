@@ -15,7 +15,6 @@
         <class>de.ls5.dywa.generated.entity.models.app.BoardImpl</class>
         <class>de.ls5.dywa.generated.entity.models.app.ColumnImpl</class>
         <class>de.ls5.dywa.generated.entity.models.app.CellImpl</class>
-        <class>de.ls5.dywa.generated.entity.models.app.TempColumnImpl</class>
 
 		<shared-cache-mode>ALL</shared-cache-mode>
 		<properties>

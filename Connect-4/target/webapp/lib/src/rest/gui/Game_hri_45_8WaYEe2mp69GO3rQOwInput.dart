@@ -10,6 +10,7 @@ import 'package:app/src/models/FileReference.dart';
 class Game_hri_45_8WaYEe2mp69GO3rQOwInput extends UserInteractionResponse {
 	
 	Data.Board board = null;
+	int turn = 0;
 	
 	Game_hri_45_8WaYEe2mp69GO3rQOwInput(Map<String,dynamic> map, Map<String,dynamic> cache)
 	{
@@ -17,6 +18,11 @@ class Game_hri_45_8WaYEe2mp69GO3rQOwInput extends UserInteractionResponse {
 		if(inputPorts.containsKey('board')) {
 			if(inputPorts['board']!=null){
 				board = Data.Board.fromJSOG(jsog:inputPorts['board'],cache:cache);
+			}
+		}
+		if(inputPorts.containsKey('turn')) {
+			if(inputPorts['turn']!=null){
+				turn = int.parse(inputPorts['turn'].toString());
 			}
 		}
 	}
@@ -27,6 +33,6 @@ class Game_hri_45_8WaYEe2mp69GO3rQOwInput extends UserInteractionResponse {
 	}
 	
 	bool inpusChanged(Game_hri_45_8WaYEe2mp69GO3rQOwInput input) {
-		return board != input.board;
+		return board != input.board || turn != input.turn;
 	}
 }

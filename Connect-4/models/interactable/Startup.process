@@ -34,8 +34,8 @@ Process _sA1GYNviEeWsF7MALrkAZQ {
   		isList false
   		name "newUser"
   	}
-  	-ControlFlow-> _5mJZIWhUEe2Ts87gHbvjRg  decorate "" at (0,0) {
-  		id _6IiUgWhUEe2Ts87gHbvjRg
+  	-ControlFlow-> _sBOvANviEeWsF7MALrkAZQ  decorate "" at (0,0) {
+  		id _EVUP4WvqEe29DbU9LWXeGA
   		concurrent true
   	}
   }
@@ -167,31 +167,13 @@ Process _sA1GYNviEeWsF7MALrkAZQ {
   		isList true
   		name "retrieved"
   	}
-  	-ControlFlow-> _5mJZIWhUEe2Ts87gHbvjRg  decorate "" at (0,0) {
-  		id _6ppdgWhUEe2Ts87gHbvjRg
+  	-ControlFlow-> _sBOvANviEeWsF7MALrkAZQ  decorate "" at (0,0) {
+  		id _EwdTwWvqEe29DbU9LWXeGA
   		concurrent true
   	}
   }
   
   EndSIB _sBOvANviEeWsF7MALrkAZQ at 480,900 size 100,65 {
   	branchName "success"
-  }
-  
-  AtomicSIB _5mJZIWhUEe2Ts87gHbvjRg at 314,711 size 120,65 {
-  	libraryComponentUID "app.demo.InitialiseBoard"
-  	label "InitialiseBoard"
-  	ignoredBranch [  ]
-  	-BranchConnector-> _5m3K0GhUEe2Ts87gHbvjRg   {
-  		id _5m8DUWhUEe2Ts87gHbvjRg
-  		concurrent true
-  	}
-  }
-  
-  Branch _5m3K0GhUEe2Ts87gHbvjRg at 314,786 size 120,25 {
-  	name "success"
-  	-ControlFlow-> _sBOvANviEeWsF7MALrkAZQ  decorate "" at (0,0) {
-  		id _69Y44WhUEe2Ts87gHbvjRg
-  		concurrent true
-  	}
   }
 }

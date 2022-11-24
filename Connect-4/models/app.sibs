@@ -5,7 +5,7 @@ import "models/app.data" as data
 sib InitialiseBoard : info.scce.dime.app.demo.Game#initialise
   -> success
 
-sib GetCol : info.scce.dime.app.demo.Game#getCol
+sib MakeCol : info.scce.dime.app.demo.Game#makeCol
 index : integer
 ->success
 column : [integer]
@@ -22,3 +22,22 @@ column : data.Column
 sib PCL : info.scce.dime.app.demo.Game#pC
 index:integer
 ->success
+
+sib PlaceCoin : info.scce.dime.app.demo.Game#placeCoin
+board : data.Board
+player : integer
+index : integer
+->success
+board : data.Board
+->failure
+
+sib SwitchPlayer : info.scce.dime.app.demo.Game#switchPlayer
+player : integer
+->success
+newPlayer : integer
+
+sib CheckWin : info.scce.dime.app.demo.Game#checkWin
+board : data.Board
+player : integer
+->true
+->false

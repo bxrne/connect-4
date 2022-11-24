@@ -4,7 +4,7 @@ GUI _hri-8WaYEe2mp69GO3rQOw {
   additionalJavaScript [  ]
   additionalStylesheets [  ]
   title "game"
-  DataContext _hrmCQWaYEe2mp69GO3rQOw at 10,10 size 180,581 {
+  DataContext _hrmCQWaYEe2mp69GO3rQOw at 10,10 size 180,625 {
   	dfViewWorkaround true
   	ComplexVariable _rrMz0WmqEe2sl80VZxYqHw at 11,71 size 160,25 {
   		expanded true
@@ -17,6 +17,10 @@ GUI _hri-8WaYEe2mp69GO3rQOw {
   		-ComplexAttributeConnector-> _sNQ_EWmqEe2sl80VZxYqHw  decorate "Ellipse" at (0,0) {
   			id _sNVQgWmqEe2sl80VZxYqHw
   			associationName "columns"
+  		}
+  		
+  		-AddComplexToSubmission-> _c1JK8WsdEe2LPP-yV9ajYA  decorate "" at (0,0) decorate "Text" at (0,0) {
+  			id _W4dcYGtlEe2yLYR6JjFIQg
   		}
   	}
   	
@@ -133,9 +137,21 @@ GUI _hri-8WaYEe2mp69GO3rQOw {
   			isLive false
   		}
   	}
+  	
+  	PrimitiveVariable _sJPDYWwKEe2izKycOTLADg at 20,570 size 140,25 {
+  		dataType Integer
+  		isInput true
+  		name "turn"
+  		dfViewWorkaround true
+  		isList false
+  		-IF-> _5fGRQWwKEe2izKycOTLADg  decorate "" at (0,0) decorate "Text" at (0,0) {
+  			id _6n_zAWwKEe2izKycOTLADg
+  			negate false
+  		}
+  	}
   }
   
-  Template _hrnQYWaYEe2mp69GO3rQOw at 240,10 size 560,1120 {
+  Template _hrnQYWaYEe2mp69GO3rQOw at 240,10 size 560,1190 {
   	blockName ""
   	disableAutoLayout false
   	generalStyle GeneralStyling _hrpFkGaYEe2mp69GO3rQOw {
@@ -144,7 +160,7 @@ GUI _hri-8WaYEe2mp69GO3rQOw {
   			attributes [  ]
   			marginTop None
   		}
-  	Row _hrq6wWaYEe2mp69GO3rQOw at 10,30 size 350,160 {
+  	Row _hrq6wWaYEe2mp69GO3rQOw at 10,30 size 350,230 {
   		generalStyle GeneralStyling _hrzdoWaYEe2mp69GO3rQOw {
   				tallness Fitting
   				marginBottom None
@@ -157,7 +173,7 @@ GUI _hri-8WaYEe2mp69GO3rQOw {
   		MoveDown _hrsv8WaYEe2mp69GO3rQOw at 2,10 size 14,7 {
   		}
   		
-  		Col _hrvzQWaYEe2mp69GO3rQOw at 10,30 size 320,110 {
+  		Col _hrvzQWaYEe2mp69GO3rQOw at 10,30 size 320,180 {
   			wideness Full
   			layout Layout _hrzdoGaYEe2mp69GO3rQOw {
   					size Default
@@ -206,10 +222,40 @@ GUI _hri-8WaYEe2mp69GO3rQOw {
   				MoveDown _RcTaE2ahEe24gf5J_KrBHg at 2,10 size 14,7 {
   				}
   			}
+  			
+  			Text _5fGRQWwKEe2izKycOTLADg at 10,90 size 200,60 {
+  				content [ StaticContent _5fy00GwKEe2izKycOTLADg {
+  						renderMarkdown false
+  						maxChars 0
+  						html false
+  						rawContent "Player {{turn}}'s turn"
+  						styling TextStyling _5f5igGwKEe2izKycOTLADg {
+  								small false
+  								highlight false
+  								deleted false
+  								underline false
+  								bold false
+  								alignment Left
+  								italic false
+  								color Default
+  							}
+  					} ]
+  				generalStyle GeneralStyling _5fsHIGwKEe2izKycOTLADg {
+  						tallness Fitting
+  						marginBottom None
+  						attributes [  ]
+  						marginTop None
+  					}
+  				MoveUp _5ff54WwKEe2izKycOTLADg at 2,2 size 14,7 {
+  				}
+  				
+  				MoveDown _5fgg8WwKEe2izKycOTLADg at 2,10 size 14,7 {
+  				}
+  			}
   		}
   	}
   	
-  	Row _vy9owWacEe24gf5J_KrBHg at 10,920 size 250,170 {
+  	Row _vy9owWacEe24gf5J_KrBHg at 10,990 size 250,170 {
   		generalStyle GeneralStyling _vzAFAWacEe24gf5J_KrBHg {
   				tallness Fitting
   				marginBottom None
@@ -274,7 +320,7 @@ GUI _hri-8WaYEe2mp69GO3rQOw {
   		}
   	}
   	
-  	Jumbotron _JL4yYWhqEe2Ts87gHbvjRg at 10,200 size 540,710 {
+  	Jumbotron _JL4yYWhqEe2Ts87gHbvjRg at 10,270 size 540,710 {
   		generalStyle GeneralStyling _JL_gEGhqEe2Ts87gHbvjRg {
   				tallness Fitting
   				marginBottom None

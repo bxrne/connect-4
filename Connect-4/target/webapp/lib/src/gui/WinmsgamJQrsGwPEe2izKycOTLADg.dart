@@ -36,7 +36,6 @@ import 'package:app/src/modal/Modal.dart' as modal;
 import 'package:app/src/panel/Panel.dart' as panel;
 
 //file guard imports
-import 'package:app/src/models/FileGuardsahri_45_8WaYEe2mp69GO3rQOwgame.dart';
 //special element imports
 //table component imports
 //form component imports
@@ -48,7 +47,7 @@ import 'dart:js' as js;
 import 'package:app/src/core/AbstractRoutes.dart';
 
 @Component(
-  selector: "game-tag",
+  selector: "winmsg-tag",
   pipes: const [commonPipes,SecondsPipe],
   encapsulation: ViewEncapsulation.None,
   exports: const [
@@ -57,10 +56,10 @@ import 'package:app/src/core/AbstractRoutes.dart';
   directives: const [
   coreDirectives,panel.Panel,modal.Modal,DimeCustomeAttributes,formDirectives,FileSelect,routerDirectives,MaxLength,login.Login,SafeInnerHtmlDirective,
   ],
-  templateUrl: 'Gameahri_45_8WaYEe2mp69GO3rQOw.html'
+  templateUrl: 'WinmsgamJQrsGwPEe2izKycOTLADg.html'
 )
 
-class Gameahri_45_8WaYEe2mp69GO3rQOw extends dime.DIMEComponent implements OnInit, OnDestroy, AfterViewInit {
+class WinmsgamJQrsGwPEe2izKycOTLADg extends dime.DIMEComponent implements OnInit, OnDestroy, AfterViewInit {
   
   	// common declarations
   	bool refresh;
@@ -85,26 +84,17 @@ class Gameahri_45_8WaYEe2mp69GO3rQOw extends dime.DIMEComponent implements OnIni
   	
   	
   	
-  	// branch back as info.scce.dime.gui.editor.graphiti.api.CButton@1a946377 (id: _wx7LYWacEe24gf5J_KrBHg) in info.scce.dime.gui.editor.graphiti.api.CGUI@bc7daf94 (id: _hri-8WaYEe2mp69GO3rQOw)
-  	@Output('actionbackevent') Stream<Map<String,dynamic>> get evt_actionbackevent => actionbackevent.stream;
-  	StreamController<Map<String,dynamic>> actionbackevent = new StreamController();
-  	// branch placePiece as info.scce.dime.gui.editor.graphiti.api.CButton@e035f265 (id: _c1JK8WsdEe2LPP-yV9ajYA) in info.scce.dime.gui.editor.graphiti.api.CGUI@bc7daf94 (id: _hri-8WaYEe2mp69GO3rQOw)
-  	@Output('actionplacepieceevent') Stream<Map<String,dynamic>> get evt_actionplacepieceevent => actionplacepieceevent.stream;
-  	StreamController<Map<String,dynamic>> actionplacepieceevent = new StreamController();
   	
   	@ViewChildren(modal.Modal)
   	List<modal.Modal> modals;
   	bool hasToSignIn;
 	//DATA CONTEXT
-	//Board board
-		@Input()
-		Data.Board board;
 	@Input()
-	int turn;
+	int winner;
 	
 	bool isDestroyed = true;
   
-	Gameahri_45_8WaYEe2mp69GO3rQOw(DIMEProcessService this.processService, Router this.router,DomSanitizationService this.domSanitizationService,AbstractRoutes routes) : super(domSanitizationService,processService,routes)
+	WinmsgamJQrsGwPEe2izKycOTLADg(DIMEProcessService this.processService, Router this.router,DomSanitizationService this.domSanitizationService,AbstractRoutes routes) : super(domSanitizationService,processService,routes)
 	{
 		restartComponent();
 	}
@@ -114,22 +104,12 @@ class Gameahri_45_8WaYEe2mp69GO3rQOw extends dime.DIMEComponent implements OnIni
 		this.hasToSignIn = false;
 		
 		//DATA CONTEXT
-		// Board board
-		this.board = null;
-		// Integer turn
-		this.turn = 0;
+		// Integer winner
+		this.winner = 0;
 						
 						
 		
 			  	
-		// branch back declaration
-		if(this.actionbackevent!=null) {
-			  			this.actionbackevent = new StreamController<Map<String,dynamic>>();  				
-		}
-		// branch placePiece declaration
-		if(this.actionplacepieceevent!=null) {
-			  			this.actionplacepieceevent = new StreamController<Map<String,dynamic>>();  				
-		}
 			
 		updateImageHash();
 	}
@@ -142,12 +122,10 @@ class Gameahri_45_8WaYEe2mp69GO3rQOw extends dime.DIMEComponent implements OnIni
 	}
 	
 	void updateInputs(
-	{Data.Board pboard,
-	int pturn
+	{int pwinner
 	})
 	{
-		board = pboard;
-		turn = pturn;
+		winner = pwinner;
 		
 		updateWithoutInputs(updateHidden:false);
 	}
@@ -185,75 +163,25 @@ class Gameahri_45_8WaYEe2mp69GO3rQOw extends dime.DIMEComponent implements OnIni
   		
   		
   	
-  		/// callback, if the button back is clicked
-  			void actionbackeventawx7LYWacEe24gf5J_KrBHgEventTrigger()
-  		
-  		{
-  			Map<String,dynamic> data = new Map();
-  			this.actionbackevent.add(data);
-  		}
-  		/// callback, if the button placePiece is clicked
-  			void actionplacepieceeventac1JK8WsdEe2LPP_45_yV9ajYAEventTrigger(
-  				p_tcFioWmqEe2sl80VZxYqHw
-  				
-  				)
-  		
-  		{
-  			Map<String,dynamic> data = new Map();
-  			data['board'] = this.board;
-  			data['index'] = p_tcFioWmqEe2sl80VZxYqHw;
-  			this.actionplacepieceevent.add(data);
-  		}
   		
   		
   		
   		
-  		/// loads an image file download for an image component	
-  		String loadaAzErgWsWEe2LPP_45_yV9ajYAImage(fileRef)
-  		{
-  			//prepare guard compound
-  			FileGuardaAzErgWsWEe2LPP_45_yV9ajYACompound guardContainer = new FileGuardaAzErgWsWEe2LPP_45_yV9ajYACompound();
-  			guardContainer.context = fileRef;
-  			
-  			// private interactable
-  			String guardData = guardContainer.toQueryParams();
-  			return guardData;
-  			
-  		}
   	
   		
   		
   		
-  		Data.Board
-  		 initOnDemandboard()
+  		int initOnDemandwinner()
   		{
-  			if(this.board==null){
-  				this.board = new Data.Board
-  				();
-  			}
-  			return this.board;
+  			return this.winner;
   		}
-  		void setValueboard(Data.Board
-  		 value)
+  		void setValuewinner(int value)
   		{
-  			this.board = value;
+  			this.winner = value;
   		}
-  		void boardsetValue(Data.Board
-  		 value)
+  		void winnersetValue(int value)
   		{
-  			this.setValueboard(value);
-  		}
-  		int initOnDemandturn()
-  		{
-  			return this.turn;
-  		}
-  		void setValueturn(int value)
-  		{
-  			this.turn = value;
-  		}
-  		void turnsetValue(int value)
-  		{
-  			this.setValueturn(value);
+  			this.setValuewinner(value);
   		}
   		
   	
@@ -262,28 +190,28 @@ class Gameahri_45_8WaYEe2mp69GO3rQOw extends dime.DIMEComponent implements OnIni
   		
   
 	/// returns the surrounding container class for major GUI models
-	String getContainer_hri8WaYEe2mp69GO3rQOwRootClass()
+	String getContainer_mJQrsGwPEe2izKycOTLADgRootClass()
 	{
 		if(this.ismajorpage)return "";
 		return "";
 	}
 	
 	/// returns the surrounding wrapper class for major GUI models
-	String getContainer_hri8WaYEe2mp69GO3rQOwId()
+	String getContainer_mJQrsGwPEe2izKycOTLADgId()
 	{
 		if(this.ismajorpage)return "wrapper";
-		return "_hri8WaYEe2mp69GO3rQOw";
+		return "_mJQrsGwPEe2izKycOTLADg";
 	}
 	
 	/// returns the surrounding container class for major GUI models
-	String getContainer_hri8WaYEe2mp69GO3rQOwClass()
+	String getContainer_mJQrsGwPEe2izKycOTLADgClass()
 	{
 		if(this.ismajorpage)return "container-display";
 		return "";
 	}
 	
 	/// callback, to go back to the root interaction
-	void redirect_hri8WaYEe2mp69GO3rQOwToHome(dynamic e)
+	void redirect_mJQrsGwPEe2izKycOTLADgToHome(dynamic e)
 	{
 		e.preventDefault();
 		this.router.navigate(Routes.root.toUrl());

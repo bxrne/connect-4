@@ -98,7 +98,7 @@ public class BoardSearch implements Board {
 
 	@java.lang.Override
 	public java.util.List<de.ls5.dywa.generated.entity.models.app.Column> getcolumns_Column() {
-		return (java.util.List<de.ls5.dywa.generated.entity.models.app.Column>) this.listAttributeMap.get(dywaIdToJpqlAttr.get(14L));
+		return (java.util.List<de.ls5.dywa.generated.entity.models.app.Column>) this.listAttributeMap.get(dywaIdToJpqlAttr.get(13L));
 	}
 	public void setcolumns_Column
 	(java.util.List<de.ls5.dywa.generated.entity.models.app.Column> object) {
@@ -108,7 +108,7 @@ public class BoardSearch implements Board {
 							throw new java.lang.RuntimeException("Wrong type");
 				}
 				}
-			this.listAttributeMap.put(dywaIdToJpqlAttr.get(14L), object);
+			this.listAttributeMap.put(dywaIdToJpqlAttr.get(13L), object);
 	}
 
 	// EXTENSION ATTRIBUTES

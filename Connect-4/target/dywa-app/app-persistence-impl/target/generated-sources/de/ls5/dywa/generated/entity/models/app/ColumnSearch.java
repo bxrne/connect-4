@@ -98,7 +98,7 @@ public class ColumnSearch implements Column {
 
 	@java.lang.Override
 	public java.util.List<de.ls5.dywa.generated.entity.models.app.Cell> getcells_Cell() {
-		return (java.util.List<de.ls5.dywa.generated.entity.models.app.Cell>) this.listAttributeMap.get(dywaIdToJpqlAttr.get(15L));
+		return (java.util.List<de.ls5.dywa.generated.entity.models.app.Cell>) this.listAttributeMap.get(dywaIdToJpqlAttr.get(14L));
 	}
 	public void setcells_Cell
 	(java.util.List<de.ls5.dywa.generated.entity.models.app.Cell> object) {
@@ -108,11 +108,11 @@ public class ColumnSearch implements Column {
 							throw new java.lang.RuntimeException("Wrong type");
 				}
 				}
-			this.listAttributeMap.put(dywaIdToJpqlAttr.get(15L), object);
+			this.listAttributeMap.put(dywaIdToJpqlAttr.get(14L), object);
 	}
 	@java.lang.Override
 	public java.lang.Long getindex() {
-		return (java.lang.Long) this.attributeMap.get(dywaIdToJpqlAttr.get(16L));
+		return (java.lang.Long) this.attributeMap.get(dywaIdToJpqlAttr.get(15L));
 	}
 	public void setindex
 	(java.lang.Long object) {
@@ -120,7 +120,7 @@ public class ColumnSearch implements Column {
 				if (! (object instanceof java.lang.Long)) {
 							throw new java.lang.RuntimeException("Wrong type");
 				}
-			this.attributeMap.put(dywaIdToJpqlAttr.get(16L), object);
+			this.attributeMap.put(dywaIdToJpqlAttr.get(15L), object);
 	}
 
 	// EXTENSION ATTRIBUTES

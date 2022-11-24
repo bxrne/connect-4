@@ -19,8 +19,8 @@ public class Game {
 		for(int i = 0; i<7; i++) {
 			for(int j = 0; j<6; j++) board[i][j] = 0l;
 		}
-		System.out.println("BOARD INIT SUCCESSFUL 1");
-		System.out.println(display(board));
+		System.out.println("BOARD INIT SUCCESSFUL 2");
+		//System.out.println(display(board));
 	}
 
 	public static List<List<Long>> getBoard() {
@@ -31,8 +31,8 @@ public class Game {
 		return result;
 	}
 	
-	public static List<Long> getCol(Long index){
-		return Arrays.asList(board[index.intValue()]);
+	public static List<Long> makeCol(Long index){
+		return Arrays.asList(new Long[] {0l, 0l, 0l, 0l, 0l, 0l});
 	}
 	
 	public static Long getCell(Long col, Long row) {
@@ -40,9 +40,10 @@ public class Game {
 	}
 	
 	//gives a list {0, 1, 2, ..., board.length-1} for board construction
+	//HARDCODED VALUE HERE
 	public static List<Long> getBoardWidth() {
 		List<Long> result = new ArrayList<Long>();
-		for(int i = 0; i < board.length; i++) result.add((long) i); 
+		for(int i = 0; i <= 7 ; i++) result.add((long) i); 
 		return result;
 		
 	}
@@ -50,6 +51,7 @@ public class Game {
 
 	//col is 0-6, player is 1-2
 	//false if no win, true if win
+	/*
 	public static boolean takeTurn(Long col, Long player) {
 		//set the next empty cell in this col to this player's number
 		for(int i = board[0].length-1; i > 0; i--) {
@@ -61,20 +63,57 @@ public class Game {
 		System.out.println(display(board));
 		return checkWin(board, player);
 	}
-
-	public static String display(Long[][] board) {
+	*/
+	
+	public static Board placeCoin(Board board, Long player, Long index) {
+		//get cells of column in question
+		List<Cell> cells = board.getcolumns_Column().get(index.intValue()).getcells_Cell();
+		//column is already full
+		if(cells.get(0).getvalue() != 0l) {
+			System.err.println("Column index "+ index + " is already full! Turn cancelled");
+			return board;
+		}
+		for(int i = cells.size() - 1; i >= 0; i--) {
+			Cell thisCell = cells.get(i);
+			if(thisCell.getvalue().equals(0l)) {
+				thisCell.setvalue(player);
+				break;
+			}
+		}
+		System.out.println("TURN TAKEN SUCCESSFULLY BY PLAYER " + player);
+		System.out.println(display(board));
+		
+		
+		return board;
+	}
+	
+	
+	//returns string representation of the board obj
+	public static String display(Board board) {
 		String output = "";
-		for (int i = 0; i < board[0].length; i++) {
-			for (int j = 0; j < board.length; j++) {
-				output += board[j][i] + " ";
+		for (int i = 0; i < board.getcolumns_Column().size(); i++) {
+			for (int j = 0; j < board.getcolumns_Column().get(0).getcells_Cell().size(); j++) {
+				output += board.getcolumns_Column().get(i).getcells_Cell().get(j).getvalue().intValue() + " ";
 			}
 			output += "\n";
 		}
 		return output;
 	}
 
-	public static boolean checkWin(Long[][] board, Long player) {
+	public static boolean checkWin(Board _board, Long player) {
 		//WIN CHECKING
+		//might just build the 2d array from the board obj lol very bold
+		int width = _board.getcolumns_Column().size();
+		int height = _board.getcolumns_Column().get(0).getcells_Cell().size();
+		
+		Long[][] board = new Long[width][height];
+		
+		for(int i = 0; i < width; i++) {
+			for(int j = 0; j < height; j++) {
+				board[i][j] = _board.getcolumns_Column().get(i).getcells_Cell().get(j).getvalue();
+			}
+		}
+		
 		//vertical
 		//i is row, j is col, k is cell of 4
 		//bottom 3 rows arent checked as the last cell will be out of bounds
@@ -124,4 +163,9 @@ public class Game {
 		column.getcells_Cell().add(cell);
 	}
 	
+	public static Long switchPlayer(Long player) {
+		if(player == 1l) return (Long)2l;
+		//(if player == 2l)
+		return (Long)1l;
+	}
 }

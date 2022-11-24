@@ -39,11 +39,12 @@ public final class Home_LWgagF__HYPHEN_MINUS__SEeakMeYoloYxpg implements DIMEPro
 			public static class JSONContext extends info.scce.dime.process.JSONContext {
 
 				// begin context variables
+				private de.ls5.dywa.generated.rest.types.Board board;
+				private java.lang.Long turn;
 				// end context variables
 
 				// begin direct dataflow variables
 				private java.lang.Long gamePlacePieceIndex_nSD1wWsdEe2LPP__HYPHEN_MINUS__yV9ajYA;
-				private de.ls5.dywa.generated.rest.types.Board GetBoardSuccessBoard_fQhQgWkVEe2cW5_gHw6itA;
 				// end direct dataflow variables
 
 				// begin index variables of iterate sibs
@@ -53,11 +54,12 @@ public final class Home_LWgagF__HYPHEN_MINUS__SEeakMeYoloYxpg implements DIMEPro
 					final JSONContext result = new JSONContext();
 					final info.scce.dime.rest.ObjectCache objectCache = new info.scce.dime.rest.ObjectCache();
 
-					result.gamePlacePieceIndex_nSD1wWsdEe2LPP__HYPHEN_MINUS__yV9ajYA = ctx.gamePlacePieceIndex_nSD1wWsdEe2LPP__HYPHEN_MINUS__yV9ajYA;
-					if(ctx.GetBoardSuccessBoard_fQhQgWkVEe2cW5_gHw6itA != null) {
-						result.GetBoardSuccessBoard_fQhQgWkVEe2cW5_gHw6itA = de.ls5.dywa.generated.rest.types.Board.fromDywaEntity(ctx.GetBoardSuccessBoard_fQhQgWkVEe2cW5_gHw6itA, objectCache);
-						de.ls5.dywa.generated.rest.types.BoardSelective.copy(ctx.GetBoardSuccessBoard_fQhQgWkVEe2cW5_gHw6itA, result.GetBoardSuccessBoard_fQhQgWkVEe2cW5_gHw6itA, objectCache);
+					if(ctx.board != null) {
+						result.board = de.ls5.dywa.generated.rest.types.Board.fromDywaEntity(ctx.board, objectCache);
+						de.ls5.dywa.generated.rest.types.BoardSelective.copy(ctx.board, result.board, objectCache);
 					}
+					result.turn = ctx.turn;
+					result.gamePlacePieceIndex_nSD1wWsdEe2LPP__HYPHEN_MINUS__yV9ajYA = ctx.gamePlacePieceIndex_nSD1wWsdEe2LPP__HYPHEN_MINUS__yV9ajYA;
 
 					return result;
 				}
@@ -71,10 +73,11 @@ public final class Home_LWgagF__HYPHEN_MINUS__SEeakMeYoloYxpg implements DIMEPro
 
 					info.scce.dime.process.ContextTransformer contextTransformer = info.scce.dime.process.ContextTransformer.getInstance(bm);
 
-					result.gamePlacePieceIndex_nSD1wWsdEe2LPP__HYPHEN_MINUS__yV9ajYA = this.gamePlacePieceIndex_nSD1wWsdEe2LPP__HYPHEN_MINUS__yV9ajYA;
-					if (this.GetBoardSuccessBoard_fQhQgWkVEe2cW5_gHw6itA != null) {
-						result.GetBoardSuccessBoard_fQhQgWkVEe2cW5_gHw6itA = contextTransformer.transform(this.GetBoardSuccessBoard_fQhQgWkVEe2cW5_gHw6itA);
+					if (this.board != null) {
+						result.board = contextTransformer.transform(this.board);
 					}
+					result.turn = this.turn;
+					result.gamePlacePieceIndex_nSD1wWsdEe2LPP__HYPHEN_MINUS__yV9ajYA = this.gamePlacePieceIndex_nSD1wWsdEe2LPP__HYPHEN_MINUS__yV9ajYA;
 
 					return result;
 		        }
@@ -98,9 +101,11 @@ public final class Home_LWgagF__HYPHEN_MINUS__SEeakMeYoloYxpg implements DIMEPro
 		// stack variables
 		private ProcessCallFrame callStack = new ProcessCallFrame();
 
+		// context variables.
+		private de.ls5.dywa.generated.entity.models.app.Board board;
+		private java.lang.Long turn = 0l;
 		// direct dataflow variables.
 		private java.lang.Long gamePlacePieceIndex_nSD1wWsdEe2LPP__HYPHEN_MINUS__yV9ajYA;
-		private de.ls5.dywa.generated.entity.models.app.Board GetBoardSuccessBoard_fQhQgWkVEe2cW5_gHw6itA;
 
 		public info.scce.dime.process.JSONContext toJSON() {
 			return JSONContext.toJSON(beanManager, this);
@@ -110,8 +115,11 @@ public final class Home_LWgagF__HYPHEN_MINUS__SEeakMeYoloYxpg implements DIMEPro
 	private enum SIB_ID {
 	_NHhKMGhZEe2Ts87gHbvjRg,
 	_b46FcWhaEe2Ts87gHbvjRg,
-	_fQXfgWkVEe2cW5_gHw6itA,
 	_4dXEIWsdEe2LPP__HYPHEN_MINUS__yV9ajYA,
+	_yfBIcWwEEe2iyKycOTLADg,
+	_H0Q1cWwKEe2izKycOTLADg,
+	_fyArMWwOEe2izKycOTLADg,
+	_n3ZogWwPEe2izKycOTLADg,
 		;
 	}
 
@@ -153,6 +161,7 @@ public final class Home_LWgagF__HYPHEN_MINUS__SEeakMeYoloYxpg implements DIMEPro
 		switch (sibId) {
 		case "_NHhKMGhZEe2Ts87gHbvjRg": return executeInternal(ctx, continue_NHhKMGhZEe2Ts87gHbvjRg(ctx, slgResult));
 		case "_b46FcWhaEe2Ts87gHbvjRg": return executeInternal(ctx, continue_b46FcWhaEe2Ts87gHbvjRg(ctx, slgResult));
+		case "_n3ZogWwPEe2izKycOTLADg": return executeInternal(ctx, continue_n3ZogWwPEe2izKycOTLADg(ctx, slgResult));
 			default: throw new IllegalStateException("Unknown continuation point '" + sibId + '\'');
 		}
 	}
@@ -169,12 +178,24 @@ public final class Home_LWgagF__HYPHEN_MINUS__SEeakMeYoloYxpg implements DIMEPro
 					curr = execute_b46FcWhaEe2Ts87gHbvjRg(ctx);
 					break;
 				}
-				case _fQXfgWkVEe2cW5_gHw6itA: {
-					curr = execute_fQXfgWkVEe2cW5_gHw6itA(ctx);
-					break;
-				}
 				case _4dXEIWsdEe2LPP__HYPHEN_MINUS__yV9ajYA: {
 					curr = execute_4dXEIWsdEe2LPP__HYPHEN_MINUS__yV9ajYA(ctx);
+					break;
+				}
+				case _yfBIcWwEEe2iyKycOTLADg: {
+					curr = execute_yfBIcWwEEe2iyKycOTLADg(ctx);
+					break;
+				}
+				case _H0Q1cWwKEe2izKycOTLADg: {
+					curr = execute_H0Q1cWwKEe2izKycOTLADg(ctx);
+					break;
+				}
+				case _fyArMWwOEe2izKycOTLADg: {
+					curr = execute_fyArMWwOEe2izKycOTLADg(ctx);
+					break;
+				}
+				case _n3ZogWwPEe2izKycOTLADg: {
+					curr = execute_n3ZogWwPEe2izKycOTLADg(ctx);
 					break;
 				}
 				default: {
@@ -212,6 +233,7 @@ public final class Home_LWgagF__HYPHEN_MINUS__SEeakMeYoloYxpg implements DIMEPro
 	private static class InputsForGUISIB_NHhKMGhZEe2Ts87gHbvjRg {
 		public de.ls5.dywa.generated.rest.types.Board
 		 board;
+		public java.lang.Long turn;
 	}
 	
 	
@@ -226,7 +248,7 @@ public final class Home_LWgagF__HYPHEN_MINUS__SEeakMeYoloYxpg implements DIMEPro
 		{
 			de.ls5.dywa.generated.rest.types.Board
 			 result = null;
-			de.ls5.dywa.generated.entity.models.app.Board obj = ctx.GetBoardSuccessBoard_fQhQgWkVEe2cW5_gHw6itA;
+			de.ls5.dywa.generated.entity.models.app.Board obj = ctx.board;
 			
 			de.ls5.dywa.generated.rest.types.Board restTO;
 			
@@ -247,6 +269,7 @@ public final class Home_LWgagF__HYPHEN_MINUS__SEeakMeYoloYxpg implements DIMEPro
 			}
 			inputs.board = result;
 		}
+		inputs.turn = ctx.turn;
 		
 		final CallFrame currentFrame = new CallFrame("info.scce.dime.process.models.interaction.Home_LWgagF__HYPHEN_MINUS__SEeakMeYoloYxpg:_NHhKMGhZEe2Ts87gHbvjRg:_hri-8WaYEe2mp69GO3rQOw", ctx, ctx.lastMajorSIBId);
 		
@@ -323,43 +346,109 @@ public final class Home_LWgagF__HYPHEN_MINUS__SEeakMeYoloYxpg implements DIMEPro
 		final info.scce.dime.gui.models.gui.home.Home_dddDUGaXEe2ffZDgDpg3pAResult result = (info.scce.dime.gui.models.gui.home.Home_dddDUGaXEe2ffZDgDpg3pAResult) guiResult;
 		if ("start_game_basic".equals(result.getBranchName())) {
 			// branch 'start_game_basic'
-			return SIB_ID._fQXfgWkVEe2cW5_gHw6itA;
+			return SIB_ID._yfBIcWwEEe2iyKycOTLADg;
 		}
 		else {
 			// unspecified branch, show same GUI again
 			return execute_b46FcWhaEe2Ts87gHbvjRg(ctx);
 		}
 	}
-	// container for graph abstraction 'GetBoard' and sub process 'GetBoard'.
-	public SIB_ID execute_fQXfgWkVEe2cW5_gHw6itA(final Context ctx) {
-		final info.scce.dime.process.models.interaction.GetBoard_HdofkWkUEe2cW5_gHw6itA instance = CDIUtil.getManagedInstance(ctx.beanManager, info.scce.dime.process.models.interaction.GetBoard_HdofkWkUEe2cW5_gHw6itA.class);
-	
-		final info.scce.dime.process.models.interaction.GetBoard_HdofkWkUEe2cW5_gHw6itA.GetBoard_HdofkWkUEe2cW5_gHw6itAResult result = instance.execute(false);
-	
-		switch(result.getBranchName()) {
-		case "success": {
-			ctx.GetBoardSuccessBoard_fQhQgWkVEe2cW5_gHw6itA = result.getSuccessReturn().getBoard();
-			// branch 'success'
-			return SIB_ID._NHhKMGhZEe2Ts87gHbvjRg;
-		}
-			default: throw new IllegalStateException("SIB 'GetBoard' has no successor defined for branch '" + result.getBranchName() + '\'');
-		}
-	}
-	
 	// container for graph abstraction 'addPiece' and sub process 'addPiece'.
 	public SIB_ID execute_4dXEIWsdEe2LPP__HYPHEN_MINUS__yV9ajYA(final Context ctx) {
 		final info.scce.dime.process.models.interaction.AddPiece_05YnEWsdEe2LPP__HYPHEN_MINUS__yV9ajYA instance = new info.scce.dime.process.models.interaction.AddPiece_05YnEWsdEe2LPP__HYPHEN_MINUS__yV9ajYA(ctx.beanManager);
 	
-		final info.scce.dime.process.models.interaction.AddPiece_05YnEWsdEe2LPP__HYPHEN_MINUS__yV9ajYA.AddPiece_05YnEWsdEe2LPP__HYPHEN_MINUS__yV9ajYAResult result = instance.execute(false, ctx.gamePlacePieceIndex_nSD1wWsdEe2LPP__HYPHEN_MINUS__yV9ajYA);
+		final info.scce.dime.process.models.interaction.AddPiece_05YnEWsdEe2LPP__HYPHEN_MINUS__yV9ajYA.AddPiece_05YnEWsdEe2LPP__HYPHEN_MINUS__yV9ajYAResult result = instance.execute(false, ctx.board, ctx.gamePlacePieceIndex_nSD1wWsdEe2LPP__HYPHEN_MINUS__yV9ajYA, ctx.turn);
 	
 		switch(result.getBranchName()) {
 		case "success": {
+			ctx.board = result.getSuccessReturn().getBoard();
 			// branch 'success'
-			return SIB_ID._fQXfgWkVEe2cW5_gHw6itA;
+			return SIB_ID._fyArMWwOEe2izKycOTLADg;
 		}
 			default: throw new IllegalStateException("SIB 'addPiece' has no successor defined for branch '" + result.getBranchName() + '\'');
 		}
 	}
 	
+	// container for graph abstraction 'InitBoard' and sub process 'InitBoard'.
+	public SIB_ID execute_yfBIcWwEEe2iyKycOTLADg(final Context ctx) {
+		final info.scce.dime.process.models.interaction.InitBoard_mMPIMWwEEe2iyKycOTLADg instance = CDIUtil.getManagedInstance(ctx.beanManager, info.scce.dime.process.models.interaction.InitBoard_mMPIMWwEEe2iyKycOTLADg.class);
+	
+		final info.scce.dime.process.models.interaction.InitBoard_mMPIMWwEEe2iyKycOTLADg.InitBoard_mMPIMWwEEe2iyKycOTLADgResult result = instance.execute(false);
+	
+		switch(result.getBranchName()) {
+		case "success": {
+			ctx.board = result.getSuccessReturn().getBoard();
+			ctx.turn = result.getSuccessReturn().getTurn();
+			// branch 'success'
+			return SIB_ID._NHhKMGhZEe2Ts87gHbvjRg;
+		}
+			default: throw new IllegalStateException("SIB 'InitBoard' has no successor defined for branch '" + result.getBranchName() + '\'');
+		}
+	}
+	
+	// container for atomic SIB 'SwitchPlayer'.
+	public SIB_ID execute_H0Q1cWwKEe2izKycOTLADg(final Context ctx) {
+		try {
+			final java.lang.Long result = info.scce.dime.app.demo.Game.switchPlayer(ctx.turn);
+			ctx.turn = result;
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			// branch 'failure'
+			throw new IllegalStateException("SIB 'SwitchPlayer' has no successor defined for branch 'failure'");
+		}
+		// branch 'success'
+		return SIB_ID._NHhKMGhZEe2Ts87gHbvjRg;
+	}
+	// container for atomic SIB 'CheckWin'.
+	public SIB_ID execute_fyArMWwOEe2izKycOTLADg(final Context ctx) {
+		if (info.scce.dime.app.demo.Game.checkWin(ctx.board, ctx.turn)) {
+			// branch 'true'
+			return SIB_ID._n3ZogWwPEe2izKycOTLADg;
+		}
+		else {
+			// branch 'false'
+			return SIB_ID._H0Q1cWwKEe2izKycOTLADg;
+		}
+	}
+	// Input class -- generated by info.scce.dime.generator.process.BackendProcessGeneratorHelper#renderInputClass(SIB)
+	//   for SIB winmsg _n3ZogWwPEe2izKycOTLADg
+	private static class InputsForGUISIB_n3ZogWwPEe2izKycOTLADg {
+		public java.lang.Long winner;
+	}
+	
+	
+	// container for GUI SIB 'winmsg'.
+	public SIB_ID execute_n3ZogWwPEe2izKycOTLADg(final Context ctx) {
+	
+		
+		final InputsForGUISIB_n3ZogWwPEe2izKycOTLADg inputs = new InputsForGUISIB_n3ZogWwPEe2izKycOTLADg();
+		
+		inputs.winner = ctx.turn;
+		
+		final CallFrame currentFrame = new CallFrame("info.scce.dime.process.models.interaction.Home_LWgagF__HYPHEN_MINUS__SEeakMeYoloYxpg:_n3ZogWwPEe2izKycOTLADg:_mJQrsGwPEe2izKycOTLADg", ctx, ctx.lastMajorSIBId);
+		
+		ctx.callStack.getCallFrames().add(currentFrame);
+	
+		GUIEncounteredSignal signal = new GUIEncounteredSignal(ctx.callStack, "_n3ZogWwPEe2izKycOTLADg", inputs);
+		
+		throw signal;
+	}
+	
+	public SIB_ID continue_n3ZogWwPEe2izKycOTLADg(Context ctx, Object guiResult) {
+		if(ctx.callStack.isAuthenticationRequired()) {
+			final Subject shiroSubj = SecurityUtils.getSubject();
+			if (!shiroSubj.isAuthenticated()) {
+				GUIEncounteredSignal sig = new GUIEncounteredSignal(ctx.callStack, "_n3ZogWwPEe2izKycOTLADg");
+				sig.setStatus(401);
+				throw sig;
+			}
+		}
+		
+		ctx.callStack.getCallFrames().remove(ctx.callStack.getCallFrames().size()-1);
+		
+		// unspecified branch, show same GUI again
+		return execute_n3ZogWwPEe2izKycOTLADg(ctx);
+	}
 	
 }  

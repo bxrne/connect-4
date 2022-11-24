@@ -98,18 +98,4 @@ Data _tH3fEMwMEeWZVvvwxpYu8A {
   		isList false
   	}
   }
-  
-  ConcreteType _ejoBUWnxEe2us-FTnwz4hA at 630,420 size 140,55 {
-  	name "TempColumn"
-  	ComplexAttribute _hJyLQWnxEe2us-FTnwz4hA at 5,32 size 130,18 {
-  		dataType _N5BPYGmoEe2sl80VZxYqHw
-  		name "cell"
-  		isList true
-  	}
-  	-Association-> _N5BPYGmoEe2sl80VZxYqHw  decorate "Text" at (-60,8) decorate "" at (0,0) {
-  		id _hJmlEGnxEe2us-FTnwz4hA
-  		isHidden false
-  		sourceAttr _hJyLQWnxEe2us-FTnwz4hA
-  	}
-  }
 }
