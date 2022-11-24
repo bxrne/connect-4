@@ -1,0 +1,95 @@
+GUI _mJQrsGwPEe2izKycOTLADg {
+  fullWidth false
+  disableAutoLayout false
+  additionalJavaScript [  ]
+  additionalStylesheets [  ]
+  title "winmsg"
+  DataContext _mJWyUWwPEe2izKycOTLADg at 10,10 size 180,145 {
+  	dfViewWorkaround true
+  	PrimitiveVariable _v2HLgWwPEe2izKycOTLADg at 30,90 size 140,25 {
+  		dataType Integer
+  		isInput true
+  		name "winner"
+  		dfViewWorkaround true
+  		isList false
+  		-IF-> _xpaVIWwPEe2izKycOTLADg  decorate "" at (0,0) decorate "Text" at (0,0) {
+  			id _yMGygWwPEe2izKycOTLADg
+  			negate false
+  		}
+  	}
+  }
+  
+  Template _mJXZYWwPEe2izKycOTLADg at 240,10 size 270,230 {
+  	blockName ""
+  	disableAutoLayout false
+  	generalStyle GeneralStyling _mJYngGwPEe2izKycOTLADg {
+  			tallness Fitting
+  			marginBottom None
+  			attributes [  ]
+  			marginTop None
+  		}
+  	Row _mJZ1oGwPEe2izKycOTLADg at 10,30 size 250,170 {
+  		generalStyle GeneralStyling _mJf8QWwPEe2izKycOTLADg {
+  				tallness Fitting
+  				marginBottom None
+  				attributes [  ]
+  				marginTop None
+  			}
+  		MoveUp _mJacsWwPEe2izKycOTLADg at 2,2 size 14,7 {
+  		}
+  		
+  		MoveDown _mJbDwWwPEe2izKycOTLADg at 2,10 size 14,7 {
+  		}
+  		
+  		Col _mJbq0WwPEe2izKycOTLADg at 10,30 size 220,120 {
+  			wideness Full
+  			layout Layout _mJf8QGwPEe2izKycOTLADg {
+  					size Default
+  					offset None
+  					alignment Left
+  				}
+  			generalStyle GeneralStyling _mJfVMGwPEe2izKycOTLADg {
+  					tallness Fitting
+  					marginBottom None
+  					attributes [  ]
+  					marginTop None
+  				}
+  			MoveLeft _mJdgAWwPEe2izKycOTLADg at 2,2 size 7,14 {
+  			}
+  			
+  			MoveRight _mJeHEWwPEe2izKycOTLADg at 10,2 size 7,14 {
+  			}
+  			
+  			Text _xpaVIWwPEe2izKycOTLADg at 10,30 size 200,60 {
+  				content [ StaticContent _xpcKUGwPEe2izKycOTLADg {
+  						renderMarkdown false
+  						maxChars 0
+  						html false
+  						rawContent "Well done player {{winner}}! The loser should be ashamed"
+  						styling TextStyling _xpcKUWwPEe2izKycOTLADg {
+  								small false
+  								highlight false
+  								deleted false
+  								underline false
+  								bold false
+  								alignment Left
+  								italic false
+  								color Default
+  							}
+  					} ]
+  				generalStyle GeneralStyling _xpbjQ2wPEe2izKycOTLADg {
+  						tallness Fitting
+  						marginBottom None
+  						attributes [  ]
+  						marginTop None
+  					}
+  				MoveUp _xpbjQGwPEe2izKycOTLADg at 2,2 size 14,7 {
+  				}
+  				
+  				MoveDown _xpbjQmwPEe2izKycOTLADg at 2,10 size 14,7 {
+  				}
+  			}
+  		}
+  	}
+  }
+}

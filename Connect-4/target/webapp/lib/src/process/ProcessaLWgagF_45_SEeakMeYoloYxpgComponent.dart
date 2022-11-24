@@ -19,12 +19,15 @@ import 'package:app/src/gui/Gameahri_45_8WaYEe2mp69GO3rQOw.dart';
 import 'package:app/src/rest/gui/Home_dddDUGaXEe2ffZDgDpg3pAInput.dart';
 import 'package:app/src/rest/gui/Home_dddDUGaXEe2ffZDgDpg3pABranch.dart';
 import 'package:app/src/gui/HomeadddDUGaXEe2ffZDgDpg3pA.dart';
+import 'package:app/src/rest/gui/Winmsg_mJQrsGwPEe2izKycOTLADgInput.dart';
+import 'package:app/src/rest/gui/Winmsg_mJQrsGwPEe2izKycOTLADgBranch.dart';
+import 'package:app/src/gui/WinmsgamJQrsGwPEe2izKycOTLADg.dart';
 //NF model outputs
 
 @Component(
   	selector: 'Home-aLWgagF_45_SEeakMeYoloYxpg-process',
   	directives: const [
-  		coreDirectives,login.Login,Gameahri_45_8WaYEe2mp69GO3rQOw,HomeadddDUGaXEe2ffZDgDpg3pA
+  		coreDirectives,login.Login,Gameahri_45_8WaYEe2mp69GO3rQOw,HomeadddDUGaXEe2ffZDgDpg3pA,WinmsgamJQrsGwPEe2izKycOTLADg
   	],
 	template: '''
 	<login-form 
@@ -57,6 +60,16 @@ import 'package:app/src/gui/HomeadddDUGaXEe2ffZDgDpg3pA.dart';
 			(actionstartxxgamexxbasicevent) = "eventab5AMEWhaEe2Ts87gHbvjRgstart_game_basicTrigger(\$event)"
 		>
 		</home-tag>
+		<winmsg-tag
+			*ngIf="isVisible(majorSIB,'_n3ZogWwPEe2izKycOTLADg')"
+			[winner]="majoran3ZogWwPEe2izKycOTLADgInput.winner"
+			[guiId]="'_mJQrsGwPEe2izKycOTLADg'"
+			[runtimeId]="runtimeId"
+			[currentbranch]="currentBranch"
+			[modalDialog]="false"
+			[ismajorpage]="true"
+		>
+		</winmsg-tag>
 	</template>
 	'''
 )
@@ -96,6 +109,8 @@ class ProcessaLWgagF_45_SEeakMeYoloYxpgComponent extends GUIProcess implements O
 	Game_hri_45_8WaYEe2mp69GO3rQOwInput minoraNHhKMGhZEe2Ts87gHbvjRgInput;
 	Home_dddDUGaXEe2ffZDgDpg3pAInput majorab46FcWhaEe2Ts87gHbvjRgInput;
 	Home_dddDUGaXEe2ffZDgDpg3pAInput minorab46FcWhaEe2Ts87gHbvjRgInput;
+	Winmsg_mJQrsGwPEe2izKycOTLADgInput majoran3ZogWwPEe2izKycOTLADgInput;
+	Winmsg_mJQrsGwPEe2izKycOTLADgInput minoran3ZogWwPEe2izKycOTLADgInput;
 	
 	final DIMEProcessService _processService;
 	
@@ -112,6 +127,10 @@ class ProcessaLWgagF_45_SEeakMeYoloYxpgComponent extends GUIProcess implements O
 	// GUISIB home
 	@ViewChildren(HomeadddDUGaXEe2ffZDgDpg3pA)
 	List<HomeadddDUGaXEe2ffZDgDpg3pA> componentab46FcWhaEe2Ts87gHbvjRg;
+	// GUISIBs of Process Home
+	// GUISIB winmsg
+	@ViewChildren(WinmsgamJQrsGwPEe2izKycOTLADg)
+	List<WinmsgamJQrsGwPEe2izKycOTLADg> componentan3ZogWwPEe2izKycOTLADg;
 	
 	ProcessaLWgagF_45_SEeakMeYoloYxpgComponent(this._processService,this._router,this._notificationService,AbstractRoutes routes): super(routes);
 
@@ -195,6 +214,26 @@ class ProcessaLWgagF_45_SEeakMeYoloYxpgComponent extends GUIProcess implements O
 				}
 			}
 		}
+		if(isVisible(majorSIB,'_n3ZogWwPEe2izKycOTLADg')) {
+			majoran3ZogWwPEe2izKycOTLADgInput = majorInput as Winmsg_mJQrsGwPEe2izKycOTLADgInput;
+			if(componentan3ZogWwPEe2izKycOTLADg != null) {
+				componentan3ZogWwPEe2izKycOTLADg.forEach((n)=>n.updateInputs(
+					pwinner:majoran3ZogWwPEe2izKycOTLADgInput.winner
+				));
+			}
+		} else if(isVisible(minorSIB,'_n3ZogWwPEe2izKycOTLADg')) {
+			Winmsg_mJQrsGwPEe2izKycOTLADgInput newInput = minorInput as Winmsg_mJQrsGwPEe2izKycOTLADgInput;
+			bool hasChanged = minoran3ZogWwPEe2izKycOTLADgInput!=null?minoran3ZogWwPEe2izKycOTLADgInput.inpusChanged(newInput):true;
+			minoran3ZogWwPEe2izKycOTLADgInput = newInput;
+			if(componentan3ZogWwPEe2izKycOTLADg != null) {
+				componentan3ZogWwPEe2izKycOTLADg.forEach((n)=>n.updateInputs(
+					pwinner:minoran3ZogWwPEe2izKycOTLADgInput.winner
+				));
+				if(hasChanged) {
+					componentan3ZogWwPEe2izKycOTLADg.forEach((n)=>n.restartComponent());			
+				}
+			}
+		}
 		
 		
 	}
@@ -253,4 +292,5 @@ class ProcessaLWgagF_45_SEeakMeYoloYxpgComponent extends GUIProcess implements O
 		.then((cpr)=>processResponse(_processService,cpr))
 		.catchError((e)=>processError(e));
 	}
+	// Branches for GUISIB winmsg of Process Home
 }

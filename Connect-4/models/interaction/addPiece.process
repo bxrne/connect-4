@@ -8,17 +8,12 @@ Process _05YnEWsdEe2LPP-yV9ajYA {
   	dfViewWorkaround true
   }
   
-  StartSIB _05bqYWsdEe2LPP-yV9ajYA at 330,20 size 100,126 {
+  StartSIB _05bqYWsdEe2LPP-yV9ajYA at 330,-20 size 100,126 {
   	PrimitiveOutputPort _1UX58WsdEe2LPP-yV9ajYA at 5,67 size 90,18 {
   		dataType Integer
   		isList false
   		name "index"
-  		-PrimitiveDirectDataFlow-> _reiLUWsfEe2LPP-yV9ajYA via (300,96) (300,227) decorate "" at (0,0) {
-  			id _vBmpcWsfEe2LPP-yV9ajYA
-  			dfViewWorkaround true
-  		}
-  		
-  		-PrimitiveDirectDataFlow-> _OzBmUWtlEe2yLYR6JjFIQg via (300,96) (300,412) decorate "" at (0,0) {
+  		-PrimitiveDirectDataFlow-> _OzBmUWtlEe2yLYR6JjFIQg via (300,56) (300,412) decorate "" at (0,0) {
   			id _d6k0QGtlEe2yLYR6JjFIQg
   			dfViewWorkaround true
   		}
@@ -28,7 +23,7 @@ Process _05YnEWsdEe2LPP-yV9ajYA {
   		libraryComponentUID "_bk7lAGkUEe2cW5_gHw6itA"
   		isList false
   		name "board"
-  		-ComplexDirectDataFlow-> _OykTUWtlEe2yLYR6JjFIQg via (310,114) (310,376) decorate "" at (0,0) {
+  		-ComplexDirectDataFlow-> _OykTUWtlEe2yLYR6JjFIQg via (310,74) (310,376) decorate "" at (0,0) {
   			id _asWkwWtlEe2yLYR6JjFIQg
   			dfViewWorkaround true
   		}
@@ -38,13 +33,13 @@ Process _05YnEWsdEe2LPP-yV9ajYA {
   		dataType Integer
   		isList false
   		name "turn"
-  		-PrimitiveDirectDataFlow-> _Vf8-0WwJEe2izKycOTLADg via (310,132) (310,394) decorate "" at (0,0) {
+  		-PrimitiveDirectDataFlow-> _Vf8-0WwJEe2izKycOTLADg via (310,92) (310,394) decorate "" at (0,0) {
   			id _V_QxAWwJEe2izKycOTLADg
   			dfViewWorkaround true
   		}
   	}
-  	-ControlFlow-> _refvEWsfEe2LPP-yV9ajYA  decorate "" at (0,0) {
-  		id _uhzvEWsfEe2LPP-yV9ajYA
+  	-ControlFlow-> _OxptUGtlEe2yLYR6JjFIQg  decorate "" at (0,0) {
+  		id _O1GTkWwNEe2izKycOTLADg
   		concurrent true
   	}
   }
@@ -55,29 +50,6 @@ Process _05YnEWsdEe2LPP-yV9ajYA {
   		libraryComponentUID "_bk7lAGkUEe2cW5_gHw6itA"
   		isList false
   		name "board"
-  	}
-  }
-  
-  AtomicSIB _refvEWsfEe2LPP-yV9ajYA at 320,151 size 120,90 {
-  	libraryComponentUID "app.demo.PCL"
-  	label "PCL"
-  	ignoredBranch [  ]
-  	PrimitiveInputPort _reiLUWsfEe2LPP-yV9ajYA at 5,67 size 110,18 {
-  		dataType Integer
-  		isList false
-  		name "index"
-  	}
-  	-BranchConnector-> _renq4WsfEe2LPP-yV9ajYA   {
-  		id _reoR8WsfEe2LPP-yV9ajYA
-  		concurrent true
-  	}
-  }
-  
-  Branch _renq4WsfEe2LPP-yV9ajYA at 320,260 size 120,25 {
-  	name "success"
-  	-ControlFlow-> _OxptUGtlEe2yLYR6JjFIQg  decorate "" at (0,0) {
-  		id _cJuhsWtlEe2yLYR6JjFIQg
-  		concurrent true
   	}
   }
   

@@ -67,7 +67,6 @@ public final class AddPiece_05YnEWsdEe2LPP__HYPHEN_MINUS__yV9ajYA implements DIM
 
 	private enum SIB_ID {
 	_05dfkWsdEe2LPP__HYPHEN_MINUS__yV9ajYA,
-	_refvEWsfEe2LPP__HYPHEN_MINUS__yV9ajYA,
 	_OxptUGtlEe2yLYR6JjFIQg,
 		;
 	}
@@ -87,7 +86,6 @@ public final class AddPiece_05YnEWsdEe2LPP__HYPHEN_MINUS__yV9ajYA implements DIM
 		ctx.startTurn_TmgJ4WwJEe2izKycOTLADg = turn;
 		ctx.startBoard_T11Y4WtlEe2yLYR6JjFIQg = board;
 		ctx.startIndex_1UX58WsdEe2LPP__HYPHEN_MINUS__yV9ajYA = index;
-		ctx.startIndex_1UX58WsdEe2LPP__HYPHEN_MINUS__yV9ajYA = index;
 		
 		return ctx;
 	}
@@ -96,7 +94,7 @@ public final class AddPiece_05YnEWsdEe2LPP__HYPHEN_MINUS__yV9ajYA implements DIM
 		final Context ctx = createContext(board, index, turn);
 		ctx.callStack.setAuthenticationRequired(isAuthenticationRequired);
 
-		return executeInternal(ctx, SIB_ID._refvEWsfEe2LPP__HYPHEN_MINUS__yV9ajYA);
+		return executeInternal(ctx, SIB_ID._OxptUGtlEe2yLYR6JjFIQg);
 	}
 	
 	
@@ -119,10 +117,6 @@ public final class AddPiece_05YnEWsdEe2LPP__HYPHEN_MINUS__yV9ajYA implements DIM
 			switch (curr) {
 				case _05dfkWsdEe2LPP__HYPHEN_MINUS__yV9ajYA: {
 					return execute_05dfkWsdEe2LPP__HYPHEN_MINUS__yV9ajYA(ctx);
-				}
-				case _refvEWsfEe2LPP__HYPHEN_MINUS__yV9ajYA: {
-					curr = execute_refvEWsfEe2LPP__HYPHEN_MINUS__yV9ajYA(ctx);
-					break;
 				}
 				case _OxptUGtlEe2yLYR6JjFIQg: {
 					curr = execute_OxptUGtlEe2yLYR6JjFIQg(ctx);
@@ -196,19 +190,6 @@ public final class AddPiece_05YnEWsdEe2LPP__HYPHEN_MINUS__yV9ajYA implements DIM
 	// container for graph i/o 'success'.
 	public AddPiece_05YnEWsdEe2LPP__HYPHEN_MINUS__yV9ajYAResult execute_05dfkWsdEe2LPP__HYPHEN_MINUS__yV9ajYA(final Context ctx) {
 		return new AddPiece_05YnEWsdEe2LPP__HYPHEN_MINUS__yV9ajYAResult(new SuccessReturnImpl(ctx));
-	}
-	// container for atomic SIB 'PCL'.
-	public SIB_ID execute_refvEWsfEe2LPP__HYPHEN_MINUS__yV9ajYA(final Context ctx) {
-		try {
-			info.scce.dime.app.demo.Game.pC(ctx.startIndex_1UX58WsdEe2LPP__HYPHEN_MINUS__yV9ajYA);
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			// branch 'failure'
-			throw new IllegalStateException("SIB 'PCL' has no successor defined for branch 'failure'");
-		}
-		// branch 'success'
-		return SIB_ID._OxptUGtlEe2yLYR6JjFIQg;
 	}
 	// container for atomic SIB 'PlaceCoin'.
 	public SIB_ID execute_OxptUGtlEe2yLYR6JjFIQg(final Context ctx) {

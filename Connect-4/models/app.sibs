@@ -35,3 +35,9 @@ sib SwitchPlayer : info.scce.dime.app.demo.Game#switchPlayer
 player : integer
 ->success
 newPlayer : integer
+
+sib CheckWin : info.scce.dime.app.demo.Game#checkWin
+board : data.Board
+player : integer
+->true
+->false

@@ -100,8 +100,20 @@ public class Game {
 		return output;
 	}
 
-	public static boolean checkWin(Long[][] board, Long player) {
+	public static boolean checkWin(Board _board, Long player) {
 		//WIN CHECKING
+		//might just build the 2d array from the board obj lol very bold
+		int width = _board.getcolumns_Column().size();
+		int height = _board.getcolumns_Column().get(0).getcells_Cell().size();
+		
+		Long[][] board = new Long[width][height];
+		
+		for(int i = 0; i < width; i++) {
+			for(int j = 0; j < height; j++) {
+				board[i][j] = _board.getcolumns_Column().get(i).getcells_Cell().get(j).getvalue();
+			}
+		}
+		
 		//vertical
 		//i is row, j is col, k is cell of 4
 		//bottom 3 rows arent checked as the last cell will be out of bounds
