@@ -11,7 +11,7 @@ Process _LWgagF-SEeakMeYoloYxpg {
   	}
   }
   
-  GUISIB _NHhKMGhZEe2Ts87gHbvjRg at 40,500 size 120,90 {
+  GUISIB _NHhKMGhZEe2Ts87gHbvjRg at 40,500 size 120,108 {
   	cacheGUI false
   	majorPage true
   	libraryComponentUID "_hri-8WaYEe2mp69GO3rQOw"
@@ -22,6 +22,12 @@ Process _LWgagF-SEeakMeYoloYxpg {
   		libraryComponentUID "_bk7lAGkUEe2cW5_gHw6itA"
   		isList false
   		name "board"
+  	}
+  	
+  	PrimitiveInputPort _MX4AAWwJEe2izKycOTLADg at 5,85 size 110,18 {
+  		dataType Integer
+  		isList false
+  		name "turn"
   	}
   	-BranchConnector-> _NIHnIWhZEe2Ts87gHbvjRg   {
   		id _NIO74WhZEe2Ts87gHbvjRg
@@ -34,9 +40,9 @@ Process _LWgagF-SEeakMeYoloYxpg {
   	}
   }
   
-  Branch _NIHnIWhZEe2Ts87gHbvjRg at 40,600 size 120,25 {
+  Branch _NIHnIWhZEe2Ts87gHbvjRg at 400,532 size 120,25 {
   	name "back"
-  	-ControlFlow-> _b46FcWhaEe2Ts87gHbvjRg via (180,617) (180,182) decorate "" at (0,0) {
+  	-ControlFlow-> _b46FcWhaEe2Ts87gHbvjRg via (550,553) (550,182) decorate "" at (0,0) {
   		id _nv4VoWhpEe2Ts87gHbvjRg
   		concurrent true
   	}
@@ -57,57 +63,26 @@ Process _LWgagF-SEeakMeYoloYxpg {
   
   Branch _b5AMEWhaEe2Ts87gHbvjRg at 9,242 size 181,38 {
   	name "start_game_basic"
-  	-ControlFlow-> _fQXfgWkVEe2cW5_gHw6itA  decorate "" at (0,0) {
-  		id _gCuJgWkVEe2cW5_gHw6itA
+  	-ControlFlow-> _yfBIcWwEEe2iyKycOTLADg  decorate "" at (0,0) {
+  		id _z29y0GwEEe2iyKycOTLADg
   		concurrent true
   	}
   }
   
-  ProcessSIB _fQXfgWkVEe2cW5_gHw6itA at 40,320 size 120,65 {
-  	libraryComponentUID "_HdofkWkUEe2cW5_gHw6itA"
-  	label "GetBoard"
-  	ignoredBranch [  ]
-  	-BranchConnector-> _fQgCYWkVEe2cW5_gHw6itA   {
-  		id _fQgpcWkVEe2cW5_gHw6itA
-  		concurrent true
-  	}
-  }
-  
-  Branch _fQgCYWkVEe2cW5_gHw6itA at 40,395 size 120,50 {
-  	name "success"
-  	ComplexOutputPort _fQhQgWkVEe2cW5_gHw6itA at 5,27 size 110,18 {
-  		libraryComponentUID "_bk7lAGkUEe2cW5_gHw6itA"
-  		isList false
-  		name "board"
-  		-ComplexDirectDataFlow-> _hcfY0WkVEe2cW5_gHw6itA via (30,431) (30,576) decorate "" at (0,0) {
-  			id _h0GAgWkVEe2cW5_gHw6itA
-  			dfViewWorkaround true
-  		}
-  	}
-  	-ControlFlow-> _NHhKMGhZEe2Ts87gHbvjRg  decorate "" at (0,0) {
-  		id _g09ewWkVEe2cW5_gHw6itA
-  		concurrent true
-  	}
-  }
-  
-  Branch _nR758WsdEe2LPP-yV9ajYA at 260,520 size 120,68 {
+  Branch _nR758WsdEe2LPP-yV9ajYA at 40,630 size 120,68 {
   	name "placePiece"
   	ComplexOutputPort _YJ2y0WtlEe2yLYR6JjFIQg at 5,27 size 110,18 {
   		libraryComponentUID "_bk7lAGkUEe2cW5_gHw6itA"
   		isList false
   		name "board"
-  		-ComplexDirectDataFlow-> _VRMjoWtlEe2yLYR6JjFIQg via (250,556) (250,594) decorate "" at (0,0) {
-  			id _Yn6AwWtlEe2yLYR6JjFIQg
-  			dfViewWorkaround true
-  		}
   	}
   	
   	PrimitiveOutputPort _nSD1wWsdEe2LPP-yV9ajYA at 5,45 size 110,18 {
   		dataType Integer
   		isList false
   		name "index"
-  		-PrimitiveDirectDataFlow-> _4daHcWsdEe2LPP-yV9ajYA via (250,556) (250,576) decorate "" at (0,0) {
-  			id _5clsgWsdEe2LPP-yV9ajYA
+  		-PrimitiveDirectDataFlow-> _4daHcWsdEe2LPP-yV9ajYA via (30,684) (30,810) decorate "" at (0,0) {
+  			id _ED_loWwGEe2iyKycOTLADg
   			dfViewWorkaround true
   		}
   	}
@@ -117,7 +92,7 @@ Process _LWgagF-SEeakMeYoloYxpg {
   	}
   }
   
-  ProcessSIB _4dXEIWsdEe2LPP-yV9ajYA at 460,500 size 120,108 {
+  ProcessSIB _4dXEIWsdEe2LPP-yV9ajYA at 40,734 size 120,126 {
   	libraryComponentUID "_05YnEWsdEe2LPP-yV9ajYA"
   	label "addPiece"
   	ignoredBranch [  ]
@@ -132,16 +107,141 @@ Process _LWgagF-SEeakMeYoloYxpg {
   		isList false
   		name "board"
   	}
+  	
+  	PrimitiveInputPort _AVvY8WwLEe2izKycOTLADg at 5,103 size 110,18 {
+  		dataType Integer
+  		isList false
+  		name "turn"
+  	}
   	-BranchConnector-> _4dlGkWsdEe2LPP-yV9ajYA   {
   		id _4dmUsWsdEe2LPP-yV9ajYA
   		concurrent true
   	}
   }
   
-  Branch _4dlGkWsdEe2LPP-yV9ajYA at 680,532 size 120,25 {
+  ProcessSIB _yfBIcWwEEe2iyKycOTLADg at 62,337 size 120,65 index 8 {
+  	libraryComponentUID "_mMPIMWwEEe2iyKycOTLADg"
+  	label "InitBoard"
+  	ignoredBranch [  ]
+  	-BranchConnector-> _yfTcUWwEEe2iyKycOTLADg   {
+  		id _yfYU0WwEEe2iyKycOTLADg
+  		concurrent true
+  	}
+  }
+  
+  Branch _4dlGkWsdEe2LPP-yV9ajYA at 40,880 size 120,50 index 7 {
   	name "success"
-  	-ControlFlow-> _fQXfgWkVEe2cW5_gHw6itA via (740,310) (100,310) decorate "" at (0,0) {
-  		id _67ALQWsdEe2LPP-yV9ajYA
+  	ComplexOutputPort _ZaVtkGwFEe2iyKycOTLADg at 5,27 size 110,18 {
+  		libraryComponentUID "_bk7lAGkUEe2cW5_gHw6itA"
+  		isList false
+  		name "board"
+  		-ComplexUpdate-> _BdVFYWwGEe2iyKycOTLADg via (-170,916) (-170,574) decorate "" at (0,0) {
+  			id _E0KeUWwGEe2iyKycOTLADg
+  			dfViewWorkaround true
+  		}
+  	}
+  	-ControlFlow-> _H0Q1cWwKEe2izKycOTLADg  decorate "" at (0,0) {
+  		id _I8JDgWwKEe2izKycOTLADg
+  		concurrent true
+  	}
+  }
+  
+  Branch _yfTcUWwEEe2iyKycOTLADg at 62,412 size 120,68 {
+  	name "success"
+  	ComplexOutputPort _yfcmQWwEEe2iyKycOTLADg at 5,27 size 110,18 {
+  		libraryComponentUID "_bk7lAGkUEe2cW5_gHw6itA"
+  		isList false
+  		name "board"
+  		-ComplexUpdate-> _BdVFYWwGEe2iyKycOTLADg via (-80,448) (-80,510) decorate "" at (0,0) {
+  			id _CXluMGwGEe2iyKycOTLADg
+  			dfViewWorkaround true
+  		}
+  	}
+  	
+  	PrimitiveOutputPort _K7-pwWwJEe2izKycOTLADg at 5,45 size 110,18 {
+  		dataType Integer
+  		isList false
+  		name "turn"
+  		-PrimitiveUpdate-> _O-KFwGwJEe2izKycOTLADg  decorate "" at (0,0) {
+  			id _QrGIsGwJEe2izKycOTLADg
+  			dfViewWorkaround true
+  		}
+  	}
+  	-ControlFlow-> _NHhKMGhZEe2Ts87gHbvjRg  decorate "" at (0,0) {
+  		id _zXu5IGwEEe2iyKycOTLADg
+  		concurrent true
+  	}
+  }
+  
+  DataContext __-oSwGwFEe2iyKycOTLADg at -170,450 size 180,215 {
+  	dfViewWorkaround true
+  	ComplexVariable _BdVFYWwGEe2iyKycOTLADg at 10,112 size 160,25 {
+  		expanded false
+  		libraryComponentUID "_bk7lAGkUEe2cW5_gHw6itA"
+  		name "board"
+  		dfViewWorkaround true
+  		isList false
+  		-ComplexRead-> _hcfY0WkVEe2cW5_gHw6itA  decorate "" at (0,0) {
+  			id _Cs8TIWwGEe2iyKycOTLADg
+  			dfViewWorkaround true
+  		}
+  		
+  		-ComplexRead-> _VRMjoWtlEe2yLYR6JjFIQg via (22,574) (23,828) decorate "" at (0,0) {
+  			id _EWJFkWwGEe2iyKycOTLADg
+  			dfViewWorkaround true
+  		}
+  	}
+  	
+  	PrimitiveVariable _O-KFwGwJEe2izKycOTLADg at 10,160 size 140,25 {
+  		dataType Integer
+  		name "turn"
+  		dfViewWorkaround true
+  		isList false
+  		-PrimitiveRead-> _MX4AAWwJEe2izKycOTLADg  decorate "" at (0,0) {
+  			id _RIwVEGwJEe2izKycOTLADg
+  			dfViewWorkaround true
+  		}
+  		
+  		-PrimitiveRead-> _H0oo4GwKEe2izKycOTLADg via (12,622) (13,1026) decorate "" at (0,0) {
+  			id _JaArQWwKEe2izKycOTLADg
+  			dfViewWorkaround true
+  		}
+  		
+  		-PrimitiveRead-> _AVvY8WwLEe2izKycOTLADg via (-90,736) (-90,845) decorate "" at (0,0) {
+  			id _BoSl8WwLEe2izKycOTLADg
+  			dfViewWorkaround true
+  		}
+  	}
+  }
+  
+  AtomicSIB _H0Q1cWwKEe2izKycOTLADg at 40,950 size 120,90 {
+  	libraryComponentUID "app.demo.SwitchPlayer"
+  	label "SwitchPlayer"
+  	ignoredBranch [  ]
+  	PrimitiveInputPort _H0oo4GwKEe2izKycOTLADg at 5,67 size 110,18 {
+  		dataType Integer
+  		isList false
+  		name "player"
+  	}
+  	-BranchConnector-> _H0uvgWwKEe2izKycOTLADg   {
+  		id _H0vWkWwKEe2izKycOTLADg
+  		concurrent true
+  	}
+  }
+  
+  Branch _H0uvgWwKEe2izKycOTLADg at 40,1050 size 120,50 {
+  	name "success"
+  	PrimitiveOutputPort _H0xy0WwKEe2izKycOTLADg at 5,27 size 110,18 {
+  		dataType Integer
+  		isList false
+  		name "newPlayer"
+  		-PrimitiveUpdate-> _O-KFwGwJEe2izKycOTLADg via (13,1086) (12,622) decorate "" at (0,0) {
+  			id _J94NUWwKEe2izKycOTLADg
+  			dfViewWorkaround true
+  		}
+  	}
+  	-ControlFlow-> _NHhKMGhZEe2Ts87gHbvjRg via (180,1075) (180,554) decorate "" at (0,0) {
+  		id _KQmVAWwKEe2izKycOTLADg
   		concurrent true
   	}
   }

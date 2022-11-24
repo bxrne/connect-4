@@ -65,11 +65,15 @@ public class Game {
 	}
 	*/
 	
-	public static boolean placeCoin(Board board, Long player, Long index) {
+	public static Board placeCoin(Board board, Long player, Long index) {
 		//get cells of column in question
 		List<Cell> cells = board.getcolumns_Column().get(index.intValue()).getcells_Cell();
-		
-		for(int i = cells.size() - 1; i >= 0; i++) {
+		//column is already full
+		if(cells.get(0).getvalue() != 0l) {
+			System.err.println("Column index "+ index + " is already full! Turn cancelled");
+			return board;
+		}
+		for(int i = cells.size() - 1; i >= 0; i--) {
 			Cell thisCell = cells.get(i);
 			if(thisCell.getvalue().equals(0l)) {
 				thisCell.setvalue(player);
@@ -80,7 +84,7 @@ public class Game {
 		System.out.println(display(board));
 		
 		
-		return false; //TODO:replace with win check
+		return board;
 	}
 	
 	
@@ -147,4 +151,9 @@ public class Game {
 		column.getcells_Cell().add(cell);
 	}
 	
+	public static Long switchPlayer(Long player) {
+		if(player == 1l) return (Long)2l;
+		//(if player == 2l)
+		return (Long)1l;
+	}
 }

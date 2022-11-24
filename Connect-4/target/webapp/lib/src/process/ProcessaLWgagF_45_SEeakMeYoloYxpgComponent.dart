@@ -37,6 +37,7 @@ import 'package:app/src/gui/HomeadddDUGaXEe2ffZDgDpg3pA.dart';
 		<game-tag
 			*ngIf="isVisible(majorSIB,'_NHhKMGhZEe2Ts87gHbvjRg')"
 			[board]="majoraNHhKMGhZEe2Ts87gHbvjRgInput.board"
+			[turn]="majoraNHhKMGhZEe2Ts87gHbvjRgInput.turn"
 			[guiId]="'_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOw'"
 			[runtimeId]="runtimeId"
 			[currentbranch]="currentBranch"
@@ -158,7 +159,8 @@ class ProcessaLWgagF_45_SEeakMeYoloYxpgComponent extends GUIProcess implements O
 			majoraNHhKMGhZEe2Ts87gHbvjRgInput = majorInput as Game_hri_45_8WaYEe2mp69GO3rQOwInput;
 			if(componentaNHhKMGhZEe2Ts87gHbvjRg != null) {
 				componentaNHhKMGhZEe2Ts87gHbvjRg.forEach((n)=>n.updateInputs(
-					pboard:majoraNHhKMGhZEe2Ts87gHbvjRgInput.board
+					pboard:majoraNHhKMGhZEe2Ts87gHbvjRgInput.board,
+					pturn:majoraNHhKMGhZEe2Ts87gHbvjRgInput.turn
 				));
 			}
 		} else if(isVisible(minorSIB,'_NHhKMGhZEe2Ts87gHbvjRg')) {
@@ -167,7 +169,8 @@ class ProcessaLWgagF_45_SEeakMeYoloYxpgComponent extends GUIProcess implements O
 			minoraNHhKMGhZEe2Ts87gHbvjRgInput = newInput;
 			if(componentaNHhKMGhZEe2Ts87gHbvjRg != null) {
 				componentaNHhKMGhZEe2Ts87gHbvjRg.forEach((n)=>n.updateInputs(
-					pboard:minoraNHhKMGhZEe2Ts87gHbvjRgInput.board
+					pboard:minoraNHhKMGhZEe2Ts87gHbvjRgInput.board,
+					pturn:minoraNHhKMGhZEe2Ts87gHbvjRgInput.turn
 				));
 				if(hasChanged) {
 					componentaNHhKMGhZEe2Ts87gHbvjRg.forEach((n)=>n.restartComponent());			

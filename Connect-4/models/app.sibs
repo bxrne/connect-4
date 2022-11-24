@@ -28,6 +28,10 @@ board : data.Board
 player : integer
 index : integer
 ->success
+board : data.Board
 ->failure
 
-//sib Debug-printB
+sib SwitchPlayer : info.scce.dime.app.demo.Game#switchPlayer
+player : integer
+->success
+newPlayer : integer

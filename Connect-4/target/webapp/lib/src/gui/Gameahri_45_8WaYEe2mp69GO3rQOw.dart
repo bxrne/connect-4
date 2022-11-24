@@ -99,6 +99,8 @@ class Gameahri_45_8WaYEe2mp69GO3rQOw extends dime.DIMEComponent implements OnIni
 	//Board board
 		@Input()
 		Data.Board board;
+	@Input()
+	int turn;
 	
 	bool isDestroyed = true;
   
@@ -114,6 +116,8 @@ class Gameahri_45_8WaYEe2mp69GO3rQOw extends dime.DIMEComponent implements OnIni
 		//DATA CONTEXT
 		// Board board
 		this.board = null;
+		// Integer turn
+		this.turn = 0;
 						
 						
 		
@@ -138,10 +142,12 @@ class Gameahri_45_8WaYEe2mp69GO3rQOw extends dime.DIMEComponent implements OnIni
 	}
 	
 	void updateInputs(
-	{Data.Board pboard
+	{Data.Board pboard,
+	int pturn
 	})
 	{
 		board = pboard;
+		turn = pturn;
 		
 		updateWithoutInputs(updateHidden:false);
 	}
@@ -236,6 +242,18 @@ class Gameahri_45_8WaYEe2mp69GO3rQOw extends dime.DIMEComponent implements OnIni
   		 value)
   		{
   			this.setValueboard(value);
+  		}
+  		int initOnDemandturn()
+  		{
+  			return this.turn;
+  		}
+  		void setValueturn(int value)
+  		{
+  			this.turn = value;
+  		}
+  		void turnsetValue(int value)
+  		{
+  			this.setValueturn(value);
   		}
   		
   	
