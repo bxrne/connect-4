@@ -12,14 +12,10 @@ GUI _mJQrsGwPEe2izKycOTLADg {
   		name "winner"
   		dfViewWorkaround true
   		isList false
-  		-IF-> _xpaVIWwPEe2izKycOTLADg  decorate "" at (0,0) decorate "Text" at (0,0) {
-  			id _yMGygWwPEe2izKycOTLADg
-  			negate false
-  		}
   	}
   }
   
-  Template _mJXZYWwPEe2izKycOTLADg at 240,10 size 270,230 {
+  Template _mJXZYWwPEe2izKycOTLADg at 240,10 size 590,500 {
   	blockName ""
   	disableAutoLayout false
   	generalStyle GeneralStyling _mJYngGwPEe2izKycOTLADg {
@@ -28,66 +24,233 @@ GUI _mJQrsGwPEe2izKycOTLADg {
   			attributes [  ]
   			marginTop None
   		}
-  	Row _mJZ1oGwPEe2izKycOTLADg at 10,30 size 250,170 {
-  		generalStyle GeneralStyling _mJf8QWwPEe2izKycOTLADg {
+  	Row _iNoQsWwcEe2-2tLdl7-gLg at 10,30 size 570,260 {
+  		generalStyle GeneralStyling _iNtwQGwcEe2-2tLdl7-gLg {
   				tallness Fitting
   				marginBottom None
   				attributes [  ]
-  				marginTop None
+  				marginTop Single
   			}
-  		MoveUp _mJacsWwPEe2izKycOTLADg at 2,2 size 14,7 {
+  		MoveUp _iNpe0WwcEe2-2tLdl7-gLg at 2,2 size 14,7 {
   		}
   		
-  		MoveDown _mJbDwWwPEe2izKycOTLADg at 2,10 size 14,7 {
+  		MoveDown _iNpe02wcEe2-2tLdl7-gLg at 2,10 size 14,7 {
   		}
   		
-  		Col _mJbq0WwPEe2izKycOTLADg at 10,30 size 220,120 {
-  			wideness Full
-  			layout Layout _mJf8QGwPEe2izKycOTLADg {
+  		Col _iNqs8WwcEe2-2tLdl7-gLg at 10,30 size 100,80 {
+  			wideness Third
+  			layout Layout _iNrUAWwcEe2-2tLdl7-gLg {
   					size Default
   					offset None
   					alignment Left
   				}
-  			generalStyle GeneralStyling _mJfVMGwPEe2izKycOTLADg {
+  			generalStyle GeneralStyling _iNrUAGwcEe2-2tLdl7-gLg {
   					tallness Fitting
   					marginBottom None
   					attributes [  ]
   					marginTop None
   				}
-  			MoveLeft _mJdgAWwPEe2izKycOTLADg at 2,2 size 7,14 {
+  			MoveLeft _iNqs82wcEe2-2tLdl7-gLg at 2,2 size 7,14 {
   			}
   			
-  			MoveRight _mJeHEWwPEe2izKycOTLADg at 10,2 size 7,14 {
+  			MoveRight _iNqs9WwcEe2-2tLdl7-gLg at 10,2 size 7,14 {
+  			}
+  		}
+  		
+  		Col _i5AI8WwcEe2-2tLdl7-gLg at 120,30 size 320,210 {
+  			wideness Third
+  			layout Layout _i5BXEWwcEe2-2tLdl7-gLg {
+  					size Default
+  					offset None
+  					alignment Left
+  				}
+  			generalStyle GeneralStyling _i5BXEGwcEe2-2tLdl7-gLg {
+  					tallness Fitting
+  					marginBottom None
+  					attributes [  ]
+  					marginTop None
+  				}
+  			MoveLeft _i5AwAWwcEe2-2tLdl7-gLg at 2,2 size 7,14 {
   			}
   			
-  			Text _xpaVIWwPEe2izKycOTLADg at 10,30 size 200,60 {
-  				content [ StaticContent _xpcKUGwPEe2izKycOTLADg {
+  			MoveRight _i5AwA2wcEe2-2tLdl7-gLg at 10,2 size 7,14 {
+  			}
+  			
+  			Image _3eN5cWwcEe2-2tLdl7-gLg at 10,90 size 100,90 {
+  				dimensionX -1
+  				path "https://bxrne.com/{{winner}}.png"
+  				dimensionY -1
+  				styling ImageStyling _3ePHk2wcEe2-2tLdl7-gLg {
+  						border Default
+  						responsive true
+  					}
+  				generalStyle GeneralStyling _3ePHkmwcEe2-2tLdl7-gLg {
+  						tallness Fitting
+  						marginBottom None
+  						attributes [  ]
+  						marginTop Single
+  					}
+  				MoveUp _3eOggWwcEe2-2tLdl7-gLg at 2,2 size 14,7 {
+  				}
+  				
+  				MoveDown _3ePHkWwcEe2-2tLdl7-gLg at 2,10 size 14,7 {
+  				}
+  			}
+  			
+  			Headline _LXPyAWwgEe2-2tLdl7-gLg at 10,30 size 300,50 {
+  				size Big
+  				content [ StaticContent _LXRnMWwgEe2-2tLdl7-gLg {
   						renderMarkdown false
   						maxChars 0
   						html false
-  						rawContent "Well done player {{winner}}! The loser should be ashamed"
-  						styling TextStyling _xpcKUWwPEe2izKycOTLADg {
+  						rawContent "WINNER"
+  						styling TextStyling _LXRnMmwgEe2-2tLdl7-gLg {
   								small false
   								highlight false
   								deleted false
   								underline false
-  								bold false
-  								alignment Left
+  								bold true
+  								alignment Center
   								italic false
   								color Default
   							}
   					} ]
-  				generalStyle GeneralStyling _xpbjQ2wPEe2izKycOTLADg {
+  				generalStyle GeneralStyling _LXRnMGwgEe2-2tLdl7-gLg {
   						tallness Fitting
   						marginBottom None
   						attributes [  ]
   						marginTop None
   					}
-  				MoveUp _xpbjQGwPEe2izKycOTLADg at 2,2 size 14,7 {
+  				MoveUp _LXRAIWwgEe2-2tLdl7-gLg at 2,2 size 14,7 {
   				}
   				
-  				MoveDown _xpbjQmwPEe2izKycOTLADg at 2,10 size 14,7 {
+  				MoveDown _LXRAI2wgEe2-2tLdl7-gLg at 2,10 size 14,7 {
   				}
+  			}
+  		}
+  		
+  		Col _jPSiAWwcEe2-2tLdl7-gLg at 450,30 size 100,80 {
+  			wideness Third
+  			layout Layout _jPTJE2wcEe2-2tLdl7-gLg {
+  					size Default
+  					offset None
+  					alignment Left
+  				}
+  			generalStyle GeneralStyling _jPTJEmwcEe2-2tLdl7-gLg {
+  					tallness Fitting
+  					marginBottom None
+  					attributes [  ]
+  					marginTop None
+  				}
+  			MoveLeft _jPSiA2wcEe2-2tLdl7-gLg at 2,2 size 7,14 {
+  			}
+  			
+  			MoveRight _jPTJEWwcEe2-2tLdl7-gLg at 10,2 size 7,14 {
+  			}
+  		}
+  	}
+  	
+  	Row _MBvycWweEe2-2tLdl7-gLg at 10,300 size 470,170 {
+  		generalStyle GeneralStyling _MBzc0GweEe2-2tLdl7-gLg {
+  				tallness Fitting
+  				marginBottom None
+  				attributes [  ]
+  				marginTop Single
+  			}
+  		MoveUp _MBvyc2weEe2-2tLdl7-gLg at 2,2 size 14,7 {
+  		}
+  		
+  		MoveDown _MBwZgWweEe2-2tLdl7-gLg at 2,10 size 14,7 {
+  		}
+  		
+  		Col _MBxAkWweEe2-2tLdl7-gLg at 10,30 size 100,80 {
+  			wideness Third
+  			layout Layout _MBxnoWweEe2-2tLdl7-gLg {
+  					size Default
+  					offset None
+  					alignment Left
+  				}
+  			generalStyle GeneralStyling _MBxnoGweEe2-2tLdl7-gLg {
+  					tallness Fitting
+  					marginBottom None
+  					attributes [  ]
+  					marginTop None
+  				}
+  			MoveLeft _MBxAk2weEe2-2tLdl7-gLg at 2,2 size 7,14 {
+  			}
+  			
+  			MoveRight _MBxAlWweEe2-2tLdl7-gLg at 10,2 size 7,14 {
+  			}
+  		}
+  		
+  		Col _NGaUcWweEe2-2tLdl7-gLg at 120,30 size 220,120 {
+  			wideness Third
+  			layout Layout _NGa7g2weEe2-2tLdl7-gLg {
+  					size Default
+  					offset None
+  					alignment Left
+  				}
+  			generalStyle GeneralStyling _NGa7gmweEe2-2tLdl7-gLg {
+  					tallness Fitting
+  					marginBottom None
+  					attributes [  ]
+  					marginTop None
+  				}
+  			MoveLeft _NGaUc2weEe2-2tLdl7-gLg at 2,2 size 7,14 {
+  			}
+  			
+  			MoveRight _NGa7gWweEe2-2tLdl7-gLg at 10,2 size 7,14 {
+  			}
+  			
+  			Button _QLiSUWweEe2-2tLdl7-gLg at 10,30 size 200,60 {
+  				displayLabel "Play Again"
+  				label "play again"
+  				styling ButtonStyling _QLpAAGweEe2-2tLdl7-gLg {
+  						fullWidth true
+  						size Large
+  						disabled false
+  						color Green
+  					}
+  				options ButtonOptions _QLq1MGweEe2-2tLdl7-gLg {
+  						isLink false
+  						submitsForm true
+  					}
+  				disabled false
+  				icon Icon _QLjgc2weEe2-2tLdl7-gLg {
+  						postIcon ChevronRight
+  						preIcon None
+  					}
+  				generalStyle GeneralStyling _QLjgcmweEe2-2tLdl7-gLg {
+  						tallness Fitting
+  						marginBottom None
+  						attributes [  ]
+  						marginTop None
+  					}
+  				MoveUp _QLi5YWweEe2-2tLdl7-gLg at 2,2 size 14,7 {
+  				}
+  				
+  				MoveDown _QLjgcWweEe2-2tLdl7-gLg at 2,10 size 14,7 {
+  				}
+  			}
+  		}
+  		
+  		Col _Ncf5MWweEe2-2tLdl7-gLg at 350,30 size 100,80 {
+  			wideness Third
+  			layout Layout _NcggRWweEe2-2tLdl7-gLg {
+  					size Default
+  					offset None
+  					alignment Left
+  				}
+  			generalStyle GeneralStyling _NcggRGweEe2-2tLdl7-gLg {
+  					tallness Fitting
+  					marginBottom None
+  					attributes [  ]
+  					marginTop None
+  				}
+  			MoveLeft _NcggQWweEe2-2tLdl7-gLg at 2,2 size 7,14 {
+  			}
+  			
+  			MoveRight _NcggQ2weEe2-2tLdl7-gLg at 10,2 size 7,14 {
   			}
   		}
   	}

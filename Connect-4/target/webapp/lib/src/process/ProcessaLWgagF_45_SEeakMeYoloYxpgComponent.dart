@@ -68,6 +68,7 @@ import 'package:app/src/gui/WinmsgamJQrsGwPEe2izKycOTLADg.dart';
 			[currentbranch]="currentBranch"
 			[modalDialog]="false"
 			[ismajorpage]="true"
+			(actionplayagainevent) = "eventaYZLCIWweEe2_45_2tLdl7_45_gLgplay_againTrigger(\$event)"
 		>
 		</winmsg-tag>
 	</template>
@@ -293,4 +294,21 @@ class ProcessaLWgagF_45_SEeakMeYoloYxpgComponent extends GUIProcess implements O
 		.catchError((e)=>processError(e));
 	}
 	// Branches for GUISIB winmsg of Process Home
+	// Branch play again
+	void eventaYZLCIWweEe2_45_2tLdl7_45_gLgplay_againTrigger(Map<String,dynamic> map)
+	{
+		var result = new Winmsg_mJQrsGwPEe2izKycOTLADgBranch.forplay_againBranch(
+		);
+		_processService.continueProcess(
+			deserializer,
+			getActiveProcesses()[runtimeId].runtime,
+			getRuntimeId(),
+			'_mJQrsGwPEe2izKycOTLADg',
+			'play_again/branch/public',
+			result.toJSOG(),
+			parentRuntimeId:getParentRuntimeId()
+		)
+		.then((cpr)=>processResponse(_processService,cpr))
+		.catchError((e)=>processError(e));
+	}
 }

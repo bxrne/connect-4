@@ -36,6 +36,7 @@ import 'package:app/src/modal/Modal.dart' as modal;
 import 'package:app/src/panel/Panel.dart' as panel;
 
 //file guard imports
+import 'package:app/src/models/FileGuardsamJQrsGwPEe2izKycOTLADgwinmsg.dart';
 //special element imports
 //table component imports
 //form component imports
@@ -84,6 +85,9 @@ class WinmsgamJQrsGwPEe2izKycOTLADg extends dime.DIMEComponent implements OnInit
   	
   	
   	
+  	// branch play again as info.scce.dime.gui.editor.graphiti.api.CButton@fa4479d4 (id: _QLiSUWweEe2-2tLdl7-gLg) in info.scce.dime.gui.editor.graphiti.api.CGUI@e89349b9 (id: _mJQrsGwPEe2izKycOTLADg)
+  	@Output('actionplayagainevent') Stream<Map<String,dynamic>> get evt_actionplayagainevent => actionplayagainevent.stream;
+  	StreamController<Map<String,dynamic>> actionplayagainevent = new StreamController();
   	
   	@ViewChildren(modal.Modal)
   	List<modal.Modal> modals;
@@ -110,6 +114,10 @@ class WinmsgamJQrsGwPEe2izKycOTLADg extends dime.DIMEComponent implements OnInit
 						
 		
 			  	
+		// branch play again declaration
+		if(this.actionplayagainevent!=null) {
+			  			this.actionplayagainevent = new StreamController<Map<String,dynamic>>();  				
+		}
 			
 		updateImageHash();
 	}
@@ -163,10 +171,29 @@ class WinmsgamJQrsGwPEe2izKycOTLADg extends dime.DIMEComponent implements OnInit
   		
   		
   	
+  		/// callback, if the button play again is clicked
+  			void actionplayagaineventaQLiSUWweEe2_45_2tLdl7_45_gLgEventTrigger()
+  		
+  		{
+  			Map<String,dynamic> data = new Map();
+  			this.actionplayagainevent.add(data);
+  		}
   		
   		
   		
   		
+  		/// loads an image file download for an image component	
+  		String loada3eN5cWwcEe2_45_2tLdl7_45_gLgImage(fileRef)
+  		{
+  			//prepare guard compound
+  			FileGuarda3eN5cWwcEe2_45_2tLdl7_45_gLgCompound guardContainer = new FileGuarda3eN5cWwcEe2_45_2tLdl7_45_gLgCompound();
+  			guardContainer.context = fileRef;
+  			
+  			// private interactable
+  			String guardData = guardContainer.toQueryParams();
+  			return guardData;
+  			
+  		}
   	
   		
   		

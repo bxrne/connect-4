@@ -1,17 +1,67 @@
 <div 
- class="row">
+ [ngStyle]="{ 'margin-top':'15px' }"
+class="row">
 <div
 
-class="col-md-12 text-left"
+class="col-md-4 text-left"
 >
-<span *ngIf="winner!=0
-" 
-aria-live="polite" aria-atomic="true" 
+</div>
+<div
 
- >
-<span aria-live="polite" aria-atomic="true" class="text-left">
-Well done player {{winner}}! The loser should be ashamed
+class="col-md-4 text-left"
+>
+<h1
+
+> 
+<span aria-live="polite" aria-atomic="true" class="text-center">
+<strong>
+WINNER
+</strong>
 </span>
-</span>
+</h1>
+<img
+	
+	[ngStyle]="{ 'margin-top':'15px' , 'width':'100%' , 'height':'100%' }"
+	alt="winmsg image"
+	class="img img-responsive"
+	src="https://bxrne.com/{{winner}}.png"
+>
+</div>
+<div
+
+class="col-md-4 text-left"
+>
+</div>
+</div>
+<div 
+ [ngStyle]="{ 'margin-top':'15px' }"
+class="row">
+<div
+
+class="col-md-4 text-left"
+>
+</div>
+<div
+
+class="col-md-4 text-left"
+>
+<!-- beginn button play again -->
+<button 
+	data-cinco-id="_QLiSUWweEe2-2tLdl7-gLg"
+	tabindex="0" aria-label="play again"
+	[disabled]="isBusy()"
+type="button"
+(click)="actionplayagaineventaQLiSUWweEe2_45_2tLdl7_45_gLgEventTrigger()
+"
+class="btn btn-success btn-lg btn-block">
+ Play Again
+ <span aria-hidden="true" aria-label="icon chevron-right" class="glyphicon glyphicon-chevron-right" style="left:2px"></span>
+</button>
+<!-- end button play again -->
+</div>
+<div
+
+class="col-md-4 text-left"
+>
 </div>
 </div>

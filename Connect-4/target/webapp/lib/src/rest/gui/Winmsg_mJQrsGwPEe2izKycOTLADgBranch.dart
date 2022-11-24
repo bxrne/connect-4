@@ -9,6 +9,12 @@ import 'package:app/src/core/dime_process_service.dart';
 class Winmsg_mJQrsGwPEe2izKycOTLADgBranch extends ContinueProcessRequest {
 	
 	
+	Play_again branch_play_again;
+	
+	Winmsg_mJQrsGwPEe2izKycOTLADgBranch.forplay_againBranch(
+	) {
+		branch_play_again = new Play_again();
+	}
 
 	String toJSON() {
 		return jsonEncode(toJSOG());
@@ -18,7 +24,22 @@ class Winmsg_mJQrsGwPEe2izKycOTLADgBranch extends ContinueProcessRequest {
 	{
 		Map<String,dynamic> jsonObj = new Map();
 		
+		if(branch_play_again!=null) {
+			return branch_play_again.toJSOG();
+		}
 		throw new Exception("Exhaustive IF Winmsg_mJQrsGwPEe2izKycOTLADgBranch.dart");
 	}
 }
 	
+	class Play_again {
+		
+
+		Map<String,dynamic> toJSOG()
+		{
+			
+			Map<String,dynamic> jsonObj = new Map();
+					
+			return jsonObj;
+		}
+		
+	}
