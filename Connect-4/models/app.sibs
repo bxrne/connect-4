@@ -2,28 +2,22 @@ package app.demo
 
 import "models/app.data" as data
 
-sib InitialiseBoard : info.scce.dime.app.demo.Game#initialise
-  -> success
-
-sib MakeCol : info.scce.dime.app.demo.Game#makeCol
+sib MakeCol : info.scce.dime.app.demo.Game#makeCol //
 index : integer
 ->success
 column : [integer]
 
-sib GetBoardWidth : info.scce.dime.app.demo.Game#getBoardWidth
+sib GetBoardWidth : info.scce.dime.app.demo.Game#getBoardWidth //
 ->success
 width : [integer]
 
-sib AddCell : info.scce.dime.app.demo.Game#addCell
+sib AddCell : info.scce.dime.app.demo.Game#addCell //
 cell : data.Cell
 column : data.Column
 ->success
 
-sib PCL : info.scce.dime.app.demo.Game#pC
-index:integer
-->success
 
-sib PlaceCoin : info.scce.dime.app.demo.Game#placeCoin
+sib PlaceCoin : info.scce.dime.app.demo.Game#placeCoin //
 board : data.Board
 player : integer
 index : integer
@@ -31,12 +25,12 @@ index : integer
 board : data.Board
 ->failure
 
-sib SwitchPlayer : info.scce.dime.app.demo.Game#switchPlayer
+sib SwitchPlayer : info.scce.dime.app.demo.Game#switchPlayer //
 player : integer
 ->success
 newPlayer : integer
 
-sib CheckWin : info.scce.dime.app.demo.Game#checkWin
+sib CheckWin : info.scce.dime.app.demo.Game#checkWin //
 board : data.Board
 player : integer
 ->true
