@@ -70,17 +70,22 @@ public class BaseUserSelective {
 		{
 			final de.ls5.dywa.generated.entity.models.app.BaseUser effectiveFrom = from;
 			final de.ls5.dywa.generated.rest.types.BaseUser effectiveTo = to;
-		effectiveTo.setfirstName(effectiveFrom.getfirstName());
-		}
-		{
-			final de.ls5.dywa.generated.entity.models.app.BaseUser effectiveFrom = from;
-			final de.ls5.dywa.generated.rest.types.BaseUser effectiveTo = to;
-		effectiveTo.setlastName(effectiveFrom.getlastName());
-		}
-		{
-			final de.ls5.dywa.generated.entity.models.app.BaseUser effectiveFrom = from;
-			final de.ls5.dywa.generated.rest.types.BaseUser effectiveTo = to;
 		effectiveTo.setusername(effectiveFrom.getusername());
+		}
+		{
+			final de.ls5.dywa.generated.entity.models.app.BaseUser effectiveFrom = from;
+			final de.ls5.dywa.generated.rest.types.BaseUser effectiveTo = to;
+		effectiveTo.setemail(effectiveFrom.getemail());
+		}
+		{
+			final de.ls5.dywa.generated.entity.models.app.BaseUser effectiveFrom = from;
+			final de.ls5.dywa.generated.rest.types.BaseUser effectiveTo = to;
+		effectiveTo.setwins(effectiveFrom.getwins());
+		}
+		{
+			final de.ls5.dywa.generated.entity.models.app.BaseUser effectiveFrom = from;
+			final de.ls5.dywa.generated.rest.types.BaseUser effectiveTo = to;
+		effectiveTo.setlosses(effectiveFrom.getlosses());
 		}
 	}
 }

@@ -98,7 +98,7 @@ public class BaseUserSearch implements BaseUser {
 
 	@java.lang.Override
 	public java.util.List<de.ls5.dywa.generated.entity.models.app.ConcreteUser> getconcreteUser_ConcreteUser() {
-		return (java.util.List<de.ls5.dywa.generated.entity.models.app.ConcreteUser>) this.listAttributeMap.get(dywaIdToJpqlAttr.get(7L));
+		return (java.util.List<de.ls5.dywa.generated.entity.models.app.ConcreteUser>) this.listAttributeMap.get(dywaIdToJpqlAttr.get(9L));
 	}
 	public void setconcreteUser_ConcreteUser
 	(java.util.List<de.ls5.dywa.generated.entity.models.app.ConcreteUser> object) {
@@ -108,37 +108,13 @@ public class BaseUserSearch implements BaseUser {
 							throw new java.lang.RuntimeException("Wrong type");
 				}
 				}
-			this.listAttributeMap.put(dywaIdToJpqlAttr.get(7L), object);
+			this.listAttributeMap.put(dywaIdToJpqlAttr.get(9L), object);
 	}
 	@java.lang.Override
 	public java.lang.String getpassword() {
-		return (java.lang.String) this.attributeMap.get(dywaIdToJpqlAttr.get(8L));
-	}
-	public void setpassword
-	(java.lang.String object) {
-			
-				if (! (object instanceof java.lang.String)) {
-							throw new java.lang.RuntimeException("Wrong type");
-				}
-			this.attributeMap.put(dywaIdToJpqlAttr.get(8L), object);
-	}
-	@java.lang.Override
-	public de.ls5.dywa.generated.util.FileReference getimage() {
-		return new de.ls5.dywa.generated.util.FileReference((de.ls5.dywa.generated.util.DomainFile) this.attributeMap.get(dywaIdToJpqlAttr.get(9L)));
-	}
-	public void setimage
-	(de.ls5.dywa.generated.util.FileReference object) {
-			
-				if (! (object instanceof de.ls5.dywa.generated.util.FileReference)) {
-							throw new java.lang.RuntimeException("Wrong type");
-				}
-			this.attributeMap.put(dywaIdToJpqlAttr.get(9L), object != null ? object.getDelegate() : null);
-	}
-	@java.lang.Override
-	public java.lang.String getfirstName() {
 		return (java.lang.String) this.attributeMap.get(dywaIdToJpqlAttr.get(10L));
 	}
-	public void setfirstName
+	public void setpassword
 	(java.lang.String object) {
 			
 				if (! (object instanceof java.lang.String)) {
@@ -147,16 +123,16 @@ public class BaseUserSearch implements BaseUser {
 			this.attributeMap.put(dywaIdToJpqlAttr.get(10L), object);
 	}
 	@java.lang.Override
-	public java.lang.String getlastName() {
-		return (java.lang.String) this.attributeMap.get(dywaIdToJpqlAttr.get(11L));
+	public de.ls5.dywa.generated.util.FileReference getimage() {
+		return new de.ls5.dywa.generated.util.FileReference((de.ls5.dywa.generated.util.DomainFile) this.attributeMap.get(dywaIdToJpqlAttr.get(11L)));
 	}
-	public void setlastName
-	(java.lang.String object) {
+	public void setimage
+	(de.ls5.dywa.generated.util.FileReference object) {
 			
-				if (! (object instanceof java.lang.String)) {
+				if (! (object instanceof de.ls5.dywa.generated.util.FileReference)) {
 							throw new java.lang.RuntimeException("Wrong type");
 				}
-			this.attributeMap.put(dywaIdToJpqlAttr.get(11L), object);
+			this.attributeMap.put(dywaIdToJpqlAttr.get(11L), object != null ? object.getDelegate() : null);
 	}
 	@java.lang.Override
 	public java.lang.String getusername() {
@@ -169,6 +145,42 @@ public class BaseUserSearch implements BaseUser {
 							throw new java.lang.RuntimeException("Wrong type");
 				}
 			this.attributeMap.put(dywaIdToJpqlAttr.get(12L), object);
+	}
+	@java.lang.Override
+	public java.lang.String getemail() {
+		return (java.lang.String) this.attributeMap.get(dywaIdToJpqlAttr.get(13L));
+	}
+	public void setemail
+	(java.lang.String object) {
+			
+				if (! (object instanceof java.lang.String)) {
+							throw new java.lang.RuntimeException("Wrong type");
+				}
+			this.attributeMap.put(dywaIdToJpqlAttr.get(13L), object);
+	}
+	@java.lang.Override
+	public java.lang.Long getwins() {
+		return (java.lang.Long) this.attributeMap.get(dywaIdToJpqlAttr.get(14L));
+	}
+	public void setwins
+	(java.lang.Long object) {
+			
+				if (! (object instanceof java.lang.Long)) {
+							throw new java.lang.RuntimeException("Wrong type");
+				}
+			this.attributeMap.put(dywaIdToJpqlAttr.get(14L), object);
+	}
+	@java.lang.Override
+	public java.lang.Long getlosses() {
+		return (java.lang.Long) this.attributeMap.get(dywaIdToJpqlAttr.get(15L));
+	}
+	public void setlosses
+	(java.lang.Long object) {
+			
+				if (! (object instanceof java.lang.Long)) {
+							throw new java.lang.RuntimeException("Wrong type");
+				}
+			this.attributeMap.put(dywaIdToJpqlAttr.get(15L), object);
 	}
 
 	// EXTENSION ATTRIBUTES

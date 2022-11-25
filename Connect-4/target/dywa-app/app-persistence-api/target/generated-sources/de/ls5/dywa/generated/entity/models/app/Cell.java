@@ -5,13 +5,13 @@ package de.ls5.dywa.generated.entity.models.app;
 @de.ls5.dywa.annotations.ShortDescription(description = "")
 @de.ls5.dywa.annotations.LongDescription(description = "")
 public interface Cell extends de.ls5.dywa.generated.util.Identifiable {
-	@de.ls5.dywa.annotations.IdRef(id = 16L)
+	@de.ls5.dywa.annotations.IdRef(id = 19L)
 	@de.ls5.dywa.annotations.OriginalName(name = "value")
 	@de.ls5.dywa.annotations.ShortDescription(description = "")
 	@de.ls5.dywa.annotations.LongDescription(description = "")
 	java.lang.Long getvalue();
 	
-	@de.ls5.dywa.annotations.IdRef(id = 16L)
+	@de.ls5.dywa.annotations.IdRef(id = 19L)
 	@de.ls5.dywa.annotations.OriginalName(name = "value")
 	@de.ls5.dywa.annotations.ShortDescription(description = "")
 	@de.ls5.dywa.annotations.LongDescription(description = "")

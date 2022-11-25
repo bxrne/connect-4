@@ -82,52 +82,6 @@ public class BaseUser extends info.scce.dime.rest.RESTBaseImpl implements info.s
 	}
 
 	private java.lang.String
-	 firstName;
-	private boolean isfirstNameSet;
-	
-	@com.fasterxml.jackson.annotation.JsonProperty("firstName")
-	@info.scce.dime.rest.JsonRenderIndicator("isfirstNameSet")
-	public java.lang.String
-	 getfirstName() {
-		return this.firstName;
-	}
-	
-	@com.fasterxml.jackson.annotation.JsonIgnore
-	public boolean isfirstNameSet() {
-		return this.isfirstNameSet;
-	}
-
-	@com.fasterxml.jackson.annotation.JsonProperty("firstName")
-	public void setfirstName(final java.lang.String
-	 firstName) {
-		this.firstName = firstName;
-		this.isfirstNameSet = true;
-	}
-
-	private java.lang.String
-	 lastName;
-	private boolean islastNameSet;
-	
-	@com.fasterxml.jackson.annotation.JsonProperty("lastName")
-	@info.scce.dime.rest.JsonRenderIndicator("islastNameSet")
-	public java.lang.String
-	 getlastName() {
-		return this.lastName;
-	}
-	
-	@com.fasterxml.jackson.annotation.JsonIgnore
-	public boolean islastNameSet() {
-		return this.islastNameSet;
-	}
-
-	@com.fasterxml.jackson.annotation.JsonProperty("lastName")
-	public void setlastName(final java.lang.String
-	 lastName) {
-		this.lastName = lastName;
-		this.islastNameSet = true;
-	}
-
-	private java.lang.String
 	 username;
 	private boolean isusernameSet;
 	
@@ -148,6 +102,75 @@ public class BaseUser extends info.scce.dime.rest.RESTBaseImpl implements info.s
 	 username) {
 		this.username = username;
 		this.isusernameSet = true;
+	}
+
+	private java.lang.String
+	 email;
+	private boolean isemailSet;
+	
+	@com.fasterxml.jackson.annotation.JsonProperty("email")
+	@info.scce.dime.rest.JsonRenderIndicator("isemailSet")
+	public java.lang.String
+	 getemail() {
+		return this.email;
+	}
+	
+	@com.fasterxml.jackson.annotation.JsonIgnore
+	public boolean isemailSet() {
+		return this.isemailSet;
+	}
+
+	@com.fasterxml.jackson.annotation.JsonProperty("email")
+	public void setemail(final java.lang.String
+	 email) {
+		this.email = email;
+		this.isemailSet = true;
+	}
+
+	private java.lang.Long
+	 wins;
+	private boolean iswinsSet;
+	
+	@com.fasterxml.jackson.annotation.JsonProperty("wins")
+	@info.scce.dime.rest.JsonRenderIndicator("iswinsSet")
+	public java.lang.Long
+	 getwins() {
+		return this.wins;
+	}
+	
+	@com.fasterxml.jackson.annotation.JsonIgnore
+	public boolean iswinsSet() {
+		return this.iswinsSet;
+	}
+
+	@com.fasterxml.jackson.annotation.JsonProperty("wins")
+	public void setwins(final java.lang.Long
+	 wins) {
+		this.wins = wins;
+		this.iswinsSet = true;
+	}
+
+	private java.lang.Long
+	 losses;
+	private boolean islossesSet;
+	
+	@com.fasterxml.jackson.annotation.JsonProperty("losses")
+	@info.scce.dime.rest.JsonRenderIndicator("islossesSet")
+	public java.lang.Long
+	 getlosses() {
+		return this.losses;
+	}
+	
+	@com.fasterxml.jackson.annotation.JsonIgnore
+	public boolean islossesSet() {
+		return this.islossesSet;
+	}
+
+	@com.fasterxml.jackson.annotation.JsonProperty("losses")
+	public void setlosses(final java.lang.Long
+	 losses) {
+		this.losses = losses;
+		this.islossesSet = true;
 	}
 
 	

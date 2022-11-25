@@ -18,6 +18,9 @@ public class BoardControllerImpl implements BoardController {
 	@javax.inject.Inject
 	private de.ls5.dywa.generated.util.DomainFileController domainFileController;
 
+@javax.inject.Inject //referenceMap
+private de.ls5.dywa.generated.controller.models.app.GameController gameController;
+
     
     @Override
 	public Board read(final java.lang.Long id) {
@@ -103,6 +106,14 @@ public class BoardControllerImpl implements BoardController {
 	@Override
 	public void deleteWithIncomingReferences(Board entityToDelete) {
 
+		
+		// Delete references from type Game
+			de.ls5.dywa.generated.entity.models.app.Game searchGame;
+			searchGame = new de.ls5.dywa.generated.entity.models.app.GameSearch();	
+				searchGame.setboard(entityToDelete);
+			for (de.ls5.dywa.generated.entity.models.app.Game queryResult : this.gameController.findByProperties(searchGame)) {
+				queryResult.setboard(null);
+			}
 		delete(entityToDelete);
 	}
 	

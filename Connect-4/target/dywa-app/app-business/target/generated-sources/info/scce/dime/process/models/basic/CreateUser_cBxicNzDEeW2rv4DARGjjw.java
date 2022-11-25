@@ -57,10 +57,8 @@ public final class CreateUser_cBxicNzDEeW2rv4DARGjjw implements DIMEProcess {
 		// context variables.
 		private de.ls5.dywa.generated.entity.models.app.BaseUser baseuser;
 		// direct dataflow variables.
-		private java.lang.String startLastName_qNqZYNzDEeW2rv4DARGjjw;
 		private java.lang.String startUserName_mEu1INzDEeW2rv4DARGjjw;
 		private java.lang.String HashPasswordSuccessHashedPassword_anME899QEeeA5bEoRBL2qw;
-		private java.lang.String startFirstName_pEmfkNzDEeW2rv4DARGjjw;
 		private java.lang.String startPassword_0H7qINzDEeW2rv4DARGjjw;
 		private de.ls5.dywa.generated.entity.models.app.ConcreteUser Create_ConcreteUserSuccessCreated_djYfINzDEeW2rv4DARGjjw;
 
@@ -89,23 +87,20 @@ public final class CreateUser_cBxicNzDEeW2rv4DARGjjw implements DIMEProcess {
 		this.BaseUserController = BaseUserController;
 	}
 
-	private Context createContext(java.lang.String firstName, java.lang.String lastName, java.lang.String password, java.lang.String userName) {
+	private Context createContext(java.lang.String email, java.lang.String password, java.lang.String userName) {
 		final Context ctx = new Context();
 		ctx.beanManager = this.beanManager;
 
 		// store inputs
 		ctx.startUserName_mEu1INzDEeW2rv4DARGjjw = userName;
-		ctx.startFirstName_pEmfkNzDEeW2rv4DARGjjw = firstName;
-		ctx.startLastName_qNqZYNzDEeW2rv4DARGjjw = lastName;
 		ctx.startPassword_0H7qINzDEeW2rv4DARGjjw = password;
-		ctx.startLastName_qNqZYNzDEeW2rv4DARGjjw = lastName;
 		ctx.startUserName_mEu1INzDEeW2rv4DARGjjw = userName;
 		
 		return ctx;
 	}
 
-	public CreateUser_cBxicNzDEeW2rv4DARGjjwResult execute(boolean isAuthenticationRequired,java.lang.String firstName, java.lang.String lastName, java.lang.String password, java.lang.String userName) {
-		final Context ctx = createContext(firstName, lastName, password, userName);
+	public CreateUser_cBxicNzDEeW2rv4DARGjjwResult execute(boolean isAuthenticationRequired,java.lang.String email, java.lang.String password, java.lang.String userName) {
+		final Context ctx = createContext(email, password, userName);
 		ctx.callStack.setAuthenticationRequired(isAuthenticationRequired);
 
 		return executeInternal(ctx, SIB_ID._anJBod9QEeeA5bEoRBL2qw);
@@ -213,7 +208,7 @@ public final class CreateUser_cBxicNzDEeW2rv4DARGjjw implements DIMEProcess {
 	public SIB_ID execute_dig8cNzDEeW2rv4DARGjjw(final Context ctx) {
 		final de.ls5.dywa.generated.controller.models.app.ConcreteUserController domController = this.ConcreteUserController;
 	
-		final de.ls5.dywa.generated.entity.models.app.ConcreteUser createdObj = domController.create(ctx.startLastName_qNqZYNzDEeW2rv4DARGjjw);
+		final de.ls5.dywa.generated.entity.models.app.ConcreteUser createdObj = domController.create(null);
 	
 	
 		de.ls5.dywa.generated.entity.models.app.ConcreteUser value0 = createdObj;
@@ -235,10 +230,11 @@ public final class CreateUser_cBxicNzDEeW2rv4DARGjjw implements DIMEProcess {
 	
 		final de.ls5.dywa.generated.entity.models.app.BaseUser createdObj = domController.create(ctx.startUserName_mEu1INzDEeW2rv4DARGjjw);
 	
-		createdObj.setlastName(ctx.startLastName_qNqZYNzDEeW2rv4DARGjjw);
 		createdObj.setpassword(ctx.HashPasswordSuccessHashedPassword_anME899QEeeA5bEoRBL2qw);
-		createdObj.setfirstName(ctx.startFirstName_pEmfkNzDEeW2rv4DARGjjw);
 		createdObj.setusername(ctx.startUserName_mEu1INzDEeW2rv4DARGjjw);
+		createdObj.setemail(null);
+		createdObj.setwins(0l);
+		createdObj.setlosses(0l);
 	
 		ctx.baseuser = createdObj;
 	

@@ -26,6 +26,14 @@ class DataCastUtil {
 	static Cell castToCell(core.Object o) => o as Cell;
 	static DIMEList<Cell> castToListCell(DIMEList<core.Object> os) => new DIMEList.from(os.cast<Cell>());
 	static DIMEList<Cell> newListCell() => new DIMEList<Cell>();
+	
+	static Game castToGame(core.Object o) => o as Game;
+	static DIMEList<Game> castToListGame(DIMEList<core.Object> os) => new DIMEList.from(os.cast<Game>());
+	static DIMEList<Game> newListGame() => new DIMEList<Game>();
+	
+	static Result castToResult(core.Object o) => o as Result;
+	static DIMEList<Result> castToListResult(DIMEList<core.Object> os) => new DIMEList.from(os.cast<Result>());
+	static DIMEList<Result> newListResult() => new DIMEList<Result>();
 }
 class ConcreteUser extends BaseModel
 {
@@ -134,7 +142,7 @@ class ConcreteUser extends BaseModel
 			if (jsog.containsKey("dywaSwitchedTo")) {
 				core.Map<core.String,core.dynamic> jsogObj = jsog["dywaSwitchedTo"];
 				if(jsogObj != null) {
-					ConcreteUser valueaNdnRIWvqEe29DbU9LWXeGA;
+					ConcreteUser valueaCrd9UWzTEe2diMV8DHaeLg;
 					
 					core.String jsogId;
 					
@@ -145,22 +153,22 @@ class ConcreteUser extends BaseModel
 					 	jsogId = jsogObj['@id'];
 					}
 					if (cache.containsKey(jsogId)) {
-						valueaNdnRIWvqEe29DbU9LWXeGA = cache[jsogId];
+						valueaCrd9UWzTEe2diMV8DHaeLg = cache[jsogId];
 					}
 					else {
 						if (jsogObj != null) {
 							if (jsogObj['dywaRuntimeType'] == "de.ls5.dywa.generated.rest.types.ConcreteUserImpl") {
-								valueaNdnRIWvqEe29DbU9LWXeGA = new ConcreteUser(cache: cache, jsog: jsogObj);
+								valueaCrd9UWzTEe2diMV8DHaeLg = new ConcreteUser(cache: cache, jsog: jsogObj);
 							}
 							else {
-								valueaNdnRIWvqEe29DbU9LWXeGA = new ConcreteUser(cache: cache,jsog: jsogObj);
+								valueaCrd9UWzTEe2diMV8DHaeLg = new ConcreteUser(cache: cache,jsog: jsogObj);
 							}
 						}
 						else {
-							valueaNdnRIWvqEe29DbU9LWXeGA = new ConcreteUser(cache: cache,jsog: jsogObj);
+							valueaCrd9UWzTEe2diMV8DHaeLg = new ConcreteUser(cache: cache,jsog: jsogObj);
 						}
 					}
-					this._dywaSwitchedTo = valueaNdnRIWvqEe29DbU9LWXeGA;
+					this._dywaSwitchedTo = valueaCrd9UWzTEe2diMV8DHaeLg;
 				}
 			}
 			
@@ -332,21 +340,24 @@ class BaseUser extends BaseModel
 	core.bool _concreteUserHasBeenSet = false;
 	core.bool concreteUserHasBeenChanged() => _concreteUserHasBeenSet;
 	DIMEList<ConcreteUser> _concreteUser;
-	core.bool _firstNameHasBeenSet = false;
-	core.bool firstNameHasBeenChanged() => _firstNameHasBeenSet;
-	core.String _firstName;
+	core.bool _emailHasBeenSet = false;
+	core.bool emailHasBeenChanged() => _emailHasBeenSet;
+	core.String _email;
 	core.bool _imageHasBeenSet = false;
 	core.bool imageHasBeenChanged() => _imageHasBeenSet;
 	FileReference _image;
-	core.bool _lastNameHasBeenSet = false;
-	core.bool lastNameHasBeenChanged() => _lastNameHasBeenSet;
-	core.String _lastName;
+	core.bool _lossesHasBeenSet = false;
+	core.bool lossesHasBeenChanged() => _lossesHasBeenSet;
+	core.int _losses;
 	core.bool _passwordHasBeenSet = false;
 	core.bool passwordHasBeenChanged() => _passwordHasBeenSet;
 	core.String _password;
 	core.bool _usernameHasBeenSet = false;
 	core.bool usernameHasBeenChanged() => _usernameHasBeenSet;
 	core.String _username;
+	core.bool _winsHasBeenSet = false;
+	core.bool winsHasBeenChanged() => _winsHasBeenSet;
+	core.int _wins;
 	
 	static BaseUser fromId(core.int id) {
 		var m = new BaseUser();
@@ -360,11 +371,12 @@ class BaseUser extends BaseModel
 	core.dynamic $$getProperty(core.String prop) {
 	  var propMap = {
 	  'concreteUser': this.concreteUser, 
-	  'firstName': this.firstName, 
+	  'email': this.email, 
 	  'image': this.image, 
-	  'lastName': this.lastName, 
+	  'losses': this.losses, 
 	  'password': this.password, 
-	  'username': this.username
+	  'username': this.username, 
+	  'wins': this.wins
 	  };
 	
 	  if (!propMap.containsKey(prop)) throw NoSuchPropertyException(prop);
@@ -374,11 +386,12 @@ class BaseUser extends BaseModel
 	void $$setProperty(core.String prop, core.dynamic value) {
 	  switch (prop) {
 	  case 'concreteUser': this.concreteUser = value; return;
-	  case 'firstName': this.firstName = value; return;
+	  case 'email': this.email = value; return;
 	  case 'image': this.image = value; return;
-	  case 'lastName': this.lastName = value; return;
+	  case 'losses': this.losses = value; return;
 	  case 'password': this.password = value; return;
 	  case 'username': this.username = value; return;
+	  case 'wins': this.wins = value; return;
 	    default: throw NoSuchPropertyException(prop);
 	  }
 	}
@@ -406,11 +419,12 @@ class BaseUser extends BaseModel
 			
 			// properties
 			this._concreteUser = new DIMEList.monitored(concreteUserHasBeenSetted);
-			this._firstName = null;
+			this._email = null;
 			this._image = null;
-			this._lastName = null;
+			this._losses = 0;
 			this._password = null;
 			this._username = null;
+			this._wins = 0;
 		}
 		// from jsog
 		else {
@@ -458,26 +472,26 @@ class BaseUser extends BaseModel
 			
 			
 			_concreteUserHasBeenSet = false;
-			if (jsog.containsKey("firstName")) {
-				core.String jsogObj = jsog["firstName"];
+			if (jsog.containsKey("email")) {
+				core.String jsogObj = jsog["email"];
 				if(jsogObj != null) {
-					core.String valueaVE6ToM5BEeWKGIrSDzlNog;
+					core.String valueaR0p24Wy7Ee2dfcV8DHaeLg;
 					
 					if(jsogObj!=null){
-					valueaVE6ToM5BEeWKGIrSDzlNog = jsogObj.toString();
+					valueaR0p24Wy7Ee2dfcV8DHaeLg = jsogObj.toString();
 					}
-					this._firstName = valueaVE6ToM5BEeWKGIrSDzlNog;
+					this._email = valueaR0p24Wy7Ee2dfcV8DHaeLg;
 				}
 				else {
-					this._firstName = null;
+					this._email = null;
 				}
 			}
 			
 			
 			else{
-				this._firstName = null;
+				this._email = null;
 			}
-			_firstNameHasBeenSet = false;
+			_emailHasBeenSet = false;
 			if (jsog.containsKey("image")) {
 				core.Map<core.String,core.dynamic> jsogObj = jsog["image"];
 				if(jsogObj != null) {
@@ -498,26 +512,26 @@ class BaseUser extends BaseModel
 				this._image = null;
 			}
 			_imageHasBeenSet = false;
-			if (jsog.containsKey("lastName")) {
-				core.String jsogObj = jsog["lastName"];
+			if (jsog.containsKey("losses")) {
+				core.int jsogObj = jsog["losses"];
 				if(jsogObj != null) {
-					core.String valueaWYcYEM5BEeWKGIrSDzlNog;
+					core.int valueaWm_45_WYWy7Ee2dfcV8DHaeLg;
 					
 					if(jsogObj!=null){
-					valueaWYcYEM5BEeWKGIrSDzlNog = jsogObj.toString();
+					valueaWm_45_WYWy7Ee2dfcV8DHaeLg = core.int.parse(jsogObj.toString());
 					}
-					this._lastName = valueaWYcYEM5BEeWKGIrSDzlNog;
+					this._losses = valueaWm_45_WYWy7Ee2dfcV8DHaeLg;
 				}
 				else {
-					this._lastName = null;
+					this._losses = 0;
 				}
 			}
 			
 			
 			else{
-				this._lastName = null;
+				this._losses = 0;
 			}
-			_lastNameHasBeenSet = false;
+			_lossesHasBeenSet = false;
 			if (jsog.containsKey("password")) {
 				core.String jsogObj = jsog["password"];
 				if(jsogObj != null) {
@@ -558,23 +572,45 @@ class BaseUser extends BaseModel
 				this._username = null;
 			}
 			_usernameHasBeenSet = false;
+			if (jsog.containsKey("wins")) {
+				core.int jsogObj = jsog["wins"];
+				if(jsogObj != null) {
+					core.int valueaUudVkWy7Ee2dfcV8DHaeLg;
+					
+					if(jsogObj!=null){
+					valueaUudVkWy7Ee2dfcV8DHaeLg = core.int.parse(jsogObj.toString());
+					}
+					this._wins = valueaUudVkWy7Ee2dfcV8DHaeLg;
+				}
+				else {
+					this._wins = 0;
+				}
+			}
+			
+			
+			else{
+				this._wins = 0;
+			}
+			_winsHasBeenSet = false;
 		}
 	}
 	
 	void concreteUserHasBeenSetted() { _concreteUserHasBeenSet=true; }
-	void firstNameHasBeenSetted() { _firstNameHasBeenSet=true; }
+	void emailHasBeenSetted() { _emailHasBeenSet=true; }
 	void imageHasBeenSetted() { _imageHasBeenSet=true; }
-	void lastNameHasBeenSetted() { _lastNameHasBeenSet=true; }
+	void lossesHasBeenSetted() { _lossesHasBeenSet=true; }
 	void passwordHasBeenSetted() { _passwordHasBeenSet=true; }
 	void usernameHasBeenSetted() { _usernameHasBeenSet=true; }
+	void winsHasBeenSetted() { _winsHasBeenSet=true; }
 	
 	core.bool hasChanged() {
 		return 		_concreteUserHasBeenSet || 
-					_firstNameHasBeenSet || 
+					_emailHasBeenSet || 
 					_imageHasBeenSet || 
-					_lastNameHasBeenSet || 
+					_lossesHasBeenSet || 
 					_passwordHasBeenSet || 
-					_usernameHasBeenSet
+					_usernameHasBeenSet || 
+					_winsHasBeenSet
 			;
 	}
 	
@@ -607,14 +643,17 @@ class BaseUser extends BaseModel
 				jsonObj["image"] = null;
 			}
 			}
-			if(( firstNameHasBeenChanged() && !jsonObj.containsKey('firstName')) && !objects.containsKey(this._firstName)) {
-			jsonObj["firstName"] = this._firstName;
-			}
-			if(( lastNameHasBeenChanged() && !jsonObj.containsKey('lastName')) && !objects.containsKey(this._lastName)) {
-			jsonObj["lastName"] = this._lastName;
-			}
 			if(( usernameHasBeenChanged() && !jsonObj.containsKey('username')) && !objects.containsKey(this._username)) {
 			jsonObj["username"] = this._username;
+			}
+			if(( emailHasBeenChanged() && !jsonObj.containsKey('email')) && !objects.containsKey(this._email)) {
+			jsonObj["email"] = this._email;
+			}
+			if(( winsHasBeenChanged() && !jsonObj.containsKey('wins')) && !objects.containsKey(this._wins)) {
+			jsonObj["wins"] = this._wins;
+			}
+			if(( lossesHasBeenChanged() && !jsonObj.containsKey('losses')) && !objects.containsKey(this._losses)) {
+			jsonObj["losses"] = this._losses;
 			}
 			return { 
 				'@ref': jsogId.toString()
@@ -655,14 +694,17 @@ class BaseUser extends BaseModel
 			jsonObj["image"] = null;
 		}
 		}
-		if(( firstNameHasBeenChanged() && !jsonObj.containsKey('firstName')) && !objects.containsKey(this._firstName) || this.dywa_id == 0) {
-		jsonObj["firstName"] = this._firstName;
-		}
-		if(( lastNameHasBeenChanged() && !jsonObj.containsKey('lastName')) && !objects.containsKey(this._lastName) || this.dywa_id == 0) {
-		jsonObj["lastName"] = this._lastName;
-		}
 		if(( usernameHasBeenChanged() && !jsonObj.containsKey('username')) && !objects.containsKey(this._username) || this.dywa_id == 0) {
 		jsonObj["username"] = this._username;
+		}
+		if(( emailHasBeenChanged() && !jsonObj.containsKey('email')) && !objects.containsKey(this._email) || this.dywa_id == 0) {
+		jsonObj["email"] = this._email;
+		}
+		if(( winsHasBeenChanged() && !jsonObj.containsKey('wins')) && !objects.containsKey(this._wins) || this.dywa_id == 0) {
+		jsonObj["wins"] = this._wins;
+		}
+		if(( lossesHasBeenChanged() && !jsonObj.containsKey('losses')) && !objects.containsKey(this._losses) || this.dywa_id == 0) {
+		jsonObj["losses"] = this._losses;
 		}
 		return jsonObj;
 	}
@@ -771,60 +813,6 @@ class BaseUser extends BaseModel
 		}
 		
 	
-	void set firstName (core.String value)
-	{
-		this._firstNameHasBeenSet = true;
-		this._firstName = value;
-	}
-	
-	core.String get firstName
-	{
-		return this._firstName;
-	}
-	
-		core.String initOnDemandfirstName()
-		{
-			return this.firstName;
-		}
-		
-		void setValuefirstName(core.String value)
-		{
-			this.firstName = value;
-		}
-		
-		void firstNamesetValue(core.String value)
-		{
-			this.firstName = value;
-		}
-		
-	
-	void set lastName (core.String value)
-	{
-		this._lastNameHasBeenSet = true;
-		this._lastName = value;
-	}
-	
-	core.String get lastName
-	{
-		return this._lastName;
-	}
-	
-		core.String initOnDemandlastName()
-		{
-			return this.lastName;
-		}
-		
-		void setValuelastName(core.String value)
-		{
-			this.lastName = value;
-		}
-		
-		void lastNamesetValue(core.String value)
-		{
-			this.lastName = value;
-		}
-		
-	
 	void set username (core.String value)
 	{
 		this._usernameHasBeenSet = true;
@@ -849,6 +837,87 @@ class BaseUser extends BaseModel
 		void usernamesetValue(core.String value)
 		{
 			this.username = value;
+		}
+		
+	
+	void set email (core.String value)
+	{
+		this._emailHasBeenSet = true;
+		this._email = value;
+	}
+	
+	core.String get email
+	{
+		return this._email;
+	}
+	
+		core.String initOnDemandemail()
+		{
+			return this.email;
+		}
+		
+		void setValueemail(core.String value)
+		{
+			this.email = value;
+		}
+		
+		void emailsetValue(core.String value)
+		{
+			this.email = value;
+		}
+		
+	
+	void set wins (core.int value)
+	{
+		this._winsHasBeenSet = true;
+		this._wins = value;
+	}
+	
+	core.int get wins
+	{
+		return this._wins;
+	}
+	
+		core.int initOnDemandwins()
+		{
+			return this.wins;
+		}
+		
+		void setValuewins(core.int value)
+		{
+			this.wins = value;
+		}
+		
+		void winssetValue(core.int value)
+		{
+			this.wins = value;
+		}
+		
+	
+	void set losses (core.int value)
+	{
+		this._lossesHasBeenSet = true;
+		this._losses = value;
+	}
+	
+	core.int get losses
+	{
+		return this._losses;
+	}
+	
+		core.int initOnDemandlosses()
+		{
+			return this.losses;
+		}
+		
+		void setValuelosses(core.int value)
+		{
+			this.losses = value;
+		}
+		
+		void lossessetValue(core.int value)
+		{
+			this.losses = value;
 		}
 		
 	
@@ -1511,6 +1580,678 @@ class Cell extends BaseModel
 		void valuesetValue(core.int value)
 		{
 			this.value = value;
+		}
+		
+	
+}
+
+class Game extends BaseModel
+{
+	core.bool _boardHasBeenSet = false;
+	core.bool boardHasBeenChanged() => _boardHasBeenSet||(_board==null?false:_board.hasChanged()) ;
+	Board _board;
+	core.bool _player1HasBeenSet = false;
+	core.bool player1HasBeenChanged() => _player1HasBeenSet||(_player1==null?false:_player1.hasChanged()) ;
+	ConcreteUser _player1;
+	core.bool _player2HasBeenSet = false;
+	core.bool player2HasBeenChanged() => _player2HasBeenSet||(_player2==null?false:_player2.hasChanged()) ;
+	ConcreteUser _player2;
+	
+	static Game fromId(core.int id) {
+		var m = new Game();
+		m.dywa_id = id;
+		return m;
+	}
+	
+	
+	// reflection methods to read and wirte dart properties by string name
+	
+	core.dynamic $$getProperty(core.String prop) {
+	  var propMap = {
+	  'board': this.board, 
+	  'player1': this.player1, 
+	  'player2': this.player2
+	  };
+	
+	  if (!propMap.containsKey(prop)) throw NoSuchPropertyException(prop);
+	  return propMap[prop];
+	}
+	
+	void $$setProperty(core.String prop, core.dynamic value) {
+	  switch (prop) {
+	  case 'board': this.board = value; return;
+	  case 'player1': this.player1 = value; return;
+	  case 'player2': this.player2 = value; return;
+	    default: throw NoSuchPropertyException(prop);
+	  }
+	}
+	
+	core.bool $$hasProperty(core.String prop) {
+	  try {
+	    $$getProperty(prop);
+	    return true;
+	  } on NoSuchPropertyException catch (e) {
+	    return false;
+	  }
+	}
+	
+	Game({core.Map<core.String,core.dynamic> cache, jsog}) {
+		if (cache == null) {
+			cache = new core.Map();
+		}
+
+		// default constructor
+		if (jsog == null) {
+			
+			this.dywa_id = -1;
+			this.dywa_version = 0;
+			this.dywa_name = null;
+			
+			// properties
+		}
+		// from jsog
+		else {
+			core.String jsogId = jsog['@id'];
+			cache[jsogId] = this;
+			
+			this.dywa_id = jsog['dywaId'];
+			this.dywa_version = jsog['dywaVersion'];
+			this.dywa_name = jsog['dywaName'];
+			
+			// properties
+			if (jsog.containsKey("board")) {
+				core.Map<core.String,core.dynamic> jsogObj = jsog["board"];
+				if(jsogObj != null) {
+					Board valueaxNkagWy7Ee2dfcV8DHaeLg;
+					
+					core.String jsogId;
+					
+					if (jsogObj.containsKey('@ref')) {
+						jsogId = jsogObj['@ref'];
+					}
+					else {
+					 	jsogId = jsogObj['@id'];
+					}
+					if (cache.containsKey(jsogId)) {
+						valueaxNkagWy7Ee2dfcV8DHaeLg = cache[jsogId];
+					}
+					else {
+						if (jsogObj != null) {
+							if (jsogObj['dywaRuntimeType'] == "de.ls5.dywa.generated.rest.types.BoardImpl") {
+								valueaxNkagWy7Ee2dfcV8DHaeLg = new Board(cache: cache, jsog: jsogObj);
+							}
+							else {
+								valueaxNkagWy7Ee2dfcV8DHaeLg = new Board(cache: cache,jsog: jsogObj);
+							}
+						}
+						else {
+							valueaxNkagWy7Ee2dfcV8DHaeLg = new Board(cache: cache,jsog: jsogObj);
+						}
+					}
+					this._board = valueaxNkagWy7Ee2dfcV8DHaeLg;
+				}
+			}
+			
+			
+			_boardHasBeenSet = false;
+			if (jsog.containsKey("player1")) {
+				core.Map<core.String,core.dynamic> jsogObj = jsog["player1"];
+				if(jsogObj != null) {
+					ConcreteUser valueapZFxkWy7Ee2dfcV8DHaeLg;
+					
+					core.String jsogId;
+					
+					if (jsogObj.containsKey('@ref')) {
+						jsogId = jsogObj['@ref'];
+					}
+					else {
+					 	jsogId = jsogObj['@id'];
+					}
+					if (cache.containsKey(jsogId)) {
+						valueapZFxkWy7Ee2dfcV8DHaeLg = cache[jsogId];
+					}
+					else {
+						if (jsogObj != null) {
+							if (jsogObj['dywaRuntimeType'] == "de.ls5.dywa.generated.rest.types.ConcreteUserImpl") {
+								valueapZFxkWy7Ee2dfcV8DHaeLg = new ConcreteUser(cache: cache, jsog: jsogObj);
+							}
+							else {
+								valueapZFxkWy7Ee2dfcV8DHaeLg = new ConcreteUser(cache: cache,jsog: jsogObj);
+							}
+						}
+						else {
+							valueapZFxkWy7Ee2dfcV8DHaeLg = new ConcreteUser(cache: cache,jsog: jsogObj);
+						}
+					}
+					this._player1 = valueapZFxkWy7Ee2dfcV8DHaeLg;
+				}
+			}
+			
+			
+			_player1HasBeenSet = false;
+			if (jsog.containsKey("player2")) {
+				core.Map<core.String,core.dynamic> jsogObj = jsog["player2"];
+				if(jsogObj != null) {
+					ConcreteUser valueaoPhhcGy7Ee2dfcV8DHaeLg;
+					
+					core.String jsogId;
+					
+					if (jsogObj.containsKey('@ref')) {
+						jsogId = jsogObj['@ref'];
+					}
+					else {
+					 	jsogId = jsogObj['@id'];
+					}
+					if (cache.containsKey(jsogId)) {
+						valueaoPhhcGy7Ee2dfcV8DHaeLg = cache[jsogId];
+					}
+					else {
+						if (jsogObj != null) {
+							if (jsogObj['dywaRuntimeType'] == "de.ls5.dywa.generated.rest.types.ConcreteUserImpl") {
+								valueaoPhhcGy7Ee2dfcV8DHaeLg = new ConcreteUser(cache: cache, jsog: jsogObj);
+							}
+							else {
+								valueaoPhhcGy7Ee2dfcV8DHaeLg = new ConcreteUser(cache: cache,jsog: jsogObj);
+							}
+						}
+						else {
+							valueaoPhhcGy7Ee2dfcV8DHaeLg = new ConcreteUser(cache: cache,jsog: jsogObj);
+						}
+					}
+					this._player2 = valueaoPhhcGy7Ee2dfcV8DHaeLg;
+				}
+			}
+			
+			
+			_player2HasBeenSet = false;
+		}
+	}
+	
+	void boardHasBeenSetted() { _boardHasBeenSet=true; }
+	void player1HasBeenSetted() { _player1HasBeenSet=true; }
+	void player2HasBeenSetted() { _player2HasBeenSet=true; }
+	
+	core.bool hasChanged() {
+		return 		_boardHasBeenSet || 
+					_player1HasBeenSet || 
+					_player2HasBeenSet
+			;
+	}
+	
+	
+	core.Map<core.String,core.dynamic> toJSOG(core.Map<core.Object,core.dynamic> objects) {
+		if (objects == null) {
+			objects = new core.Map();
+		}
+		core.int jsogId;
+		core.Map<core.String,core.dynamic> jsonObj = new core.Map();
+		if(objects.containsKey(this)) {
+			jsogId = objects[this]['id'];
+			jsonObj = objects[this]['value'];
+			if(( player2HasBeenChanged() && !jsonObj.containsKey('player2')) && !objects.containsKey(this._player2)) {
+			if(this._player2 != null) {
+				jsonObj["player2"] = this._player2.toJSOG(objects);
+			}
+			else {
+				jsonObj["player2"] = null;
+			}
+			}
+			if(( player1HasBeenChanged() && !jsonObj.containsKey('player1')) && !objects.containsKey(this._player1)) {
+			if(this._player1 != null) {
+				jsonObj["player1"] = this._player1.toJSOG(objects);
+			}
+			else {
+				jsonObj["player1"] = null;
+			}
+			}
+			if(( boardHasBeenChanged() && !jsonObj.containsKey('board')) && !objects.containsKey(this._board)) {
+			if(this._board != null) {
+				jsonObj["board"] = this._board.toJSOG(objects);
+			}
+			else {
+				jsonObj["board"] = null;
+			}
+			}
+			return { 
+				'@ref': jsogId.toString()
+			};
+		}
+		else {
+			jsogId = objects.length;
+			var pair = {
+				'id': jsogId,
+				'value': jsonObj
+			};
+			objects[this] = pair;
+		}
+		jsonObj['@id'] = jsogId.toString();
+		jsonObj['dywaRuntimeType'] = "de.ls5.dywa.generated.rest.types.GameImpl";
+
+		jsonObj['dywaId'] = this.dywa_id;
+		jsonObj['dywaVersion'] = this.dywa_version;
+		if(this.dywa_name != null) {
+			jsonObj['dywaName'] = this.dywa_name;
+		}
+		if(( player2HasBeenChanged() && !jsonObj.containsKey('player2')) && !objects.containsKey(this._player2) || this.dywa_id == 0) {
+		if(this._player2 != null) {
+			jsonObj["player2"] = this._player2.toJSOG(objects);
+		}
+		else {
+			jsonObj["player2"] = null;
+		}
+		}
+		if(( player1HasBeenChanged() && !jsonObj.containsKey('player1')) && !objects.containsKey(this._player1) || this.dywa_id == 0) {
+		if(this._player1 != null) {
+			jsonObj["player1"] = this._player1.toJSOG(objects);
+		}
+		else {
+			jsonObj["player1"] = null;
+		}
+		}
+		if(( boardHasBeenChanged() && !jsonObj.containsKey('board')) && !objects.containsKey(this._board) || this.dywa_id == 0) {
+		if(this._board != null) {
+			jsonObj["board"] = this._board.toJSOG(objects);
+		}
+		else {
+			jsonObj["board"] = null;
+		}
+		}
+		return jsonObj;
+	}
+	static fromJSON(core.String json) {
+		return fromJSOG(cache:new core.Map<core.String,core.dynamic>(),jsog:jsonDecode(json));
+	}
+		
+	static Game fromJSOG({core.Map<core.String,core.dynamic> cache, jsog}) {
+		if(jsog.containsKey('@ref')) {
+			assert (cache.containsKey(jsog['@ref']));
+			return cache[jsog['@ref']];
+		}
+		if(jsog['dywaRuntimeType'] == 'de.ls5.dywa.generated.rest.types.GameImpl') {
+			return new Game(cache:cache,jsog:jsog);
+		}
+		return new Game(cache:cache,jsog:jsog);
+	}
+	
+	void set player2 (ConcreteUser value)
+	{
+		this._player2HasBeenSet = true;
+		this._player2 = value;
+	}
+	
+	ConcreteUser get player2
+	{
+		return this._player2;
+	}
+	
+		ConcreteUser initOnDemandplayer2()
+		{
+			if(this._player2 == null) {
+			this.player2 = new ConcreteUser();
+			}
+			return this.player2;
+		}
+		
+		void setValueplayer2(ConcreteUser value)
+		{
+			this.player2 = value;
+		}
+		
+		void player2setValue(ConcreteUser value)
+		{
+			this.player2 = value;
+		}
+		
+	
+	void set player1 (ConcreteUser value)
+	{
+		this._player1HasBeenSet = true;
+		this._player1 = value;
+	}
+	
+	ConcreteUser get player1
+	{
+		return this._player1;
+	}
+	
+		ConcreteUser initOnDemandplayer1()
+		{
+			if(this._player1 == null) {
+			this.player1 = new ConcreteUser();
+			}
+			return this.player1;
+		}
+		
+		void setValueplayer1(ConcreteUser value)
+		{
+			this.player1 = value;
+		}
+		
+		void player1setValue(ConcreteUser value)
+		{
+			this.player1 = value;
+		}
+		
+	
+	void set board (Board value)
+	{
+		this._boardHasBeenSet = true;
+		this._board = value;
+	}
+	
+	Board get board
+	{
+		return this._board;
+	}
+	
+		Board initOnDemandboard()
+		{
+			if(this._board == null) {
+			this.board = new Board();
+			}
+			return this.board;
+		}
+		
+		void setValueboard(Board value)
+		{
+			this.board = value;
+		}
+		
+		void boardsetValue(Board value)
+		{
+			this.board = value;
+		}
+		
+	
+}
+
+class Result extends BaseModel
+{
+	core.bool _loserHasBeenSet = false;
+	core.bool loserHasBeenChanged() => _loserHasBeenSet||(_loser==null?false:_loser.hasChanged()) ;
+	ConcreteUser _loser;
+	core.bool _winnerHasBeenSet = false;
+	core.bool winnerHasBeenChanged() => _winnerHasBeenSet||(_winner==null?false:_winner.hasChanged()) ;
+	ConcreteUser _winner;
+	
+	static Result fromId(core.int id) {
+		var m = new Result();
+		m.dywa_id = id;
+		return m;
+	}
+	
+	
+	// reflection methods to read and wirte dart properties by string name
+	
+	core.dynamic $$getProperty(core.String prop) {
+	  var propMap = {
+	  'loser': this.loser, 
+	  'winner': this.winner
+	  };
+	
+	  if (!propMap.containsKey(prop)) throw NoSuchPropertyException(prop);
+	  return propMap[prop];
+	}
+	
+	void $$setProperty(core.String prop, core.dynamic value) {
+	  switch (prop) {
+	  case 'loser': this.loser = value; return;
+	  case 'winner': this.winner = value; return;
+	    default: throw NoSuchPropertyException(prop);
+	  }
+	}
+	
+	core.bool $$hasProperty(core.String prop) {
+	  try {
+	    $$getProperty(prop);
+	    return true;
+	  } on NoSuchPropertyException catch (e) {
+	    return false;
+	  }
+	}
+	
+	Result({core.Map<core.String,core.dynamic> cache, jsog}) {
+		if (cache == null) {
+			cache = new core.Map();
+		}
+
+		// default constructor
+		if (jsog == null) {
+			
+			this.dywa_id = -1;
+			this.dywa_version = 0;
+			this.dywa_name = null;
+			
+			// properties
+		}
+		// from jsog
+		else {
+			core.String jsogId = jsog['@id'];
+			cache[jsogId] = this;
+			
+			this.dywa_id = jsog['dywaId'];
+			this.dywa_version = jsog['dywaVersion'];
+			this.dywa_name = jsog['dywaName'];
+			
+			// properties
+			if (jsog.containsKey("loser")) {
+				core.Map<core.String,core.dynamic> jsogObj = jsog["loser"];
+				if(jsogObj != null) {
+					ConcreteUser valueaVx6hMWy8Ee2dfcV8DHaeLg;
+					
+					core.String jsogId;
+					
+					if (jsogObj.containsKey('@ref')) {
+						jsogId = jsogObj['@ref'];
+					}
+					else {
+					 	jsogId = jsogObj['@id'];
+					}
+					if (cache.containsKey(jsogId)) {
+						valueaVx6hMWy8Ee2dfcV8DHaeLg = cache[jsogId];
+					}
+					else {
+						if (jsogObj != null) {
+							if (jsogObj['dywaRuntimeType'] == "de.ls5.dywa.generated.rest.types.ConcreteUserImpl") {
+								valueaVx6hMWy8Ee2dfcV8DHaeLg = new ConcreteUser(cache: cache, jsog: jsogObj);
+							}
+							else {
+								valueaVx6hMWy8Ee2dfcV8DHaeLg = new ConcreteUser(cache: cache,jsog: jsogObj);
+							}
+						}
+						else {
+							valueaVx6hMWy8Ee2dfcV8DHaeLg = new ConcreteUser(cache: cache,jsog: jsogObj);
+						}
+					}
+					this._loser = valueaVx6hMWy8Ee2dfcV8DHaeLg;
+				}
+			}
+			
+			
+			_loserHasBeenSet = false;
+			if (jsog.containsKey("winner")) {
+				core.Map<core.String,core.dynamic> jsogObj = jsog["winner"];
+				if(jsogObj != null) {
+					ConcreteUser valueaWRziMWy8Ee2dfcV8DHaeLg;
+					
+					core.String jsogId;
+					
+					if (jsogObj.containsKey('@ref')) {
+						jsogId = jsogObj['@ref'];
+					}
+					else {
+					 	jsogId = jsogObj['@id'];
+					}
+					if (cache.containsKey(jsogId)) {
+						valueaWRziMWy8Ee2dfcV8DHaeLg = cache[jsogId];
+					}
+					else {
+						if (jsogObj != null) {
+							if (jsogObj['dywaRuntimeType'] == "de.ls5.dywa.generated.rest.types.ConcreteUserImpl") {
+								valueaWRziMWy8Ee2dfcV8DHaeLg = new ConcreteUser(cache: cache, jsog: jsogObj);
+							}
+							else {
+								valueaWRziMWy8Ee2dfcV8DHaeLg = new ConcreteUser(cache: cache,jsog: jsogObj);
+							}
+						}
+						else {
+							valueaWRziMWy8Ee2dfcV8DHaeLg = new ConcreteUser(cache: cache,jsog: jsogObj);
+						}
+					}
+					this._winner = valueaWRziMWy8Ee2dfcV8DHaeLg;
+				}
+			}
+			
+			
+			_winnerHasBeenSet = false;
+		}
+	}
+	
+	void loserHasBeenSetted() { _loserHasBeenSet=true; }
+	void winnerHasBeenSetted() { _winnerHasBeenSet=true; }
+	
+	core.bool hasChanged() {
+		return 		_loserHasBeenSet || 
+					_winnerHasBeenSet
+			;
+	}
+	
+	
+	core.Map<core.String,core.dynamic> toJSOG(core.Map<core.Object,core.dynamic> objects) {
+		if (objects == null) {
+			objects = new core.Map();
+		}
+		core.int jsogId;
+		core.Map<core.String,core.dynamic> jsonObj = new core.Map();
+		if(objects.containsKey(this)) {
+			jsogId = objects[this]['id'];
+			jsonObj = objects[this]['value'];
+			if(( loserHasBeenChanged() && !jsonObj.containsKey('loser')) && !objects.containsKey(this._loser)) {
+			if(this._loser != null) {
+				jsonObj["loser"] = this._loser.toJSOG(objects);
+			}
+			else {
+				jsonObj["loser"] = null;
+			}
+			}
+			if(( winnerHasBeenChanged() && !jsonObj.containsKey('winner')) && !objects.containsKey(this._winner)) {
+			if(this._winner != null) {
+				jsonObj["winner"] = this._winner.toJSOG(objects);
+			}
+			else {
+				jsonObj["winner"] = null;
+			}
+			}
+			return { 
+				'@ref': jsogId.toString()
+			};
+		}
+		else {
+			jsogId = objects.length;
+			var pair = {
+				'id': jsogId,
+				'value': jsonObj
+			};
+			objects[this] = pair;
+		}
+		jsonObj['@id'] = jsogId.toString();
+		jsonObj['dywaRuntimeType'] = "de.ls5.dywa.generated.rest.types.ResultImpl";
+
+		jsonObj['dywaId'] = this.dywa_id;
+		jsonObj['dywaVersion'] = this.dywa_version;
+		if(this.dywa_name != null) {
+			jsonObj['dywaName'] = this.dywa_name;
+		}
+		if(( loserHasBeenChanged() && !jsonObj.containsKey('loser')) && !objects.containsKey(this._loser) || this.dywa_id == 0) {
+		if(this._loser != null) {
+			jsonObj["loser"] = this._loser.toJSOG(objects);
+		}
+		else {
+			jsonObj["loser"] = null;
+		}
+		}
+		if(( winnerHasBeenChanged() && !jsonObj.containsKey('winner')) && !objects.containsKey(this._winner) || this.dywa_id == 0) {
+		if(this._winner != null) {
+			jsonObj["winner"] = this._winner.toJSOG(objects);
+		}
+		else {
+			jsonObj["winner"] = null;
+		}
+		}
+		return jsonObj;
+	}
+	static fromJSON(core.String json) {
+		return fromJSOG(cache:new core.Map<core.String,core.dynamic>(),jsog:jsonDecode(json));
+	}
+		
+	static Result fromJSOG({core.Map<core.String,core.dynamic> cache, jsog}) {
+		if(jsog.containsKey('@ref')) {
+			assert (cache.containsKey(jsog['@ref']));
+			return cache[jsog['@ref']];
+		}
+		if(jsog['dywaRuntimeType'] == 'de.ls5.dywa.generated.rest.types.ResultImpl') {
+			return new Result(cache:cache,jsog:jsog);
+		}
+		return new Result(cache:cache,jsog:jsog);
+	}
+	
+	void set loser (ConcreteUser value)
+	{
+		this._loserHasBeenSet = true;
+		this._loser = value;
+	}
+	
+	ConcreteUser get loser
+	{
+		return this._loser;
+	}
+	
+		ConcreteUser initOnDemandloser()
+		{
+			if(this._loser == null) {
+			this.loser = new ConcreteUser();
+			}
+			return this.loser;
+		}
+		
+		void setValueloser(ConcreteUser value)
+		{
+			this.loser = value;
+		}
+		
+		void losersetValue(ConcreteUser value)
+		{
+			this.loser = value;
+		}
+		
+	
+	void set winner (ConcreteUser value)
+	{
+		this._winnerHasBeenSet = true;
+		this._winner = value;
+	}
+	
+	ConcreteUser get winner
+	{
+		return this._winner;
+	}
+	
+		ConcreteUser initOnDemandwinner()
+		{
+			if(this._winner == null) {
+			this.winner = new ConcreteUser();
+			}
+			return this.winner;
+		}
+		
+		void setValuewinner(ConcreteUser value)
+		{
+			this.winner = value;
+		}
+		
+		void winnersetValue(ConcreteUser value)
+		{
+			this.winner = value;
 		}
 		
 	

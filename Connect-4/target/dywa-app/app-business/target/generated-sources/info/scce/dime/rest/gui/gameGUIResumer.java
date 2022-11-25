@@ -106,7 +106,7 @@ public class gameGUIResumer extends info.scce.dime.process.GUIResumer {
 	@javax.ws.rs.Path("back/branch/public")
 	@javax.ws.rs.Produces(javax.ws.rs.core.MediaType.APPLICATION_JSON)
 	@javax.ws.rs.Consumes(javax.ws.rs.core.MediaType.APPLICATION_JSON)
-	public javax.ws.rs.core.Response continuebackBranch(info.scce.dime.rest.gui.model._wx7LYWacEe24gf5J_KrBHgBranch output) {
+	public javax.ws.rs.core.Response continuebackBranch(info.scce.dime.rest.gui.model._k2BaEGacEe24gf5J_KrBHgBranch output) {
 		
 		checkAuthentication(output.getCallStack(),"_hri-8WaYEe2mp69GO3rQOw/back");
 		

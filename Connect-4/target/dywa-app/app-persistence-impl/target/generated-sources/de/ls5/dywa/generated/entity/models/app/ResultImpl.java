@@ -3,9 +3,9 @@ package de.ls5.dywa.generated.entity.models.app;
 @javax.persistence.Entity
 @javax.persistence.Cacheable
 @org.hibernate.annotations.Cache(usage = org.hibernate.annotations.CacheConcurrencyStrategy.READ_WRITE)
-@javax.persistence.Table(name = "t_TempColumn__ejobuwnxee2us_f", indexes={@javax.persistence.Index(columnList="meta_inheritance")})
-@de.ls5.dywa.annotations.IdRef(id = 5L)
-public class TempColumnImpl implements TempColumn {
+@javax.persistence.Table(name = "t_Result__ryh6gwy8ee2dfcv", indexes={@javax.persistence.Index(columnList="meta_inheritance")})
+@de.ls5.dywa.annotations.IdRef(id = 6L)
+public class ResultImpl implements Result {
 	@javax.persistence.Id
 	@javax.persistence.GeneratedValue(strategy = javax.persistence.GenerationType.SEQUENCE)
 	@javax.persistence.Column(name = "meta_id")
@@ -26,17 +26,29 @@ public class TempColumnImpl implements TempColumn {
 
 	
 	/* MAIN ATTRIBUTES START */
-	@de.ls5.dywa.annotations.IdRef(id = 18L)
+	@de.ls5.dywa.annotations.IdRef(id = 23L)
 	@org.hibernate.annotations.Cascade(org.hibernate.annotations.CascadeType.PERSIST)
-	@javax.persistence.JoinTable(name="r_TempColumn_Cell__hjylqwnxee2us_f", joinColumns = { @javax.persistence.JoinColumn(name = "r1_TempColumn_id") }, inverseJoinColumns = { @javax.persistence.JoinColumn(name = "r2_Cell_id") })
-	@org.hibernate.annotations.ManyToAny(metaColumn=@javax.persistence.Column(name="m_Cell_Type__hjylqwnxee2us_f"))
+	@javax.persistence.JoinColumn(name = "a_Loser__vx6hmwy8ee2dfcv")
+	@org.hibernate.annotations.Any(metaColumn=@javax.persistence.Column(name="m_Loser_Type__vx6hmwy8ee2dfcv"))
 	@org.hibernate.annotations.AnyMetaDef(
 		idType="long", metaType="string",
 		metaValues={
-			@org.hibernate.annotations.MetaValue(targetEntity=de.ls5.dywa.generated.entity.models.app.CellImpl.class, value="_n5bpygmoee2sl80")
+			@org.hibernate.annotations.MetaValue(targetEntity=de.ls5.dywa.generated.entity.models.app.ConcreteUserImpl.class, value="_dh6bymwneewzvvv")
 		}
 	)
-	private java.util.List<de.ls5.dywa.generated.entity.models.app.Cell> cell  = new java.util.ArrayList<>();
+	private de.ls5.dywa.generated.entity.models.app.ConcreteUser loser;
+	
+	@de.ls5.dywa.annotations.IdRef(id = 24L)
+	@org.hibernate.annotations.Cascade(org.hibernate.annotations.CascadeType.PERSIST)
+	@javax.persistence.JoinColumn(name = "a_Winner__wrzimwy8ee2dfcv")
+	@org.hibernate.annotations.Any(metaColumn=@javax.persistence.Column(name="m_Winner_Type__wrzimwy8ee2dfcv"))
+	@org.hibernate.annotations.AnyMetaDef(
+		idType="long", metaType="string",
+		metaValues={
+			@org.hibernate.annotations.MetaValue(targetEntity=de.ls5.dywa.generated.entity.models.app.ConcreteUserImpl.class, value="_dh6bymwneewzvvv")
+		}
+	)
+	private de.ls5.dywa.generated.entity.models.app.ConcreteUser winner;
 	
 	/* MAIN ATTRIBUTES END */
 	
@@ -53,7 +65,7 @@ public class TempColumnImpl implements TempColumn {
 	/* ADDITIONAL INHERITED MODELS END */
 	
 	// Constructors
-	public TempColumnImpl() {
+	public ResultImpl() {
 	}
 
 
@@ -95,19 +107,30 @@ public class TempColumnImpl implements TempColumn {
 	}
 	
 	@java.lang.Override
-	public java.util.List<de.ls5.dywa.generated.entity.models.app.Cell> getcell_Cell() {
-		return this.cell;
+	public de.ls5.dywa.generated.entity.models.app.ConcreteUser getloser() {
+		return this.loser;
 	}
 	
 	@java.lang.Override
-	public void setcell_Cell(java.util.List<de.ls5.dywa.generated.entity.models.app.Cell> object) {
-		this.cell = object;
+	public void setloser(de.ls5.dywa.generated.entity.models.app.ConcreteUser object) {
+		this.loser = object;
+	}
+	
+	
+	@java.lang.Override
+	public de.ls5.dywa.generated.entity.models.app.ConcreteUser getwinner() {
+		return this.winner;
+	}
+	
+	@java.lang.Override
+	public void setwinner(de.ls5.dywa.generated.entity.models.app.ConcreteUser object) {
+		this.winner = object;
 	}
 	
 	
 	@java.lang.Override
 	public String toString() {
-		return "TempColumn[id: " + this.id_ + ", name: " + this.name_ + "]";
+		return "Result[id: " + this.id_ + ", name: " + this.name_ + "]";
 	}
 }
 

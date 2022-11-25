@@ -35,3 +35,8 @@ board : data.Board
 player : integer
 ->true
 ->false
+
+sib printBoard : info.scce.dime.app.demo.Game#printBoard //
+location : text
+board: data.Board
+->success

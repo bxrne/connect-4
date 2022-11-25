@@ -7,7 +7,7 @@ GUI _hri-8WaYEe2mp69GO3rQOw {
   DataContext _hrmCQWaYEe2mp69GO3rQOw at 10,10 size 180,625 {
   	dfViewWorkaround true
   	ComplexVariable _rrMz0WmqEe2sl80VZxYqHw at 11,71 size 160,25 {
-  		expanded true
+  		expanded false
   		isLive false
   		libraryComponentUID "_bk7lAGkUEe2cW5_gHw6itA"
   		isInput true

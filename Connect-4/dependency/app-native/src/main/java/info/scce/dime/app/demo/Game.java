@@ -41,6 +41,12 @@ public class Game {
 	}
 	
 	
+	//DEBUG: Print out the board
+	public static void printBoard(String location, Board board) {
+		System.err.println("BOARD AT LOCATION" + location);
+		System.out.println(display(board));
+	}
+	
 	//DEBUG: String representation of board
 	public static String display(Board board) {
 		String output = "";

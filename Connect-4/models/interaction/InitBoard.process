@@ -249,13 +249,13 @@ Process _mMPIMWwEEe2iyKycOTLADg {
   		libraryComponentUID "_bk7lAGkUEe2cW5_gHw6itA"
   		isList false
   		name "created"
-  		-ComplexDirectDataFlow-> _rY4zQGwEEe2iyKycOTLADg via (1240,1103) (1240,1247) decorate "" at (0,0) {
-  			id _rY4MSGwEEe2iyKycOTLADg
+  		-ComplexUpdate-> __O2CQWzOEe2dgcV8DHaeLg  decorate "" at (0,0) {
+  			id _FWUW0WzPEe2dgcV8DHaeLg
   			dfViewWorkaround true
   		}
   	}
-  	-ControlFlow-> _rY5aWmwEEe2iyKycOTLADg  decorate "" at (0,0) {
-  		id _rY5aY2wEEe2iyKycOTLADg
+  	-ControlFlow-> _CZMeYWzPEe2dgcV8DHaeLg  decorate "" at (0,0) {
+  		id _EiCfP2zPEe2dgcV8DHaeLg
   		concurrent true
   	}
   }
@@ -281,7 +281,7 @@ Process _mMPIMWwEEe2iyKycOTLADg {
   	}
   }
   
-  EndSIB _rY5aWmwEEe2iyKycOTLADg at 1259,1171 size 100,108 {
+  EndSIB _rY5aWmwEEe2iyKycOTLADg at 1259,1276 size 100,108 {
   	branchName "success"
   	ComplexInputPort _rY4zQGwEEe2iyKycOTLADg at 5,67 size 90,18 {
   		libraryComponentUID "_bk7lAGkUEe2cW5_gHw6itA"
@@ -348,6 +348,54 @@ Process _mMPIMWwEEe2iyKycOTLADg {
   	}
   	-ControlFlow-> _rYl4VWwEEe2iyKycOTLADg  decorate "" at (0,0) {
   		id _rY4zSmwEEe2iyKycOTLADg
+  		concurrent true
+  	}
+  }
+  
+  DataContext _-lp7UWzOEe2dgcV8DHaeLg at 980,1089 size 180,115 {
+  	dfViewWorkaround true
+  	ComplexVariable __O2CQWzOEe2dgcV8DHaeLg at 10,60 size 160,25 {
+  		expanded false
+  		libraryComponentUID "_bk7lAGkUEe2cW5_gHw6itA"
+  		name "board"
+  		dfViewWorkaround true
+  		isList false
+  		-ComplexRead-> _CZZ5wGzPEe2dgcV8DHaeLg  decorate "" at (0,0) {
+  			id _FkwbcWzPEe2dgcV8DHaeLg
+  			dfViewWorkaround true
+  		}
+  		
+  		-ComplexRead-> _rY4zQGwEEe2iyKycOTLADg  decorate "" at (0,0) {
+  			id _F2qDwWzPEe2dgcV8DHaeLg
+  			dfViewWorkaround true
+  		}
+  	}
+  }
+  
+  AtomicSIB _CZMeYWzPEe2dgcV8DHaeLg at 1249,1130 size 120,108 {
+  	libraryComponentUID "app.demo.printBoard"
+  	label "printBoard"
+  	ignoredBranch [  ]
+  	TextInputStatic _JSss0WzPEe2dgcV8DHaeLg at 5,67 size 110,18 {
+  		value "end of InitBoard"
+  		name "location"
+  	}
+  	
+  	ComplexInputPort _CZZ5wGzPEe2dgcV8DHaeLg at 5,85 size 110,18 {
+  		libraryComponentUID "_bk7lAGkUEe2cW5_gHw6itA"
+  		isList false
+  		name "board"
+  	}
+  	-BranchConnector-> _CZn8MWzPEe2dgcV8DHaeLg   {
+  		id _CZojQWzPEe2dgcV8DHaeLg
+  		concurrent true
+  	}
+  }
+  
+  Branch _CZn8MWzPEe2dgcV8DHaeLg at 1249,1230 size 120,25 {
+  	name "success"
+  	-ControlFlow-> _rY5aWmwEEe2iyKycOTLADg  decorate "" at (0,0) {
+  		id _ExUMUWzPEe2dgcV8DHaeLg
   		concurrent true
   	}
   }

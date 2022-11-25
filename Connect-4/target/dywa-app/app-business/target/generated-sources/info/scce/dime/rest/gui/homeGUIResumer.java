@@ -17,7 +17,7 @@ public class homeGUIResumer extends info.scce.dime.process.GUIResumer {
 	@javax.ws.rs.Path("start_game_basic/branch/public")
 	@javax.ws.rs.Produces(javax.ws.rs.core.MediaType.APPLICATION_JSON)
 	@javax.ws.rs.Consumes(javax.ws.rs.core.MediaType.APPLICATION_JSON)
-	public javax.ws.rs.core.Response continuestart_game_basicBranch(info.scce.dime.rest.gui.model._wx7LYWacEe24gf5J_KrBHgBranch output) {
+	public javax.ws.rs.core.Response continuestart_game_basicBranch(info.scce.dime.rest.gui.model._k2BaEGacEe24gf5J_KrBHgBranch output) {
 		
 		checkAuthentication(output.getCallStack(),"_dddDUGaXEe2ffZDgDpg3pA/start_game_basic");
 		

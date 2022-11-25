@@ -3,7 +3,7 @@
 		
 		package info.scce.dime.rest.gui.model;
 		
-		public class _wx7LYWacEe24gf5J_KrBHgBranch{
+		public class _k2BaEGacEe24gf5J_KrBHgBranch{
 			
 
 			info.scce.dime.process.ProcessCallFrame callStack;

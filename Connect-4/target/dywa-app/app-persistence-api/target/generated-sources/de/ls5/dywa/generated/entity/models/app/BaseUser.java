@@ -5,65 +5,41 @@ package de.ls5.dywa.generated.entity.models.app;
 @de.ls5.dywa.annotations.ShortDescription(description = "")
 @de.ls5.dywa.annotations.LongDescription(description = "")
 public interface BaseUser extends de.ls5.dywa.generated.util.Identifiable {
-	@de.ls5.dywa.annotations.IdRef(id = 7L)
+	@de.ls5.dywa.annotations.IdRef(id = 9L)
 	@de.ls5.dywa.annotations.OriginalName(name = "concreteUser")
 	@de.ls5.dywa.annotations.ShortDescription(description = "")
 	@de.ls5.dywa.annotations.LongDescription(description = "")
 	java.util.List<de.ls5.dywa.generated.entity.models.app.ConcreteUser> getconcreteUser_ConcreteUser();
 	
-	@de.ls5.dywa.annotations.IdRef(id = 7L)
+	@de.ls5.dywa.annotations.IdRef(id = 9L)
 	@de.ls5.dywa.annotations.OriginalName(name = "concreteUser")
 	@de.ls5.dywa.annotations.ShortDescription(description = "")
 	@de.ls5.dywa.annotations.LongDescription(description = "")
 	void setconcreteUser_ConcreteUser(java.util.List<de.ls5.dywa.generated.entity.models.app.ConcreteUser> object);
 	
-	@de.ls5.dywa.annotations.IdRef(id = 8L)
+	@de.ls5.dywa.annotations.IdRef(id = 10L)
 	@de.ls5.dywa.annotations.OriginalName(name = "password")
 	@de.ls5.dywa.annotations.ShortDescription(description = "")
 	@de.ls5.dywa.annotations.LongDescription(description = "")
 	java.lang.String getpassword();
 	
-	@de.ls5.dywa.annotations.IdRef(id = 8L)
+	@de.ls5.dywa.annotations.IdRef(id = 10L)
 	@de.ls5.dywa.annotations.OriginalName(name = "password")
 	@de.ls5.dywa.annotations.ShortDescription(description = "")
 	@de.ls5.dywa.annotations.LongDescription(description = "")
 	void setpassword(java.lang.String object);
 	
-	@de.ls5.dywa.annotations.IdRef(id = 9L)
+	@de.ls5.dywa.annotations.IdRef(id = 11L)
 	@de.ls5.dywa.annotations.OriginalName(name = "image")
 	@de.ls5.dywa.annotations.ShortDescription(description = "")
 	@de.ls5.dywa.annotations.LongDescription(description = "")
 	de.ls5.dywa.generated.util.FileReference getimage();
 	
-	@de.ls5.dywa.annotations.IdRef(id = 9L)
+	@de.ls5.dywa.annotations.IdRef(id = 11L)
 	@de.ls5.dywa.annotations.OriginalName(name = "image")
 	@de.ls5.dywa.annotations.ShortDescription(description = "")
 	@de.ls5.dywa.annotations.LongDescription(description = "")
 	void setimage(de.ls5.dywa.generated.util.FileReference object);
-	
-	@de.ls5.dywa.annotations.IdRef(id = 10L)
-	@de.ls5.dywa.annotations.OriginalName(name = "firstName")
-	@de.ls5.dywa.annotations.ShortDescription(description = "")
-	@de.ls5.dywa.annotations.LongDescription(description = "")
-	java.lang.String getfirstName();
-	
-	@de.ls5.dywa.annotations.IdRef(id = 10L)
-	@de.ls5.dywa.annotations.OriginalName(name = "firstName")
-	@de.ls5.dywa.annotations.ShortDescription(description = "")
-	@de.ls5.dywa.annotations.LongDescription(description = "")
-	void setfirstName(java.lang.String object);
-	
-	@de.ls5.dywa.annotations.IdRef(id = 11L)
-	@de.ls5.dywa.annotations.OriginalName(name = "lastName")
-	@de.ls5.dywa.annotations.ShortDescription(description = "")
-	@de.ls5.dywa.annotations.LongDescription(description = "")
-	java.lang.String getlastName();
-	
-	@de.ls5.dywa.annotations.IdRef(id = 11L)
-	@de.ls5.dywa.annotations.OriginalName(name = "lastName")
-	@de.ls5.dywa.annotations.ShortDescription(description = "")
-	@de.ls5.dywa.annotations.LongDescription(description = "")
-	void setlastName(java.lang.String object);
 	
 	@de.ls5.dywa.annotations.IdRef(id = 12L)
 	@de.ls5.dywa.annotations.OriginalName(name = "username")
@@ -76,6 +52,42 @@ public interface BaseUser extends de.ls5.dywa.generated.util.Identifiable {
 	@de.ls5.dywa.annotations.ShortDescription(description = "")
 	@de.ls5.dywa.annotations.LongDescription(description = "")
 	void setusername(java.lang.String object);
+	
+	@de.ls5.dywa.annotations.IdRef(id = 13L)
+	@de.ls5.dywa.annotations.OriginalName(name = "email")
+	@de.ls5.dywa.annotations.ShortDescription(description = "")
+	@de.ls5.dywa.annotations.LongDescription(description = "")
+	java.lang.String getemail();
+	
+	@de.ls5.dywa.annotations.IdRef(id = 13L)
+	@de.ls5.dywa.annotations.OriginalName(name = "email")
+	@de.ls5.dywa.annotations.ShortDescription(description = "")
+	@de.ls5.dywa.annotations.LongDescription(description = "")
+	void setemail(java.lang.String object);
+	
+	@de.ls5.dywa.annotations.IdRef(id = 14L)
+	@de.ls5.dywa.annotations.OriginalName(name = "wins")
+	@de.ls5.dywa.annotations.ShortDescription(description = "")
+	@de.ls5.dywa.annotations.LongDescription(description = "")
+	java.lang.Long getwins();
+	
+	@de.ls5.dywa.annotations.IdRef(id = 14L)
+	@de.ls5.dywa.annotations.OriginalName(name = "wins")
+	@de.ls5.dywa.annotations.ShortDescription(description = "")
+	@de.ls5.dywa.annotations.LongDescription(description = "")
+	void setwins(java.lang.Long object);
+	
+	@de.ls5.dywa.annotations.IdRef(id = 15L)
+	@de.ls5.dywa.annotations.OriginalName(name = "losses")
+	@de.ls5.dywa.annotations.ShortDescription(description = "")
+	@de.ls5.dywa.annotations.LongDescription(description = "")
+	java.lang.Long getlosses();
+	
+	@de.ls5.dywa.annotations.IdRef(id = 15L)
+	@de.ls5.dywa.annotations.OriginalName(name = "losses")
+	@de.ls5.dywa.annotations.ShortDescription(description = "")
+	@de.ls5.dywa.annotations.LongDescription(description = "")
+	void setlosses(java.lang.Long object);
 	
 
 	// EXTENSION ATTRIBUTES
