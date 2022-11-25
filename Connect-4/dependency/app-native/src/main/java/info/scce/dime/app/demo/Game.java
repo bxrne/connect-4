@@ -49,10 +49,12 @@ public class Game {
 	
 	//DEBUG: String representation of board
 	public static String display(Board board) {
+		int width = board.getcolumns_Column().size();
+		int height = board.getcolumns_Column().get(0).getcells_Cell().size();
 		String output = "";
-		for (int i = 0; i < board.getcolumns_Column().size(); i++) {
-			for (int j = 0; j < board.getcolumns_Column().get(0).getcells_Cell().size(); j++) {
-				output += board.getcolumns_Column().get(i).getcells_Cell().get(j).getvalue().intValue() + " ";
+		for (int i = 0; i < height; i++) {
+			for (int j = 0; j < width; j++) {
+				output += board.getcolumns_Column().get(j).getcells_Cell().get(i).getvalue().intValue() + " ";
 			}
 			output += "\n";
 		}
@@ -92,7 +94,6 @@ public class Game {
 				}
 			}
 		}
-		//board[col][row]
 		//diagonal /
 		for(int i = 0; i<board[0].length - 3; i++) {
 			for(int j = 3; j < board.length - 3; j++) {
