@@ -10,7 +10,7 @@ Process _mMPIMWwEEe2iyKycOTLADg {
   		libraryComponentUID "_dW6gAWkUEe2cW5_gHw6itA"
   		isList false
   		name "created"
-  		-ComplexDirectDataFlow-> _rYyFmGwEEe2iyKycOTLADg via (380,1031) (380,1773) decorate "" at (0,0) {
+  		-ComplexDirectDataFlow-> _rYyFmGwEEe2iyKycOTLADg via (349,1031) (356,1774) decorate "" at (0,0) {
   			id _rYyFlmwEEe2iyKycOTLADg
   			dfViewWorkaround true
   		}
@@ -26,7 +26,7 @@ Process _mMPIMWwEEe2iyKycOTLADg {
   	}
   }
   
-  CreateSIB _rYz6wWwEEe2iyKycOTLADg at 389,1489 size 120,108 {
+  CreateSIB _rYz6wWwEEe2iyKycOTLADg at 396,1490 size 120,108 {
   	libraryComponentUID "_N5BPYGmoEe2sl80VZxYqHw"
   	label "Create Cell"
   	ignoredBranch [  ]
@@ -47,26 +47,9 @@ Process _mMPIMWwEEe2iyKycOTLADg {
   	}
   }
   
-  Branch _rYnGeWwEEe2iyKycOTLADg at 371,484 size 155,50 {
-  	name "success"
-  	PrimitiveOutputPort _rYnGfWwEEe2iyKycOTLADg at 5,27 size 145,18 {
-  		dataType Integer
-  		isList true
-  		name "width"
-  		-PrimitiveDirectDataFlow-> _rY2-J2wEEe2iyKycOTLADg via (360,520) (360,640) decorate "" at (0,0) {
-  			id _rY4MOWwEEe2iyKycOTLADg
-  			dfViewWorkaround true
-  		}
-  	}
-  	-ControlFlow-> _rY2-I2wEEe2iyKycOTLADg  decorate "" at (0,0) {
-  		id _rY4zVmwEEe2iyKycOTLADg
-  		concurrent true
-  	}
-  }
-  
-  StartSIB _rY1I4WwEEe2iyKycOTLADg at 399,79 size 100,65 {
-  	-ControlFlow-> _rYnGd2wEEe2iyKycOTLADg  decorate "" at (0,0) {
-  		id _rY3lJ2wEEe2iyKycOTLADg
+  StartSIB _rY1I4WwEEe2iyKycOTLADg at 399,280 size 100,65 {
+  	-ControlFlow-> _eZB6gWwYEe2iz6ycOTLADg  decorate "" at (0,0) {
+  		id _gxPvEWwYEe2iz6ycOTLADg
   		concurrent true
   	}
   }
@@ -125,9 +108,9 @@ Process _mMPIMWwEEe2iyKycOTLADg {
   	content "width: {0, 1, 2, 3, 4, [board_width - 1]}"
   }
   
-  Branch _rYl4U2wEEe2iyKycOTLADg at 389,1797 size 120,25 {
+  Branch _rYl4U2wEEe2iyKycOTLADg at 396,1800 size 120,25 {
   	name "success"
-  	-ControlFlow-> _rYl4VWwEEe2iyKycOTLADg via (460,1550) (460,1071) decorate "" at (0,0) {
+  	-ControlFlow-> _rYl4VWwEEe2iyKycOTLADg via (552,1809) (552,1330) decorate "" at (0,0) {
   		id _rYl4UWwEEe2iyKycOTLADg
   		concurrent true
   	}
@@ -154,7 +137,7 @@ Process _mMPIMWwEEe2iyKycOTLADg {
   		dataType Integer
   		isList false
   		name "element"
-  		-PrimitiveDirectDataFlow-> _rYyFo2wEEe2iyKycOTLADg via (380,740) (380,1178) decorate "" at (0,0) {
+  		-PrimitiveDirectDataFlow-> _rYyFo2wEEe2iyKycOTLADg via (324,740) (324,1178) decorate "" at (0,0) {
   			id _rYyFn2wEEe2iyKycOTLADg
   			dfViewWorkaround true
   		}
@@ -170,13 +153,13 @@ Process _mMPIMWwEEe2iyKycOTLADg {
   	}
   }
   
-  Branch _rY2XBmwEEe2iyKycOTLADg at 389,1609 size 120,50 {
+  Branch _rY2XBmwEEe2iyKycOTLADg at 396,1610 size 120,50 {
   	name "success"
   	ComplexOutputPort _rY2XCmwEEe2iyKycOTLADg at 5,27 size 110,18 {
   		libraryComponentUID "_N5BPYGmoEe2sl80VZxYqHw"
   		isList false
   		name "created"
-  		-ComplexDirectDataFlow-> _rY2-GmwEEe2iyKycOTLADg via (380,1645) (380,1755) decorate "" at (0,0) {
+  		-ComplexDirectDataFlow-> _rY2-GmwEEe2iyKycOTLADg via (387,1646) (387,1756) decorate "" at (0,0) {
   			id _rY2-GGwEEe2iyKycOTLADg
   			dfViewWorkaround true
   		}
@@ -187,17 +170,7 @@ Process _mMPIMWwEEe2iyKycOTLADg {
   	}
   }
   
-  AtomicSIB _rYnGd2wEEe2iyKycOTLADg at 371,359 size 155,84 {
-  	libraryComponentUID "app.demo.GetBoardWidth"
-  	label "GetBoardWidth"
-  	ignoredBranch [  ]
-  	-BranchConnector-> _rYnGeWwEEe2iyKycOTLADg   {
-  		id _rYnGdWwEEe2iyKycOTLADg
-  		concurrent true
-  	}
-  }
-  
-  AtomicSIB _rY0h2mwEEe2iyKycOTLADg at 396,1102 size 120,90 {
+  AtomicSIB _rY0h2mwEEe2iyKycOTLADg at 389,1100 size 120,90 {
   	libraryComponentUID "app.demo.MakeCol"
   	label "MakeCol"
   	ignoredBranch [  ]
@@ -212,7 +185,7 @@ Process _mMPIMWwEEe2iyKycOTLADg {
   	}
   }
   
-  IteratePrimitiveSIB _rYl4VWwEEe2iyKycOTLADg at 389,1285 size 120,90 {
+  IteratePrimitiveSIB _rYl4VWwEEe2iyKycOTLADg at 396,1285 size 120,90 {
   	label "Iterate"
   	ignoredBranch [  ]
   	PrimitiveInputPort _rYmfYGwEEe2iyKycOTLADg at 5,67 size 110,18 {
@@ -239,10 +212,6 @@ Process _mMPIMWwEEe2iyKycOTLADg {
   	}
   }
   
-  DataContext _rY4zTmwEEe2iyKycOTLADg at 89,59 size 210,765 {
-  	dfViewWorkaround true
-  }
-  
   Branch _rYystmwEEe2iyKycOTLADg at 1249,1067 size 120,50 {
   	name "success"
   	ComplexOutputPort _rYysumwEEe2iyKycOTLADg at 5,27 size 110,18 {
@@ -260,7 +229,7 @@ Process _mMPIMWwEEe2iyKycOTLADg {
   	}
   }
   
-  AtomicSIB _rY3lLWwEEe2iyKycOTLADg at 389,1679 size 120,108 {
+  AtomicSIB _rY3lLWwEEe2iyKycOTLADg at 396,1680 size 120,108 {
   	libraryComponentUID "app.demo.AddCell"
   	label "AddCell"
   	ignoredBranch [  ]
@@ -295,13 +264,13 @@ Process _mMPIMWwEEe2iyKycOTLADg {
   	}
   }
   
-  Branch _rYz62WwEEe2iyKycOTLADg at 389,1415 size 120,50 {
+  Branch _rYz62WwEEe2iyKycOTLADg at 396,1410 size 120,50 {
   	name "next"
   	PrimitiveOutputPort _rYz63WwEEe2iyKycOTLADg at 5,27 size 110,18 {
   		dataType Integer
   		isList false
   		name "element"
-  		-PrimitiveDirectDataFlow-> _rYz6ymwEEe2iyKycOTLADg via (380,1451) (380,1583) decorate "" at (0,0) {
+  		-PrimitiveDirectDataFlow-> _rYz6ymwEEe2iyKycOTLADg via (387,1446) (387,1584) decorate "" at (0,0) {
   			id _rY1v-2wEEe2iyKycOTLADg
   			dfViewWorkaround true
   		}
@@ -331,11 +300,21 @@ Process _mMPIMWwEEe2iyKycOTLADg {
   	}
   }
   
-  Documentation _rY5aZ2wEEe2iyKycOTLADg at 569,709 size 191,40 {
+  Documentation _rY5aZ2wEEe2iyKycOTLADg at 508,709 size 191,40 {
   	content "This is the index of the column"
   }
   
-  Branch _rY2XG2wEEe2iyKycOTLADg at 396,1202 size 120,50 {
+  AtomicSIB _eZB6gWwYEe2iz6ycOTLADg at 389,400 size 120,65 index 21 {
+  	libraryComponentUID "app.demo.Indexer"
+  	label "Indexer"
+  	ignoredBranch [  ]
+  	-BranchConnector-> _eZemcWwYEe2iz6ycOTLADg   {
+  		id _eZf0kWwYEe2iz6ycOTLADg
+  		concurrent true
+  	}
+  }
+  
+  Branch _rY2XG2wEEe2iyKycOTLADg at 396,1202 size 120,50 index 20 {
   	name "success"
   	PrimitiveOutputPort _rY1wAWwEEe2iyKycOTLADg at 5,27 size 110,18 {
   		dataType Integer
@@ -348,6 +327,23 @@ Process _mMPIMWwEEe2iyKycOTLADg {
   	}
   	-ControlFlow-> _rYl4VWwEEe2iyKycOTLADg  decorate "" at (0,0) {
   		id _rY4zSmwEEe2iyKycOTLADg
+  		concurrent true
+  	}
+  }
+  
+  Branch _eZemcWwYEe2iz6ycOTLADg at 389,494 size 120,50 {
+  	name "success"
+  	PrimitiveOutputPort _eZt3AWwYEe2iz6ycOTLADg at 5,27 size 110,18 {
+  		dataType Integer
+  		isList true
+  		name "width"
+  		-PrimitiveDirectDataFlow-> _rY2-J2wEEe2iyKycOTLADg via (372,530) (372,640) decorate "" at (0,0) {
+  			id _hV5UQWwYEe2iz6ycOTLADg
+  			dfViewWorkaround true
+  		}
+  	}
+  	-ControlFlow-> _rY2-I2wEEe2iyKycOTLADg  decorate "" at (0,0) {
+  		id _hEVDIWwYEe2iz6ycOTLADg
   		concurrent true
   	}
   }
