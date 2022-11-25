@@ -15,7 +15,7 @@ public class Game {
 	//HARDCODED VALUE HERE
 	public static List<Long> getBoardWidth() {
 		List<Long> result = new ArrayList<Long>();
-		for(int i = 0; i <= 7 ; i++) result.add((long) i); 
+		for(int i = 0; i < 7 ; i++) result.add((long) i); 
 		return result;
 		
 	}
