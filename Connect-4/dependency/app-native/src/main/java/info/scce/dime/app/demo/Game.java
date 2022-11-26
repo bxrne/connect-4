@@ -6,24 +6,27 @@ import de.ls5.dywa.generated.entity.models.app.*;
 
 public class Game {
 	
-	public static List<Long> makeCol(Long index){
-		return Arrays.asList(new Long[] {0l, 0l, 0l, 0l, 0l, 0l});
+	//returns a list of Longs, size = height of the board
+	public static List<Long> makeEmptyColumn(Long height){
+		List<Long> column = new ArrayList<Long>();
+		for(int i = 0; i < height.intValue(); i++) column.add((Long)0l);
+		return column;
 	}
 	
 	
-	//gives a list {0, 1, 2, ..., board.length-1} for board construction
-	//HARDCODED VALUE HERE
-	public static List<Long> getBoardWidth() {
+	//gives a list {0, 1, 2, ..., (width of board - 1)} for board construction
+	
+	public static List<Long> makeIndexList(Long width){
 		List<Long> result = new ArrayList<Long>();
-		for(int i = 0; i < 7 ; i++) result.add((long) i); 
+		for(int i = 0; i < width.intValue() ; i++) result.add((long) i); 
 		return result;
-		
 	}
 	
 
 	public static Board placeCoin(Board board, Long player, Long index) {
 		//get cells of column in question
 		List<Cell> cells = board.getcolumns_Column().get(index.intValue()).getcells_Cell();
+		
 		//column is already full
 		if(cells.get(0).getvalue() != 0l) {
 			System.err.println("Column index "+ index + " is already full! Turn cancelled");
@@ -43,7 +46,7 @@ public class Game {
 	
 	//DEBUG: Print out the board
 	public static void printBoard(String location, Board board) {
-		System.err.println("BOARD AT LOCATION" + location);
+		System.err.println("BOARD AT LOCATION " + location);
 		System.out.println(display(board));
 	}
 	
@@ -67,6 +70,7 @@ public class Game {
 		int width = _board.getcolumns_Column().size();
 		int height = _board.getcolumns_Column().get(0).getcells_Cell().size();
 		
+		//board[col][cell]
 		Long[][] board = new Long[width][height];
 		
 		for(int i = 0; i < width; i++) {
@@ -76,49 +80,52 @@ public class Game {
 		}
 		
 		//vertical
-		//i is row, j is col, k is cell of 4
-		//bottom 3 rows arent checked as the last cell will be out of bounds
-		for(int i = 0; i<board[0].length - 3; i++) {
-			for(int j = 0; j < board.length; j++) {
-				//if all 4 cells are = to player checking win, they win
-				if(board[j][i] ==player && board[j][i+1] ==player && board[j][i+2] ==player && board[j][i+3] ==player) {
+		for(int i = 0; i < board.length; i++) {
+			for(int j = 0; j<board[0].length - 3; j++) {
+				if(board[i][j] ==player && board[i][j+1] ==player && board[i][j+2] ==player && board[i][j+3] ==player) {
 					return true;
 				}
 			}
 		}
+		
 		//horizontal
-		for(int i = 0; i<board[0].length; i++) {
-			for(int j = 0; j < board.length - 3; j++) {
-				if(board[j][i] ==player && board[j+1][i] ==player && board[j+2][i] ==player && board[j+3][i] ==player) {
+		for (int i = 0; i < board.length - 3; i++) {
+			for (int j = 0; j < board[0].length; j++) {
+				if(board[i][j] ==player && board[i+1][j] ==player && board[i+2][j] ==player && board[i+3][j] ==player) {
 					return true;
 				}
 			}
 		}
+		
 		//diagonal /
-		for(int i = 0; i<board[0].length - 3; i++) {
-			for(int j = 3; j < board.length - 3; j++) {
-				if(board[j][i] ==player && board[j-1][i+1] ==player && board[j-2][i+2] ==player && board[j-3][i+3] ==player) {
+		for (int i = 3; i < board.length; i++) {
+			for (int j = 0; j < board[0].length - 3; j++) {
+				if(board[i][j] ==player && board[i-1][j+1] ==player && board[i-2][j+2] ==player && board[i-3][j+3] ==player) {
 					return true;
 				}
 			}
 		}
+		
 		//diagonal \
-		for(int i = 0; i<board[0].length - 3; i++) {
-			for(int j = 0; j < board.length - 3; j++) {
-				if(board[j][i] ==player && board[j+1][i+1] ==player && board[j+2][i+2] ==player && board[j+3][i+3] ==player) {
+		for (int i = 0; i < board.length - 3; i++) {
+			for (int j = 0; j < board[0].length - 3; j++) {
+				if(board[i][j] ==player && board[i+1][j+1] ==player && board[i+2][j+2] ==player && board[i+3][j+3] ==player) {
 					return true;
 				}
 			}
 		}
+		
 		//no win
 		return false;
 
 	}
 	
+	//put cell into column, used in InitBoard
 	public static void addCell(Cell cell, Column column) {
 		column.getcells_Cell().add(cell);
 	}
 	
+	//changes who's turn it is
 	public static Long switchPlayer(Long player) {
 		if(player == 1l) return (Long)2l;
 		//(if player == 2l)
