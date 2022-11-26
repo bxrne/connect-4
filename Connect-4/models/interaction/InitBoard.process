@@ -202,13 +202,13 @@ Process _mMPIMWwEEe2iyKycOTLADg {
   		libraryComponentUID "_bk7lAGkUEe2cW5_gHw6itA"
   		isList false
   		name "created"
-  		-ComplexUpdate-> __O2CQWzOEe2dgcV8DHaeLg  decorate "" at (0,0) {
-  			id _FWUW0WzPEe2dgcV8DHaeLg
+  		-ComplexDirectDataFlow-> _rY4zQGwEEe2iyKycOTLADg via (1239,1103) (1239,1352) decorate "" at (0,0) {
+  			id _QdQPYW0ZEe2yY46ZtG-Oww
   			dfViewWorkaround true
   		}
   	}
-  	-ControlFlow-> _CZMeYWzPEe2dgcV8DHaeLg  decorate "" at (0,0) {
-  		id _EiCfP2zPEe2dgcV8DHaeLg
+  	-ControlFlow-> _rY5aWmwEEe2iyKycOTLADg  decorate "" at (0,0) {
+  		id _RkVzQW0ZEe2yY46ZtG-Oww
   		concurrent true
   	}
   }
@@ -288,47 +288,7 @@ Process _mMPIMWwEEe2iyKycOTLADg {
   	content "This is the index of the column"
   }
   
-  DataContext _-lp7UWzOEe2dgcV8DHaeLg at 980,1089 size 180,115 {
-  	dfViewWorkaround true
-  	ComplexVariable __O2CQWzOEe2dgcV8DHaeLg at 10,60 size 160,25 {
-  		expanded false
-  		libraryComponentUID "_bk7lAGkUEe2cW5_gHw6itA"
-  		name "board"
-  		dfViewWorkaround true
-  		isList false
-  		-ComplexRead-> _CZZ5wGzPEe2dgcV8DHaeLg  decorate "" at (0,0) {
-  			id _FkwbcWzPEe2dgcV8DHaeLg
-  			dfViewWorkaround true
-  		}
-  		
-  		-ComplexRead-> _rY4zQGwEEe2iyKycOTLADg  decorate "" at (0,0) {
-  			id _F2qDwWzPEe2dgcV8DHaeLg
-  			dfViewWorkaround true
-  		}
-  	}
-  }
-  
-  AtomicSIB _CZMeYWzPEe2dgcV8DHaeLg at 1249,1130 size 120,108 {
-  	libraryComponentUID "app.demo.printBoard"
-  	label "printBoard"
-  	ignoredBranch [  ]
-  	TextInputStatic _JSss0WzPEe2dgcV8DHaeLg at 5,67 size 110,18 {
-  		value "end of InitBoard"
-  		name "location"
-  	}
-  	
-  	ComplexInputPort _CZZ5wGzPEe2dgcV8DHaeLg at 5,85 size 110,18 {
-  		libraryComponentUID "_bk7lAGkUEe2cW5_gHw6itA"
-  		isList false
-  		name "board"
-  	}
-  	-BranchConnector-> _CZn8MWzPEe2dgcV8DHaeLg   {
-  		id _CZojQWzPEe2dgcV8DHaeLg
-  		concurrent true
-  	}
-  }
-  
-  AtomicSIB _P6QM0W0VEe2yX46ZtG-Oww at 361,1080 size 176,90 index 23 {
+  AtomicSIB _P6QM0W0VEe2yX46ZtG-Oww at 361,1080 size 176,90 {
   	libraryComponentUID "app.demo.MakeEmptyColumn"
   	label "MakeEmptyColumn"
   	ignoredBranch [  ]
@@ -342,15 +302,7 @@ Process _mMPIMWwEEe2iyKycOTLADg {
   	}
   }
   
-  Branch _CZn8MWzPEe2dgcV8DHaeLg at 1249,1230 size 120,25 index 22 {
-  	name "success"
-  	-ControlFlow-> _rY5aWmwEEe2iyKycOTLADg  decorate "" at (0,0) {
-  		id _ExUMUWzPEe2dgcV8DHaeLg
-  		concurrent true
-  	}
-  }
-  
-  AtomicSIB _4lEkMW0WEe2yX46ZtG-Oww at 379,220 size 139,100 index 25 {
+  AtomicSIB _4lEkMW0WEe2yX46ZtG-Oww at 379,220 size 139,100 index 22 {
   	libraryComponentUID "app.demo.MakeIndexList"
   	label "MakeIndexList"
   	ignoredBranch [  ]
@@ -364,7 +316,7 @@ Process _mMPIMWwEEe2iyKycOTLADg {
   	}
   }
   
-  Branch _P61boW0VEe2yX46ZtG-Oww at 389,1203 size 120,50 index 24 {
+  Branch _P61boW0VEe2yX46ZtG-Oww at 389,1203 size 120,50 index 21 {
   	name "success"
   	PrimitiveOutputPort _P68wYW0VEe2yX46ZtG-Oww at 5,27 size 110,18 {
   		dataType Integer

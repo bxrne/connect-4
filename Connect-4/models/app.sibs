@@ -37,6 +37,12 @@ player : integer
 ->true
 ->false
 
+sib CheckIsColumnFull : info.scce.dime.app.demo.Game#isColumnFull
+board : data.Board
+index : integer
+->true
+->false
+
 sib printBoard : info.scce.dime.app.demo.Game#printBoard //
 location : text
 board: data.Board

@@ -131,4 +131,10 @@ public class Game {
 		//(if player == 2l)
 		return (Long)1l;
 	}
+	
+	//checks whether a given column is full
+	public static boolean isColumnFull (Board board, Long index) {
+		//if the value stored in the first cell of the column is not 0, then the column is full
+		return board.getcolumns_Column().get(index.intValue()).getcells_Cell().get(0).getvalue().intValue() != 0;
+	}
 }
