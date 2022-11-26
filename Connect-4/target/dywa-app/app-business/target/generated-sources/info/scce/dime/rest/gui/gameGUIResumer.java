@@ -18,6 +18,29 @@ public class gameGUIResumer extends info.scce.dime.process.GUIResumer {
 	private de.ls5.dywa.generated.controller.models.app.BoardController BoardController;
 
 	@javax.ws.rs.POST
+	@javax.ws.rs.Path("back/branch/public")
+	@javax.ws.rs.Produces(javax.ws.rs.core.MediaType.APPLICATION_JSON)
+	@javax.ws.rs.Consumes(javax.ws.rs.core.MediaType.APPLICATION_JSON)
+	public javax.ws.rs.core.Response continuebackBranch(info.scce.dime.rest.gui.model._k2BaEGacEe24gf5J_KrBHgBranch output) {
+		
+		checkAuthentication(output.getCallStack(),"_hri-8WaYEe2mp69GO3rQOw/back");
+		
+		
+		final info.scce.dime.gui.models.gui.game.Game_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOwResult guiResult = 
+		new info.scce.dime.gui.models.gui.game.Game_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOwResult("back");
+		if(!"_hri-8WaYEe2mp69GO3rQOw".equals(output.getCallStack().getCallFrames().get(output.getCallStack().getCallFrames().size()-1).getPointer().split(":")[2])){
+					output.getCallStack().getCallFrames().get(output.getCallStack().getCallFrames().size()-1).setPointer(output.getCallStack().getCallFrames().get(output.getCallStack().getCallFrames().size()-1).getMajorGUI());
+		}
+		if(!output.getCallStack().getCallFrames().isEmpty()) {
+		
+			if(output.getCallStack().getCallFrames().get(output.getCallStack().getCallFrames().size() - 1).getPointer() == null) {
+				return javax.ws.rs.core.Response.status(422).build();
+			}
+		}
+		final Object result = this.processResumer.resumeFromGUI(output.getCallStack(), guiResult);
+		return javax.ws.rs.core.Response.ok(result).build();
+	}
+	@javax.ws.rs.POST
 	@javax.ws.rs.Path("placePiece/branch/public")
 	@javax.ws.rs.Produces(javax.ws.rs.core.MediaType.APPLICATION_JSON)
 	@javax.ws.rs.Consumes(javax.ws.rs.core.MediaType.APPLICATION_JSON)
@@ -90,29 +113,6 @@ public class gameGUIResumer extends info.scce.dime.process.GUIResumer {
 		
 		final info.scce.dime.gui.models.gui.game.Game_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOwResult guiResult = 
 		new info.scce.dime.gui.models.gui.game.Game_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOwResult("placePiece", guiReturn);
-		if(!"_hri-8WaYEe2mp69GO3rQOw".equals(output.getCallStack().getCallFrames().get(output.getCallStack().getCallFrames().size()-1).getPointer().split(":")[2])){
-					output.getCallStack().getCallFrames().get(output.getCallStack().getCallFrames().size()-1).setPointer(output.getCallStack().getCallFrames().get(output.getCallStack().getCallFrames().size()-1).getMajorGUI());
-		}
-		if(!output.getCallStack().getCallFrames().isEmpty()) {
-		
-			if(output.getCallStack().getCallFrames().get(output.getCallStack().getCallFrames().size() - 1).getPointer() == null) {
-				return javax.ws.rs.core.Response.status(422).build();
-			}
-		}
-		final Object result = this.processResumer.resumeFromGUI(output.getCallStack(), guiResult);
-		return javax.ws.rs.core.Response.ok(result).build();
-	}
-	@javax.ws.rs.POST
-	@javax.ws.rs.Path("back/branch/public")
-	@javax.ws.rs.Produces(javax.ws.rs.core.MediaType.APPLICATION_JSON)
-	@javax.ws.rs.Consumes(javax.ws.rs.core.MediaType.APPLICATION_JSON)
-	public javax.ws.rs.core.Response continuebackBranch(info.scce.dime.rest.gui.model._k2BaEGacEe24gf5J_KrBHgBranch output) {
-		
-		checkAuthentication(output.getCallStack(),"_hri-8WaYEe2mp69GO3rQOw/back");
-		
-		
-		final info.scce.dime.gui.models.gui.game.Game_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOwResult guiResult = 
-		new info.scce.dime.gui.models.gui.game.Game_hri__HYPHEN_MINUS__8WaYEe2mp69GO3rQOwResult("back");
 		if(!"_hri-8WaYEe2mp69GO3rQOw".equals(output.getCallStack().getCallFrames().get(output.getCallStack().getCallFrames().size()-1).getPointer().split(":")[2])){
 					output.getCallStack().getCallFrames().get(output.getCallStack().getCallFrames().size()-1).setPointer(output.getCallStack().getCallFrames().get(output.getCallStack().getCallFrames().size()-1).getMajorGUI());
 		}

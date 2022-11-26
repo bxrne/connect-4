@@ -78,11 +78,6 @@ Process _kVZOMWy7Ee2dfcV8DHaeLg {
   			id _i8XS0WzIEe2dfcV8DHaeLg
   			dfViewWorkaround true
   		}
-  		
-  		-PrimitiveRead-> _tX5BEWzJEe2dgMV8DHaeLg via (-127,609) (245,610) decorate "" at (0,0) {
-  			id _u412cWzJEe2dgMV8DHaeLg
-  			dfViewWorkaround true
-  		}
   	}
   }
   
@@ -180,8 +175,8 @@ Process _kVZOMWy7Ee2dfcV8DHaeLg {
   
   Branch _g0cZgWzHEe2dfcV8DHaeLg at 540,475 size 120,25 {
   	name "back"
-  	-ControlFlow-> _tX0IkWzJEe2dgMV8DHaeLg  decorate "" at (0,0) {
-  		id _uMQdQWzJEe2dgMV8DHaeLg
+  	-ControlFlow-> _0-I9sW2uEe2LvMTOtZFiXQ  decorate "" at (0,0) {
+  		id _1akbAW2uEe2LvMTOtZFiXQ
   		concurrent true
   	}
   }
@@ -369,38 +364,6 @@ Process _kVZOMWy7Ee2dfcV8DHaeLg {
   	content " Outgoing control flow      "
   }
   
-  AtomicSIB _tX0IkWzJEe2dgMV8DHaeLg at 540,534 size 120,90 {
-  	libraryComponentUID "app.demo.SwitchPlayer"
-  	label "SwitchPlayer"
-  	ignoredBranch [  ]
-  	PrimitiveInputPort _tX5BEWzJEe2dgMV8DHaeLg at 5,67 size 110,18 {
-  		dataType Integer
-  		isList false
-  		name "player"
-  	}
-  	-BranchConnector-> _tYEnQWzJEe2dgMV8DHaeLg   {
-  		id _tYF1YWzJEe2dgMV8DHaeLg
-  		concurrent true
-  	}
-  }
-  
-  Branch _tYEnQWzJEe2dgMV8DHaeLg at 540,634 size 120,50 {
-  	name "success"
-  	PrimitiveOutputPort _tYI4sWzJEe2dgMV8DHaeLg at 5,27 size 110,18 {
-  		dataType Integer
-  		isList false
-  		name "newPlayer"
-  		-PrimitiveUpdate-> _mv-j0WzHEe2dfcV8DHaeLg via (245,670) (-127,669) decorate "" at (0,0) {
-  			id _zMCJ8GzJEe2dgMV8DHaeLg
-  			dfViewWorkaround true
-  		}
-  	}
-  	-ControlFlow-> _bsOGAWzIEe2dfcV8DHaeLg via (702,1012) decorate "" at (0,0) {
-  		id _xHuI0WzJEe2dgMV8DHaeLg
-  		concurrent true
-  	}
-  }
-  
   AtomicSIB _Og0icW0aEe2yY46ZtG-Oww at 277,760 size 201,109 {
   	libraryComponentUID "app.demo.CheckIsColumnFull"
   	label "CheckIsColumnFull"
@@ -443,7 +406,13 @@ Process _kVZOMWy7Ee2dfcV8DHaeLg {
   	}
   }
   
-  DataContext _WuPP0W0aEe2yY46ZtG-Oww at 30,740 size 221,125 {
+  ProcessSIB _0-I9sW2uEe2LvMTOtZFiXQ at 540,541 size 120,65 index 23 {
+  	libraryComponentUID "_LWgagF-SEeakMeYoloYxpg"
+  	label "Home"
+  	ignoredBranch [  ]
+  }
+  
+  DataContext _WuPP0W0aEe2yY46ZtG-Oww at 30,740 size 221,125 index 22 {
   	dfViewWorkaround true
   	PrimitiveVariable _blkLIW0aEe2yY46ZtG-Oww at 40,70 size 140,25 {
   		dataType Integer

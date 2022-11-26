@@ -47,7 +47,7 @@ class AppComponent implements OnInit {
     @override
 	void ngOnInit() async {
     	this._notificationService.component = notificationComponent;
-    	print("GENERATED AT 2022/11/25 16:08:39");
+    	print("GENERATED AT 2022/11/26 18:22:22");
 	}
 }
 
