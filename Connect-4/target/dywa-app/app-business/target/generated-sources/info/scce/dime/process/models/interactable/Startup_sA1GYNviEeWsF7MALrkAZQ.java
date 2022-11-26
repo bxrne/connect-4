@@ -213,7 +213,7 @@ public final class Startup_sA1GYNviEeWsF7MALrkAZQ implements DIMEProcess {
 	public SIB_ID execute_G8JPsNzHEeW2rv4DARGjjw(final Context ctx) {
 		final info.scce.dime.process.models.basic.CreateUser_cBxicNzDEeW2rv4DARGjjw instance = CDIUtil.getManagedInstance(ctx.beanManager, info.scce.dime.process.models.basic.CreateUser_cBxicNzDEeW2rv4DARGjjw.class);
 	
-		final info.scce.dime.process.models.basic.CreateUser_cBxicNzDEeW2rv4DARGjjw.CreateUser_cBxicNzDEeW2rv4DARGjjwResult result = instance.execute(false, "Mary Jane", "Watson", "pwd", "mary");
+		final info.scce.dime.process.models.basic.CreateUser_cBxicNzDEeW2rv4DARGjjw.CreateUser_cBxicNzDEeW2rv4DARGjjwResult result = instance.execute(false, "c@a.a", "pwd", "mary");
 	
 		switch(result.getBranchName()) {
 		case "success": {
@@ -228,7 +228,7 @@ public final class Startup_sA1GYNviEeWsF7MALrkAZQ implements DIMEProcess {
 	public SIB_ID execute_iHeOANzGEeW2rv4DARGjjw(final Context ctx) {
 		final info.scce.dime.process.models.basic.CreateUser_cBxicNzDEeW2rv4DARGjjw instance = CDIUtil.getManagedInstance(ctx.beanManager, info.scce.dime.process.models.basic.CreateUser_cBxicNzDEeW2rv4DARGjjw.class);
 	
-		final info.scce.dime.process.models.basic.CreateUser_cBxicNzDEeW2rv4DARGjjw.CreateUser_cBxicNzDEeW2rv4DARGjjwResult result = instance.execute(false, "J. Jonah", "Jameson ", "pwd", "jonah");
+		final info.scce.dime.process.models.basic.CreateUser_cBxicNzDEeW2rv4DARGjjw.CreateUser_cBxicNzDEeW2rv4DARGjjwResult result = instance.execute(false, "b@a.a", "pwd", "jonah");
 	
 		switch(result.getBranchName()) {
 		case "success": {
@@ -243,7 +243,7 @@ public final class Startup_sA1GYNviEeWsF7MALrkAZQ implements DIMEProcess {
 	public SIB_ID execute_PssUwNzGEeW2rv4DARGjjw(final Context ctx) {
 		final info.scce.dime.process.models.basic.CreateUser_cBxicNzDEeW2rv4DARGjjw instance = CDIUtil.getManagedInstance(ctx.beanManager, info.scce.dime.process.models.basic.CreateUser_cBxicNzDEeW2rv4DARGjjw.class);
 	
-		final info.scce.dime.process.models.basic.CreateUser_cBxicNzDEeW2rv4DARGjjw.CreateUser_cBxicNzDEeW2rv4DARGjjwResult result = instance.execute(false, "Peter", "Parker", "pwd", "peter");
+		final info.scce.dime.process.models.basic.CreateUser_cBxicNzDEeW2rv4DARGjjw.CreateUser_cBxicNzDEeW2rv4DARGjjwResult result = instance.execute(false, "a@a.a", "pwd", "peter");
 	
 		switch(result.getBranchName()) {
 		case "success": {

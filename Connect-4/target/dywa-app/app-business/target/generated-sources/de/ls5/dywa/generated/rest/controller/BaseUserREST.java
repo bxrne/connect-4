@@ -141,29 +141,39 @@ public class BaseUserREST {
 			final de.ls5.dywa.generated.entity.models.app.BaseUser effectiveObj = obj;
 
 		// If values were not specified, ignore them
-		if (effectiveValue.isfirstNameSet()) {
-			checkVersion(value, obj);
-			effectiveObj.setfirstName(effectiveValue.getfirstName());
-		}
-	}
-		{
-			final de.ls5.dywa.generated.rest.types.BaseUser effectiveValue = value;
-			final de.ls5.dywa.generated.entity.models.app.BaseUser effectiveObj = obj;
-
-		// If values were not specified, ignore them
-		if (effectiveValue.islastNameSet()) {
-			checkVersion(value, obj);
-			effectiveObj.setlastName(effectiveValue.getlastName());
-		}
-	}
-		{
-			final de.ls5.dywa.generated.rest.types.BaseUser effectiveValue = value;
-			final de.ls5.dywa.generated.entity.models.app.BaseUser effectiveObj = obj;
-
-		// If values were not specified, ignore them
 		if (effectiveValue.isusernameSet()) {
 			checkVersion(value, obj);
 			effectiveObj.setusername(effectiveValue.getusername());
+		}
+	}
+		{
+			final de.ls5.dywa.generated.rest.types.BaseUser effectiveValue = value;
+			final de.ls5.dywa.generated.entity.models.app.BaseUser effectiveObj = obj;
+
+		// If values were not specified, ignore them
+		if (effectiveValue.isemailSet()) {
+			checkVersion(value, obj);
+			effectiveObj.setemail(effectiveValue.getemail());
+		}
+	}
+		{
+			final de.ls5.dywa.generated.rest.types.BaseUser effectiveValue = value;
+			final de.ls5.dywa.generated.entity.models.app.BaseUser effectiveObj = obj;
+
+		// If values were not specified, ignore them
+		if (effectiveValue.iswinsSet()) {
+			checkVersion(value, obj);
+			effectiveObj.setwins(effectiveValue.getwins());
+		}
+	}
+		{
+			final de.ls5.dywa.generated.rest.types.BaseUser effectiveValue = value;
+			final de.ls5.dywa.generated.entity.models.app.BaseUser effectiveObj = obj;
+
+		// If values were not specified, ignore them
+		if (effectiveValue.islossesSet()) {
+			checkVersion(value, obj);
+			effectiveObj.setlosses(effectiveValue.getlosses());
 		}
 	}
 	}
@@ -278,29 +288,39 @@ public class BaseUserREST {
 				final de.ls5.dywa.generated.entity.models.app.BaseUser effectiveObj = obj;
 
 			// If values were not specified, ignore them
-			if (effectiveValue.isfirstNameSet()) {
-				checkVersion(value, obj);
-				effectiveObj.setfirstName(effectiveValue.getfirstName());
-			}
-		}
-			{
-				final de.ls5.dywa.generated.rest.types.BaseUser effectiveValue = value;
-				final de.ls5.dywa.generated.entity.models.app.BaseUser effectiveObj = obj;
-
-			// If values were not specified, ignore them
-			if (effectiveValue.islastNameSet()) {
-				checkVersion(value, obj);
-				effectiveObj.setlastName(effectiveValue.getlastName());
-			}
-		}
-			{
-				final de.ls5.dywa.generated.rest.types.BaseUser effectiveValue = value;
-				final de.ls5.dywa.generated.entity.models.app.BaseUser effectiveObj = obj;
-
-			// If values were not specified, ignore them
 			if (effectiveValue.isusernameSet()) {
 				checkVersion(value, obj);
 				effectiveObj.setusername(effectiveValue.getusername());
+			}
+		}
+			{
+				final de.ls5.dywa.generated.rest.types.BaseUser effectiveValue = value;
+				final de.ls5.dywa.generated.entity.models.app.BaseUser effectiveObj = obj;
+
+			// If values were not specified, ignore them
+			if (effectiveValue.isemailSet()) {
+				checkVersion(value, obj);
+				effectiveObj.setemail(effectiveValue.getemail());
+			}
+		}
+			{
+				final de.ls5.dywa.generated.rest.types.BaseUser effectiveValue = value;
+				final de.ls5.dywa.generated.entity.models.app.BaseUser effectiveObj = obj;
+
+			// If values were not specified, ignore them
+			if (effectiveValue.iswinsSet()) {
+				checkVersion(value, obj);
+				effectiveObj.setwins(effectiveValue.getwins());
+			}
+		}
+			{
+				final de.ls5.dywa.generated.rest.types.BaseUser effectiveValue = value;
+				final de.ls5.dywa.generated.entity.models.app.BaseUser effectiveObj = obj;
+
+			// If values were not specified, ignore them
+			if (effectiveValue.islossesSet()) {
+				checkVersion(value, obj);
+				effectiveObj.setlosses(effectiveValue.getlosses());
 			}
 		}
 

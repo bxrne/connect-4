@@ -22,6 +22,10 @@ public class AALControllerImpl implements AALController {
 	private de.ls5.dywa.generated.controller.models.app.ColumnController ColumnController;
 	@Inject
 	private de.ls5.dywa.generated.controller.models.app.CellController CellController;
+	@Inject
+	private de.ls5.dywa.generated.controller.models.app.GameController GameController;
+	@Inject
+	private de.ls5.dywa.generated.controller.models.app.ResultController ResultController;
 
 	@Override
 	public void reset() {
@@ -44,6 +48,12 @@ public class AALControllerImpl implements AALController {
 	}
 	for (final de.ls5.dywa.generated.entity.models.app.Cell o : CellController.fetch()) {
 	CellController.deleteWithIncomingReferences(o);
+	}
+	for (final de.ls5.dywa.generated.entity.models.app.Game o : GameController.fetch()) {
+	GameController.deleteWithIncomingReferences(o);
+	}
+	for (final de.ls5.dywa.generated.entity.models.app.Result o : ResultController.fetch()) {
+	ResultController.deleteWithIncomingReferences(o);
 	}
 
 		this.entityManager.setFlushMode(oldFlushMode);

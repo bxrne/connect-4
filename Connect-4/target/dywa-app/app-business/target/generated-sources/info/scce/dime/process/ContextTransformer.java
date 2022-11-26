@@ -31,6 +31,10 @@ public static ContextTransformer getInstance(javax.enterprise.inject.spi.BeanMan
 @Inject de.ls5.dywa.generated.rest.controller.ColumnREST ColumnREST;
 @Inject de.ls5.dywa.generated.controller.models.app.CellController CellController;
 @Inject de.ls5.dywa.generated.rest.controller.CellREST CellREST;
+@Inject de.ls5.dywa.generated.controller.models.app.GameController GameController;
+@Inject de.ls5.dywa.generated.rest.controller.GameREST GameREST;
+@Inject de.ls5.dywa.generated.controller.models.app.ResultController ResultController;
+@Inject de.ls5.dywa.generated.rest.controller.ResultREST ResultREST;
 
 @Inject de.ls5.dywa.generated.util.DomainFileController domainFileController;
 
@@ -89,6 +93,28 @@ public de.ls5.dywa.generated.entity.models.app.Cell transform(de.ls5.dywa.genera
 	}
 	 else if (o instanceof de.ls5.dywa.generated.rest.types.Cell) {
 		obj = CellREST.copyToTransient((de.ls5.dywa.generated.rest.types.Cell) o);
+	}
+	 else { throw new java.lang.IllegalArgumentException("Unknown type"); } 
+	return obj;
+}
+public de.ls5.dywa.generated.entity.models.app.Game transform(de.ls5.dywa.generated.rest.types.Game o) {
+	final de.ls5.dywa.generated.entity.models.app.Game obj;
+	if (o.getDywaId() > 0) {
+		obj = GameController.read(o.getDywaId());
+	}
+	 else if (o instanceof de.ls5.dywa.generated.rest.types.Game) {
+		obj = GameREST.copyToTransient((de.ls5.dywa.generated.rest.types.Game) o);
+	}
+	 else { throw new java.lang.IllegalArgumentException("Unknown type"); } 
+	return obj;
+}
+public de.ls5.dywa.generated.entity.models.app.Result transform(de.ls5.dywa.generated.rest.types.Result o) {
+	final de.ls5.dywa.generated.entity.models.app.Result obj;
+	if (o.getDywaId() > 0) {
+		obj = ResultController.read(o.getDywaId());
+	}
+	 else if (o instanceof de.ls5.dywa.generated.rest.types.Result) {
+		obj = ResultREST.copyToTransient((de.ls5.dywa.generated.rest.types.Result) o);
 	}
 	 else { throw new java.lang.IllegalArgumentException("Unknown type"); } 
 	return obj;

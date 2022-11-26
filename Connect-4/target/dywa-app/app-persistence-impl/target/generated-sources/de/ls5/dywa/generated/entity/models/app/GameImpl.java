@@ -3,9 +3,9 @@ package de.ls5.dywa.generated.entity.models.app;
 @javax.persistence.Entity
 @javax.persistence.Cacheable
 @org.hibernate.annotations.Cache(usage = org.hibernate.annotations.CacheConcurrencyStrategy.READ_WRITE)
-@javax.persistence.Table(name = "t_ConcreteUser__dh6bymwneewzvvv", indexes={@javax.persistence.Index(columnList="meta_inheritance")})
-@de.ls5.dywa.annotations.IdRef(id = 0L)
-public class ConcreteUserImpl implements ConcreteUser {
+@javax.persistence.Table(name = "t_Game__mee9kwy7ee2dfcv", indexes={@javax.persistence.Index(columnList="meta_inheritance")})
+@de.ls5.dywa.annotations.IdRef(id = 5L)
+public class GameImpl implements Game {
 	@javax.persistence.Id
 	@javax.persistence.GeneratedValue(strategy = javax.persistence.GenerationType.SEQUENCE)
 	@javax.persistence.Column(name = "meta_id")
@@ -22,35 +22,45 @@ public class ConcreteUserImpl implements ConcreteUser {
 	private boolean inheritance_ = false;
 
 
-	@javax.persistence.Transient
-	private boolean bidirectionalDirtyFlag;
 	/* DYWA METADATA END */
 
 	
 	/* MAIN ATTRIBUTES START */
-	@de.ls5.dywa.annotations.IdRef(id = 7L)
+	@de.ls5.dywa.annotations.IdRef(id = 20L)
 	@org.hibernate.annotations.Cascade(org.hibernate.annotations.CascadeType.PERSIST)
-	@javax.persistence.JoinColumn(name = "a_BaseUser__fpy24mwneewzvvv")
-	@org.hibernate.annotations.Any(metaColumn=@javax.persistence.Column(name="m_BaseUser_Type__fpy24mwneewzvvv"))
-	@org.hibernate.annotations.AnyMetaDef(
-		idType="long", metaType="string",
-		metaValues={
-			@org.hibernate.annotations.MetaValue(targetEntity=de.ls5.dywa.generated.entity.models.app.BaseUserImpl.class, value="_udys4mwneewzvvv")
-		}
-	)
-	private de.ls5.dywa.generated.entity.models.app.BaseUser baseUser;
-	
-	@de.ls5.dywa.annotations.IdRef(id = 8L)
-	@org.hibernate.annotations.Cascade(org.hibernate.annotations.CascadeType.PERSIST)
-	@javax.persistence.JoinColumn(name = "a_DywaSwitchedTo__crd9uwztee2dimv")
-	@org.hibernate.annotations.Any(metaColumn=@javax.persistence.Column(name="m_DywaSwitchedTo_Type__crd9uwztee2dimv"))
+	@javax.persistence.JoinColumn(name = "a_Player2__ophhcgy7ee2dfcv")
+	@org.hibernate.annotations.Any(metaColumn=@javax.persistence.Column(name="m_Player2_Type__ophhcgy7ee2dfcv"))
 	@org.hibernate.annotations.AnyMetaDef(
 		idType="long", metaType="string",
 		metaValues={
 			@org.hibernate.annotations.MetaValue(targetEntity=de.ls5.dywa.generated.entity.models.app.ConcreteUserImpl.class, value="_dh6bymwneewzvvv")
 		}
 	)
-	private de.ls5.dywa.generated.entity.models.app.ConcreteUser dywaSwitchedTo;
+	private de.ls5.dywa.generated.entity.models.app.ConcreteUser player2;
+	
+	@de.ls5.dywa.annotations.IdRef(id = 21L)
+	@org.hibernate.annotations.Cascade(org.hibernate.annotations.CascadeType.PERSIST)
+	@javax.persistence.JoinColumn(name = "a_Player1__pzfxkwy7ee2dfcv")
+	@org.hibernate.annotations.Any(metaColumn=@javax.persistence.Column(name="m_Player1_Type__pzfxkwy7ee2dfcv"))
+	@org.hibernate.annotations.AnyMetaDef(
+		idType="long", metaType="string",
+		metaValues={
+			@org.hibernate.annotations.MetaValue(targetEntity=de.ls5.dywa.generated.entity.models.app.ConcreteUserImpl.class, value="_dh6bymwneewzvvv")
+		}
+	)
+	private de.ls5.dywa.generated.entity.models.app.ConcreteUser player1;
+	
+	@de.ls5.dywa.annotations.IdRef(id = 22L)
+	@org.hibernate.annotations.Cascade(org.hibernate.annotations.CascadeType.PERSIST)
+	@javax.persistence.JoinColumn(name = "a_Board__xnkagwy7ee2dfcv")
+	@org.hibernate.annotations.Any(metaColumn=@javax.persistence.Column(name="m_Board_Type__xnkagwy7ee2dfcv"))
+	@org.hibernate.annotations.AnyMetaDef(
+		idType="long", metaType="string",
+		metaValues={
+			@org.hibernate.annotations.MetaValue(targetEntity=de.ls5.dywa.generated.entity.models.app.BoardImpl.class, value="_bk7lagkuee2cw5_")
+		}
+	)
+	private de.ls5.dywa.generated.entity.models.app.Board board;
 	
 	/* MAIN ATTRIBUTES END */
 	
@@ -67,7 +77,7 @@ public class ConcreteUserImpl implements ConcreteUser {
 	/* ADDITIONAL INHERITED MODELS END */
 	
 	// Constructors
-	public ConcreteUserImpl() {
+	public GameImpl() {
 	}
 
 
@@ -109,49 +119,41 @@ public class ConcreteUserImpl implements ConcreteUser {
 	}
 	
 	@java.lang.Override
-	public de.ls5.dywa.generated.entity.models.app.BaseUser getbaseUser() {
-		return this.baseUser;
+	public de.ls5.dywa.generated.entity.models.app.ConcreteUser getplayer2() {
+		return this.player2;
 	}
 	
 	@java.lang.Override
-	public void setbaseUser(de.ls5.dywa.generated.entity.models.app.BaseUser object) {
-		if (!this.bidirectionalDirtyFlag) {
-			this.bidirectionalDirtyFlag = true;
-			final de.ls5.dywa.generated.entity.models.app.BaseUser current = this.getbaseUser();
-			final ConcreteUser _instance =
-			this;
-			if(current != null){
-				// redundant updates can be skipped
-				if (object != null && current.equals(object)) {
-					this.bidirectionalDirtyFlag = false;
-					return;
-				}
-	
-				current.getconcreteUser_ConcreteUser().remove(_instance);
-			}
-			if (object != null) {
-				object.getconcreteUser_ConcreteUser().add(_instance);
-			}
-			this.baseUser = object;
-			this.bidirectionalDirtyFlag = false;
-		}
+	public void setplayer2(de.ls5.dywa.generated.entity.models.app.ConcreteUser object) {
+		this.player2 = object;
 	}
 	
 	
 	@java.lang.Override
-	public de.ls5.dywa.generated.entity.models.app.ConcreteUser getdywaSwitchedTo() {
-		return this.dywaSwitchedTo;
+	public de.ls5.dywa.generated.entity.models.app.ConcreteUser getplayer1() {
+		return this.player1;
 	}
 	
 	@java.lang.Override
-	public void setdywaSwitchedTo(de.ls5.dywa.generated.entity.models.app.ConcreteUser object) {
-		this.dywaSwitchedTo = object;
+	public void setplayer1(de.ls5.dywa.generated.entity.models.app.ConcreteUser object) {
+		this.player1 = object;
+	}
+	
+	
+	@java.lang.Override
+	public de.ls5.dywa.generated.entity.models.app.Board getboard() {
+		return this.board;
+	}
+	
+	@java.lang.Override
+	public void setboard(de.ls5.dywa.generated.entity.models.app.Board object) {
+		this.board = object;
 	}
 	
 	
 	@java.lang.Override
 	public String toString() {
-		return "ConcreteUser[id: " + this.id_ + ", name: " + this.name_ + "]";
+		return "Game[id: " + this.id_ + ", name: " + this.name_ + "]";
 	}
 }
 

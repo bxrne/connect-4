@@ -98,7 +98,7 @@ public class CellSearch implements Cell {
 
 	@java.lang.Override
 	public java.lang.Long getvalue() {
-		return (java.lang.Long) this.attributeMap.get(dywaIdToJpqlAttr.get(16L));
+		return (java.lang.Long) this.attributeMap.get(dywaIdToJpqlAttr.get(19L));
 	}
 	public void setvalue
 	(java.lang.Long object) {
@@ -106,7 +106,7 @@ public class CellSearch implements Cell {
 				if (! (object instanceof java.lang.Long)) {
 							throw new java.lang.RuntimeException("Wrong type");
 				}
-			this.attributeMap.put(dywaIdToJpqlAttr.get(16L), object);
+			this.attributeMap.put(dywaIdToJpqlAttr.get(19L), object);
 	}
 
 	// EXTENSION ATTRIBUTES

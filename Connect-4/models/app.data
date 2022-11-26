@@ -1,8 +1,8 @@
 Data _tH3fEMwMEeWZVvvwxpYu8A {
   modelName "Data"
-  ConcreteType _dh6BYMwNEeWZVvvwxpYu8A at 90,60 size 111,55 {
+  ConcreteType _dh6BYMwNEeWZVvvwxpYu8A at 70,40 size 151,75 {
   	name "ConcreteUser"
-  	UserAttribute _fPY24MwNEeWZVvvwxpYu8A at 5,32 size 101,18 {
+  	UserAttribute _fPY24MwNEeWZVvvwxpYu8A at 5,32 size 141,18 {
   		oppositeAttribute _fOkXgMwNEeWZVvvwxpYu8A
   		dataType _UdYs4MwNEeWZVvvwxpYu8A
   		name "baseUser"
@@ -10,7 +10,7 @@ Data _tH3fEMwMEeWZVvvwxpYu8A {
   	}
   }
   
-  UserType _UdYs4MwNEeWZVvvwxpYu8A at 74,190 size 143,145 {
+  UserType _UdYs4MwNEeWZVvvwxpYu8A at 74,190 size 143,163 {
   	name "BaseUser"
   	UserAttribute _fOkXgMwNEeWZVvvwxpYu8A at 5,32 size 133,18 {
   		oppositeAttribute _fPY24MwNEeWZVvvwxpYu8A
@@ -31,21 +31,27 @@ Data _tH3fEMwMEeWZVvvwxpYu8A {
   		isList false
   	}
   	
-  	PrimitiveAttribute _VE6ToM5BEeWKGIrSDzlNog at 5,50 size 133,18 {
-  		dataType Text
-  		name "firstName"
-  		isList false
-  	}
-  	
-  	PrimitiveAttribute _WYcYEM5BEeWKGIrSDzlNog at 5,86 size 133,18 {
-  		dataType Text
-  		name "lastName"
-  		isList false
-  	}
-  	
   	PrimitiveAttribute _1aiCkG_QEeaqHezD6-M0AA at 5,122 size 133,18 {
   		dataType Text
   		name "username"
+  		isList false
+  	}
+  	
+  	PrimitiveAttribute _R0p24Wy7Ee2dfcV8DHaeLg at 5,50 size 133,18 {
+  		dataType Text
+  		name "email"
+  		isList false
+  	}
+  	
+  	PrimitiveAttribute _UudVkWy7Ee2dfcV8DHaeLg at 5,140 size 133,18 {
+  		dataType Integer
+  		name "wins"
+  		isList false
+  	}
+  	
+  	PrimitiveAttribute _Wm-WYWy7Ee2dfcV8DHaeLg at 5,86 size 133,18 {
+  		dataType Integer
+  		name "losses"
   		isList false
   	}
   	-UserAssociation-> _dh6BYMwNEeWZVvvwxpYu8A  decorate "Text" at (4,-8) decorate "Text" at (12,-7) {
@@ -56,7 +62,7 @@ Data _tH3fEMwMEeWZVvvwxpYu8A {
   	}
   }
   
-  ConcreteType _bk7lAGkUEe2cW5_gHw6itA at 350,160 size 161,55 {
+  ConcreteType _bk7lAGkUEe2cW5_gHw6itA at 514,160 size 161,55 {
   	name "Board"
   	ComplexAttribute _g81d0WkUEe2cW5_gHw6itA at 5,32 size 151,18 {
   		dataType _dW6gAWkUEe2cW5_gHw6itA
@@ -70,7 +76,7 @@ Data _tH3fEMwMEeWZVvvwxpYu8A {
   	}
   }
   
-  ConcreteType _dW6gAWkUEe2cW5_gHw6itA at 361,284 size 140,73 {
+  ConcreteType _dW6gAWkUEe2cW5_gHw6itA at 525,284 size 140,73 {
   	name "Column"
   	ComplexAttribute _PRuuwWmoEe2sl80VZxYqHw at 5,32 size 130,18 {
   		dataType _N5BPYGmoEe2sl80VZxYqHw
@@ -90,12 +96,76 @@ Data _tH3fEMwMEeWZVvvwxpYu8A {
   	}
   }
   
-  ConcreteType _N5BPYGmoEe2sl80VZxYqHw at 361,420 size 140,55 {
+  ConcreteType _N5BPYGmoEe2sl80VZxYqHw at 525,420 size 140,55 {
   	name "Cell"
   	PrimitiveAttribute _QoaN0WmoEe2sl80VZxYqHw at 5,32 size 130,18 {
   		dataType Integer
   		name "value"
   		isList false
+  	}
+  }
+  
+  ConcreteType _mEE9kWy7Ee2dfcV8DHaeLg at 460,32 size 270,91 {
+  	name "Game"
+  	ComplexAttribute _oPhhcGy7Ee2dfcV8DHaeLg at 5,68 size 260,18 {
+  		dataType _dh6BYMwNEeWZVvvwxpYu8A
+  		name "player2"
+  		isList false
+  	}
+  	
+  	ComplexAttribute _pZFxkWy7Ee2dfcV8DHaeLg at 5,50 size 260,18 {
+  		dataType _dh6BYMwNEeWZVvvwxpYu8A
+  		name "player1"
+  		isList false
+  	}
+  	
+  	ComplexAttribute _xNkagWy7Ee2dfcV8DHaeLg at 5,32 size 260,18 {
+  		dataType _bk7lAGkUEe2cW5_gHw6itA
+  		name "board"
+  		isList false
+  	}
+  	-Association-> _dh6BYMwNEeWZVvvwxpYu8A  decorate "Text" at (-50,-36) decorate "" at (0,0) {
+  		id _oPWiUWy7Ee2dfcV8DHaeLg
+  		isHidden false
+  		sourceAttr _oPhhcGy7Ee2dfcV8DHaeLg
+  	}
+  	
+  	-Association-> _dh6BYMwNEeWZVvvwxpYu8A  decorate "Text" at (-151,-36) decorate "" at (0,0) {
+  		id _pZCHMWy7Ee2dfcV8DHaeLg
+  		isHidden false
+  		sourceAttr _pZFxkWy7Ee2dfcV8DHaeLg
+  	}
+  	
+  	-Association-> _bk7lAGkUEe2cW5_gHw6itA  decorate "Text" at (23,0) decorate "" at (0,0) {
+  		id _xNbQkWy7Ee2dfcV8DHaeLg
+  		isHidden false
+  		sourceAttr _xNkagWy7Ee2dfcV8DHaeLg
+  	}
+  }
+  
+  ConcreteType _Ryh6gWy8Ee2dfcV8DHaeLg at 76,-170 size 140,73 {
+  	name "Result"
+  	ComplexAttribute _Vx6hMWy8Ee2dfcV8DHaeLg at 5,50 size 130,18 {
+  		dataType _dh6BYMwNEeWZVvvwxpYu8A
+  		name "loser"
+  		isList false
+  	}
+  	
+  	ComplexAttribute _WRziMWy8Ee2dfcV8DHaeLg at 5,32 size 130,18 {
+  		dataType _dh6BYMwNEeWZVvvwxpYu8A
+  		name "winner"
+  		isList false
+  	}
+  	-Association-> _dh6BYMwNEeWZVvvwxpYu8A  decorate "Text" at (32,0) decorate "" at (0,0) {
+  		id _Vx3d4Wy8Ee2dfcV8DHaeLg
+  		isHidden false
+  		sourceAttr _Vx6hMWy8Ee2dfcV8DHaeLg
+  	}
+  	
+  	-Association-> _dh6BYMwNEeWZVvvwxpYu8A  decorate "Text" at (-75,0) decorate "" at (0,0) {
+  		id _WRupsWy8Ee2dfcV8DHaeLg
+  		isHidden false
+  		sourceAttr _WRziMWy8Ee2dfcV8DHaeLg
   	}
   }
 }

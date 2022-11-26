@@ -28,7 +28,7 @@ public class BaseUserImpl implements BaseUser {
 
 	
 	/* MAIN ATTRIBUTES START */
-	@de.ls5.dywa.annotations.IdRef(id = 7L)
+	@de.ls5.dywa.annotations.IdRef(id = 9L)
 	@org.hibernate.annotations.Cascade(org.hibernate.annotations.CascadeType.PERSIST)
 	@javax.persistence.JoinTable(name="r_BaseUser_ConcreteUser__fokxgmwneewzvvv", joinColumns = { @javax.persistence.JoinColumn(name = "r1_BaseUser_id") }, inverseJoinColumns = { @javax.persistence.JoinColumn(name = "r2_ConcreteUser_id") })
 	@org.hibernate.annotations.ManyToAny(metaColumn=@javax.persistence.Column(name="m_ConcreteUser_Type__fokxgmwneewzvvv"))
@@ -40,26 +40,30 @@ public class BaseUserImpl implements BaseUser {
 	)
 	private java.util.List<de.ls5.dywa.generated.entity.models.app.ConcreteUser> concreteUser  = new java.util.ArrayList<>();
 	
-	@de.ls5.dywa.annotations.IdRef(id = 8L)
+	@de.ls5.dywa.annotations.IdRef(id = 10L)
 	@javax.persistence.Column(name = "a_Password__yiigumwneewzvvv", columnDefinition="varchar")
 	private java.lang.String password;
 	
-	@de.ls5.dywa.annotations.IdRef(id = 9L)
+	@de.ls5.dywa.annotations.IdRef(id = 11L)
 	@javax.persistence.OneToOne
 	@javax.persistence.JoinColumn(name = "a_Image__3qnzmm46eewkgir")
 	private de.ls5.dywa.generated.util.DomainFile image;
 	
-	@de.ls5.dywa.annotations.IdRef(id = 10L)
-	@javax.persistence.Column(name = "a_FirstName__ve6tom5beewkgir", columnDefinition="varchar")
-	private java.lang.String firstName;
-	
-	@de.ls5.dywa.annotations.IdRef(id = 11L)
-	@javax.persistence.Column(name = "a_LastName__wycyem5beewkgir", columnDefinition="varchar")
-	private java.lang.String lastName;
-	
 	@de.ls5.dywa.annotations.IdRef(id = 12L)
 	@javax.persistence.Column(name = "a_Username__1aickg_qeeaqhez", columnDefinition="varchar")
 	private java.lang.String username;
+	
+	@de.ls5.dywa.annotations.IdRef(id = 13L)
+	@javax.persistence.Column(name = "a_Email__r0p24wy7ee2dfcv", columnDefinition="varchar")
+	private java.lang.String email;
+	
+	@de.ls5.dywa.annotations.IdRef(id = 14L)
+	@javax.persistence.Column(name = "a_Wins__uudvkwy7ee2dfcv", columnDefinition="bigint")
+	private java.lang.Long wins;
+	
+	@de.ls5.dywa.annotations.IdRef(id = 15L)
+	@javax.persistence.Column(name = "a_Losses__wm_wywy7ee2dfcv", columnDefinition="bigint")
+	private java.lang.Long losses;
 	
 	/* MAIN ATTRIBUTES END */
 	
@@ -176,28 +180,6 @@ public class BaseUserImpl implements BaseUser {
 	
 	
 	@java.lang.Override
-	public java.lang.String getfirstName() {
-		return this.firstName;
-	}
-	
-	@java.lang.Override
-	public void setfirstName(java.lang.String object) {
-		this.firstName = object;
-	}
-	
-	
-	@java.lang.Override
-	public java.lang.String getlastName() {
-		return this.lastName;
-	}
-	
-	@java.lang.Override
-	public void setlastName(java.lang.String object) {
-		this.lastName = object;
-	}
-	
-	
-	@java.lang.Override
 	public java.lang.String getusername() {
 		return this.username;
 	}
@@ -205,6 +187,39 @@ public class BaseUserImpl implements BaseUser {
 	@java.lang.Override
 	public void setusername(java.lang.String object) {
 		this.username = object;
+	}
+	
+	
+	@java.lang.Override
+	public java.lang.String getemail() {
+		return this.email;
+	}
+	
+	@java.lang.Override
+	public void setemail(java.lang.String object) {
+		this.email = object;
+	}
+	
+	
+	@java.lang.Override
+	public java.lang.Long getwins() {
+		return this.wins;
+	}
+	
+	@java.lang.Override
+	public void setwins(java.lang.Long object) {
+		this.wins = object;
+	}
+	
+	
+	@java.lang.Override
+	public java.lang.Long getlosses() {
+		return this.losses;
+	}
+	
+	@java.lang.Override
+	public void setlosses(java.lang.Long object) {
+		this.losses = object;
 	}
 	
 	

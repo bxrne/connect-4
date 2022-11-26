@@ -26,7 +26,7 @@ public class BoardImpl implements Board {
 
 	
 	/* MAIN ATTRIBUTES START */
-	@de.ls5.dywa.annotations.IdRef(id = 13L)
+	@de.ls5.dywa.annotations.IdRef(id = 16L)
 	@org.hibernate.annotations.Cascade(org.hibernate.annotations.CascadeType.PERSIST)
 	@javax.persistence.JoinTable(name="r_Board_Columns__g81d0wkuee2cw5_", joinColumns = { @javax.persistence.JoinColumn(name = "r1_Board_id") }, inverseJoinColumns = { @javax.persistence.JoinColumn(name = "r2_Column_id") })
 	@org.hibernate.annotations.ManyToAny(metaColumn=@javax.persistence.Column(name="m_Columns_Type__g81d0wkuee2cw5_"))

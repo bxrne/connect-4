@@ -2,14 +2,15 @@ package app.demo
 
 import "models/app.data" as data
 
-sib MakeCol : info.scce.dime.app.demo.Game#makeCol //
-index : integer
+sib MakeEmptyColumn : info.scce.dime.app.demo.Game#makeEmptyColumn //
+height : integer
 ->success
 column : [integer]
 
-sib GetBoardWidth : info.scce.dime.app.demo.Game#getBoardWidth //
+sib MakeIndexList : info.scce.dime.app.demo.Game#makeIndexList
+width : integer
 ->success
-width : [integer]
+indexes : [integer]
 
 sib AddCell : info.scce.dime.app.demo.Game#addCell //
 cell : data.Cell
@@ -35,3 +36,14 @@ board : data.Board
 player : integer
 ->true
 ->false
+
+sib CheckIsColumnFull : info.scce.dime.app.demo.Game#isColumnFull
+board : data.Board
+index : integer
+->true
+->false
+
+sib printBoard : info.scce.dime.app.demo.Game#printBoard //
+location : text
+board: data.Board
+->success

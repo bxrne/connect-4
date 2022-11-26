@@ -24,6 +24,12 @@ private de.ls5.dywa.generated.controller.models.app.ConcreteUserController concr
 @javax.inject.Inject //referenceMap
 private de.ls5.dywa.generated.controller.models.app.BaseUserController baseUserController;
 
+@javax.inject.Inject //referenceMap
+private de.ls5.dywa.generated.controller.models.app.GameController gameController;
+
+@javax.inject.Inject //referenceMap
+private de.ls5.dywa.generated.controller.models.app.ResultController resultController;
+
     
     @Override
 	public ConcreteUser read(final java.lang.Long id) {
@@ -124,6 +130,32 @@ private de.ls5.dywa.generated.controller.models.app.BaseUserController baseUserC
 				searchConcreteUser.setdywaSwitchedTo(entityToDelete);
 			for (de.ls5.dywa.generated.entity.models.app.ConcreteUser queryResult : this.concreteUserController.findByProperties(searchConcreteUser)) {
 				queryResult.setdywaSwitchedTo(null);
+			}
+		
+		// Delete references from type Game
+			de.ls5.dywa.generated.entity.models.app.Game searchGame;
+			searchGame = new de.ls5.dywa.generated.entity.models.app.GameSearch();	
+				searchGame.setplayer2(entityToDelete);
+			for (de.ls5.dywa.generated.entity.models.app.Game queryResult : this.gameController.findByProperties(searchGame)) {
+				queryResult.setplayer2(null);
+			}
+			searchGame = new de.ls5.dywa.generated.entity.models.app.GameSearch();	
+				searchGame.setplayer1(entityToDelete);
+			for (de.ls5.dywa.generated.entity.models.app.Game queryResult : this.gameController.findByProperties(searchGame)) {
+				queryResult.setplayer1(null);
+			}
+		
+		// Delete references from type Result
+			de.ls5.dywa.generated.entity.models.app.Result searchResult;
+			searchResult = new de.ls5.dywa.generated.entity.models.app.ResultSearch();	
+				searchResult.setloser(entityToDelete);
+			for (de.ls5.dywa.generated.entity.models.app.Result queryResult : this.resultController.findByProperties(searchResult)) {
+				queryResult.setloser(null);
+			}
+			searchResult = new de.ls5.dywa.generated.entity.models.app.ResultSearch();	
+				searchResult.setwinner(entityToDelete);
+			for (de.ls5.dywa.generated.entity.models.app.Result queryResult : this.resultController.findByProperties(searchResult)) {
+				queryResult.setwinner(null);
 			}
 		delete(entityToDelete);
 	}
