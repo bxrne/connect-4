@@ -41,10 +41,12 @@ public final class Game_kVZOMWy7Ee2dfcV8DHaeLg implements DIMEProcess {
 				// begin context variables
 				private de.ls5.dywa.generated.rest.types.Board board;
 				private java.lang.Long turn;
+				private java.lang.Long numberOfTurnsTaken;
 				// end context variables
 
 				// begin direct dataflow variables
 				private java.lang.Long gamePlacePieceIndex_g0n_sGzHEe2dfcV8DHaeLg;
+				private java.lang.Long IntegerAddSuccessResult_uJ4c0W3IEe277rRNOuM5KQ;
 				// end direct dataflow variables
 
 				// begin index variables of iterate sibs
@@ -59,7 +61,9 @@ public final class Game_kVZOMWy7Ee2dfcV8DHaeLg implements DIMEProcess {
 						de.ls5.dywa.generated.rest.types.BoardSelective.copy(ctx.board, result.board, objectCache);
 					}
 					result.turn = ctx.turn;
+					result.numberOfTurnsTaken = ctx.numberOfTurnsTaken;
 					result.gamePlacePieceIndex_g0n_sGzHEe2dfcV8DHaeLg = ctx.gamePlacePieceIndex_g0n_sGzHEe2dfcV8DHaeLg;
+					result.IntegerAddSuccessResult_uJ4c0W3IEe277rRNOuM5KQ = ctx.IntegerAddSuccessResult_uJ4c0W3IEe277rRNOuM5KQ;
 
 					return result;
 				}
@@ -77,7 +81,9 @@ public final class Game_kVZOMWy7Ee2dfcV8DHaeLg implements DIMEProcess {
 						result.board = contextTransformer.transform(this.board);
 					}
 					result.turn = this.turn;
+					result.numberOfTurnsTaken = this.numberOfTurnsTaken;
 					result.gamePlacePieceIndex_g0n_sGzHEe2dfcV8DHaeLg = this.gamePlacePieceIndex_g0n_sGzHEe2dfcV8DHaeLg;
+					result.IntegerAddSuccessResult_uJ4c0W3IEe277rRNOuM5KQ = this.IntegerAddSuccessResult_uJ4c0W3IEe277rRNOuM5KQ;
 
 					return result;
 		        }
@@ -106,8 +112,10 @@ public final class Game_kVZOMWy7Ee2dfcV8DHaeLg implements DIMEProcess {
 		private de.ls5.dywa.generated.entity.models.app.BaseUser player2;
 		private de.ls5.dywa.generated.entity.models.app.BaseUser player1;
 		private java.lang.Long turn = 0l;
+		private java.lang.Long numberOfTurnsTaken = 0l;
 		// direct dataflow variables.
 		private java.lang.Long gamePlacePieceIndex_g0n_sGzHEe2dfcV8DHaeLg;
+		private java.lang.Long IntegerAddSuccessResult_uJ4c0W3IEe277rRNOuM5KQ;
 
 		public info.scce.dime.process.JSONContext toJSON() {
 			return JSONContext.toJSON(beanManager, this);
@@ -122,7 +130,8 @@ public final class Game_kVZOMWy7Ee2dfcV8DHaeLg implements DIMEProcess {
 	_Q8__HYPHEN_MINUS__VEGzIEe2dfcV8DHaeLg,
 	_bsOGAWzIEe2dfcV8DHaeLg,
 	_tX0IkWzJEe2dgMV8DHaeLg,
-	_YLaNgWzPEe2dgcV8DHaeLg,
+	_uJYtkG3IEe277rRNOuM5KQ,
+	_zYC44W3KEe277rRNOuM5KQ,
 		;
 	}
 
@@ -202,9 +211,12 @@ public final class Game_kVZOMWy7Ee2dfcV8DHaeLg implements DIMEProcess {
 					curr = execute_tX0IkWzJEe2dgMV8DHaeLg(ctx);
 					break;
 				}
-				case _YLaNgWzPEe2dgcV8DHaeLg: {
-					curr = execute_YLaNgWzPEe2dgcV8DHaeLg(ctx);
+				case _uJYtkG3IEe277rRNOuM5KQ: {
+					curr = execute_uJYtkG3IEe277rRNOuM5KQ(ctx);
 					break;
+				}
+				case _zYC44W3KEe277rRNOuM5KQ: {
+					return execute_zYC44W3KEe277rRNOuM5KQ(ctx);
 				}
 				default: {
 					throw new IllegalStateException("unhandled SIB container " + curr);
@@ -220,6 +232,13 @@ public final class Game_kVZOMWy7Ee2dfcV8DHaeLg implements DIMEProcess {
 	public static class Game_kVZOMWy7Ee2dfcV8DHaeLgResult implements info.scce.dime.process.DIMEProcessResult<Void> {
 		private String branchName;
 		private String branchId;
+		private DrawReturn Draw;
+		
+		public Game_kVZOMWy7Ee2dfcV8DHaeLgResult(DrawReturn Draw) {
+			this.branchName = "Draw";
+			this.branchId = "_zYC44W3KEe277rRNOuM5KQ";
+			this.Draw = Draw;
+		}
 		
 		public String getBranchName() {
 			return branchName;
@@ -229,10 +248,34 @@ public final class Game_kVZOMWy7Ee2dfcV8DHaeLg implements DIMEProcess {
 			return branchId;
 		}
 		
+		public DrawReturn getDrawReturn() {
+			return Draw;
+		}
 
 	}
 	
 	// model branches.
+		/**
+		 * Interface definition for return type of branch <code>Draw</code>.
+		 */
+		public interface DrawReturn {
+		}
+	
+		/**
+		 * Return type of branch <code>Draw</code> accessing the 
+		 * corresponding values in the process context, instead of storing
+		 * the values locally.
+		 */
+		static class DrawReturnImpl implements DrawReturn {
+
+			private final Context ctx;
+
+	        DrawReturnImpl(Context ctx) {
+	            this.ctx = ctx;
+	        }
+
+		}
+		
 
 
 	// sibs
@@ -240,14 +283,14 @@ public final class Game_kVZOMWy7Ee2dfcV8DHaeLg implements DIMEProcess {
 	public SIB_ID execute_AyKlQWzGEe2dfcV8DHaeLg(final Context ctx) {
 		final info.scce.dime.process.models.interaction.InitBoard_mMPIMWwEEe2iyKycOTLADg instance = CDIUtil.getManagedInstance(ctx.beanManager, info.scce.dime.process.models.interaction.InitBoard_mMPIMWwEEe2iyKycOTLADg.class);
 	
-		final info.scce.dime.process.models.interaction.InitBoard_mMPIMWwEEe2iyKycOTLADg.InitBoard_mMPIMWwEEe2iyKycOTLADgResult result = instance.execute(false);
+		final info.scce.dime.process.models.interaction.InitBoard_mMPIMWwEEe2iyKycOTLADg.InitBoard_mMPIMWwEEe2iyKycOTLADgResult result = instance.execute(false, 6l, 7l);
 	
 		switch(result.getBranchName()) {
 		case "success": {
 			ctx.board = result.getSuccessReturn().getBoard();
 			ctx.turn = result.getSuccessReturn().getTurn();
 			// branch 'success'
-			return SIB_ID._YLaNgWzPEe2dgcV8DHaeLg;
+			return SIB_ID._g0A7sWzHEe2dfcV8DHaeLg;
 		}
 			default: throw new IllegalStateException("SIB 'InitBoard' has no successor defined for branch '" + result.getBranchName() + '\'');
 		}
@@ -328,7 +371,7 @@ public final class Game_kVZOMWy7Ee2dfcV8DHaeLg implements DIMEProcess {
 			ctx.board = (de.ls5.dywa.generated.entity.models.app.Board)result.getgui__c1JK8WsdEe2LPP__HYPHEN_MINUS__yV9ajYAplacePieceReturn().getBoard();
 			}
 			// branch 'placePiece'
-			return SIB_ID.__FR6wWzHEe2dfcV8DHaeLg;
+			return SIB_ID._uJYtkG3IEe277rRNOuM5KQ;
 		}
 		else {
 			// unspecified branch, show same GUI again
@@ -339,13 +382,21 @@ public final class Game_kVZOMWy7Ee2dfcV8DHaeLg implements DIMEProcess {
 	public SIB_ID execute__FR6wWzHEe2dfcV8DHaeLg(final Context ctx) {
 		final info.scce.dime.process.models.interaction.AddPiece_05YnEWsdEe2LPP__HYPHEN_MINUS__yV9ajYA instance = new info.scce.dime.process.models.interaction.AddPiece_05YnEWsdEe2LPP__HYPHEN_MINUS__yV9ajYA(ctx.beanManager);
 	
-		final info.scce.dime.process.models.interaction.AddPiece_05YnEWsdEe2LPP__HYPHEN_MINUS__yV9ajYA.AddPiece_05YnEWsdEe2LPP__HYPHEN_MINUS__yV9ajYAResult result = instance.execute(false, ctx.board, ctx.gamePlacePieceIndex_g0n_sGzHEe2dfcV8DHaeLg, ctx.turn);
+		final info.scce.dime.process.models.interaction.AddPiece_05YnEWsdEe2LPP__HYPHEN_MINUS__yV9ajYA.AddPiece_05YnEWsdEe2LPP__HYPHEN_MINUS__yV9ajYAResult result = instance.execute(false, ctx.board, ctx.gamePlacePieceIndex_g0n_sGzHEe2dfcV8DHaeLg, ctx.IntegerAddSuccessResult_uJ4c0W3IEe277rRNOuM5KQ, ctx.turn);
 	
 		switch(result.getBranchName()) {
 		case "success": {
 			ctx.board = result.getSuccessReturn().getBoard();
 			// branch 'success'
 			return SIB_ID._KiYQMWzIEe2dfcV8DHaeLg;
+		}
+		case "Column is full": {
+			// branch 'Column is full'
+			return SIB_ID._g0A7sWzHEe2dfcV8DHaeLg;
+		}
+		case "Board is full": {
+			// branch 'Board is full'
+			return SIB_ID._zYC44W3KEe277rRNOuM5KQ;
 		}
 			default: throw new IllegalStateException("SIB 'addPiece' has no successor defined for branch '" + result.getBranchName() + '\'');
 		}
@@ -436,18 +487,23 @@ public final class Game_kVZOMWy7Ee2dfcV8DHaeLg implements DIMEProcess {
 		// branch 'success'
 		return SIB_ID._bsOGAWzIEe2dfcV8DHaeLg;
 	}
-	// container for atomic SIB 'printBoard'.
-	public SIB_ID execute_YLaNgWzPEe2dgcV8DHaeLg(final Context ctx) {
+	// container for atomic SIB 'IntegerAdd'.
+	public SIB_ID execute_uJYtkG3IEe277rRNOuM5KQ(final Context ctx) {
 		try {
-			info.scce.dime.app.demo.Game.printBoard("Before game GUI", ctx.board);
+			final java.lang.Long result = info.scce.dime.common.CommonNativeIntegerServiceLibrary.add(ctx.numberOfTurnsTaken, 1l);
+			ctx.IntegerAddSuccessResult_uJ4c0W3IEe277rRNOuM5KQ = result;
 		}
 		catch (Exception e) {
 			e.printStackTrace();
 			// branch 'failure'
-			throw new IllegalStateException("SIB 'printBoard' has no successor defined for branch 'failure'");
+			throw new IllegalStateException("SIB 'IntegerAdd' has no successor defined for branch 'failure'");
 		}
 		// branch 'success'
-		return SIB_ID._g0A7sWzHEe2dfcV8DHaeLg;
+		return SIB_ID.__FR6wWzHEe2dfcV8DHaeLg;
+	}
+	// container for graph i/o 'Draw'.
+	public Game_kVZOMWy7Ee2dfcV8DHaeLgResult execute_zYC44W3KEe277rRNOuM5KQ(final Context ctx) {
+		return new Game_kVZOMWy7Ee2dfcV8DHaeLgResult(new DrawReturnImpl(ctx));
 	}
 	
 }  

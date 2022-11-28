@@ -29,7 +29,6 @@ public class Game {
 		
 		//column is already full
 		if(cells.get(0).getvalue() != 0l) {
-			System.err.println("Column index "+ index + " is already full! Turn cancelled");
 			return board;
 		}
 		for(int i = cells.size() - 1; i >= 0; i--) {

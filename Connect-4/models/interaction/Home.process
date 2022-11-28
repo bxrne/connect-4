@@ -39,12 +39,24 @@ Process _LWgagF-SEeakMeYoloYxpg {
   		isList false
   		name "player2"
   	}
+  	-BranchConnector-> _10hiYW3KEe277rRNOuM5KQ   {
+  		id _10hiY23KEe277rRNOuM5KQ
+  		concurrent true
+  	}
   }
   
   Branch _b5AMEWhaEe2Ts87gHbvjRg at 9,242 size 181,38 index 2 {
   	name "start_game_basic"
   	-ControlFlow-> _7521sWzJEe2dgMV8DHaeLg  decorate "" at (0,0) {
   		id _85-18WzJEe2dgMV8DHaeLg
+  		concurrent true
+  	}
+  }
+  
+  Branch _10hiYW3KEe277rRNOuM5KQ at 210,371 size 120,25 {
+  	name "Draw"
+  	-ControlFlow-> _b46FcWhaEe2Ts87gHbvjRg via (270,182) decorate "" at (0,0) {
+  		id _2rQ9IW3KEe277rRNOuM5KQ
   		concurrent true
   	}
   }

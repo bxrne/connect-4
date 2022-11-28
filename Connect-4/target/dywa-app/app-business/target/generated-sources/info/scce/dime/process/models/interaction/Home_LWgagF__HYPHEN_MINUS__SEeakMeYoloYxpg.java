@@ -215,6 +215,10 @@ public final class Home_LWgagF__HYPHEN_MINUS__SEeakMeYoloYxpg implements DIMEPro
 		ctx.callStack.getCallFrames().remove(ctx.callStack.getCallFrames().size() - 1);
 		
 		switch(result.getBranchName()) {
+		case "Draw": {
+			// branch 'Draw'
+			return SIB_ID._b46FcWhaEe2Ts87gHbvjRg;
+		}
 			default: throw new IllegalStateException("SIB 'Game' has no successor defined for branch '" + result.getBranchName() + '\'');
 		}
 	}
